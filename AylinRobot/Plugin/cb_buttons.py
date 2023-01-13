@@ -1,6 +1,6 @@
 import os
 from AylinRobot.translation import Translation
-import config
+from AylinRobot.config import Config
 from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
