@@ -82,18 +82,18 @@ async def cb_data(client, message):
                 user = await client.get_chat_member(int(Config.UPDATES_CHANNEL), message.message.chat.id)
                 if user.status == "kicked":
                     await message.message.edit(
-                        text=f"Üzr istəyirik, cənab, Məndən istifadə etmək qadağandır.  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME}).",
+                        text=f"Üzr istəyirik, cənab, Məndən istifadə etmək qadağandır.Sahibim  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME}).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
                 await message.message.edit(
-                    text="<b>Salam</b> {},\n\n<b>Səz hələ də Playlist Kanalımıza qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun və 'Yenilə 🔄' düyməsini basın</b>".format(message.from_user.mention),
+                    text="<b>Salam</b> {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(message.from_user.mention),
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Yeniləmələr Kanalımıza Qoşulun 🗣", url=invite_link.invite_link)
+                                InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
                             ],
                             [
                                 InlineKeyboardButton("Yeniləyin 🔄", callback_data="refreshme")
