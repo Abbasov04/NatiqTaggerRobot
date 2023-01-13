@@ -1,109 +1,207 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from AylinRobot.config import Config
 
 class Translation(object):
 
     START_TEXT = """
-Hello {} 👋
+**Salam {} 👋**
 
-I'm Leo Song Downloader Bot 🇱🇰
+**Mənim Adım  ️️️️️️{} 🙋‍♀️ Mən Azərbaycan Dilində Çox Özəllikili Telegram Botuyam Bacarıqlarımı Görmək Üçün `💠 Kömək` Buttonuna Toxun**
 
-You can download any song within a shortime with this Bot 🙂
-
-If you want to know how to use this bot just
-touch on " Help 🆘 "  Button 😊
-
-Leo Projects 🇱🇰 
 """    
     HELP_TEXT = """
-Hello {}👋
+**{} 🙈 Əmrlərim Bunlardır  Buttonlara toxunaraq istədiyiniz əmr haqqında məlumat ala bilərsiniz**
 
-You should know following instructions to download songs 😊
-
-You can download song by,
-
-🔰<code>/song <song name></code>: Download songs from all sources
-Ex : <code>/song alone</code>
-
-Or,
-
-🔰 via youtube URL s... Send me any Youtube URL to download it 😊
-"""
-    ABOUT_TEXT = """
-🔰 **Bot :** [Leo Song Downloader Bot 🇱🇰](https://t.me/leosongdownloaderbot)
-🔰 **Developer :** [Naviya 🇱🇰](https://telegram.me/naviya2)
-🔰 **Updates Channel :** [Leo Updates 🇱🇰](https://telegram.me/new_ehi)
-🔰 **Support Group :** [Leo Support 🇱🇰](https://telegram.me/leosupportx)
-🔰 **Language :** [Python3](https://python.org)
-🔰 **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
-🔰 **Server :** [VPS](https://www.digitalocean.com)
 """
 
-    ABOUT_DEV_TEXT = """
-<b>Developer is a Super Noob 😅
+    SAHIB_TEXT = """
 
-You can find him in telegram as @naviya2 🇱🇰
+🔮 Istifadə: /status
+📃 Açıqlama: Bot haqqında ümumi məlumat verər.
 
-Developer's github account : [Github](https://github.com/Naviya2) 🇱🇰
+🔮 Istifadə: /broadcast
+📃 Açıqlama: Yayım başladar.
 
-If you find any error on this bot please be kind to tell [Developer](https://t.me/naviya2) or in our [Support Group](https://t.me/leosupportx) 😊</b>
+🔮 Istifadə: /gcast
+📃 Açıqlama: Qruplarda yayım edər.
+
+🔮 Istifadə: /broadcast_pin
+📃 Açıqlama: Qruplarda yayım edər və pinləyər.
 """
-    INFO_TEXT = """
-Hey {mention},
 
-Your details are here 😊
+    MUSIC_TEXT = """
+🔮 Istifadə: /song 
+🧩 Nümunə: /song Rei - Ah Canım Sevgilim
+📃 Açıqlama: Musiqi yükləyir.
 
-🔰 **First Name :** `{first_name}`
-🔰 **Last Name  :** `{last_name}`
-🔰 **Username   :** @{username}
-🔰 **User Id    :** `{user_id}`
+🔮 Istifadə: /video
+🧩  Nümunə:/video Rei - Ah Canım Sevgilim
+📃 Açıqlama: Video yükləyir.
+
+🔮 Istifadə: /lyrics 
+🧩 Nümunə: /lyrics Rei - Ah Canım Sevgilim
+📃 Açıqlama: Musiqinin sözlərini tapır.
+
+🔮 Istifadə: /search
+🧩 Nümunə: /search Rei - Ah Canım Sevgilim
+📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
 """
+
+    TELEGRAPH_TEXT = """
+
+🔮 Istifadə: /tgm
+📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz.
+
+"""
+
+    SEHID_TEXT = """
+
+🔮 Istifadə: /sehid 
+📃 Açıqlama:  Bu əmr vaistəsiylə sizə *Şəhid* adları göndərəcəm
+
+*Allah bütün Şəhidimizə rəhmət eləsin*
+Qazilərimizə şəfa versin 
+Başın sağolsun Azərbaycan 🇦🇿
+Bazada *2881* Şəhid adı mövcuddur
+
+""" 
+    OYUN_TEXT = """
+
+🔮 Istifadə: /zer
+📃 Açıqlama: zər atar
+
+🔮 Istifadə: /top
+📃 Açıqlama: top atar
+
+🔮 Istifadə: /bowling
+📃 Açıqlama: bowling atar
+
+🔮 Istifadə: /ox
+📃 Açıqlama: ox atar
+
+🔮 Istifadə: /jackpot
+📃 Açıqlama: jackpot atar
+
+"""
+
+    EYLENCE_TEXT = """
+
+🔮 Istifadə: /soxri 
+📃 Açıqlama: Rondom 16+ Şəkillər Atar.
+
+🔮 Istifadə: /pisik
+📃 Açıqlama: Rondom Pişik Şəkili Atar
+
+🔮 Istifadə: /anime
+📃 Açıqlama: Rondom Anime Şəkili Atar
+
+🔮 Istifadə: /masin
+📃 Açıqlama: Rondom Maşın Şəkili Atar
+
+🔮 Istifadə: /masin2
+📃 Açıqlama: Rondom Maşın Videosu Atar
+
+🔮 Istifadə: /tema
+📃 Açıqlama: Rondom Telegram Teması Atar
+
+🔮 Istifadə: /pp
+📃 Açıqlama: Rondom Profil Şəkili Atar
+
+🔮 Istifadə: /sevgi
+📃 Açıqlama: Hazır Sevi Yə Aid Sözlər Atar.
+
+🔮 Istifadə: /bio
+📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.
+
+"""
+
+
+    ELAVELER_TEXT = """
+
+🔮 Istifadə: /carbon
+📃 Açıqlama: Yazdığınız mesajı şəkilə çevirin
+
+🔮 Istifadə: /id
+📃 Açıqlama: İstifadəçinin s ID alın.
+
+🔮 Istifadə: /info
+📃 Açıqlama: İstifadəçi haqqında məlumat verər
+
+🔮 Istifadə: /alive
+📃 Açıqlama: Botun işlək olduğunu yoxlayar.
+
+"""
+
+
+
+
 
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Developer🧑‍💻', url='https://telegram.me/naviya2'),
-        InlineKeyboardButton('Rate us ★', url='https://t.me/tlgrmcbot?start=leosongdownloaderbot-review')
+        InlineKeyboardButton('💠 Kömək', callback_data='help'),
+        ],[        
+        InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true")
         ],[
-        InlineKeyboardButton('Updates Channel🗣', url='https://t.me/new_ehi'),
-        InlineKeyboardButton('Support Group 👥', url='https://t.me/leosupportx')
-        ],[
-        InlineKeyboardButton('Help 🆘', callback_data='help')
-        ],[
-        InlineKeyboardButton('➕ Add me to your group ➕', url='t.me/leosongdownloaderbot?startgroup=true')
+        InlineKeyboardButton("Etiraf Botu", url=f"https://t.me/{Config.ETIRAFBOT}"),
+        InlineKeyboardButton("Etiraf Kanalı", url=f"https://t.me/{Config.ETIRAF}"),
+        ],[        
+        InlineKeyboardButton("Söhbət Qrupu"  , url=f"https://t.me/{Config.SUPPORT}"),
+        InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
+        ],[        
+        InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Home 🏠', callback_data='home'),
-        InlineKeyboardButton('About ❗️', callback_data='about'),
-        InlineKeyboardButton('User Info ❗', callback_data='info')
+        InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
+        InlineKeyboardButton('⭐ Telegraph', callback_data='tg')
         ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('🎮 Oyunlar', callback_data='oyun'),
+        InlineKeyboardButton('🇦🇿 Şəhidlər', callback_data='sehıd'),
+        ],[        
+        InlineKeyboardButton('🌀 Əyləncə', callback_data='eylence'),
+        InlineKeyboardButton('Əlavələr', callback_data='elave'),
+        ],[
+        InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'), 
+        ],[        
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),
         ]]
     )
-    ABOUT_BUTTONS = InlineKeyboardMarkup(
+    
+    
+    MUSIC_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Home 🏠', callback_data='home'),
-        InlineKeyboardButton('Help 🆘', callback_data='help'),
-        InlineKeyboardButton('About Dev 🧑‍💻', callback_data='aboutdev')
-        ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )
-    INFO_BUTTONS = InlineKeyboardMarkup(
+    TELEGRAPH_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Home 🏠', callback_data='home'),
-        InlineKeyboardButton('About ❗️', callback_data='about'),
-        InlineKeyboardButton('Help 🆘', callback_data='help')
-        ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )
-    ABOUT_DEV_BUTTONS = InlineKeyboardMarkup(
+    SEHID_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Home 🏠', callback_data='home'),
-        InlineKeyboardButton('Help 🆘', callback_data='help'),
-        InlineKeyboardButton('About ❗️', callback_data='about')
-        ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
+        ]]
+    )        
+    OYUN_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
+        ]]
+    )
+    EYLENCE_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
+        ]]
+    )     
+    SAHIB_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
+        ]]
+    )
+    ELAVE_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     ) 
+    
