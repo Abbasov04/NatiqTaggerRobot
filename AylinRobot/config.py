@@ -1,14 +1,32 @@
-# Leo Projects <https://t.me/leosupportx>
-
 import os
-API_ID = int(os.getenv("API_ID", 2158704))
-API_HASH = os.getenv("API_HASH", "227f3bd8c1d7fc3ecfa243e1a85dd2fa")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "1698103524:AAHMGhZ5IhFVxdk0WHg4-V-rdqRE4MHvWP4")
-UPDATES_CHANNEL = int(os.environ.get("UPDATES_CHANNEL", -1001231683570))
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "leosongdownloaderbot")
-SESSION_NAME = os.environ.get("SESSION_NAME", "LeoSongDownloaderBot")
-BOT_OWNER = int(os.environ.get("BOT_OWNER", 1069002447))
-BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
-MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://navindu:navi18572@cluster0.9yrur.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -1001511224747))
-ARQ_API_KEY = os.getenv("ARQ_API_KEY", None)
+
+
+class Config:
+
+   API_ID = int(os.getenv("API_ID", "8953338"))
+   API_HASH = os.getenv("API_HASH", "fe21f223cb02d8f7c1cbda651f553a45")
+   BOT_TOKEN = os.getenv("BOT_TOKEN", "5636190781:AAGDOmFJmYDaJcPuW1lWyEAMgN-SwyycvRA")
+   BOT_USERNAME = os.environ.get("BOT_USERNAME", "AylinRobot")
+   OWNER_ID = int(os.environ.get("OWNER_ID","5865605067"))
+   OWNER_NAME = os.environ.get("OWNER_NAME", "HuseynH") 
+   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
+   MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+   LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001898638971"))
+   PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "-1001727904239")
+   PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID"))
+   COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
+   
+   
+   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "c65f693e-fe89-42b0-a3f9-599643757c37")
+
+   ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
+
+   ETIRAFBOT = os.environ.get("ETIRAFBOT", "PGBEtirafBot")
+  
+   SUPPORT = os.environ.get("SUPPORT", "PGBTeamGroup")
+   ETIRAF = os.environ.get("ETIRAF", "PgbTeamChannel")   
+   ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/f6c186e3c581a223856c4.mp4") 
+   
+   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/9bb9dd24fa66576f08ad1.jpg")   
+   UPDATES_CHANNEL = int(os.environ.get("UPDATES_CHANNEL", None))
+   ARQ_API_KEY = os.getenv("ARQ_API_KEY", None)
