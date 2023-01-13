@@ -76,8 +76,8 @@ async def cb_data(client, message):
             disable_web_page_preview=True
         ) 
     elif message.data == "refreshme":
-        if config.UPDATES_CHANNEL:
-            invite_link = await client.create_chat_invite_link(int(config.UPDATES_CHANNEL))
+        if Config.UPDATES_CHANNEL:
+            invite_link = await client.create_chat_invite_link(int(Config.UPDATES_CHANNEL))
             try:
                 user = await client.get_chat_member(int(Config.UPDATES_CHANNEL), message.message.chat.id)
                 if user.status == "kicked":
