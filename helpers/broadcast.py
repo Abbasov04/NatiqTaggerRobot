@@ -2,7 +2,6 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-
 import time
 import string
 import random
@@ -97,7 +96,7 @@ async def broadcast_handler(m: Message):
     else:
         await m.reply_document(
             document='broadcast.txt',
-            caption=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n\@{Config.BOT_USERNAME}",
+            caption=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n@{Config.BOT_USERNAME}",
             quote=True
         )
     await aiofiles.os.remove('broadcast.txt')
