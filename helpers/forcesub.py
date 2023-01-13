@@ -42,11 +42,11 @@ async def ForceSub(bot: Client, event: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Join Our Updates Channel 🗣", url=invite_link.invite_link)
+                        InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
                     ],
 
                     [   
-                        InlineKeyboardButton("Refresh 🔄", callback_data="refreshme")
+                        InlineKeyboardButton("Yenilə 🔄", callback_data="refreshme")
                     ],
                 ]
             ),
@@ -59,5 +59,5 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Something Went Wrong! Unable to do Force Subscribe.\nError: {err}\n\nContact Support Group: https://t.me/leosupportx")
+        print(f"Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.\nXəta: {err}\n\nSahibim [HÜSEYN] (https://t.me/{Config.OWNER_NAME}).\n\nİlə Əlaq Saxla"
         return 200
