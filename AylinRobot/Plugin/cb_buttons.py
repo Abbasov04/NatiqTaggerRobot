@@ -79,24 +79,24 @@ async def cb_data(client, message):
         if config.UPDATES_CHANNEL:
             invite_link = await client.create_chat_invite_link(int(config.UPDATES_CHANNEL))
             try:
-                user = await client.get_chat_member(int(config.UPDATES_CHANNEL), message.message.chat.id)
+                user = await client.get_chat_member(int(Config.UPDATES_CHANNEL), message.message.chat.id)
                 if user.status == "kicked":
                     await message.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/leosupportx).",
+                        text=f"Üzr istəyirik, cənab, Məndən istifadə etmək qadağandır.  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME}).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
                 await message.message.edit(
-                    text="<b>Hey</b> {},\n\n<b>You still didn't join our Updates Channel ☹️ \nPlease Join and hit on the 'Refresh 🔄' Button</b>".format(message.from_user.mention),
+                    text="<b>Salam</b> {},\n\n<b>Səz hələ də Playlist Kanalımıza qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun və 'Yenilə 🔄' düyməsini basın</b>".format(message.from_user.mention),
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Join Our Updates Channel 🗣", url=invite_link.invite_link)
+                                InlineKeyboardButton("Yeniləmələr Kanalımıza Qoşulun 🗣", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("Refresh 🔄", callback_data="refreshme")
+                                InlineKeyboardButton("Yeniləyin 🔄", callback_data="refreshme")
                             ]
                         ]
                     ),
@@ -105,13 +105,13 @@ async def cb_data(client, message):
                 return
             except Exception:
                 await message.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/leosupportx).",
+                    text=f"Nə isə səhv getdi.  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME}).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
                 return
         await message.message.edit(
-            text=Translation.START_TEXT.format(message.from_user.mention),
+            text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
             disable_web_page_preview=True,
             reply_markup=Translation.START_BUTTONS,
         )
