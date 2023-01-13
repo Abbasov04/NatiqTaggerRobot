@@ -19,7 +19,7 @@ from pyrogram import Client
 from helpers.forcesub import ForceSub
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
-from AylinRobot.plugins import *
+from AylinRobot.Plugin import *
 from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AylinRobot import AylinRobot as app
