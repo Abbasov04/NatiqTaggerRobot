@@ -1,6 +1,4 @@
-# @AylinRobot
-# Sahib @HuseynH
-# Repo Açığdısa İcazəsis Götürmə
+# Leo Projects <https://t.me/leosupportx>
 
 from os.path import dirname, basename, isfile, join
 import glob
