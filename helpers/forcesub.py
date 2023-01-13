@@ -9,13 +9,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 async def ForceSub(bot: Client, event: Message):
     """
-    Custom Pyrogram Based Telegram Bot's Force Subscribe Function by @Naviya2.
-    If User is not Joined Force Sub Channel Bot to Send a Message & ask him to Join First.
-    
-    :param bot: Pass Client.
-    :param event: Pass Message.
-    :return: It will return 200 if Successfully Got User in Force Sub Channel and 400 if Found that User Not Participant in Force Sub Channel or User is Kicked from Force Sub Channel it will return 400. Also it returns 200 if Unable to Find Channel.
-    """
+@HuseynH tərəfindən Xüsusi Piroqram Əsaslı Telegram Botunun Məcburi Abunə Funksiyası.
+     İstifadəçi Mesaj Göndərmək üçün Alt Kanal Botuna Qoşulmayıbsa və Ondan Əvvəlcə Qoşulmasını xahiş et.
+     """
     
     try:
         invite_link = await bot.create_chat_invite_link(chat_id=(int(Config.UPDATES_CHANNEL)))
@@ -31,7 +27,7 @@ async def ForceSub(bot: Client, event: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=event.from_user.id,
-                text="Sorry Dear, You are Banned to use me ☹️\nFeel free to say in our [Support Group](https://t.me/leosupportx).",
+                text=f"Üzr istəyirik, əzizim, məndən istifadə etmək qadağandır ☹️\nSahibimlə Əlaqə Saxla [HÜSEYN](https://t.me/{Config.OWNER_NAME}) deyin.",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=event.message_id
