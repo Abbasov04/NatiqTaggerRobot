@@ -20,7 +20,7 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Unable to do Force Subscribe to {Config.UPDATES_CHANNEL}\n\nError: {err}\n\nContact Support Group: https://t.me/leosupportx")
+        print(f"{Config.UPDATES_CHANNEL} kanalına məcburi abunə olmaq mümkün deyil\n\nXəta: {err}\n\nSahibimlə Əlaqə Saxla [HÜSEYN](https://t.me/{Config.OWNER_NAME}) Deyin.:")
         return 200
     try:
         user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL)), user_id=event.from_user.id)
@@ -38,7 +38,7 @@ async def ForceSub(bot: Client, event: Message):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=event.from_user.id,
-            text="<b>Hello {} 👋\n\nYou can't use me untill subscribe our Updates Channel ☹️\n\nSo Please join our Updates Channel by the following button and hit on the 'Refresh 🔄' Button 😊</b>".format(event.from_user.mention),
+            text="<b>Salam</b> {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(event.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -59,5 +59,5 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.\nXəta: {err}\n\nSahibim [HÜSEYN] (https://t.me/{Config.OWNER_NAME}).\n\nİlə Əlaq Saxla"
+        print(f"Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.\nXəta: {err}\n\nSahibim [HÜSEYN](https://t.me/{Config.OWNER_NAME}).\n\nİlə Əlaq Saxla"
         return 200
