@@ -1,11 +1,3 @@
-import os
-from AylinRobot.translation import Translation
-from AylinRobot.config import Config
-from pyrogram import Client
-from pyrogram.errors import UserNotParticipant
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from AylinRobot import AylinRobot as app
-
 # @AylinRobot
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
@@ -18,6 +10,7 @@ from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot import AylinRobot as app
+
 
 @app.on_callback_query()
 async def cb_data(client, message):
