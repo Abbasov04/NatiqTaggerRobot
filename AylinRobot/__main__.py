@@ -1,5 +1,7 @@
-# Leo Projects <https://t.me/leosupportx>
-# @Naviya2 🇱🇰
+# @AylinRobot
+#@MusicAzBot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə
 
 import os
 import time
@@ -7,9 +9,9 @@ import psutil
 import shutil
 import string
 import asyncio
-import config
+from AylinRobot.config import Config
 from asyncio import TimeoutError
-from LeoSongDownloaderBot.translation import Translation
+from AylinRobot.translation import Translation
 from helper.database.access_db import db
 from helper.broadcast import broadcast_handler
 from helper.database.add_user import AddUserToDatabase
