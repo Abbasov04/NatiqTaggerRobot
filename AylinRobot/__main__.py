@@ -11,12 +11,12 @@ import asyncio
 from AylinRobot.config import Config
 from asyncio import TimeoutError
 from AylinRobot.translation import Translation
-from helper.database.access_db import db
-from helper.broadcast import broadcast_handler
-from helper.database.add_user import AddUserToDatabase
-from helper.display_progress import humanbytes
+from helpers.database.access_db import db
+from helpers.broadcast import broadcast_handler
+from helpers.database.add_user import AddUserToDatabase
+from helpers.display_progress import humanbytes
 from pyrogram import Client
-from helper.forcesub import ForceSub
+from helpers.forcesub import ForceSub
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from AylinRobot.plugins import *
