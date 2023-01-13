@@ -1,7 +1,6 @@
 # @AylinRobot
-#@MusicAzBot
 # Sahib @HuseynH
-# Repo Açığdısa İcazəsis Götürmə
+# Repo Açığdısa İcazəsis Götürmə Oğlum
 
 import os
 import time
@@ -20,11 +19,11 @@ from pyrogram import Client
 from helper.forcesub import ForceSub
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
-from LeoSongDownloaderBot.plugins import *
+from AylinRobot.plugins import *
 from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from LeoSongDownloaderBot import LeoSongDownloaderBot as app
-from LeoSongDownloaderBot import LOGGER
+from AylinRobot import AylinRobot as app
+from AylinRobot import LOGGER
 
 AylinIMG = f"{Config.START_IMG}"
 
