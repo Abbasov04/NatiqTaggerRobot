@@ -1,6 +1,6 @@
 pyrogram==1.4.16
 py-tgcalls
-sqlalchemy==1.4.41
+sqlalchemy
 TgCrypto
 python-dotenv
 motor
