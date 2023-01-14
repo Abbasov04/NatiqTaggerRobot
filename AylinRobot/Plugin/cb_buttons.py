@@ -89,7 +89,7 @@ async def cb_data(client, message):
                                 InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
                             ],
                             [
-                                InlineKeyboardButton("Yeniləyin 🔄", callback_data="refreshme")
+                                InlineKeyboardButton("Yenilə 🔄", callback_data="refreshme")
                             ]
                         ]
                     ),
