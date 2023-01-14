@@ -59,5 +59,5 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"**Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.**\n**Xəta:** **{err}**\n\n**Əyər** **Bu Xətanı Yenə Alırsınızsa Sahib** [HÜSEYN](https://t.me/{Config.OWNER_NAME}) **Əlaqə Saxla**"...)
+        print(f"**Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.**\nXəta:{err}\n\nƏyər** **Bu Xətanı Yenə Alırsınızsa Sahib** [HÜSEYN](https://t.me/{Config.OWNER_NAME}) **Əlaqə Saxla**"...)
         return 200
