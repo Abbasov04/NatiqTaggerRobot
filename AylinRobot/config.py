@@ -17,7 +17,7 @@ class Config:
    COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
    
    
-   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "c65f693e-fe89-42b0-a3f9-599643757c37")
+   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "ce9e7011-283a-4e12-b089-1b2095c9b70e")
 
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
 
