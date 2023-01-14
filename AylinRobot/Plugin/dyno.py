@@ -16,10 +16,9 @@ import requests
 from AylinRobot.config import Config
 
 
-CMD = ['.', '/']
 BOT_START_TIME = time.time()
 
-@app.on_message(filters.private & filters.user(Config.OWNER_ID) & filters.command("dyno", CMD))         
+@app.on_message(filters.private & filters.user(Config.OWNER_ID))         
 async def bot_status(client,message):
     if Config.HEROKU_API_KEY:
         try:
