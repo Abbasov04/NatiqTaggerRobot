@@ -27,7 +27,7 @@ async def ForceSub(bot: Client, event: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=event.from_user.id,
-                text=f"Üzr istəyirik, əzizim, məndən istifadə etmək qadağandır ☹️\nSahibimlə Əlaqə Saxla [HÜSEYN](https://t.me/{Config.OWNER_NAME}) deyin.",
+                text=f"Üzr istəyirik, əzizim, məndən istifadə etmək qadağandır ☹️\nSahibimlə Əlaqə Saxla [HÜSEYN](https://t.me/{Config.OWNER_NAME}) deyin.",)
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=event.message_id
@@ -59,5 +59,5 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"**Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.\nXəta:{err}\n\nƏyər Bu Xətanı Yenə Alırsınızsa Sahib [HÜSEYN](https://t.me/{Config.OWNER_NAME}) Əlaqə Saxla**..")
+        print(f"**Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.\nXəta:{err}\n\nƏyər Bu Xətanı Yenə Alırsınızsa Sahib [HÜSEYN](https://t.me/{Config.OWNER_NAME}) Əlaqə Saxla**..",)
         return 200
