@@ -12,7 +12,7 @@ class Config:
    BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
    MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001898638971"))
-   PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobot")
+   PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobotPlaylist")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001727904239"))
    COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
    
