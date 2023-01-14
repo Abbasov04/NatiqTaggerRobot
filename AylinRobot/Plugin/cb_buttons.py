@@ -75,7 +75,7 @@ async def cb_data(client, message):
                 user = await client.get_chat_member(int(Config.UPDATES_CHANNEL), message.message.chat.id)
                 if user.status == "kicked":
                     await message.message.edit(
-                        text=f"Üzr istəyirik, cənab, Məndən istifadə etmək qadağandır.Sahibim  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME}).",
+                        text=f"Üzr istəyirik, cənab, Məndən istifadə etmək qadağandır.Sahibim  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME}...)",)
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -98,7 +98,7 @@ async def cb_data(client, message):
                 return
             except Exception:
                 await message.message.edit(
-                    text=f"Nə isə səhv getdi.  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME}).",
+                    text=f"Nə isə səhv getdi.  [HÜSEYN] ilə əlaqə saxlayın(https://t.me/{Config.OWNER_NAME})...",)
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
