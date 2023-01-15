@@ -90,7 +90,6 @@ def song(client, message):
 **├───────────────**
 **├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
 **╰───────────────**
-   [☆☆☆]({Config.START_IMG})    
 '''
 
         secmul, dur, dur_arr = 1, 0, duration.split(':')
