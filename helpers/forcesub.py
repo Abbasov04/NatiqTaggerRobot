@@ -38,10 +38,10 @@ async def ForceSub(bot: Client, event: Message):
             return 200
     except UserNotParticipant:
     await bot.send_message(
+      ),
         return
     await message.reply_photo(
-        AylinIMG,
-        ),
+        AylinIMG,          
             chat_id=event.from_user.id,
             text="Salam {}\n{}\n{} -Un Əmrlərini Görmək Üçün Playlist Kanalına Qoşulun Və  Yenilə 🔄 Buttonuna Toxunun".format(event.from_user.mention, Config.START_IMG, Config.BOT_USERNAME),
             reply_markup=InlineKeyboardMarkup(
