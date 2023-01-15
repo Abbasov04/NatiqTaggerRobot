@@ -1,6 +1,6 @@
-from MusicAzBot import MusicAzBot as app
+from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
-from MusicAzBot.config import Config
+from AylinRobot.config import Config
 import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp, lyricsgenius
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
