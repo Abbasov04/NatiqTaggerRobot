@@ -1,5 +1,5 @@
-from MusicAzBot.config import Config
-from MusicAzBot import MusicAzBot as app
+from AylinRobot.config import Config
+from AylinRobot import AylinRobot as app
 import os, youtube_dl, requests, aiohttp, wget, time
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
