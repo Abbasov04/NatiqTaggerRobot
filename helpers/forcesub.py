@@ -27,7 +27,7 @@ async def ForceSub(bot: Client, event: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=event.from_user.id,
-                text=f"Üzr istəyirik, əzizim, məndən istifadə etmək qadağandır ☹️\nSahibimlə Əlaqə Saxla [HÜSEYN](https://t.me/{Config.OWNER_NAME}) deyin.",
+                text=f"Üzr istəyirik, əzizim, məndən istifadə etmək qadağandır ☹️\nSahibimlə Əlaqə Saxla. [HÜSEYN](https://t.me/{Config.OWNER_NAME})",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=event.message_id
@@ -38,7 +38,7 @@ async def ForceSub(bot: Client, event: Message):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=event.from_user.id,
-            text="<b>Salam</b> {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(event.from_user.mention),
+            text="{}<b>Salam</b> {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(event.from_user.mention, Config.BOT_USERNAME),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
