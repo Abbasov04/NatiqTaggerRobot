@@ -6,7 +6,6 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
-AylinIMG = f"{Config.START_IMG}"
 
 async def ForceSub(bot: Client, event: Message):
     """
@@ -28,7 +27,7 @@ async def ForceSub(bot: Client, event: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=event.from_user.id,
-                text=f"Üzr istəyirik, əzizim, məndən istifadə etmək qadağandır ☹️\nSahibimlə Əlaqə Saxla. [HÜSEYN](https://t.me/{Config.OWNER_NAME})",
+                text=f"Üzr istəyirik, əzizim, məndən istifadə etmək qadağandır ☹️\nSahibimlə Əlaqə Saxla [HÜSEYN](https://t.me/{Config.OWNER_NAME}).",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=event.message_id
@@ -37,11 +36,9 @@ async def ForceSub(bot: Client, event: Message):
         else:
             return 200
     except UserNotParticipant:
-          await message.reply_photo(
-        AylinIMG,      
         await bot.send_message(
             chat_id=event.from_user.id,
-            text="<b>{} Salam</b> {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(event.from_user.mention),
+            text="{},\n\n{}<b>Salam</b>\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(event.from_user.mention, Config.START_IMG),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
