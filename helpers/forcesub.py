@@ -37,8 +37,8 @@ async def ForceSub(bot: Client, event: Message):
         else:
             return 200
     except UserNotParticipant:
-        await message.reply_photo(
-        AylinIMG,
+    await message.reply_photo(
+    AylinIMG
         await bot.send_message(
             chat_id=event.from_user.id,
             text="Salam {}\nMənim Adım\n{} Mənim Playlist Kanalıma Qoşulmayınca Məndən İstifədı Edə Bilməzsən Playlist Kanalıma Qoşulduq Dan Sonra **Yenilə 🔄**  ".format(event.from_user.mention, Config.START_IMG, Config.BOT_USERNAME),
