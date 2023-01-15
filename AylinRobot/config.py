@@ -27,6 +27,6 @@ class Config:
    ETIRAF = os.environ.get("ETIRAF", "PgbTeamChannel")   
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/f6c186e3c581a223856c4.mp4") 
    
-   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/9bb9dd24fa66576f08ad1.jpg")   
+   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")   
    UPDATES_CHANNEL = int(os.environ.get("UPDATES_CHANNEL", "-1001727904239"))
    ARQ_API_KEY = os.getenv("ARQ_API_KEY", None)
