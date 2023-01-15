@@ -6,6 +6,7 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
+AylinIMG = f"{Config.START_IMG}"
 
 async def ForceSub(bot: Client, event: Message):
     """
@@ -37,8 +38,11 @@ async def ForceSub(bot: Client, event: Message):
             return 200
     except UserNotParticipant:
         await bot.send_message(
+        return
+    await message.reply_photo(
+        AylinIMG,          
             chat_id=event.from_user.id,
-            text="Salam {}\n{}\n{} -Un Əmrlərini Görmək Üçün Playlist Kanalına Qoşulun Və Yenilə 🔄 Buttonuna Toxunun".format(event.from_user.mention, [☆☆☆]({Config.START_IMG}), Config.BOT_USERNAME),
+            text="Salam {}\n{}\n{} -Un Əmrlərini Görmək Üçün Playlist Kanalına Qoşulun Və  Yenilə 🔄 Buttonuna Toxunun".format(event.from_user.mention, Config.START_IMG, Config.BOT_USERNAME),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
