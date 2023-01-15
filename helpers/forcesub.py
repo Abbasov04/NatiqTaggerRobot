@@ -37,7 +37,7 @@ async def ForceSub(bot: Client, event: Message):
         else:
             return 200
     except UserNotParticipant:
-        await bot.send_message(
+    await bot.send_message(
         return
     await message.reply_photo(
         AylinIMG,          
