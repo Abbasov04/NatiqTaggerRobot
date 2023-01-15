@@ -1,7 +1,7 @@
 import json
 import logging
 
-from AylinRobot import MusicAzBot as app
+from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 from helpers.filters import command
 from pyrogram import Client
