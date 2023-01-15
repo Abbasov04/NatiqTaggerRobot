@@ -13,7 +13,7 @@ from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
 
-from MusicAzBot import MusicAzBot as app
+from AylinRobot import AylinRobot as app
 from helpers.filters import command
 
 
