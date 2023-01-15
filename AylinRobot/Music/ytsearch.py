@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@app.on_message(command(["search", f"search@{Config.BOT_USERNAME}"]))
+@app.on_message(command(["search"]))
 async def ytsearch(_, message: Message):
   
     try:
