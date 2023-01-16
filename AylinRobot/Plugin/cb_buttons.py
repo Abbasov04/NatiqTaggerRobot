@@ -82,7 +82,7 @@ async def cb_data(client, message):
                     return
             except UserNotParticipant:
                 await message.message.edit(
-                    text=" {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(message.from_user.mention),
+                    text=" {} {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(message.from_user.mention),
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -105,6 +105,7 @@ async def cb_data(client, message):
                 return
         await message.message.edit(
             text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+           update.effective_message.reply_photo(Config.START_IMG,            
             disable_web_page_preview=True,
             reply_markup=Translation.START_BUTTONS,
         )
