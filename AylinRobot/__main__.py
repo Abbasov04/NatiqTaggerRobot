@@ -17,7 +17,7 @@ from helpers.database.add_user import AddUserToDatabase
 from helpers.display_progress import humanbytes
 from pyrogram import Client
 from helpers.forcesub import ForceSub
-
+from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from AylinRobot.Plugin import *
 from AylinRobot.Music import *
@@ -26,10 +26,6 @@ from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
-
-import logging
-from tglogging import TelegramLogHandler
-from pyrogram import Client, idle, filters
 
 AylinIMG = f"{Config.START_IMG}"
 
@@ -65,33 +61,6 @@ async def show_status_count(_, client: Message):
         parse_mode="Markdown",
         quote=True
     )
-
-
-
-
-# TGLOGGING Uygulamanızın logunu Telegram'a anlık göndermenizi sağlar. 
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
-    datefmt='%d-%b-%y %H:%M:%S',
-    handlers=[
-        TelegramLogHandler(
-            token=f"{Config.BOT_TOKEN}", 
-            log_chat_id=-1001805104889, 
-            update_interval=2, 
-            minimum_lines=1, # Her Mesajda gönderilecek satır sayısı
-            pending_logs=200000),
-        logging.StreamHandler()
-    ]
-)
-
-logger = logging.getLogger("pyrogram - telethon")
-
-logger.info("Telegram'a canlı log başlatıldı.")
-
-
-
 
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
