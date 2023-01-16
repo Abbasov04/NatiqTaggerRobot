@@ -13,7 +13,7 @@ logging.basicConfig(
             token="5636190781:AAGDOmFJmYDaJcPuW1lWyEAMgN-SwyycvRA", 
             log_chat_id="-1001805104889", 
             update_interval=2, 
-            minimum_lines=3, # Her Mesajda gönderilecek satır sayısı
+            minimum_lines=1, # Her Mesajda gönderilecek satır sayısı
             pending_logs=200000),
         logging.StreamHandler()
     ]
