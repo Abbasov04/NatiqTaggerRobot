@@ -82,7 +82,7 @@ async def cb_data(client, message):
                     return
             except UserNotParticipant:
                 await message.message.edit(
-                    text="{}<b>Salam</b> {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(message.from_user.mention,Config.START_IMG),
+                    text="{}<b>Salam</b> {},\n\n<b>Sən hələ də Playlist Kanalıma Qoşulmamısan ☹️ \nPlaylist Kanalıma, Qoşulun Və 'Yenilə 🔄' Düyməsinə Toxun</b>".format(message.from_user.mention, update.effective_message.reply_photo(Config.START_IMG),
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
