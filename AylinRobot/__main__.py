@@ -64,4 +64,6 @@ async def show_status_count(_, client: Message):
 
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
+app.stop()
+LOGGER.info(f"{Config.BOT_USERNAME} Dayandırıldı Sahib {Config.OWNER_NAME}")
 idle()
