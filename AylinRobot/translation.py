@@ -138,13 +138,12 @@ Bazada *2881* Şəhid adı mövcuddur
 
     START_BUTTONS = InlineKeyboardMarkup(
         [[
+        InlineKeyboardButton("Botlist", url=f"https://t.me/{Config.ETIRAFBOT}"),
+        ],[                  
         InlineKeyboardButton('💠 Kömək', callback_data='help'),
         ],[        
         InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true")
         ],[
-        InlineKeyboardButton("Etiraf Botu", url=f"https://t.me/{Config.ETIRAFBOT}"),
-        InlineKeyboardButton("Etiraf Kanalı", url=f"https://t.me/{Config.ETIRAF}"),
-        ],[        
         InlineKeyboardButton("Söhbət Qrupu"  , url=f"https://t.me/{Config.SUPPORT}"),
         InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
         ],[        
