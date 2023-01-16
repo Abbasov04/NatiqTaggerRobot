@@ -62,9 +62,6 @@ async def show_status_count(_, client: Message):
         quote=True
     )
 
-app.start()
-LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
-
 import logging
 from tglogging import TelegramLogHandler
 
