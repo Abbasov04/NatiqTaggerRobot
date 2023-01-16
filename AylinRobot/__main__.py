@@ -62,6 +62,8 @@ async def show_status_count(_, client: Message):
         quote=True
     )
 
+app.start()
+LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 
 import logging
 from tglogging import TelegramLogHandler
@@ -77,12 +79,12 @@ logging.basicConfig(
             token="5636190781:AAGDOmFJmYDaJcPuW1lWyEAMgN-SwyycvRA", 
             log_chat_id="-1001805104889", 
             update_interval=2, 
-            minimum_lines=1, # Her Mesajda gönderilecek satır sayısı
+            minimum_lines=3, # Her Mesajda gönderilecek satır sayısı
             pending_logs=200000),
         logging.StreamHandler()
     ]
 )
 
-logger = logging.getLogger("pyrogram")
+logger = logging.getLogger("pyrogram - telethon")
 
 logger.info("Telegram'a canlı log başlatıldı.")
