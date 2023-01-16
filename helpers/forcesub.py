@@ -38,7 +38,7 @@ async def ForceSub(bot: Client, event: Message):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=event.from_user.id,
-            text="Salam {}\n{}\n{} -Un Əmrlərini Görmək Üçün Playlist Kanalına Qoşulun Və  Yenilə 🔄 Buttonuna Toxunun".format(event.from_user.mention, update.effective_messaje.reply_photo(, Config.BOT_USERNAME),
+       parse_mode=markdown text=="Salam {}\n{}\n{} -Un Əmrlərini Görmək Üçün Playlist Kanalına Qoşulun Və  Yenilə 🔄 Buttonuna Toxunun".format(event.from_user.mention, update.effective_messaje.reply_photo(, Config.BOT_USERNAME),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
