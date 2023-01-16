@@ -27,6 +27,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 
+import logging
+from tglogging import TelegramLogHandler
+from pyrogram import Client, idle, filters
+
 AylinIMG = f"{Config.START_IMG}"
 
 @app.on_message(filters.command("start"))
@@ -64,8 +68,6 @@ async def show_status_count(_, client: Message):
 
 
 
-import logging
-from tglogging import TelegramLogHandler
 
 # TGLOGGING Uygulamanızın logunu Telegram'a anlık göndermenizi sağlar. 
 
