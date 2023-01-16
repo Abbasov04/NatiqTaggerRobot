@@ -99,7 +99,7 @@ def song(client, message):
         m.edit("📤 Yüklənir..")
         message.reply_audio(audio_file, caption=caption_for_private, quote=False, title=title, duration=dur, thumb=thumb_name, parse_mode="md", performer = f"{Config.PLAYLIST_NAME}", reply_markup=buttons['markup_for_private', 'add_to_group'])
         m.delete()
-        app.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=caption_for_logchannel, performer =(f"{Config.BOT_USERNAME}", title=title, duration=dur, thumb=thumb_name,
+        app.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=caption_for_logchannel, performer =f"{Config.BOT_USERNAME}", title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
         m.edit(f'**⚠️ Gözlənilməyən xəta yarandı.**\n**Xahiş edirəm xətanı {Config.OWNER_NAME} sahibimə xəbərdar et!**')
         print(e)
