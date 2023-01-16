@@ -11,7 +11,7 @@ logging.basicConfig(
     handlers=[
         TelegramLogHandler(
             token="5636190781:AAGDOmFJmYDaJcPuW1lWyEAMgN-SwyycvRA", 
-            log_chat_id="-1001805104889", 
+            log_chat_id=-1001805104889, 
             update_interval=2, 
             minimum_lines=1, # Her Mesajda gönderilecek satır sayısı
             pending_logs=200000),
