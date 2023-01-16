@@ -144,8 +144,8 @@ Bazada *2881* Şəhid adı mövcuddur
         InlineKeyboardButton('💠 Kömək', callback_data='help'),
         ],[        
         InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),
+        ],[                
         InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
-        ],[        
         InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
         ]]
     )
