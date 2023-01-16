@@ -62,11 +62,13 @@ async def show_status_count(_, client: Message):
         quote=True
     )
 
+
 import logging
 from tglogging import TelegramLogHandler
 
 # TGLOGGING Uygulamanızın logunu Telegram'a anlık göndermenizi sağlar. 
 
+logging.basicConfig(
     level=logging.INFO,
     format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
     datefmt='%d-%b-%y %H:%M:%S',
@@ -81,6 +83,6 @@ from tglogging import TelegramLogHandler
     ]
 )
 
-logger = logging.getLogger("pyrogram - telethon")
+logger = logging.getLogger("pyrogram")
 
 logger.info("Telegram'a canlı log başlatıldı.")
