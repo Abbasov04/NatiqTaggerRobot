@@ -67,7 +67,7 @@ from tglogging import TelegramLogHandler
 
 # TGLOGGING Uygulamanızın logunu Telegram'a anlık göndermenizi sağlar. 
 
-logging.basicConfig(
+logging.Config(
     level=logging.INFO,
     format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
     datefmt='%d-%b-%y %H:%M:%S',
