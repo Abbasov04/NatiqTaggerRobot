@@ -16,7 +16,6 @@ from helpers.broadcast import broadcast_handler
 from helpers.database.add_user import AddUserToDatabase
 from helpers.display_progress import humanbytes
 from pyrogram import Client
-from helpers.forcesub import ForceSub
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from AylinRobot.Plugin import *
