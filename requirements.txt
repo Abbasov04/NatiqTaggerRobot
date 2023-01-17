@@ -1,5 +1,6 @@
 pyrogram==1.4.16
 py-tgcalls
+tglogging
 sqlalchemy
 TgCrypto
 python-dotenv
