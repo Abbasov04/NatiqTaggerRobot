@@ -15,18 +15,9 @@ class Config:
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobotPlaylist")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001727904239"))
    COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
-   
-   
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "ce9e7011-283a-4e12-b089-1b2095c9b70e")
-
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
-
-   ETIRAFBOT = os.environ.get("ETIRAFBOT", "PGBEtirafBot")
-  
-   SUPPORT = os.environ.get("SUPPORT", "PGBTeamGroup")
-   ETIRAF = os.environ.get("ETIRAF", "PgbTeamChannel")   
+   BOTLIST = os.environ.get("BOTLIST", "RomotlarimBot")
+   SUPPORT = os.environ.get("SUPPORT", "Husidi")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/f6c186e3c581a223856c4.mp4") 
-   
-   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")   
-   UPDATES_CHANNEL = int(os.environ.get("UPDATES_CHANNEL", "-1001727904239"))
-   ARQ_API_KEY = os.getenv("ARQ_API_KEY", None)
+   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
