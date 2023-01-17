@@ -31,9 +31,6 @@ AylinIMG = f"{Config.START_IMG}"
 @app.on_message(filters.command("start"))
 async def start(client, message):
     await AddUserToDatabase(client, message)
-    FSub = await ForceSub(client, message)
-    if FSub == 400:
-        return
     await message.reply_photo(
         AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
