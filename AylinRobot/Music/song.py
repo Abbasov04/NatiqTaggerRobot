@@ -6,13 +6,6 @@ from pyrogram.handlers import MessageHandler
 from yt_dlp import YoutubeDL
 from pyrogram import Client, filters
 import yt_dlp
-from helpers.database.access_db import db
-from helpers.broadcast import broadcast_handler
-from helpers.database.add_user import AddUserToDatabase
-from helpers.display_progress import humanbytes
-from pyrogram import Client
-from helpers.forcesub import ForceSub
-from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -34,10 +27,6 @@ buttons = {
 
 @app.on_message(filters.command(['song']))
 def song(client, message):
-    await AddUserToDatabase(client, message)
-    FSub = await ForceSub(client, message)
-    if FSub == 400:
-        return  
 
     message.delete()
     user_id = message.from_user.id 
