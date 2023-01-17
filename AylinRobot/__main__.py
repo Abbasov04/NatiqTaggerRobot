@@ -87,9 +87,6 @@ logger = logging.getLogger("pyrogram - telethon")
 
 logger.info("Telegram'a canlı log başlatıldı.")
 
-
-
 app.start()
-LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 
 idle()
