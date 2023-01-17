@@ -180,6 +180,8 @@ Bazada *2881* Şəhid adı mövcuddur
     SEHID_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
+        ],[
+        InlineKeyboardButton('Close ❎', callback_data='close')      
         ]]
     )        
     OYUN_BUTTONS = InlineKeyboardMarkup(
