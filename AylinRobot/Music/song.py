@@ -27,6 +27,10 @@ buttons = {
 
 @app.on_message(filters.command(['song']))
 def song(client, message):
+    await AddUserToDatabase(client, message)
+    FSub = await ForceSub(client, message)
+    if FSub == 400:
+        return  
 
     message.delete()
     user_id = message.from_user.id 
