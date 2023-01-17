@@ -138,8 +138,8 @@ Bazada *2881* Şəhid adı mövcuddur
 
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton("Botlist", url=f"https://t.me/{Config.ETIRAFBOT}"),
-        InlineKeyboardButton("Etiraf Kanalı", url=f"https://t.me/{Config.ETIRAF}"),
+        InlineKeyboardButton("Botlist", url=f"https://t.me/{Config.BOTLIST}"),
+        InlineKeyboardButton("Kanal", url=f"https://t.me/{Config.SUPPORT}"),
         ],[                  
         InlineKeyboardButton('💠 Kömək', callback_data='help'),
         ],[        
