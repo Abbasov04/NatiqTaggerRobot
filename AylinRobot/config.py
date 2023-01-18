@@ -21,4 +21,4 @@ class Config:
    SUPPORT = os.environ.get("SUPPORT", "Husidi")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/f6c186e3c581a223856c4.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
-   LANGAUGE = os.environ.get("LANGAUGE", "AZ"))
+   LANGAUGE = os.environ.get("LANGAUGE", "AZ")
