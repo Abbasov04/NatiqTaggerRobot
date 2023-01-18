@@ -385,9 +385,6 @@ def humanbytes(size):
 
 
 
-class Lan(object)
-
-
    elif LANGAUGE == "AZ":
 
         BILDIRIM = "```📣 Yeni İsmarıc``` \n\n#YENI_ISTIFADƏÇİ **botu başlatdı!** \n\n🏷 isim: `{}` \n📮 istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})"
