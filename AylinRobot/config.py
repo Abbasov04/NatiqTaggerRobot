@@ -11,7 +11,7 @@ class Config:
    OWNER_NAME = os.environ.get("OWNER_NAME", "HuseynH") 
    BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
    MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-   LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001805104889"))
+   LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001898638971"))
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobotPlaylist")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001727904239"))
    COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
@@ -21,4 +21,3 @@ class Config:
    SUPPORT = os.environ.get("SUPPORT", "Husidi")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/f6c186e3c581a223856c4.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
-   LANGAUGE = os.environ.get("LANGAUGE", "AZ")
