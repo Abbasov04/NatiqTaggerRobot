@@ -240,7 +240,7 @@ async def delcmd_off(chat_id: int): # Grup için mesaj silme özeliğini kapatı
 ################# SAHİP KOMUTLARI #############
 
 # Verileri listeleme komutu
-@Client.on_message(filters.command("stats") & filters.user(OWNER_ID))
+@app.on_message(filters.command("stats") & filters.user(Config.OWNER_ID))
 async def botstats(bot: Client, message: Message):
     g4rip = await bot.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
     all_users = await db.get_all_users()
@@ -271,7 +271,7 @@ async def G4RIP(bot: Client, cmd: Message):
 
 
 # Broadcast komutu
-@app.on_message(filters.command("broadcast") & filters.user(OWNER_ID) & filters.reply)
+@app.on_message(filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
 async def broadcast_handler_open(_, m: Message):
     await main_broadcast_handler(m, db)
 
@@ -385,7 +385,7 @@ def humanbytes(size):
 
 
 
-
+class Lan(object)
 
     LANGAUGE == "AZ":
 
