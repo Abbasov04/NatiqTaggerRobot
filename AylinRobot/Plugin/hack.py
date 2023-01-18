@@ -120,7 +120,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
         else:
             await db.add_user(chat_id)
             chat = bot.get_chat(chat_id)
-            if str(chat_id).startswith("-1001805104889"):
+            if str(chat_id).startswith("-100"):
                 new_chat_id = str(chat_id)[4:]
             else:
                 new_chat_id = str(chat_id)[1:]
