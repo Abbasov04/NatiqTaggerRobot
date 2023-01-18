@@ -6,6 +6,7 @@
 # Lütfen GNU Affero Genel Kamu Lisansını okuyun;
 # < https://www.github.com/aylak-github/Broadcast/blob/master/LICENSE/ >
 # ================================================================
+from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 import datetime
