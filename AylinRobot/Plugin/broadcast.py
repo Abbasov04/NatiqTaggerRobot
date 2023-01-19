@@ -252,7 +252,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
                 new_chat_id = str(chat_id)[4:]
             else:
                 new_chat_id = str(chat_id)[1:]
-            await bot.send_message(Config.LOG_GROUP,AylinRobot.Plugin LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
+            await bot.send_message(Config.LOG_GROUP,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
 
     ban_status = await db.get_ban_status(chat_id) # Yasaklı Kullanıcı Kontrolü
     if ban_status["is_banned"]:
@@ -514,7 +514,7 @@ def humanbytes(size):
 
 
 ########### ÇOKLU DİL ##############
-LANGAUGE == "AZ"
+LANGAUGE == "AZ":
 
         BILDIRIM = "```📣 Yeni İsmarıc``` \n\n#YENI_ISTIFADƏÇİ **botu başlatdı!** \n\n🏷 isim: `{}` \n📮 istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})"
         GRUP_BILDIRIM = "```📣 Yeni İsmarıc``` \n\n#YENI_QRUP **botu başlatdı!** \n\n🏷 Qrupa əlavə edən: `{}` \n📮 Qrupa əlavə edən istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})\n Qrupun adı: {}\n Qrupun ID: {}\n Qrupun mesaj kinki( sadəcə açıq qruplar): [Buraya Toxun](https://t.me/c/{}/{})"
