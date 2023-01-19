@@ -262,7 +262,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
             if Config.SUPPORT:
                 msj = f"@{Config.SUPPORT}"
             else:
-                msj = f"[{LAN.SAHIBIME}](tg://user?id={OWNER_ID})"
+                msj = f"[{LAN.SAHIBIME}](tg://user?id={Config.OWNER_ID})"
             if cmd.chat.type == "private":
                 await cmd.reply_text(LAN.PRIVATE_BAN.format(msj), quote=True)
             else:
@@ -516,7 +516,7 @@ def humanbytes(size):
 ########### ÇOKLU DİL ##############
 LANGAUGE == "AZ"
 
-        BILDIRIM = "```📣 Yeni İsmarıc``` \n\n#YENI_ISTIFADƏÇİ **botu başlatdı!** \n\n🏷 isim: `{}` \n📮 istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})"
+        BILDIRIM = "```📣 Yeni İsmarıc``` \n\n#YENI_ISTIFADƏÇİ **botu başlatdı!** \n\n🏷 isim: ` \n📮 istifadəçi id: ` \n🧝🏻‍♂️ profil linki
         GRUP_BILDIRIM = "```📣 Yeni İsmarıc``` \n\n#YENI_QRUP **botu başlatdı!** \n\n🏷 Qrupa əlavə edən: `{}` \n📮 Qrupa əlavə edən istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})\n Qrupun adı: {}\n Qrupun ID: {}\n Qrupun mesaj kinki( sadəcə açıq qruplar): [Buraya Toxun](https://t.me/c/{}/{})"
         SAHIBIME = "sahibimə"
         PRIVATE_BAN = "Məyusam, əngəlləndiniz! Bunun bir xəta olduğunu düşünürsünüz isə {} yazın."
