@@ -42,12 +42,12 @@ def last_online(from_user: User) -> str:
     time = ""
     if from_user.is_bot:
         time += "🤖 Bot :("
-    elif from_user.status == 'recently':
+    elif from_user.status == 'bu yaxınlarda':
         time += "Recently"
-    elif from_user.status == 'within_week':
+    elif from_user.status == 'həftə ərzində':
         time += "Within the last week"
-    elif from_user.status == 'within_month':
-        time += "Within the last month"
+    elif from_user.status == 'ay ərzində':
+        time += "Son bir ay ərzində"
     elif from_user.status == 'long_time_ago':
         time += "A long time ago :("
     elif from_user.status == 'online':
