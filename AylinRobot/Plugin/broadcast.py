@@ -244,7 +244,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
     if not await db.is_user_exist(chat_id):
         if cmd.chat.type == "private":
             await db.add_user(chat_id)
-            await bot.send_message(LOG_GROUP,LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
+            await bot.send_message(Config.LOG_GROUP,LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
         else:
             await db.add_user(chat_id)
             chat = bot.get_chat(chat_id)
