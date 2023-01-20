@@ -20,13 +20,17 @@ class Translation(object):
 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
 
 🔮 Istifadə: /broadcast
-📃 Açıqlama: Yayım başladar.
+📃 Açıqlama: Şəxsidə Yayım Edər.
 
 🔮 Istifadə: /gcast
 📃 Açıqlama: Qruplarda yayım edər.
 
 🔮 Istifadə: /broadcast_pin
 📃 Açıqlama: Qruplarda yayım edər və pinləyər.
+
+🔮 Istifadə: /broadcastall
+📃 Açıqlama: Qrupa Və Şəxsiyə yayım edər.
+
 """
 
     MUSIC_TEXT = """
