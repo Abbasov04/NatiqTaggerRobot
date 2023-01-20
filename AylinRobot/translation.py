@@ -141,7 +141,7 @@ BILDIRIM = """
 GRUP_BILDIRIM = """
 ```📣 Yeni Bildirim``` \n\n#YENI_GRUP **botu başlattı!** \n\n🏷 Gruba Alan İsim: `{}` \n📮 Gruba Alan kullanıcı id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})\n Grubun Adı: {}\n Grubun ID: {}\n Grubun Mesaj Linki( sadece açık gruplar): [Buraya Tıkla](https://t.me/c/{}/{})"""
 SAHIBIME = 
-"""sahibime"""
+"sahibime"
 PRIVATE_BAN = 
 """Üzgünüm, yasaklandınız! Bunun bir hata olduğunu düşünyorsanız {} yazın."""
 GROUP_BAN = 
