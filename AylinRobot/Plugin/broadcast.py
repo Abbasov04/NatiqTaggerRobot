@@ -370,7 +370,7 @@ async def delcmd_off(chat_id: int): # Grup için mesaj silme özeliğini kapatı
 # Verileri listeleme komutu
 @app.on_message(filters.command("stats") & filters.user(Config.OWNER_ID))
 async def botstats(app: Client, message: Message):
-    g4rip = await bot.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
+    g4rip = await app.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
     all_users = await db.get_all_users()
     groups = 0
     pms = 0
@@ -446,7 +446,7 @@ async def ban(c: Client, m: Message):
                 traceback.print_exc()
                 ban_log_text += LAN.KULLANICI_BILGILENDIRMEME.format(traceback.format_exc())
         await db.ban_user(user_id, ban_duration, ban_reason)
-        await c.send_message(LOG_CHANNEL, ban_log_text)
+        await c.send_message(Config.LOG_CHANNEL, ban_log_text)
         await m.reply_text(ban_log_text, quote=True)
 
 
@@ -470,7 +470,7 @@ async def unban(c: Client, m: Message):
                 traceback.print_exc()
                 unban_log_text += LAN.KULLANICI_BILGILENDIRMEME.format(traceback.format_exc())
         await db.remove_ban(user_id)
-        await c.send_message(LOG_CHANNEL, unban_log_text)
+        await c.send_message(Config.LOG_CHANNEL, unban_log_text)
         await m.reply_text(unban_log_text, quote=True)
 
 
