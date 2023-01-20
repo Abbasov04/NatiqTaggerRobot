@@ -162,10 +162,6 @@ UNBANNED_USER = "🆓 **Kullanıcının Yasağı Kaldırıldı !** \nTarafından
 USER_UNBAN_NOTIFY = "🎊 Müjde! Yasağınız kaldırıldı!"
 BLOCKS = "🆔 **Kullanıcı ID**: `{}`\n⏱ **Süre**: `{}`\n🗓 **Yasaklanan Tarih**: `{}`\n💬 **Sebep**: `{}`\n\n"
 TOTAL_BLOCK = "🚷 **Toplam Yasaklanan:** `{}`\n\n{}"
-
-
-
-
     START_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
