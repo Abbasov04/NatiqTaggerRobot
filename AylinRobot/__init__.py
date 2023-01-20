@@ -24,13 +24,13 @@ app2 = Client(
 )
 
 
-app.storage.SESSION_STRING_FORMAT = ">B?256sQ?"
+AylinRobot.storage.SESSION_STRING_FORMAT = ">B?256sQ?"
 
-app2.storage.SESSION_STRING_FORMAT = ">B?256sQ?"
+AylinRobot2.storage.SESSION_STRING_FORMAT = ">B?256sQ?"
 
 if __name__ == "__main__":
-    app.start()
-    app2.start()
+    AylinRobot.start()
+    AylinRobot2.start()
     uname = app.get_me().username
     try:
         app.send_message(Config.LOG_GROUP, f"**@{Config.BOT_USERNAME} başarıyla başlatıldı! Hatalar, eksikler, öneriler ve geri kalan her şey için destek grubuna gelin!**\n\n__By @BasicBots - @G4rip__", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Destek Grubu", url="https://t.me/RepoHaneX")]]))
