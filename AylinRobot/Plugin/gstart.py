@@ -6,16 +6,53 @@ from AylinRobot.config import Config
 from pyrogram import Client, filters
 
 
-@app.on_message(filters.new_chat_members, group=1)
-async def hg(bot: Client, msg: Message):
-    for new_user in msg.new_chat_members:
-        if str(new_user.id) == str(Config.BOT_USERNAME):
-            await msg.reply(
-                f'''`Salam` {msg.from_user.mention} `məni` {msg.chat.title} `qrupuna əlavə etdiyiniz üçün təşəkkürlər🥰`**''')
+import os
+import shutil
+from sys import version as pyver
 
-        elif str(new_user.id) == str(Config.OWNER_ID):
-            await msg.reply('Sahibim indi qrupa qoşuldu😍\nxoş gəldin aramıza Sahibim, Necəsən?🥰')
+from helpers.database.functions import start_restart_stage
+from Music.MusicUtilities.database.queue import get_active_chats, remove_active_chat
+from pyrogram import filters
 
-            buttons = [[InlineKeyboardButton("➕ Qrupa Əlavə Et ➕",url="http://t.me/Rahid_Tag_Bot?startgroup=a"),
-                    InlineKeyboardButton("🙇🏻 Sahib", url="https://t.me/Rahid_7"),
-                    InlineKeyboardButton("🔮 Rəsmi", url="https://t.me/Rahid_44")]]
+
+@app.on_message(filters.command("restart") & filters.user(Config.OWNER_ID))
+async def theme_func(_, message):
+    A = "downloads"
+    B = "raw_files"
+    shutil.rmtree(A)
+    shutil.rmtree(B)
+    os.mkdir(A)
+    os.mkdir(B)
+    served_chats = []
+    try:
+        chats = await get_active_chats()
+        for chat in chats:
+            served_chats.append(int(chat["chat_id"]))
+    except Exception:
+        pass
+    for x in served_chats:
+        try:
+            await app.send_message(
+                x,
+                "Music has just restarted herself. Sorry for the issues.\n\nStart playing after 10-15 seconds again.",
+            )
+        except Exception:
+            pass
+    served_chatss = []
+    try:
+        chats = await get_active_chats()
+        for chat in chats:
+            served_chatss.append(int(chat["chat_id"]))
+    except Exception:
+        pass
+    for served_chat in served_chatss:
+        try:
+            await remove_active_chat(served_chat)
+        except Exception as e:
+            await message.reply_text(f"{e}")
+    x = await message.reply_text(f"__Restarting Music!__")
+    await start_restart_stage(x.chat.id, x.message_id)
+    os.execvp(
+        f"python{str(pyver.split(' ')[0])[:3]}",
+        [f"python{str(pyver.split(' ')[0])[:3]}", "-m", "Music"],
+    )
