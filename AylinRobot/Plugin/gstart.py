@@ -15,7 +15,7 @@ from helpers.database.queue import get_active_chats, remove_active_chat
 from pyrogram import filters
 
 
-@app.on_message(filters.command("restart") & filters.user(Config.OWNER_ID))
+@app.on_message(filters.command("restart")
 async def theme_func(_, message):
     A = "downloads"
     B = "raw_files"
