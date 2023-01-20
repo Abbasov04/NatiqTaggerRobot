@@ -11,7 +11,7 @@ import shutil
 from sys import version as pyver
 
 from helpers.database.functions import start_restart_stage
-from Music.MusicUtilities.database.queue import get_active_chats, remove_active_chat
+from helpers.database.queue import get_active_chats, remove_active_chat
 from pyrogram import filters
 
 
