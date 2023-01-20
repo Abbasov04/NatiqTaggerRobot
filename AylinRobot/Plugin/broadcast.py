@@ -10,6 +10,7 @@ from helpers.filters import command
 from pyrogram import Client as USER
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
 
+     if Config.LANGAUGE == "AZ":
 
 chat_watcher_group = 10
 
