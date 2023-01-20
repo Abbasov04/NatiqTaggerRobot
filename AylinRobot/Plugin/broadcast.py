@@ -514,6 +514,3 @@ def humanbytes(size):
 
 
 ########### ÇOKLU DİL ##############
-class LAN(object):
-
-    if Config.LANGAUGE == "AZ":
