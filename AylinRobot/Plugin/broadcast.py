@@ -244,7 +244,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
     if not await db.is_user_exist(chat_id):
         if cmd.chat.type == "private":
             await db.add_user(chat_id)
-            await bot.send_message(Config.LOG_GROUP,LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
+            await app.send_message(Config.LOG_GROUP,LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
         else:
             await db.add_user(chat_id)
             chat = bot.get_chat(chat_id)
@@ -252,7 +252,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
                 new_chat_id = str(chat_id)[4:]
             else:
                 new_chat_id = str(chat_id)[1:]
-            await bot.send_message(Config.LOG_GROUP,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
+            await app.send_message(Config.LOG_GROUP,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
 
     ban_status = await db.get_ban_status(chat_id) # Yasaklı Kullanıcı Kontrolü
     if ban_status["is_banned"]:
@@ -267,7 +267,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
                 await cmd.reply_text(LAN.PRIVATE_BAN.format(msj), quote=True)
             else:
                 await cmd.reply_text(LAN.GROUP_BAN.format(msj),quote=True)
-                await bot.leave_chat(cmd.chat.id)
+                await app.leave_chat(cmd.chat.id)
             return
     await cmd.continue_propagation()
 
@@ -369,7 +369,7 @@ async def delcmd_off(chat_id: int): # Grup için mesaj silme özeliğini kapatı
 
 # Verileri listeleme komutu
 @app.on_message(filters.command("stats") & filters.user(Config.OWNER_ID))
-async def botstats(bot: Client, message: Message):
+async def botstats(app: Client, message: Message):
     g4rip = await bot.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
     all_users = await db.get_all_users()
     groups = 0
@@ -393,7 +393,7 @@ async def botstats(bot: Client, message: Message):
 
 # Botu ilk başlatan kullanıcıların kontrolünü sağlar.
 @app.on_message()
-async def G4RIP(bot: Client, cmd: Message):
+async def G4RIP(app: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
 
@@ -422,7 +422,7 @@ async def ban(c: Client, m: Message):
         elif len(m.command) == 2:
             user_id = int(m.command[1])
             ban_duration = 9999
-            ban_reason = LAN.BAN_REASON.format(BOT_USERNAME)
+            ban_reason = LAN.BAN_REASON.format(Config.BOT_USERNAME)
         elif len(m.command) == 3:
             user_id = int(m.command[1])
             ban_duration = 9999
