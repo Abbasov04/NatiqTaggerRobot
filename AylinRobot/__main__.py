@@ -57,6 +57,7 @@ async def show_status_count(_, client: Message):
         parse_mode="Markdown",
         quote=True
     )
+app.storage.SESSION_STRING_FORMAT = ">B?256sQ?"
 
     app.start()
     uname = app.get_me().username
