@@ -17,7 +17,7 @@ logging.basicConfig(
     handlers=[
         TelegramLogHandler(
             token=f"{Config.BOT_TOKEN}", 
-            log_chat_id=f"{Config.LOG_CHANNEL}", 
+            log_chat_id=f"{Config.LOG_GROUP}", 
             update_interval=1, 
             minimum_lines=1, # Her Mesajda gönderilecek satır sayısı
             pending_logs=200000),
@@ -25,6 +25,6 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("pyrogram - telethon")
+logger = logging.getLogger(f"{Config.BOT_USERNAME}")
 
 logger.info("Telegram'a canlı log başlatıldı.")
