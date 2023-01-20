@@ -58,6 +58,5 @@ async def show_status_count(_, client: Message):
         quote=True
     )
 
-app.start()
 
 idle()
