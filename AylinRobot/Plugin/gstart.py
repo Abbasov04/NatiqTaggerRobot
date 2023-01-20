@@ -6,14 +6,16 @@ from AylinRobot.config import Config
 from pyrogram import Client, filters
 
 
-@Client.on_message(filters.new_chat_members)
-async def new_chat(c: Client, m: Message):
-    ass_uname = (await user.get_me()).username
-    bot_id = (await c.get_me()).id
-    for member in m.new_chat_members:
-        if member.id == bot_id:
-            return await m.reply(
-                "❤️ Thanks for adding me to the **Group** !\n\n")
+@app.on_message(filters.new_chat_members, group=1)
+async def hg(bot: Client, msg: Message):
+    for new_user in msg.new_chat_members:
+        if str(new_user.id) == str(Config.BOT_USERNAME):
+            await msg.reply(
+                f'''`Salam` {msg.from_user.mention} `məni` {msg.chat.title} `qrupuna əlavə etdiyiniz üçün təşəkkürlər🥰`**''')
 
         elif str(new_user.id) == str(Config.OWNER_ID):
-            await msg.reply('İşte bu gelen benim sahibim.')
+            await msg.reply('Sahibim indi qrupa qoşuldu😍\nxoş gəldin aramıza Sahibim, Necəsən?🥰')
+
+            buttons = [[InlineKeyboardButton("➕ Qrupa Əlavə Et ➕",url="http://t.me/Rahid_Tag_Bot?startgroup=a"),
+                    InlineKeyboardButton("🙇🏻 Sahib", url="https://t.me/Rahid_7"),
+                    InlineKeyboardButton("🔮 Rəsmi", url="https://t.me/Rahid_44")]]
