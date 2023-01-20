@@ -166,7 +166,8 @@ TOTAL_BLOCK = "🚷 **Toplam Yasaklanan:** `{}`\n\n{}"
 
 
 
-    START_BUTTONS = InlineKeyboardMarkup(
+    START_BUTTONS = InlineKeyboardMarkup
+    (
         [[
         InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
         InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
