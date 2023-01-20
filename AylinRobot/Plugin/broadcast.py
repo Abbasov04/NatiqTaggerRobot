@@ -1,14 +1,21 @@
-import asyncio
-
-from pyrogram import filters
-from pyrogram.errors import FloodWait
+import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from AylinRobot.translation import *
-
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
 from pyrogram import Client as USER
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
+import motor.motor_asyncio
+from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+from pyrogram.types import Message
+from pyrogram import Client, filters, __version__
+from pyrogram.errors import (
+    FloodWait,
+    InputUserDeactivated,
+    PeerIdInvalid,
+    UserIsBlocked,
+)
+
 
 
 chat_watcher_group = 10
@@ -115,55 +122,8 @@ async def broadcast_message(_, message):
     await m.edit(f"✈️ **Broadcasted message in {sent} chats.**")
     
     
+ ##Broadcastall İkili Yayım Edər   
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # @G4rip - < https://t.me/G4rip >
-# Copyright (C) 2022
-# Tüm hakları saklıdır.
-#
-# Bu dosya, < https://github.com/aylak-github/Broadcast > parçasıdır.
-# Lütfen GNU Affero Genel Kamu Lisansını okuyun;
-# < https://www.github.com/aylak-github/Broadcast/blob/master/LICENSE/ >
-# ================================================================
-
-import datetime
-import motor.motor_asyncio
-from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-import asyncio
-import datetime
-import shutil, psutil, traceback, os
-import random
-import string
-import time
-import traceback
-import aiofiles
-from pyrogram import Client, filters, __version__
-from pyrogram.types import Message
-from pyrogram.errors import (
-    FloodWait,
-    InputUserDeactivated,
-    PeerIdInvalid,
-    UserIsBlocked,
-)
-
-
-############## DEĞİŞKENLER ##############
-
-
-
-################### VERİTABANI VERİ GİRİŞ ÇIKIŞI #########################
 class Database: 
     def __init__(self, uri, database_name):
         self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)
