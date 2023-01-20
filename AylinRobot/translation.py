@@ -1,5 +1,6 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot.config import Config
+from pyrogram.types import Message
 
 class Translation(object):
 
