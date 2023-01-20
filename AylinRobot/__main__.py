@@ -59,7 +59,7 @@ async def show_status_count(_, client: Message):
     )
 app.storage.SESSION_STRING_FORMAT = ">B?256sQ?"
 
-    app.start()
+app.start()
     uname = app.get_me().username
     try:
         app.send_message(Config.LOG_GROUP, f"**@{Config.BOT_USERNAME} başarıyla başlatıldı! Hatalar, eksikler, öneriler ve geri kalan her şey için destek grubuna gelin!**\n\n__By @BasicBots - @G4rip__", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Destek Grubu", url="https://t.me/RepoHaneX")]]))
