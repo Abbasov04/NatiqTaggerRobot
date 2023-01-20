@@ -18,7 +18,7 @@ logging.basicConfig(
         TelegramLogHandler(
             token=f"{Config.BOT_TOKEN}", 
             Config.LOG_GROUP=f"{Config.LOG_GROUP}", 
-            update_interval=2, 
+            update_interval=27, 
             minimum_lines=1000, # Her Mesajda gönderilecek satır sayısı
             pending_logs=200000),
         logging.StreamHandler()
