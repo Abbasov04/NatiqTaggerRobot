@@ -18,7 +18,7 @@ class Config:
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "ce9e7011-283a-4e12-b089-1b2095c9b70e")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
    BOTLIST = os.environ.get("BOTLIST", "RomotlarimBot")
-   SUPPORT = os.environ.get("SUPPORT", "Husidi")
+   SUPPORT = os.environ.get("SUPPORT", "HuseynH")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/f6c186e3c581a223856c4.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
    LOG_GROUP = int(os.environ.get("LOG_CHANNEL", "-1001867704784"))
