@@ -16,7 +16,7 @@ logging.basicConfig(
     datefmt='%d-%b-%y %H:%M:%S',
     handlers=[
         TelegramLogHandler(
-            token=f"{Config.BOT_TIKEN}", 
+            token=f"{Config.BOT_TOKEN}", 
             log_chat_id=f"{Config.LOG_GROUP}", 
             update_interval=2, 
             minimum_lines=1, # Her Mesajda gönderilecek satır sayısı
