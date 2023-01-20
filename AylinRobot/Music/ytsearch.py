@@ -25,7 +25,7 @@ async def ytsearch(_, message: Message):
   
     try:
         if len(message.command) < 2:
-            await message.reply_text("/axtarış **Ah Canım Sevgilim!**")
+            await message.reply_text("/search **Ah Canım Sevgilim!**")
             return
         query = message.text.split(None, 1)[1]
         m = await message.reply_text("🔎 **Axtarılır...**")
