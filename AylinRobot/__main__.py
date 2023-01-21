@@ -54,7 +54,7 @@ async def new_chat(c: Client, m: Message):
                     [
                         [
                             InlineKeyboardButton("📣 Channel", url=f"https://t.me/{Config.SUPPORT}"),
-                            InlineKeyboardButton("💭 Support", url=f"https://t.me/{Config.BOT_LIST}")
+                            InlineKeyboardButton("💭 Support", url=f"https://t.me/{Config.BOTLIST}")
                         ],
                         [
                             InlineKeyboardButton("👤 Assistant", url=f"https://t.me/{Config.OWNER_NAME}")
