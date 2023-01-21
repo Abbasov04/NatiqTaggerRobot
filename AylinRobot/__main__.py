@@ -42,8 +42,8 @@ async def start(client, message):
     await AddUserToDatabase(client, message)
     await message.reply_photo(
         AylinIMG,
-        caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
-        reply_markup=Translation.START_BUTTONS
+        caption=Translation.GROUPSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+        reply_markup=Translation.HELP_BUTTONS
     )    
     
 @app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
