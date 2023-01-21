@@ -47,7 +47,7 @@ async def _broadcast(_, client: Message):
 async def ghelp(_, message: Message):
     await message.reply_photo(
         AylinIMG,
-        caption=Translation.GROUPSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+        caption=Translation.KOMEK_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
         reply_markup=Translation.KOMEK_BUTTONS
     )
 
