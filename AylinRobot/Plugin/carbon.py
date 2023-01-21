@@ -33,8 +33,8 @@ async def make_carbon(code):
 
 @app.on_message(filters.command("carbon"))
 async def carbon_func(bot: app, msg: Message):
-    m = await msg.reply_text("Dəstəklənən media faylına cavab verin")  
-    await msg.m.edit("`Hazırlanır`")
+  await msg.m.reply_text("Dəstəklənən media faylına cavab verin")  
+    m = await msg.reply_text("`Hazırlanır`")
     carbon = await make_carbon(msg.reply_to_message.text)
     await m.edit("`Göndərilir`")
     await bot.send_photo(msg.chat.id, photo=carbon)
