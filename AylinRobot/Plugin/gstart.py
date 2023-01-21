@@ -1,71 +1,108 @@
-from telegram import ParseMode
-from telegram.ext import (
-    Updater,
-    CommandHandler,
-    MessageHandler,
-    Filters
-)
+# Copyright 2021 TerminalWarlord under the terms of the MIT
+# license found at https://github.com/TerminalWarlord/TikTok-Downloader-Bot/blob/master/LICENSE
+# Encoding = 'utf-8'
+# Fork and Deploy, do not modify this repo and claim it yours
+# For collaboration mail me at dev.jaybee@gmail.com
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, InlineQueryResultArticle, InputTextMessageContent
+import shutil
 import requests
+import json
 import os
-import logging
+import re
+from bs4 import BeautifulSoup as bs
+import time
+from datetime import timedelta
+import math
+import base64
+from helpers.progress_bar import progress, TimeFormatter, humanbytes
+from dotenv import load_dotenv
+from AylinRobot import Config
+from AylinRobot import AylinRobot as app
+from AylinRobot import LOGGER
 
-# ◇─────────────────────────────────────────────────────────────────────────────────────◇
+load_dotenv()
+bot_token = f'{Config.BOT_TOKEN}'
+workers = '4'
+api = f'{Config.API_ID}'
+hash = f'{Config.API_HASH}'
+chnnl = f'{Config.LOG_CHANNEL}'
+BOT_URL = f'{Config.BOT_USERNAME}'
 
-TikTok_Link_Types= ['https://m.tiktok.com','https://vt.tiktok.com','https://tiktok.com','https://www.tiktok.com']
-
-# ParseMode Type For All Messages
-_ParseMode=ParseMode.MARKDOWN
 
 
-# ◇─────────────────────────────────────────────────────────────────────────────────────◇
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-# ◇─────────────────────────────────────────────────────────────────────────────────────◇
-# Download Task
-def Download_Video(Link,update, context):
-    message=update.message
-    req=None
-    no_watermark=None
-    watermark=None
+@app.on_message((filters.regex("http://")|filters.regex("https://")) & (filters.regex('tiktok')|filters.regex('douyin')))
+def tiktok_dl(client, message):
+    a = app.send_message(chat_id=message.chat.id,
+                         text='__Downloading File to the Server__',
+                         parse_mode='md')
+    link = re.findall(r'\bhttps?://.*[(tiktok|douyin)]\S+', message.text)[0]
+    link = link.split("?")[0]
 
-    status_msg=message.reply_text('🚀 DOᗯᑎᒪOᗩᗪIᑎG Video TO Sᕮᖇᐯᕮᖇ ....')
-    status_sticker=message.reply_sticker('CAACAgUAAxkBAAED9jhiDqYeGjENlCjftByz0au6n4YAASEAAnUEAALpa8lXL9cvxeTK-2AjBA')
 
-    # Getting Download Links Using API
+
+    
+    params = {
+      "link": link
+    }
+    headers = {
+      'x-rapidapi-host': "tiktok-info.p.rapidapi.com",
+      'x-rapidapi-key': "f9d65af755msh3c8cac23b52a5eep108a33jsnbf7de971bb72"
+    }
+    
+    ### Get your Free TikTok API from https://rapidapi.com/TerminalWarlord/api/tiktok-info/
+    #Using the default one can stop working any moment 
+    
+    api = f"https://tiktok-info.p.rapidapi.com/dl/"
+    r = requests.get(api, params=params, headers=headers).json()['videoLinks']['download']
+    directory = str(round(time.time()))
+    filename = str(int(time.time()))+'.mp4'
+    size = int(requests.head(r).headers['Content-length'])
+    total_size = "{:.2f}".format(int(size) / 1048576)
     try:
-       req=requests.get(API+Link).json()
-       no_watermark=req['no_watermark']
-       watermark= req['watermark']
-       print('Download Links Generated \n\n\n'+str(req)+'\n\n\n')
+        os.mkdir(directory)
     except:
-        print('Download Links Generate Error !!!')
-        status_msg.edit_text('⁉️ TikTok Downloader API Error !!! Report To Developer : @SL_Developers')
-        status_sticker.delete()
-        return
-    
-    caption_text="""◇───────────────◇
+        pass
+    with requests.get(r, timeout=(50, 10000), stream=True) as r:
+        r.raise_for_status()
+        with open(f'./{directory}/{filename}', 'wb') as f:
+            chunk_size = 1048576
+            dl = 0
+            show = 1
+            for chunk in r.iter_content(chunk_size=chunk_size):
+                f.write(chunk)
+                dl = dl + chunk_size
+                percent = round(dl * 100 / size)
+                if percent > 100:
+                    percent = 100
+                if show == 1:
+                    try:
+                        a.edit(f'__**URL :**__ __{message.text}__\n'
+                               f'__**Total Size :**__ __{total_size} MB__\n'
+                               f'__**Downloaded :**__ __{percent}%__\n',
+                               disable_web_preview=False)
+                    except:
+                        pass
+                    if percent == 100:
+                        show = 0
 
-✅ Successfully Downloaded {} Video 🔰
-
-🔰 Powerd by : [🏖 TikTok Download API 🏖](https://github.com/Single-Developers/API/blob/main/tiktok/Note.md)
-[🔥 Single Developers </> ](https://t.me/SingleDevelopers) Corporation ©️
-
-◇───────────────◇"""
-    
-    # Uploading Downloaded Videos to Telegram
-    print('Uploading Videos')
-    status_msg.edit_text('☘️ 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖....')
-    message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('No Watermark'),parse_mode=_ParseMode)
-    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('Watermark'),parse_mode=_ParseMode)
-
-    # Task Done ! So, Deleteing Status Messages
-    status_msg.delete()
-    status_sticker.delete()
-
-# ◇─────────────────────────────────────────────────────────────────────────────────────◇
-
-def incoming_message_action(update, context):
-    message=update.message
-    if any(word in str(message.text) for word in TikTok_Link_Types):
-        context.dispatcher.run_async(Download_Video,str(message.text),update,context)
+        a.edit(f'__Downloaded to the server!\n'
+               f'Uploading to Telegram Now ⏳__')
+        start = time.time()
+        title = filename
+        app.send_document(chat_id=message.chat.id,
+                          document=f"./{directory}/{filename}",
+                          caption=f"**File :** __{filename}__\n"
+                          f"**Size :** __{total_size} MB__\n\n"
+                          f"__Uploaded by @{BOT_URL}__",
+                          file_name=f"{directory}",
+                          parse_mode='md',
+                          progress=progress,
+                          progress_args=(a, start, title))
+        a.delete()
+        try:
+            shutil.rmtree(directory)
+        except:
+            pass
