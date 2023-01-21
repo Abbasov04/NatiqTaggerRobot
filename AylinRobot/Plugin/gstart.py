@@ -69,35 +69,3 @@ def incoming_message_action(update, context):
     message=update.message
     if any(word in str(message.text) for word in TikTok_Link_Types):
         context.dispatcher.run_async(Download_Video,str(message.text),update,context)
-
-# ◇─────────────────────────────────────────────────────────────────────────────────────◇
-
-def main() -> None:
-    """Run the bot."""
-  
-    updater = Updater(BOT_TOKEN)
-
-    dispatcher = updater.dispatcher
-
-
-    # Commands Listning
-    dispatcher.add_handler(CommandHandler('start', start_handler, run_async=True))
-    dispatcher.add_handler(CommandHandler('about', about_handler, run_async=True))
-
-    # Message Incoming Action
-    dispatcher.add_handler( MessageHandler(Filters.text, incoming_message_action,run_async=True))
-    updater.start_polling()
-    updater.idle()
-
-
-if __name__ == '__main__':
-    main() # 😁 Start
-
-# ◇─────────────────────────────────────────────────────────────────────────────────────◇
-
-# Example For https://github.com/Single-Developers/API/blob/main/tiktok/Note.md
-
-# https://t.me/SL_Developers
-# https://t.me/SingleDevelopers
-
-# ◇─────────────────────────────────────────────────────────────────────────────────────◇
