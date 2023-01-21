@@ -43,7 +43,6 @@ async def _broadcast(_, client: Message):
 
 @app.on_message(filters.new_chat_members)
 async def new_chat(c: Client, m: Message):
-    ass_uname = (await user.get_me()).username
     bot_id = (await c.get_me()).id
     for member in m.new_chat_members:
         if member.id == bot_id:
