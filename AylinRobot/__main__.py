@@ -38,17 +38,6 @@ async def start(client, message):
     )
     
     
-@app.on_message(filters.private & filters.incoming & filters.command(['help']))
-async def start(client, message):
-    await AddUserToDatabase(client, message)
-    await message.reply_photo(
-        AylinIMG,
-        caption=Translation.HELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
-        reply_markup=Translation.HELP_BUTTONS
-    )    
-    
-    
-    
 @app.on_message(filters.command(["help"]) & ~filters.private & ~filters.channel)
 async def start(client, message):
     await AddUserToDatabase(client, message)
@@ -57,8 +46,6 @@ async def start(client, message):
         caption=Translation.GSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
         reply_markup=Translation.GSTART_BUTTONS
     )    
-    
-    
     
     
     
