@@ -14,12 +14,6 @@ class Translation(object):
 
 """
 
-    GROUPHELP_TEXT = """
-**Salam {} {} - Un Əmrlərini Almaq İstəyirsən SƏ Buttona Toxun 🥰**
-
-"""
-
-
     SAHIB_TEXT = """
 
 🔮 Istifadə: /stats
@@ -212,21 +206,3 @@ Bazada *2881* Şəhid adı mövcuddur
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     ) 
-    
-    
-    
-    
-    
-    
-    
-    GROUPHELP_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
-        InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
-        ],[        
-        InlineKeyboardButton('💠 Kömək',url=f"https://t.me/{Config.BOT_USERNAME}?start=help"),
-        ],[                
-        InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
-        InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
-        ]]
-    )    
