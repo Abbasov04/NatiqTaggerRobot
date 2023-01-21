@@ -14,13 +14,13 @@ class Translation(object):
 
 """
 
-GROUPSTART_TEXT = """
+    GROUPSTART_TEXT = """
 {} Salam {} - Un Əmrlərini Görmək Üçün
 
 """
 
 
-   KOMEK_TEXT = """
+    KOMEK_TEXT = """
 Aşağıdakı buttona
 
 """
