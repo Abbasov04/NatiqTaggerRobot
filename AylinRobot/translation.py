@@ -14,6 +14,12 @@ class Translation(object):
 
 """
 
+    GROUPSTART_TEXT = """
+{} Robot Super İşləyir    
+    
+"""
+
+
     SAHIB_TEXT = """
 
 🔮 Istifadə: /status
