@@ -41,3 +41,4 @@ pymongo[srv]
 bs4
 Heroku3
 telethon
+telegram
