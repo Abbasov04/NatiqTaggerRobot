@@ -26,7 +26,7 @@ def tiktok_dl(client, message):
     a = app.send_message(chat_id=message.chat.id,
                          text='__Downloading File to the Server__',
                          parse_mode='md')
-    link = re.findall(r'\bhttps?://.*[(tiktok|douyin)]\S+', message.text)[0]
+    link = re.findall(r'https?://.*[(tiktok|douyin)]\S+', message.text)[0]
     link = link.split("?")[0]
 
 
