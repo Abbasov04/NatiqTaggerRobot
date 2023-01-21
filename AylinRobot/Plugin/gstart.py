@@ -6,7 +6,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, InlineQueryResultArticle, InputTextMessageContent
 import shutil
-import requests
 import os
 import re
 from bs4 import BeautifulSoup as bs
