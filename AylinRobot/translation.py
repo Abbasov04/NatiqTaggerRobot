@@ -14,6 +14,16 @@ class Translation(object):
 
 """
 
+    GSTART_TEXT = """
+**{} 🙈 Əmrlərim Bunlardır  Buttonlara toxunaraq istədiyiniz əmr haqqında məlumat ala bilərsiniz**
+
+"""
+
+
+
+
+
+
     SAHIB_TEXT = """
 
 🔮 Istifadə: /stats
@@ -209,3 +219,20 @@ Bazada *2881* Şəhid adı mövcuddur
         ]]
     ) 
     
+    
+    
+    
+    
+    
+    
+    GSTART_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
+        InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
+        ],[        
+        InlineKeyboardButton('Kömək', url=f"https://t.me/{Config.BOT_USERNAME}?start"),
+        ],[                
+        InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
+        InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
+        ]]
+    )    
