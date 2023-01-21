@@ -41,6 +41,33 @@ async def _broadcast(_, client: Message):
     await broadcast_handler(client)
 
 
+@app.on_message(filters.new_chat_members)
+async def new_chat(c: Client, m: Message):
+    ass_uname = (await user.get_me()).username
+    bot_id = (await c.get_me()).id
+    for member in m.new_chat_members:
+        if member.id == bot_id:
+            return await m.reply(
+                "❤️ Thanks for adding me to the **Group** !\n\n"
+                "Appoint me as administrator in the **Group**, otherwise I will not be able to work properly, and don't forget to type `/userbotjoin` for invite the assistant.\n\n"
+                "Once done, then type `/reload`",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("📣 Channel", url=f"https://t.me/{Config.SUPPORT}"),
+                            InlineKeyboardButton("💭 Support", url=f"https://t.me/{Config.BOT_LIST}")
+                        ],
+                        [
+                            InlineKeyboardButton("👤 Assistant", url=f"https://t.me/{Config.OWNER_NAME}")
+                        ]
+                    ]
+                )
+            )
+
+
+
+
+
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 idle()
