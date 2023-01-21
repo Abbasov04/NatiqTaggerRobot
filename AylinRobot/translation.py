@@ -219,7 +219,7 @@ Bazada *2881* Şəhid adı mövcuddur
     
     
     
-    GSTART_BUTTONS = InlineKeyboardMarkup(
+    GHELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
         InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
@@ -242,3 +242,5 @@ Bazada *2881* Şəhid adı mövcuddur
         InlineKeyboardButton('Əlavələr', callback_data='elave'),
         ],[
         InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),     
+        ]]
+    )        
