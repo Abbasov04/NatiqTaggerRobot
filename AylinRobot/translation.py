@@ -19,8 +19,6 @@ class Translation(object):
     
 """
 
-   GROUPHELP_TEXT
-
 
     SAHIB_TEXT = """
 
