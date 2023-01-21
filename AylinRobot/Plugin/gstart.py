@@ -16,7 +16,6 @@ from datetime import timedelta
 import math
 import base64
 from helpers.progress_bar import progress, TimeFormatter, humanbytes
-from dotenv import load_dotenv
 from AylinRobot import Config
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
