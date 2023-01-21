@@ -20,7 +20,10 @@ GROUPSTART_TEXT = """
 """
 
 
+   KOMEK_TEXT = """
+Aşağıdakı buttona
 
+"""
 
     SAHIB_TEXT = """
 
@@ -179,6 +182,17 @@ Bazada *2881* Şəhid adı mövcuddur
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),
         ]]
     )
+    
+    KOMEK_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
+        InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
+        ],[                  
+        InlineKeyboardButton('💠 Kömək', callback_data='help'),    
+    
+    
+    
+    
     
     
     MUSIC_BUTTONS = InlineKeyboardMarkup(
