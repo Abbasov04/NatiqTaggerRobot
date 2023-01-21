@@ -43,6 +43,17 @@ async def _broadcast(_, client: Message):
 
 
 
+@app.on_message(filters.command(["help"]) & ~filters.private & ~filters.group)
+async def ghelp(_, message: Message):
+    await message.reply_photo(
+        AylinIMG,
+        caption=Translation.GROUPSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+        reply_markup=Translation.KOMEK_BUTTONS
+    )
+
+
+
+
 
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
