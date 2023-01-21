@@ -19,6 +19,8 @@ class Translation(object):
     
 """
 
+   GROUPHELP_TEXT
+
 
     SAHIB_TEXT = """
 
@@ -215,3 +217,14 @@ Bazada *2881* Şəhid adı mövcuddur
         ]]
     ) 
     
+    
+    
+    
+    
+    GROUPHELP_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
+        InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
+        ],[                  
+        InlineKeyboardButton('💠 Kömək', callback_data='help'),
+        ],[           
