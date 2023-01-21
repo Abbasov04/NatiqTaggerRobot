@@ -14,7 +14,7 @@ class Translation(object):
 
 """
 
-    GROUPSTART_TEXT = """
+   KOMEK_TEXT = """
 {} Salam {} - Un Əmrlərini Görmək Üçün
 
 """
