@@ -14,17 +14,6 @@ class Translation(object):
 
 """
 
-   KOMEK_TEXT = """
-{} Salam {} - Un Əmrlərini Görmək Üçün
-
-"""
-
-
-    KOMEK_TEXT = """
-Aşağıdakı buttona
-
-"""
-
     SAHIB_TEXT = """
 
 🔮 Istifadə: /stats
@@ -41,8 +30,6 @@ Aşağıdakı buttona
 
 🔮 Istifadə: /broadcastall
 📃 Açıqlama: Qrupa Və Şəxsiyə yayım edər.
-
-
 
 """
 
@@ -182,17 +169,6 @@ Bazada *2881* Şəhid adı mövcuddur
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),
         ]]
     )
-    
-    KOMEK_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
-        InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
-        InlineKeyboardButton('💠 Kömək', callback_data='help'),    
-        ]]
-    )    
-    
-    
-    
     
     
     MUSIC_BUTTONS = InlineKeyboardMarkup(
