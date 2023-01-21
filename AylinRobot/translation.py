@@ -14,6 +14,14 @@ class Translation(object):
 
 """
 
+GROUPSTART_TEXT = """
+{} Salam {} - Un Əmrlərini Görmək Üçün
+
+"""
+
+
+
+
     SAHIB_TEXT = """
 
 🔮 Istifadə: /stats
@@ -30,6 +38,8 @@ class Translation(object):
 
 🔮 Istifadə: /broadcastall
 📃 Açıqlama: Qrupa Və Şəxsiyə yayım edər.
+
+
 
 """
 
