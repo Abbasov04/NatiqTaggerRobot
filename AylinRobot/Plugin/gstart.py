@@ -85,7 +85,7 @@ def tiktok_dl(client, message):
                           document=f"./{directory}/{filename}",
                           caption=f"**File :** __{filename}__\n"
                           f"**Size :** __{total_size} MB__\n\n"
-                          f"__Uploaded by @{BOT_URL}__",
+                          f"__Uploaded by @{Config.BOT_USERNAME}__",
                           file_name=f"{directory}",
                           parse_mode='md',
                           progress=progress,
