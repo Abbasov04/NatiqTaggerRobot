@@ -1,7 +1,6 @@
 # @AylinRobot
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
-
 import os
 import time
 import psutil
@@ -36,18 +35,6 @@ async def start(client, message):
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
         reply_markup=Translation.START_BUTTONS
     )
-    
-    
-@app.on_message(filters.command(["help"]) & ~filters.private & ~filters.channel)
-async def start(client, message):
-    await AddUserToDatabase(client, message)
-    await message.reply_photo(
-        AylinIMG,
-        caption=Translation.GROUPHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
-        reply_markup=Translation.GROUPHELP_BUTTONS
-    )    
-    
-    
     
 @app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
 async def _broadcast(_, client: Message):
