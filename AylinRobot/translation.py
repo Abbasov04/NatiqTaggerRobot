@@ -15,13 +15,9 @@ class Translation(object):
 """
 
     GSTART_TEXT = """
-**{} 🙈 Əmrlərim Bunlardır  Buttonlara toxunaraq istədiyiniz əmr haqqında məlumat ala bilərsiniz**
+**Salam {} {} - Un Əmrlərini Almaq İstəyirsən SƏ Buttona Toxun 🥰**
 
 """
-
-
-
-
 
 
     SAHIB_TEXT = """
