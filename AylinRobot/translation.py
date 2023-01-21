@@ -14,7 +14,7 @@ class Translation(object):
 
 """
 
-    GSTART_TEXT = """
+    GHELP_TEXT = """
 **Salam {} {} - Un Əmrlərini Almaq İstəyirsən SƏ Buttona Toxun 🥰**
 
 """
@@ -230,7 +230,7 @@ Bazada *2881* Şəhid adı mövcuddur
         InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
         ]]
     )
-    GSTART_BUTTONS = InlineKeyboardMarkup(
+    GHELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
         InlineKeyboardButton('⭐ Telegraph', callback_data='tg')
