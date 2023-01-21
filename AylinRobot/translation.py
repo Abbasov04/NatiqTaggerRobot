@@ -16,7 +16,7 @@ class Translation(object):
 
     SAHIB_TEXT = """
 
-🔮 Istifadə: /status
+🔮 Istifadə: /stats
 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
 
 🔮 Istifadə: /broadcast
