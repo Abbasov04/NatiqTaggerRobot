@@ -187,7 +187,6 @@ Bazada *2881* Şəhid adı mövcuddur
         [[
         InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
         InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
-        ],[                  
         InlineKeyboardButton('💠 Kömək', callback_data='help'),    
     
     
