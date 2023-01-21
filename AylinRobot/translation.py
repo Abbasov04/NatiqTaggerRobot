@@ -14,12 +14,6 @@ class Translation(object):
 
 """
 
-    GROUPSTART_TEXT = """
-{} Robot Super İşləyir    
-    
-"""
-
-
     SAHIB_TEXT = """
 
 🔮 Istifadə: /status
@@ -215,14 +209,3 @@ Bazada *2881* Şəhid adı mövcuddur
         ]]
     ) 
     
-    
-    
-    
-    
-    GROUPHELP_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
-        InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
-        ],[                  
-        InlineKeyboardButton('💠 Kömək', callback_data='help'),
-        ],[           
