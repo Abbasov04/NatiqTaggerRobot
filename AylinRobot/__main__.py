@@ -53,11 +53,11 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 Channel", url=f"https://t.me/{Config.SUPPORT}"),
-                            InlineKeyboardButton("💭 Support", url=f"https://t.me/{Config.BOTLIST}")
+                            InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_ID}"),
+                            InlineKeyboardButton("📢 Kanall", url=f"https://t.me/{Config.SUPPORT}")
                         ],
                         [
-                            InlineKeyboardButton("👤 Assistant", url=f"https://t.me/{Config.OWNER_NAME}")
+                            InlineKeyboardButton("👨‍💻 Sahib", url=f"https://t.me/{Config.OWNER_NAME}")
                         ]
                     ]
                 )
