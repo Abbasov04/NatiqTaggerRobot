@@ -21,17 +21,6 @@ from AylinRobot import Config
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 
-load_dotenv()
-bot_token = f'{Config.BOT_TOKEN}'
-workers = '4'
-api = f'{Config.API_ID}'
-hash = f'{Config.API_HASH}'
-chnnl = f'{Config.LOG_CHANNEL}'
-BOT_URL = f'{Config.BOT_USERNAME}'
-
-
-
-
 
 @app.on_message((filters.regex("http://")|filters.regex("https://")) & (filters.regex('tiktok')|filters.regex('douyin')))
 def tiktok_dl(client, message):
