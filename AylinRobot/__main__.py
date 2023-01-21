@@ -43,8 +43,8 @@ async def start(client, message):
     await AddUserToDatabase(client, message)
     await message.reply_photo(
         AylinIMG,
-        caption=Translation.GHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
-        reply_markup=Translation.GHELP_BUTTONS
+        caption=Translation.GROUPHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+        reply_markup=Translation.GROUPHELP_BUTTONS
     )    
     
     
