@@ -33,7 +33,7 @@ async def make_carbon(code):
 
 @app.on_message(filters.command("carbon"))
 async def carbon_func(bot: app, msg: Message):
-     await msg.reply_text("Dəstəklənən media faylına cavab verin")  
+    await m.edit("Dəstəklənən media faylına cavab verin")  
     await m.edit("`Hazırlanır`")
     carbon = await make_carbon(msg.reply_to_message.text)
     await m.edit("`Göndərilir`")
