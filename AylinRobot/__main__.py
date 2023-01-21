@@ -38,7 +38,7 @@ async def start(client, message):
     )
     
     
-@app.on_message(filters.private & filters.incoming & filters.command(['help']))
+@app.on_message(filters.private & filters.incoming & filters.command(['start=help']))
 async def start(client, message):
     await AddUserToDatabase(client, message)
     await message.reply_photo(
