@@ -33,38 +33,16 @@ InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
     
     
     
-    MUSIC_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
-        ]]
-    )
-    TELEGRAPH_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
-        ]]
-    )
-    SEHID_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
-        ]]
-    )        
-    OYUN_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
-        ]]
-    )
-    EYLENCE_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
-        ]]
-    )     
-    SAHIB_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
-        ]]
-    )
-    ELAVE_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
-        ]]
-    ) 
+MUSIC_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+TELEGRAPH_BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+SEHID_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])        
+OYUN_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+EYLENCE_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])     
+SAHIB_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+ELAVE_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]]) 
