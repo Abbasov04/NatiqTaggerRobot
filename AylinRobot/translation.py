@@ -1,19 +1,20 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot.config import Config
-from AylinRobot.Plugin import *
 
-START_TEXT = """
+class Translation(object):
+
+    START_TEXT = """
 **Salam {} 👋**
 
 **Mənim Adım  ️️️️️️{} 🙋‍♀️ Mən Azərbaycan Dilində Çox Özəllikili Telegram Botuyam Bacarıqlarımı Görmək Üçün `💠 Kömək` Buttonuna Toxun**
 
 """    
-HELP_TEXT = """
+    HELP_TEXT = """
 **{} 🙈 Əmrlərim Bunlardır  Buttonlara toxunaraq istədiyiniz əmr haqqında məlumat ala bilərsiniz**
 
 """
 
-SAHIB_TEXT = """
+    SAHIB_TEXT = """
 
 🔮 Istifadə: /stats
 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
@@ -32,7 +33,7 @@ SAHIB_TEXT = """
 
 """
 
-MUSIC_TEXT = """
+    MUSIC_TEXT = """
 🔮 Istifadə: /song 
 🧩 Nümunə: /song Rei - Ah Canım Sevgilim
 📃 Açıqlama: Musiqi yükləyir.
@@ -50,14 +51,14 @@ MUSIC_TEXT = """
 📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
 """
 
-TELEGRAPH_TEXT = """
+    TELEGRAPH_TEXT = """
 
 🔮 Istifadə: /tgm
 📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz.
 
 """
 
-SEHID_TEXT = """
+    SEHID_TEXT = """
 
 🔮 Istifadə: /sehid 
 📃 Açıqlama:  Bu əmr vaistəsiylə sizə *Şəhid* adları göndərəcəm
@@ -68,7 +69,7 @@ Başın sağolsun Azərbaycan 🇦🇿
 Bazada *2881* Şəhid adı mövcuddur
 
 """ 
-OYUN_TEXT = """
+    OYUN_TEXT = """
 
 🔮 Istifadə: /zer
 📃 Açıqlama: zər atar
@@ -87,7 +88,7 @@ OYUN_TEXT = """
 
 """
 
-EYLENCE_TEXT = """
+    EYLENCE_TEXT = """
 
 🔮 Istifadə: /soxri 
 📃 Açıqlama: Rondom 16+ Şəkillər Atar.
@@ -119,7 +120,7 @@ EYLENCE_TEXT = """
 """
 
 
-ELAVELER_TEXT = """
+    ELAVELER_TEXT = """
 
 🔮 Istifadə: /carbon
 📃 Açıqlama: Yazdığınız mesajı şəkilə çevirin
