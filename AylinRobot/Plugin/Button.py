@@ -1,7 +1,6 @@
 from AylinRobot.config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from AylinRobot import LOGGER    
-class Button(object):
+from AylinRobot import LOGGER
   
 ### START BUTTONU    
       START_BUTTONS = InlineKeyboardMarkup(
