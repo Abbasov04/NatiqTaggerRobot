@@ -1,7 +1,7 @@
 import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from AylinRobot.translation import Translation
 class LAN(object):
-   if Config.LANGAUGE == "AZ":
+if Config.LANGAUGE == "AZ":
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
