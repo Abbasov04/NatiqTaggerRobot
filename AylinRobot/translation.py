@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot.config import Config
 class LAN(object):
-    if Config.LANGAUGE == "AZ":
+if Config.LANGAUGE == "AZ":
 class Translation(object):
 
     START_TEXT = """
