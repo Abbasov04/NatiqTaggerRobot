@@ -1,6 +1,5 @@
 import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from AylinRobot.translation import Translation
-class LAN(object):
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
@@ -472,3 +471,5 @@ def humanbytes(size):
         raised_to_pow += 1
     return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
    if Config.LANGAUGE == "AZ":
+class LAN(object):
+       
