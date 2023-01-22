@@ -2,7 +2,8 @@ from AylinRobot.config import Config
 from AylinRobot.translation import Translation    
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot import LOGGER    
-    
+class Translation(object):
+  
 ### START BUTTONU    
     
 START_BUTTONS = InlineKeyboardMarkup(
@@ -32,6 +33,7 @@ InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
     
     
+##### GERİ BUTTON    
     
 MUSIC_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
