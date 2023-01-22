@@ -80,3 +80,25 @@ async def start_group(client: Client, message: Message):
         caption=alive,
         reply_markup=keyboard,
     )
+    
+    
+    
+@app.on_message(command(["ping"]) & ~filters.edited)
+async def ping_pong(client: Client, message: Message):
+    start = time()
+    m_reply = await message.reply_text("pinging...")
+    delta_ping = time() - start
+    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+
+
+@app.on_message(command(["uptime"]) & ~filters.edited)
+async def get_uptime(client: Client, message: Message):
+    current_time = datetime.utcnow()
+    uptime_sec = (current_time - START_TIME).total_seconds()
+    uptime = await _human_time_duration(int(uptime_sec))
+    await message.reply_text(
+        "🤖 bot status:\n"
+        f"• **uptime:** `{uptime}`\n"
+        f"• **start time:** `{START_TIME_ISO}`"
+    )
+    
