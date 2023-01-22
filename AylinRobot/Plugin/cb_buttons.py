@@ -5,7 +5,7 @@
 
 import os
 from AylinRobot.translation import Translation
-from AylinRobot.Plugin import gstart
+from AylinRobot.Plugin import Button
 from AylinRobot.config import Config
 from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
@@ -18,13 +18,13 @@ async def cb_data(client, message):
     if message.data == "home":
         await message.message.edit_text(
             text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
-            reply_markup=Translation.START_BUTTONS,
+            reply_markup=Button.START_BUTTONS,
             disable_web_page_preview=True,
         )
     elif message.data == "help":
         await message.message.edit_text(
             text=Translation.HELP_TEXT.format(message.from_user.mention),
-            reply_markup=Translation.HELP_BUTTONS,
+            reply_markup=Button.HELP_BUTTONS,
             disable_web_page_preview=True
         )
     elif message.data == "musıc":
