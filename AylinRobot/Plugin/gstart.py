@@ -35,37 +35,37 @@ class Translation(object):
     )
     
     
-    MUSIC_BUTTONS = InlineKeyboardMarkup(
+     MUSIC_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )
-    TELEGRAPH_BUTTONS = InlineKeyboardMarkup(
+     TELEGRAPH_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )
-    SEHID_BUTTONS = InlineKeyboardMarkup(
+     SEHID_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )        
-    OYUN_BUTTONS = InlineKeyboardMarkup(
+      OYUN_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )
-    EYLENCE_BUTTONS = InlineKeyboardMarkup(
+     EYLENCE_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )     
-    SAHIB_BUTTONS = InlineKeyboardMarkup(
+      SAHIB_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
     )
-    ELAVE_BUTTONS = InlineKeyboardMarkup(
+      ELAVE_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
