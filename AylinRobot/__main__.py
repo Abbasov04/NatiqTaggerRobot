@@ -34,7 +34,7 @@ async def start(client, message):
     await message.reply_photo(
         AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
-      reply_markup=Button.START_BUTTONS
+        reply_markup=Button.START_BUTTONS
     )
     
 @app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
