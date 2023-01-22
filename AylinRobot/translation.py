@@ -1,7 +1,6 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot.config import Config
 
-class Translation(object):
 
     START_TEXT = """
 **Salam {} 👋**
