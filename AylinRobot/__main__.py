@@ -47,7 +47,7 @@ async def new_chat(c: Client, m: Message):
     for member in m.new_chat_members:
         if member.id == bot_id:
             return await m.reply(
-                f"❤️ **Məni Qrupa əlavə etdiyiniz üçün təşəkkür edirəm**Məni Qrupda administrator təyin edin, əks halda düzgün işləyə bilməyəcəm**.."
+                f" **Məni Qrupa əlavə etdiyiniz üçün təşəkkür edirəm Məni Qrupda administrator təyin edin, əks halda düzgün işləyə bilməyəcəm**.."
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
