@@ -46,8 +46,6 @@ async def new_chat(c: Client, m: Message):
     bot_id = (await c.get_me()).id
     for member in m.new_chat_members:
         if member.id == bot_id:  
-    await message.reply_photo(
-        AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
         reply_markup=Translation.START_BUTTONS
     ) 
