@@ -134,7 +134,7 @@ Bazada *2881* Şəhid adı mövcuddur
 
 """
 
-
+class LAN(object):
 
 
 BILDIRIM = "```📣 Yeni İsmarıc``` \n\n#YENI_ISTIFADƏÇİ **botu başlatdı!** \n\n🏷 isim: `{}` \n📮 istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})"
