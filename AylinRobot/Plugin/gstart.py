@@ -1,13 +1,9 @@
 from AylinRobot.config import Config
 from AylinRobot.translation import Translation    
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from AylinRobot import AylinRobot as app
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot import LOGGER    
     
-    
-    
-    
-    
+### START BUTTONU    
     
     START_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -22,6 +18,10 @@ from AylinRobot import LOGGER
         InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),
         ]]
     )
+    
+    
+#### Kömək Menyusu     
+    
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
@@ -38,6 +38,7 @@ from AylinRobot import LOGGER
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),
         ]]
     )
+    
     
     
     MUSIC_BUTTONS = InlineKeyboardMarkup(
