@@ -103,4 +103,4 @@ async def _banned_usrs(_, m: Message):
         return
     await m.reply_text(reply_text, True)
     
-    if Config.LANGAUGE == "AZ":
+if Config.LANGAUGE == "AZ":
