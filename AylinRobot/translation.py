@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot.config import Config
-
+from AylinRobot.Plugin import *
 
     START_TEXT = """
 **Salam {} 👋**
