@@ -30,42 +30,42 @@ async def cb_data(client, message):
     elif message.data == "musıc":
         await message.message.edit_text(
             text=Translation.MUSIC_TEXT,
-            reply_markup=Translation.MUSIC_BUTTONS,
+            reply_markup=Button.MUSIC_BUTTONS,
             disable_web_page_preview=True
         )
     elif message.data == "tg":
         await message.message.edit_text(
             text=Translation.TELEGRAPH_TEXT,
-            reply_markup=Translation.TELEGRAPH_BUTTONS,
+            reply_markup=Button.TELEGRAPH_BUTTONS,
             disable_web_page_preview=True
         ) 
     elif message.data == "eylence":
         await message.message.edit_text(
             text=Translation.EYLENCE_TEXT,
-            reply_markup=Translation.EYLENCE_BUTTONS,
+            reply_markup=Button.EYLENCE_BUTTONS,
             disable_web_page_preview=True
         )        
     elif message.data == "sehıd":
         await message.message.edit_text(
             text=Translation.SEHID_TEXT,
-            reply_markup=Translation.SEHID_BUTTONS,
+            reply_markup=Button.SEHID_BUTTONS,
             disable_web_page_preview=True
         ) 
     elif message.data == "oyun":
         await message.message.edit_text(
             text=Translation.OYUN_TEXT,
-            reply_markup=Translation.OYUN_BUTTONS,
+            reply_markup=Button.OYUN_BUTTONS,
             disable_web_page_preview=True
         )        
     elif message.data == "sahib":
         await message.message.edit_text(
             text=Translation.SAHIB_TEXT,
-            reply_markup=Translation.SAHIB_BUTTONS,
+            reply_markup=Button.SAHIB_BUTTONS,
             disable_web_page_preview=True
         ) 
     elif message.data == "elave":
         await message.message.edit_text(
             text=Translation.ELAVELER_TEXT.format(message.from_user.mention),
-            reply_markup=Translation.ELAVE_BUTTONS,
+            reply_markup=Button.ELAVE_BUTTONS,
             disable_web_page_preview=True
         ) 
