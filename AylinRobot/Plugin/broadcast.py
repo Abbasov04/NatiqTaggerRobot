@@ -472,6 +472,6 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
     
     
-    if Config.LANGAUGE == "AZ":
+if Config.LANGAUGE == "AZ":
 class LAN(object):
        
