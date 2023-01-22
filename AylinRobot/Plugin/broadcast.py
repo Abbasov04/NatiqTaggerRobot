@@ -473,5 +473,4 @@ def humanbytes(size):
     
     
 if Config.LANGAUGE == "AZ":
-class LAN(object):
        
