@@ -102,3 +102,5 @@ async def _banned_usrs(_, m: Message):
         os.remove("banned-user-list.txt")
         return
     await m.reply_text(reply_text, True)
+    
+    if Config.LANGAUGE == "AZ":
