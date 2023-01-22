@@ -35,7 +35,7 @@ class Translation(object):
     )
     
     
-     MUSIC_BUTTONS = InlineKeyboardMarkup(
+      MUSIC_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),
         ]]
