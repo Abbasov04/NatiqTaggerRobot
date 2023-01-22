@@ -4,7 +4,7 @@
 
 
 import os
-from AylinRobot.Plugin import *
+from AylinRobot.translation import Translation
 from AylinRobot.config import Config
 from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
