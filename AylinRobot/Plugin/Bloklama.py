@@ -1,4 +1,5 @@
 from AylinRobot import AylinRobot as app
+from AylinRobot.Plugin import Broadcast
 from AylinRobot.config import Config
 from pyrogram.types import Message
 from pyrogram import Client, filters, __version__
