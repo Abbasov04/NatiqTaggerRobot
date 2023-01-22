@@ -48,7 +48,7 @@ async def new_chat(c: Client, m: Message):
         if member.id == bot_id:  
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
         reply_markup=Translation.START_BUTTONS
-    ) 
+    ), 
 
 
 
