@@ -8,12 +8,12 @@ START_TEXT = """
 **Mənim Adım  ️️️️️️{} 🙋‍♀️ Mən Azərbaycan Dilində Çox Özəllikili Telegram Botuyam Bacarıqlarımı Görmək Üçün `💠 Kömək` Buttonuna Toxun**
 
 """    
-    HELP_TEXT = """
+HELP_TEXT = """
 **{} 🙈 Əmrlərim Bunlardır  Buttonlara toxunaraq istədiyiniz əmr haqqında məlumat ala bilərsiniz**
 
 """
 
-    SAHIB_TEXT = """
+SAHIB_TEXT = """
 
 🔮 Istifadə: /stats
 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
@@ -32,7 +32,7 @@ START_TEXT = """
 
 """
 
-    MUSIC_TEXT = """
+MUSIC_TEXT = """
 🔮 Istifadə: /song 
 🧩 Nümunə: /song Rei - Ah Canım Sevgilim
 📃 Açıqlama: Musiqi yükləyir.
@@ -50,14 +50,14 @@ START_TEXT = """
 📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
 """
 
-    TELEGRAPH_TEXT = """
+TELEGRAPH_TEXT = """
 
 🔮 Istifadə: /tgm
 📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz.
 
 """
 
-    SEHID_TEXT = """
+SEHID_TEXT = """
 
 🔮 Istifadə: /sehid 
 📃 Açıqlama:  Bu əmr vaistəsiylə sizə *Şəhid* adları göndərəcəm
@@ -68,7 +68,7 @@ Başın sağolsun Azərbaycan 🇦🇿
 Bazada *2881* Şəhid adı mövcuddur
 
 """ 
-    OYUN_TEXT = """
+OYUN_TEXT = """
 
 🔮 Istifadə: /zer
 📃 Açıqlama: zər atar
@@ -87,7 +87,7 @@ Bazada *2881* Şəhid adı mövcuddur
 
 """
 
-    EYLENCE_TEXT = """
+EYLENCE_TEXT = """
 
 🔮 Istifadə: /soxri 
 📃 Açıqlama: Rondom 16+ Şəkillər Atar.
@@ -119,7 +119,7 @@ Bazada *2881* Şəhid adı mövcuddur
 """
 
 
-    ELAVELER_TEXT = """
+ELAVELER_TEXT = """
 
 🔮 Istifadə: /carbon
 📃 Açıqlama: Yazdığınız mesajı şəkilə çevirin
