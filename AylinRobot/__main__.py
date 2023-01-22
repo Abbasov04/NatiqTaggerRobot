@@ -45,25 +45,13 @@ async def _broadcast(_, client: Message):
 async def new_chat(c: Client, m: Message):
     bot_id = (await c.get_me()).id
     for member in m.new_chat_members:
-        if member.id == bot_id:
-            return await m.reply(
-                "❤️ Thanks for adding me to the **Group** !\n\n"
-                "Appoint me as administrator in the **Group**, otherwise I will not be able to work properly, and don't forget to type `/userbotjoin` for invite the assistant.\n\n"
-                "Once done, then type `/reload`",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_ID}"),
-                            InlineKeyboardButton("📢 Kanall", url=f"https://t.me/{Config.SUPPORT}")
-                        ],
-                        [
-                            InlineKeyboardButton("👨‍💻 Sahib", url=f"https://t.me/{Config.OWNER_NAME}")
-                        ]
-                    ]
-                )
-            )
-
-
+        if member.id == bot_id:  
+    await AddUserToDatabase(client, message)
+    await message.reply_photo(
+        AylinIMG,
+        caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+        reply_markup=Translation.START_BUTTONS
+    ) 
 
 
 
