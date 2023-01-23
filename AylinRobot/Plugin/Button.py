@@ -27,6 +27,8 @@ InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
 ],[        
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
     
+### GERİ BUTTONU    
+    
 MUSIC_BUTTONS = InlineKeyboardMarkup(
 [[
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
