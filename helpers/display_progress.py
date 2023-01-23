@@ -5,7 +5,7 @@
 
 import math
 import time
-from MusicAzBot.config import Config
+from AylinRobot.config import Config
 
 
 async def progress_for_pyrogram(current, total, ud_type, message, start):
