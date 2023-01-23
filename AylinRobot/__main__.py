@@ -7,6 +7,7 @@ import psutil
 import shutil
 import string
 import asyncio
+from AylinRobot.Plugin import Broadcast
 from AylinRobot.config import Config
 from asyncio import TimeoutError
 from AylinRobot.translation import Translation
