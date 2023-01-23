@@ -8,7 +8,7 @@ from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 from pyrogram import idle, filters
-
+from pyrogram import Client
 
 @app.on_message(filters.private & filters.command("status") & filters.user(Config.OWNER_ID))
 async def show_status_count(_, client: Message):
