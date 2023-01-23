@@ -37,11 +37,6 @@ async def start(client, message):
         reply_markup=Button.START_BUTTONS
     )
     
-@app.on_message(filters.private & filters.command("broadcasting") & filters.user(Config.OWNER_ID) & filters.reply)
-async def _broadcasting(_, client: Message):
-    await broadcast_handler(client)
-
-
 @app.on_message(filters.new_chat_members)
 async def new_chat(c: Client, m: Message):
     bot_id = (await c.get_me()).id
