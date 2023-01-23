@@ -31,7 +31,7 @@ async def statsguwid(_, message):
         m = await m.edit("Running Upload SpeedTest")
         test.upload()
         test.results.share()
-        result = test.results.dict()
+        result * = test.results.dict()
     except Exception as e:
         return await m.edit(e)
     m = await m.edit("Sharing SpeedTest Results")
