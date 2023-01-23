@@ -3,7 +3,8 @@ import asyncio
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 
-
+from helpers.database.access_db import db
+from helpers.broadcast import broadcast_handler
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
@@ -29,6 +30,11 @@ async def chat_watcher_func(_, message):
         return await app.leave_chat(chat_id)
 
     await add_served_chat(chat_id)
+
+
+@app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
+async def _broadcast(_, client: Message):
+    await broadcast_handler(client)
 
 
 @app.on_message(command("broadcast_pin") & filters.user(Config.OWNER_ID))
