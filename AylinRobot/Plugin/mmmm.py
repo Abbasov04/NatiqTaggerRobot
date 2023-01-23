@@ -7,6 +7,7 @@ import asyncio
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
+from pyrogram import idle, filters
 
 
 @app.on_message(filters.private & filters.command("status") & filters.user(Config.OWNER_ID))
