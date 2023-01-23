@@ -16,7 +16,7 @@ from helpers.database.access_db import db
 from helpers.database.add_user import AddUserToDatabase
 
 
-@app.on_message(filters.private & filters.command("status") & filters.user(Config.OWNER_ID))
+@app.on_message(filters.private & filters.command("status")
 async def show_status_count(_, client: Message):
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
