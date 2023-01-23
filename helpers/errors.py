@@ -10,7 +10,7 @@ from functools import wraps
 from pyrogram import Client
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
-from MusicAzBot.config import Config
+from AylinRobot.config import Config
 
 
 def split_limits(text):
