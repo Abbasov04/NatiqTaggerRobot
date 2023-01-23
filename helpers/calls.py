@@ -1,15 +1,12 @@
 from asyncio import QueueEmpty
 from pyrogram import Client
 
-
-from AylinRobot.config import Config
-from AylinRobot.tgcalls import queues
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
-from AylinRobot.database.queue import (
+from MusicAzBot.database.queue import (
     is_active_chat,
     add_active_chat,
     remove_active_chat,
@@ -17,7 +14,8 @@ from AylinRobot.database.queue import (
     is_music_playing,
     music_off,
 )
-
+from MusicAzBot.config import API_HASH, API_ID, SESSION_NAME
+from m8n.tgcalls import queues
 
 client = Client(SESSION_NAME, API_ID, API_HASH)
 pytgcalls = PyTgCalls(client)

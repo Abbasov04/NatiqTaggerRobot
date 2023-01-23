@@ -2,6 +2,7 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
+
 import time
 import string
 import random
@@ -9,7 +10,7 @@ import asyncio
 import datetime
 import aiofiles.os
 import traceback
-from AylinRobot.config import Config
+from MusicAzBot.config import Config
 from helpers.database.access_db import db
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
@@ -96,7 +97,7 @@ async def broadcast_handler(m: Message):
     else:
         await m.reply_document(
             document='broadcast.txt',
-            caption=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n@{Config.BOT_USERNAME}",
+            caption=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n\@{Config.BOT_USERNAME}",
             quote=True
         )
     await aiofiles.os.remove('broadcast.txt')
