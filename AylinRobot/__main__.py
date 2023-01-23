@@ -37,8 +37,8 @@ async def start(client, message):
         reply_markup=Button.START_BUTTONS
     )
     
-@app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
-async def _broadcast(_, client: Message):
+@app.on_message(filters.private & filters.command("broadcasting") & filters.user(Config.OWNER_ID) & filters.reply)
+async def _broadcasting(_, client: Message):
     await broadcast_handler(client)
 
 
