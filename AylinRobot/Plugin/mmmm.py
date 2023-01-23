@@ -4,7 +4,7 @@ import psutil
 import shutil
 import string
 import asyncio
-from AylinRobot.config import config
+from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 
