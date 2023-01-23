@@ -6,3 +6,5 @@ from AylinRobot.config import Config
 from helpers.database.database import Database
 
 db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
+mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
+dcmdb = mongo_db_veritabani.handlers
