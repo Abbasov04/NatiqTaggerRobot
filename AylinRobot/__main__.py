@@ -11,6 +11,8 @@ from AylinRobot.config import Config
 from asyncio import TimeoutError
 from AylinRobot.translation import Translation
 from AylinRobot.Plugin import Button
+from helpers.database.access_db import db
+from helpers.broadcast import broadcast_handler
 from helpers.database.add_user import AddUserToDatabase
 from helpers.display_progress import humanbytes
 from pyrogram import Client
@@ -34,6 +36,10 @@ async def start(client, message):
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
         reply_markup=Button.START_BUTTONS
     )
+    
+@app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
+async def _broadcast(_, client: Message):
+    await broadcast_handler(client)
 
 
 @app.on_message(filters.new_chat_members)
