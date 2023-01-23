@@ -1,8 +1,9 @@
 import asyncio
-
+from helpers.broadcast import broadcast_handler
+from helpers.database.add_user import AddUserToDatabase
 from pyrogram import filters
 from pyrogram.errors import FloodWait
-
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
@@ -29,6 +30,11 @@ async def chat_watcher_func(_, message):
         return await app.leave_chat(chat_id)
 
     await add_served_chat(chat_id)
+
+
+@app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
+async def _broadcasting(_, client: Message):
+    await broadcast_handler(client)
 
 
 @app.on_message(command("broadcast_pin") & filters.user(Config.OWNER_ID))
