@@ -201,11 +201,6 @@ class Database:
         return self.col.find({"ban_status.is_banned": True})
 
 
-db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
-mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
-dcmdb = mongo_db_veritabani.handlers
-
-
 
 ################## KULLANICI KONTROLLERİ #############
 async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
