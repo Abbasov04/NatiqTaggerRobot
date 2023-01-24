@@ -26,7 +26,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 
-AylinRobotIMG = f"{Config.START_IMG}"
+AylinIMG = f"{Config.START_IMG}"
 
 
 
@@ -34,7 +34,7 @@ AylinRobotIMG = f"{Config.START_IMG}"
 async def start(client, message):
     await AddUserToDatabase(client, message)
     await message.reply_photo(
-        AylinRobotIMG,
+        AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
         reply_markup=Translation.START_BUTTONS
     )
