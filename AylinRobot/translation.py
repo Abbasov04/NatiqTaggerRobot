@@ -19,17 +19,23 @@ class Translation(object):
 🔮 Istifadə: /stats
 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
 
-🔮 Istifadə: /broadcast
-📃 Açıqlama: Şəxsidə Yayım Edər.
+🔮 Istifadə: /block
+📃 Açıqlama: İstifadəçini Və Ya Qrupu Bloklayar.
+
+🔮 Istifadə: /unblock
+📃 Açıqlama: Bloku Açar.
+
+🔮 Istifadə: /blocklist
+📃 Açıqlama: Blok olunanların siyahısını göstərər.
+
+🔮 Istifadə: /broadcastall
+📃 Açıqlama: Qrupa Və Şəxsiyə Yayım Edər.
 
 🔮 Istifadə: /gcast
 📃 Açıqlama: Qruplarda yayım edər.
 
 🔮 Istifadə: /broadcast_pin
 📃 Açıqlama: Qruplarda yayım edər və pinləyər.
-
-🔮 Istifadə: /broadcastall
-📃 Açıqlama: Qrupa Və Şəxsiyə yayım edər.
 
 """
 
