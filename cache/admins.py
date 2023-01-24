@@ -1,6 +1,6 @@
 from typing import Dict, List
 
-from AylinRobot.config import Config
+from AylinRobot.config import admins
 
 admins: Dict[int, List[int]] = {}
 
