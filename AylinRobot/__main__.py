@@ -28,7 +28,6 @@ AylinIMG = f"{Config.START_IMG}"
 
 @app.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def start(client, message):
-    async def add_user(self, id)  
     await message.reply_photo(
         AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
