@@ -12,7 +12,6 @@ from pyrogram import idle, filters
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import FloodWait, UserNotParticipant
-from helpers.database.access_db import db
 from helpers.database.add_user import AddUserToDatabase
 
 
