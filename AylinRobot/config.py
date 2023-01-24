@@ -2,7 +2,7 @@ import os
 
 
 class Config:
-from os import getenv
+from os import os.getenv
 from dotenv import load_dotenv
 from helpers.uptools import fetch_heroku_git_url
 
