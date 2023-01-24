@@ -11,7 +11,6 @@ from AylinRobot.config import Config
 from asyncio import TimeoutError
 from AylinRobot.translation import Translation
 from AylinRobot.Plugin import Button
-from helpers.database.access_db import db
 from helpers.database.add_user import AddUserToDatabase
 from pyrogram import Client
 from pyrogram.errors import FloodWait, UserNotParticipant
