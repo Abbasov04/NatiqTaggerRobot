@@ -38,35 +38,6 @@ async def start(client, message):
     )
     
     
-@app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
-async def _broadcast(_, client: Message):
-    await broadcast_handler(client)
-    
-    
-
-@app.on_message(filters.new_chat_members)
-async def new_chat(c: Client, m: Message):
-    bot_id = (await c.get_me()).id
-    for member in m.new_chat_members:
-        if member.id == bot_id:
-            return await m.reply(f"**❤️ Məni Qrupa əlavə etdiyiniz üçün təşəkkür edirəm\n\n Məni Qrupda administrator təyin edin, əks halda düzgün işləyə bilməyəcəm**",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_ID}"),
-                            InlineKeyboardButton("📢 Kanall", url=f"https://t.me/{Config.SUPPORT}")
-                        ],
-                        [
-                            InlineKeyboardButton("👨‍💻 Sahib", url=f"https://t.me/{Config.OWNER_NAME}")
-                        ]
-                    ]
-                )
-            )
-
-
-
-
-
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 idle()
