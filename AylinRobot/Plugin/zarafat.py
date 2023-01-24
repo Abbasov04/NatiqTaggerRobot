@@ -11,7 +11,7 @@ from pyrogram import idle, filters
 from AylinRobot.config import Config
 from pyrogram import Client, filters
 
-@app.on_message(command(["reload"]))
+@app.on_message(filters.private & filters.command("reload"))
 @authorized_users_only
 async def update_admin(client, message):
     global admins
