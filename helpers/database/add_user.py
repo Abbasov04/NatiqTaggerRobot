@@ -3,7 +3,6 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 from AylinRobot.config import Config
-from helpers.database.access_db import db
 from pyrogram import Client
 from pyrogram.types import Message
 
