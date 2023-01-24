@@ -18,7 +18,7 @@ from helper.display_progress import humanbytes
 from pyrogram import Client
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
-from AylinRobot.Plugins import *
+from AylinRobot.Plugin import *
 from AylinRobot.Music import *
 from AylinRobot.Oyunlar import *
 from pyrogram import idle, filters
