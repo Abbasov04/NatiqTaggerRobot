@@ -39,6 +39,12 @@ async def chat_watcher_func(_, message):
     await add_served_chat(chat_id)
 
 
+@app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
+async def _broadcast(_, client: Message):
+    await broadcast_handler(client)
+    
+    
+
 @app.on_message(command("broadcast_pin") & filters.user(Config.OWNER_ID))
 async def broadcast_message(_, message):
     if not message.reply_to_message:
