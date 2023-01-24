@@ -10,6 +10,9 @@ from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
 from AylinRobot.config import Config
 from pyrogram import Client, filters
+from cache.admins import admins
+
+
 
 @app.on_message(filters.private & filters.command("reload"))
 @authorized_users_only
