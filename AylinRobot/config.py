@@ -5,7 +5,7 @@ class Config:
 
    API_ID = int(os.getenv("API_ID", "8953338"))
    API_HASH = os.getenv("API_HASH", "fe21f223cb02d8f7c1cbda651f553a45")
-   BOT_TOKEN = os.getenv("BOT_TOKEN", "5976700768:AAGKIP1hMx4w_lOJ6ptNVevEySsYDvk_Bbo")
+   BOT_TOKEN = os.getenv("BOT_TOKEN", "5636190781:AAGDOmFJmYDaJcPuW1lWyEAMgN-SwyycvRA")
    BOT_USERNAME = os.environ.get("BOT_USERNAME", "DunyaMusicBot")
    OWNER_ID = int(os.environ.get("OWNER_ID","5865605067"))
    OWNER_NAME = os.environ.get("OWNER_NAME", "HuseynH") 
