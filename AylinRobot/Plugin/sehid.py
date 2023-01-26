@@ -12,12 +12,12 @@ from Sehid import random_line
 
 
 sehid = open("Sehid/sehid.txt")
-sehid = sehid.readlines()
-sehid = random.choice(sehid)
+yazilar = sehid.readlines()
+rndyazi = random.choice(yazilar)
 
 @app.on_message(filters.command('sehid'))
 async def start(client, msj):
-    global sehid
+    global soz
     chat_id = msj.chat.id
     sehid = random.choice(sehid)
     await client.send_message(chat_id,
