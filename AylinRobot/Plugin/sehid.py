@@ -11,17 +11,17 @@ from Sehid import random_line
 
 
 
-sehid = open("Sehid/sehid.txt", "r")
-sehid = sehid.readlines()
-sehid = random.choice(sehid)
+test = open("Sehid/sehid.txt, "r")
+yazilar = test.readlines()
+rndyazi = random.choice(yazilar)
 
 @app.on_message(filters.command('sehid'))
 async def start(client, msj):
-    global sehid
+    global soz
     chat_id = msj.chat.id
-    sehid = random.choice(sehid)
+    soz = random.choice(test)
     await client.send_message(chat_id,
-                              sehid,
+                              soz,
                               reply_markup=InlineKeyboardMarkup(
                                   [
                                       [
@@ -36,12 +36,12 @@ async def start(client, msj):
 
 @app.on_callback_query(filters.regex(r"^deyisdir$"))
 async def callback(cl, msj: CallbackQuery):
-    sehid2 = random.choice(sehid)
-    if sehid2 == sehid:
-        sehid2 = random.choice(sehid)
-        if sehid2 == sehid:
+    soz2 = random.choice(sozler)
+    if soz2 == soz:
+        soz2 = random.choice(sozler)
+        if soz2 == soz:
             pass
-        elif sehid2 != sehid:
-            await msj.message.edit_text(text=sehid2, reply_markup=msj.message.reply_markup)
-    elif sehid2 != sehid:
-        await msj.message.edit_text(text=sehid2, reply_markup=msj.message.reply_markup)
+        elif soz2 != soz:
+            await msj.message.edit_text(text=soz2, reply_markup=msj.message.reply_markup)
+    elif soz2 != soz:
+        await msj.message.edit_text(text=soz2, reply_markup=msj.message.reply_markup)
