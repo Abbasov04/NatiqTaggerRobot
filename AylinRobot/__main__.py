@@ -33,15 +33,10 @@ async def start(client, message):
     )
     
     
+app.start()
+LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 
-
-    await app.start()
-    ...  # Invoke API methods
-    await app.restart()
-    ...  # Invoke other API methods
-    await app.stop()
-
-
-app.run(main())
+app.stop()
+LOGGER.stop(f"{Config.BOT_USERNAME} Dayandırıldı {Config.OWNER_NAME}")
 
 idle()
