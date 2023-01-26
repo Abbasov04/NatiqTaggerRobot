@@ -11,7 +11,7 @@ from Sehid import random_line
 
 
 
-sehid = open("Sehid/sehid.txt")
+sehid = open("Sehid/sehid.txt", "r")
 sehid = sehid.readlines()
 sehid = random.choice(sehid)
 
