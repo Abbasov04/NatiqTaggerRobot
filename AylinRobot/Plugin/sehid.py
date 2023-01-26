@@ -26,6 +26,7 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                   InlineKeyboardButton("⚙️ Command​​", callback_data="sehidler"),
-                   ],[            
+                   ],
+                   [            
      disable_web_page_preview=True
     )    
