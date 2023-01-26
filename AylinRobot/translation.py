@@ -118,7 +118,7 @@ Bazada *2881* Şəhid adı mövcuddur
 📃 Açıqlama: Rondom Profil Şəkili Atar
 
 🔮 Istifadə: /sevgi
-📃 Açıqlama: Hazır Sevi Yə Aid Sözlər Atar.
+📃 Açıqlama: Hazır Sevgi Yə Aid Sözlər Atar.
 
 🔮 Istifadə: /bio
 📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.
