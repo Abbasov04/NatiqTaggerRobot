@@ -26,9 +26,6 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-                ],[
-                    InlineKeyboardButton(
                         "⚙️ Command​​", callback_data="sehidler"
                     ),
      disable_web_page_preview=True
