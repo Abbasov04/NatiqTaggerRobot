@@ -17,11 +17,11 @@ rndyazi = random.choice(yazilar)
 
 @app.on_message(filters.command('sehid'))
 async def start(client, msj):
-    global soz
+    global sehid
     chat_id = msj.chat.id
-    soz = random.choice(sehid)
+    sehid = random.choice(sehid)
     await client.send_message(chat_id,
-                              soz,
+                              sehid,
                               reply_markup=InlineKeyboardMarkup(
                                   [
                                       [
@@ -36,12 +36,12 @@ async def start(client, msj):
 
 @app.on_callback_query(filters.regex(r"^deyisdir$"))
 async def callback(cl, msj: CallbackQuery):
-    soz2 = random.choice(sozler)
-    if soz2 == soz:
-        soz2 = random.choice(sozler)
-        if soz2 == soz:
+    sehid2 = random.choice(sehid)
+    if sehid2 == sehid:
+        sehid2 = random.choice(sehid)
+        if sehid2 == sehid:
             pass
-        elif soz2 != soz:
-            await msj.message.edit_text(text=soz2, reply_markup=msj.message.reply_markup)
-    elif soz2 != soz:
-        await msj.message.edit_text(text=soz2, reply_markup=msj.message.reply_markup)
+        elif sehid2 != sehid:
+            await msj.message.edit_text(text=sehid2, reply_markup=msj.message.reply_markup)
+    elif sehid2 != sehid:
+        await msj.message.edit_text(text=sehid2, reply_markup=msj.message.reply_markup)
