@@ -10,8 +10,8 @@ from helpers.filters import command
 
 
 @app.on_callback_query(filters.regex("sehid"))
-async def commit(_, message):
-    await message.reply_text((await random_line('Sehid/sehid.txt')))
+async def cbguide(_, query: CallbackQuery):
+    await query.edit_message_text((await random_line('Sehid/sehid.txt')))
     
     
     
