@@ -35,8 +35,4 @@ async def start(client, message):
     
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
-
-app.stop()
-LOGGER.stop(f"{Config.BOT_USERNAME} Dayandırıldı {Config.OWNER_NAME}")
-
 idle()
