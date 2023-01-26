@@ -18,10 +18,8 @@ async def cbguide(_, query: CallbackQuery):
     
 @app.on_message(command("sehid") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
-    await message.reply_text(
-        f"""<b>✨ Welcome {message.from_user.mention()}!</ballows you to play music on groups through the new Telegram's voice chats!**
-
-💡 Find out all the **Bot's commands** and how they work by clicking on the **» ⚙️ Commands** button!""",
+    await message.reply_text((await random_line('Sehid/sehid.txt')))
+    
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
