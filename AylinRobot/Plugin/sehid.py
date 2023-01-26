@@ -11,7 +11,7 @@ from Sehid import random_line
 
 
 
-soz = open("Sehid/sehid.txt, "r")
+soz = open("Sehid/sehid.txt, "r"
 yazilar = test.readlines()
 rndyazi = random.choice(yazilar)
 
