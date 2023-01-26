@@ -9,14 +9,14 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from helpers.filters import command
 
 
-@app.on_callback_query(filters.regex("sehidler"))
+@app.on_callback_query(filters.regex("sehid"))
 async def commit(_, message):
     await message.reply_text((await random_line('Sehid/sehid.txt')))
     
     
     
     
-@app.on_message(command("sehidler") & filters.private & ~filters.edited)
+@app.on_message(command("sehid") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ Welcome {message.from_user.mention()}!</ballows you to play music on groups through the new Telegram's voice chats!**
@@ -25,7 +25,7 @@ async def start_(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
-                  InlineKeyboardButton("⚙️ Command​​", callback_data="sehidler"
+                  InlineKeyboardButton("⚙️ Command​​", callback_data="sehid"
                     )
                 ]
             ]
