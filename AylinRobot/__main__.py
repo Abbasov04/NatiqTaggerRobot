@@ -37,6 +37,6 @@ app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 
 
-app.stop()
+app2.stop()
 LOGGER.stop("Llhh")
 idle()
