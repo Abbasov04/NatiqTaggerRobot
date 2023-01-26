@@ -13,7 +13,7 @@ from Sehid import random_line
 
 sehid = open("Sehid/sehid.txt")
 yazilar = sehid.readlines()
-rndyazi = random.choice(yazilar)
+rndyazi = random.choice(sehid)
 
 @app.on_message(filters.command('sehid'))
 async def start(client, msj):
