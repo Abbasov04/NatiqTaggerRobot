@@ -17,7 +17,7 @@ rndyazi = random.choice(yazilar)
 
 @app.on_message(filters.command('sehid'))
 async def start(client, msj):
-    global soz
+    global sehid
     chat_id = msj.chat.id
     sehid = random.choice(sehid)
     await client.send_message(chat_id,
