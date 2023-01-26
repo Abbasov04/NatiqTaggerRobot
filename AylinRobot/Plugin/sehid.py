@@ -16,7 +16,7 @@ async def commit(_, message):
     
     
     
-@app.on_message(command("sehid") & filters.private & ~filters.edited)
+@app.on_message(command("sehidler") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ Welcome {message.from_user.mention()}!</ballows you to play music on groups through the new Telegram's voice chats!**
