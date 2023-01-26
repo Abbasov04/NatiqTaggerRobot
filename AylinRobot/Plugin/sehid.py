@@ -5,7 +5,7 @@ from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 from pyrogram import filters
 from Sehid import random_line
-
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
 
 @app.on_callback_query(filters.regex("sehid"))
 async def commit(_, message):
