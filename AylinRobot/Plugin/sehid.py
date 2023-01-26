@@ -11,7 +11,7 @@ from Sehid import random_line
 
 
 
-test = open("Sehid/sehid.txt, "r")
+soz = open("Sehid/sehid.txt, "r")
 yazilar = test.readlines()
 rndyazi = random.choice(yazilar)
 
@@ -19,7 +19,7 @@ rndyazi = random.choice(yazilar)
 async def start(client, msj):
     global soz
     chat_id = msj.chat.id
-    soz = random.choice(test)
+    soz = random.choice(soz)
     await client.send_message(chat_id,
                               soz,
                               reply_markup=InlineKeyboardMarkup(
