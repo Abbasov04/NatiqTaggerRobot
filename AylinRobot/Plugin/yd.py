@@ -11,7 +11,6 @@ from helpers.merrors import capture_err
 
 ARQ_API_KEY = "GTGJNF-FIBRFI-VYUKKA-DZOSLK-ARQ"
 aiohttpsession = aiohttp.ClientSession()
-arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
 
 
 async def quotify(messages: list):
