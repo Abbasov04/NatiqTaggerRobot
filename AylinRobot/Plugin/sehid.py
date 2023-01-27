@@ -7,11 +7,11 @@ import random
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import filters
-from test import random_line
+from Sehid import random_line
 
 
 
-test = open("Sehid/sehid.txt, "r")
+sehid = open("Sehid/sehid.txt, "r")
 yazilar = test.readlines()
 soz = random.choice(yazilar)
 
@@ -19,7 +19,7 @@ soz = random.choice(yazilar)
 async def start(client, msj):
     global soz
     chat_id = msj.chat.id
-    soz = random.choice(test)
+    soz = random.choice(sehid)
     await client.send_message(chat_id,
                               soz,
                               reply_markup=InlineKeyboardMarkup(
