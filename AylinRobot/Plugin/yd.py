@@ -9,7 +9,7 @@ from Python_ARQ import ARQ
 from AylinRobot.config import Config
 from helpers.merrors import capture_err
 
-ARQ_API_KEY = "LXUNEZ-ZCANAT-AYPGUO-JMORSH-ARQ"
+ARQ_API_KEY = "GTGJNF-FIBRFI-VYUKKA-DZOSLK-ARQ"
 aiohttpsession = aiohttp.ClientSession()
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
 
