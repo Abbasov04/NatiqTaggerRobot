@@ -11,7 +11,7 @@ from helpers.merrors import capture_err
 from aiohttp import ClientSession
 
 ARQ_API_KEY = "GTGJNF-FIBRFI-VYUKKA-DZOSLK-ARQ"
-aiohttpsession = aiohttp.ClientSession()
+aiohttpsession = ClientSession()
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
 
 
