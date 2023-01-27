@@ -8,10 +8,9 @@ from pyrogram.types import Message
 from Python_ARQ import ARQ
 from AylinRobot.config import Config
 from helpers.merrors import capture_err
-from aiohttp import ClientSession
 
 ARQ_API_KEY = "GTGJNF-FIBRFI-VYUKKA-DZOSLK-ARQ"
-aiohttpsession = ClientSession()
+aiohttpsession = aiohttp.appSession()
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
 
 
