@@ -11,15 +11,15 @@ from Sehid import random_line
 
 
 
-soz = open("Sehid/sehid.txt, "r"
+test = open("Sehid/sehid.txt, "r")
 yazilar = test.readlines()
-rndyazi = random.choice(yazilar)
+soz = random.choice(yazilar)
 
 @app.on_message(filters.command('sehid'))
 async def start(client, msj):
     global soz
     chat_id = msj.chat.id
-    soz = random.choice(soz)
+    soz = random.choice(test)
     await client.send_message(chat_id,
                               soz,
                               reply_markup=InlineKeyboardMarkup(
