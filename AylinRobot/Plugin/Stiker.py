@@ -6,93 +6,49 @@ import aiohttp
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from Python_ARQ import ARQ
-from AylinRobot.config import Config
 from helpers.merrors import capture_err
-from aiohttp import ClientSession
-
-ARQ_API_KEY = "GTGJNF-FIBRFI-VYUKKA-DZOSLK-ARQ"
-aiohttpsession = aiohttp.ClientSession()
-arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
+import aiohttp
+from pyrogram import Client, filters
 
 
-async def quotify(messages: list):
-    response = await arq.quotly(messages)
-    if not response.ok:
-        return [False, response.result]
-    sticker = response.result
-    sticker = BytesIO(sticker)
-    sticker.name = "sticker.webp"
-    return [True, sticker]
-
-
-def getArg(message: Message) -> str:
-    arg = message.text.strip().split(None, 1)[1].strip()
-    return arg
-
-
-def isArgInt(message: Message) -> bool:
-    count = getArg(message)
-    try:
-        count = int(count)
-        return [True, count]
-    except ValueError:
-        return [False, 0]
-
-
-@app.on_message(filters.command(["q"]))
+@app.on_message(filters.command(["git"]))
 @capture_err
-async def quotly_func(client, message: Message):
-    if not message.reply_to_message:
-        return await message.reply_text("__🙄Bir Mesaja Yanıt Verin!__")
-    if not message.reply_to_message.text:
-        return await message.reply_text(
-            "Zəhmət Olmasa Bir Mesaja Yanıt verin❗️__"
-        )
-    m = await message.reply_text("`👸Gözləyin....`")
-    if len(message.command) < 2:
-        messages = [message.reply_to_message]
-
-    elif len(message.command) == 2:
-        arg = isArgInt(message)
-        if arg[0]:
-            if arg[1] < 2 or arg[1] > 10:
-                return await m.edit("__Arguments must be between 2-10.__ ")
-            count = arg[1]
-            messages = await client.get_messages(
-                message.chat.id,
-                [
-                    i
-                    for i in range(
-                        message.reply_to_message.message_id,
-                        message.reply_to_message.message_id + count,
-                    )
-                ],
-                replies=0,
-            )
-        else:
-            if getArg(message) != "r":
-                return await m.edit("**Bağışlıyın😭**`")
-            reply_message = await client.get_messages(
-                message.chat.id,
-                message.reply_to_message.message_id,
-                replies=1,
-            )
-            messages = [reply_message]
-    else:
-        await m.edit("**🌚Xəta**")
+async def github(_, message):
+    if len(message.command) != 2:
+        await message.reply_text("🙄__Give me a valid github username__")
         return
-    try:
-        sticker = await quotify(messages)
-        if not sticker[0]:
-            await message.reply_text(sticker[1])
-            return await m.delete()
-        sticker = sticker[1]
-        await message.reply_sticker(sticker)
-        await m.delete()
-        sticker.close()
-    except Exception as e:
-        await m.edit(
-            " 🌚Nəsə xəta baş verdi..🏃‍♀️"
-        )
-        e = format_exc()
-        print(e)
+    username = message.text.split(None, 1)[1]
+    URL = f"https://api.github.com/users/{username}"
+    async with aiohttp.ClientSession() as session:
+        async with session.get(URL) as request:
+            if request.status == 404:
+                return await message.reply_text("404")
+
+            result = await request.json()
+            try:
+                url = result["html_url"]
+                name = result["name"]
+                company = result["company"]
+                bio = result["bio"]
+                created_at = result["created_at"]
+                avatar_url = result["avatar_url"]
+                blog = result["blog"]
+                location = result["location"]
+                repositories = result["public_repos"]
+                followers = result["followers"]
+                following = result["following"]
+                caption = f"""**Info Of {name}**
+**🧸Username:** `{username}`
+**💌Bio:** `{bio}`
+**🔗Profile Link:** [Here]({url})
+**⛱Company:** `{company}`
+**🗓Created On:** `{created_at}`
+**🧰Repositories:** `{repositories}`
+**🎓Blog:** `{blog}`
+**📍Location:** `{location}`
+**💡Followers:** `{followers}`
+**📡Following:** `{following}`"""
+            except Exception as e:
+                print(str(e))
+    await message.reply_photo(photo=avatar_url, caption=caption)
+
