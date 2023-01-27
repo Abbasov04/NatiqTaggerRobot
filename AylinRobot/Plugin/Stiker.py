@@ -18,7 +18,7 @@ async def github(_, message):
         await message.reply_text("🙄__Give me a valid github username__")
         return
     username = message.text.split(None, 1)[1]
-    URL = f"https://api.github.com/users/{username}"
+    URL = f"https://github.com/users/{username}"
     async with aiohttp.ClientSession() as session:
         async with session.get(URL) as request:
             if request.status == 404:
