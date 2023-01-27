@@ -7,7 +7,7 @@ import random
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import filters
-from Sehid import random_line
+from test import random_line
 
 
 
