@@ -4,7 +4,6 @@ import psutil
 import shutil
 import string
 import asyncio
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
@@ -16,7 +15,7 @@ async def my_handler(client, msj):
     chat_id = msj.chat.id
 
     BU_QRUP_USERLERI = []
-    async for member in await client.get_chat_members(chat_id):
+    async for member in await app.get_chat_members(chat_id):
         if member.user.is_bot == True:
             pass
         elif member.user.is_bot == False:
