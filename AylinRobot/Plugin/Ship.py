@@ -1,5 +1,4 @@
 from random import choice
-import random
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
@@ -11,7 +10,7 @@ async def my_handler(client, msj):
     chat_id = msj.chat.id
 
     BU_QRUP_USERLERI = []
-    async for member in client.get_chat_members(chat_id):
+    async for member in await app.get_chat_members(chat_id):
         if member.user.is_bot == True:
             pass
         elif member.user.is_bot == False:
