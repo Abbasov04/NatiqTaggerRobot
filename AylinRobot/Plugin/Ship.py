@@ -1,4 +1,5 @@
 from random import choice
+import random
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
