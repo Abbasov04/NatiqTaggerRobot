@@ -33,6 +33,5 @@ async def start(client, message):
     )
     
     
-app.start()
+app.run()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
-idle()
