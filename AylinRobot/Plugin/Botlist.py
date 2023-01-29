@@ -6,8 +6,8 @@ import asyncio
 from pyrogram import Client
 
     
-@app.on_message(filters.command('list') & filters.group)
-async def start(app, msj):
+@app.on_message(filters.command('list') & filters.group))
+def start(app, msj):
     BOTLAR = []
     chat_id = msj.chat.id
     async for members in app.get_chat_members(chat_id):
