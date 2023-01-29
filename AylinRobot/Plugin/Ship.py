@@ -20,5 +20,5 @@ def ship(client, message):
     two_random_members = random.sample(members, 2)
     client.send_message(
         chat_id=message.chat.id,
-        text=f"Randomly selected members: {two_random_members[0]} and {two_random_members[1]}({two_random_members[0]})[{usr.first_name}](tg://user?id={usr.id})"
+        text=f"Randomly selected members: {two_random_members[0]} and {two_random_members[1]}({two_random_members[0]})(tg://user?id={usr.id})"
     )
