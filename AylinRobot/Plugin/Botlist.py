@@ -7,7 +7,7 @@ from pyrogram import Client, filters
 
     
 @app.on_message(filters.command('list') & filters.group)
-def start(client, msj):
+def list(client, msj):
     BOTLAR = []
     chat_id = msj.chat.id
     async for members in client.get_chat_members(chat_id):
