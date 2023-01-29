@@ -10,37 +10,17 @@ from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
 from pyrogram import Client, filters
 
-@app.on_message(filters.command("ship"))
-async def my_handler(client, msj):
-    chat_id = msj.chat.id
-    chat_members = app.get_chat_members(chat_id)
-    BU_QRUP_USERLERI = []
-    for member in chat_members:
-        if member.user.is_bot == True:
-            pass
-        elif member.user.is_bot == False:
-            BU_QRUP_USERLERI.append((member.user.mention))
+import random
+import pyrogram
 
-    rnduser = random.choice(BU_QRUP_USERLERI)
-    sevgi2 = random.choice(BU_QRUP_USERLERI)
+app = pyrogram.Client("my_account")
 
-    if rnduser == sevgi2:
-        rnduser = random.choice(BU_QRUP_USERLERI)
-        # sevgi2 = random.choice(BU_QRUP_USERLERI)
-        if rnduser == sevgi2:
-            rnduser = random.choice(BU_QRUP_USERLERI)
-            # sevgi2 = random.choice(BU_QRUP_USERLERI)
-            if rnduser == sevgi2:
-                rnduser = random.choice(BU_QRUP_USERLERI)
-                if rnduser == sevgi2:
-                    await client.send_message(chat_id, f"{msj.from_user.mention} yeniden cehd edin")
-                elif rnduser != sevgi2:
-                    await client.send_message(chat_id,
-                                              f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
-            elif rnduser != sevgi2:
-                await client.send_message(chat_id,
-                                          f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
-        elif rnduser != sevgi2:
-            await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
-    elif rnduser != sevgi2:
-        await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+@app.on_message(pyrogram.Filters.command(["ship"]))
+def ship(client, message):
+    chat_members = client.get_chat_members(chat_id=message.chat.id)
+    members = [member.user.first_name for member in chat_members]
+    two_random_members = random.sample(members, 2)
+    client.send_message(
+        chat_id=message.chat.id,
+        text=f"Randomly selected members: {two_random_members[0]} and {two_random_members[1]}"
+    )
