@@ -9,10 +9,11 @@ from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
 from pyrogram import Client, filters
-from helpers.merrors import merrors
+from helpers.merrors import capture_err
 
 @app.on_message(filters.command("ship"))
 async def my_handler(client, msj):
+@capture_err  
     chat_id = msj.chat.id
     chat_members = app.get_chat_members(chat_id)
     BU_QRUP_USERLERI = []
