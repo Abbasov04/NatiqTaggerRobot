@@ -13,7 +13,7 @@ from pyrogram import Client, filters
 import random
 
 
-@app.on_message(pyrogram.Filters.command(["ship"]))
+@app.on_message(filters.command("ship"))
 def ship(client, message):
     chat_members = client.get_chat_members(chat_id=message.chat.id)
     members = [member.user.first_name for member in chat_members]
