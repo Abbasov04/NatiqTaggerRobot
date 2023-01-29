@@ -1,16 +1,7 @@
-import os
-import time
-import psutil
-import shutil
-import string
-import asyncio
-from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
 from pyrogram import Client, filters
-
-import random
 
 
 
@@ -26,6 +17,5 @@ async def start(client, msj):
             botlarsiyahi = '\n'.join(BOTLAR)
         else:
             pass
-
     botlarsiyahi = '\n'.join(BOTLAR)
     await client.send_message(chat_id, botlarsiyahi)
