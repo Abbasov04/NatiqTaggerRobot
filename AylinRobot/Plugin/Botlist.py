@@ -7,10 +7,10 @@ from pyrogram import Client, filters
 
     
 @app.on_message(filters.command('list') & filters.group)
-def list(client, msj):
+async def start(client, msj):
     BOTLAR = []
     chat_id = msj.chat.id
-    app= members in client.get_chat_members(chat_id):
+    async for members in client.get_chat_members(chat_id):
         botmu = members.user.is_bot
         if botmu == True:
             BOTLAR.append(members.user.mention)
