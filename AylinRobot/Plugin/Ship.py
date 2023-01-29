@@ -9,6 +9,7 @@ from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
 from pyrogram import Client, filters
+from helpers.merrors import merrors
 
 @app.on_message(filters.command("ship"))
 async def my_handler(client, msj):
