@@ -18,4 +18,7 @@ def ship(client, message):
     chat_members = client.get_chat_members(chat_id=message.chat.id)
     members = [member.user.first_name for member in chat_members]
     two_random_members = random.sample(members, 2)
-client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+    client.send_message(
+        chat_id=message.chat.id,
+        text=f"Randomly selected members: {two_random_members[0]} and {two_random_members[1]}"
+    )
