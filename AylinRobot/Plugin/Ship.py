@@ -20,7 +20,7 @@ def ship(client, msj):
     chat_members = client.get_chat_members(chat_id=msj.chat.id)
 
     BU_QRUP_USERLERI = []
-    async for member in app.get_chat_members(chat_id):
+    async for member in client.get_chat_members(chat_id):
         if member.user.is_bot == True:
             pass
         elif member.user.is_bot == False:
