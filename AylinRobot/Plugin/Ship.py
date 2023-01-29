@@ -11,9 +11,7 @@ from pyrogram import idle, filters
 from pyrogram import Client, filters
 
 import random
-import pyrogram
 
-app = pyrogram.Client("my_account")
 
 @app.on_message(pyrogram.Filters.command(["ship"]))
 def ship(client, message):
