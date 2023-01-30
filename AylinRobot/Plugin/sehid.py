@@ -12,7 +12,7 @@ button = InlineKeyboardMarkup([
 
 ])
 
-@app.on_message(filters.command("sehid") & "filters.edited)
+@app.on_message(filters.command("sehid") &filters.edited)
 
 async def commit(_, message): await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup-button)
 
