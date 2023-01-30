@@ -12,11 +12,11 @@ button = InlineKeyboardMarkup([
 
 ])
 
-@bot.on_message(filters.command("sehid") & "filters.edited)
+@app.on_message(filters.command("sehid") & "filters.edited)
 
-async def commit(_, message): await message.reply_text((await random_line('AykhanPro/txt/sehid.txt')), reply_markup-button)
+async def commit(_, message): await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup-button)
 
-@bot.on_callback_query(filters.regex("deyis"))
+@app.on_callback_query(filters.regex("deyis"))
 
 async def deyis(_, query: CallbackQuery):
 
