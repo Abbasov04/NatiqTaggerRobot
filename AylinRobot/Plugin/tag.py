@@ -11,12 +11,12 @@ import aiohttp
 from AylinRobot import AylinRobot as app
 from pyrogram import filters
 from app import * from Aykhan.komekci.mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, ban
-
+from AylinRobot.config import Config
 active_chats = []
 
 #Chatbot açıb bağlamaq üçün manual modul aykhan@26
 
-@app.on_message(filters.command("chatbot") & filters.user(SAHIB))
+@app.on_message(filters.command("chatbot") & filters.user(Config.OWNER_ID))
 
 async def chatbot_status(_, message):
 
