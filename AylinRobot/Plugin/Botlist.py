@@ -14,19 +14,19 @@ async with aiohttp.ClientSession() as session: async with session.get(URL) as re
 if request.status == 404:
 return await message.reply_text("404")
 # aykhan026
-result = await request.json()
-try:
-url = result['html_url']
-name = result['name']
-company result['company']
-bio = result['bio']
-created_at = result['created_at']
-avatar_url = result['avatar_url']
-blog = result['blog']
-location = result['location']
-repositories = result['public_repos']
-followers = result['followers']
-following result[ following"] caption = """Info Of {name}**
+        result = await request.json()
+        try:
+        url = result['html_url']
+        name = result['name']
+        company result['company']
+        bio = result['bio']
+        created_at = result['created_at']
+        avatar_url = result['avatar_url']
+         blog = result['blog']
+         location = result['location']
+         repositories = result['public_repos']
+         followers = result['followers']
+         following result[ following"] caption = """Info Of {name}**
 İstifadəçi adɩ: *** [username}
  Bio:  (bio)
 *Profil linki: [Here]({url})**
