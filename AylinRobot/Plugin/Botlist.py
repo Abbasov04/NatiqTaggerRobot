@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 
 
 @app.on_message(filters.command('git') & filters.group)
-if len(message.command) != 2:
+   if len(message.command) != 2:
 await message.reply_text("/github İstifadəçi adı yazmadınız ")
 return
 username = message.text.split(None, 1) [1] URL f'https://api.github.com/users/{username}'
