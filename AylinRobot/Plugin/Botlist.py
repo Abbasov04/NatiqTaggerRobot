@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 
 
 
-@app.on_message(filters.command('github')) async def github (_, Message):
+@app.on_message(filters.command('git') & filters.group)
 if len(message.command) != 2:
 await message.reply_text("/github İstifadəçi adı yazmadınız ")
 return
