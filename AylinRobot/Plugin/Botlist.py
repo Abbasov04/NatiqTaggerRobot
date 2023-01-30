@@ -27,7 +27,7 @@ return await message.reply_text("404")
          repositories = result['public_repos']
          followers = result['followers']
          following result[ following"] caption = """Info Of {name}**
-İstifadəçi adɩ: *** [username}
+İstifadəçi adɩ: ***{username}
  Bio:  (bio)
 *Profil linki: [Here]({url})**
 Şirkət: ** {company}
