@@ -6,16 +6,70 @@ from pyrogram import Client, filters
 
 
     
-@app.on_message(filters.command('list') & filters.group)
-async def start(client, msj):
-    BOTLAR = []
-    chat_id = msj.chat.id
-    async for members in client.get_chat_members(chat_id):
-        botmu = members.user.is_bot
-        if botmu == True:
-            BOTLAR.append(members.user.mention)
-            botlarsiyahi = '\n'.join(BOTLAR)
-        else:
-            pass
-    botlarsiyahi = '\n'.join(BOTLAR)
-    await client.send_message(chat_id, botlarsiyahi)
+@app.on_message(filters.command('git')) async def github (_, message):
+
+if len(message.command) != 2:
+
+await message.reply_text("/github İstifadəçi adı yazmadınız ")
+
+return
+
+username = message.text.split(None, 1) [1] URL f'https://api.github.com/users/{username}'
+
+async with aiohttp.ClientSession() as session: async with session.get(URL) as request:
+
+if request.status == 404:
+
+return await message.reply_text("404")
+
+# aykhan026
+
+result = await request.json()
+
+try:
+
+url = result['html_url']
+
+name = result['name']
+
+company result['company']
+
+bio = result['bio']
+
+created_at = result['created_at']
+
+avatar_url = result['avatar_url']
+
+blog = result['blog']
+
+location = result['location']
+
+repositories = result['public_repos']
+
+followers = result['followers']
+
+following result[ following"] caption = """Info Of {name}**
+
+İstifadəçi adɩ: *** [username}
+
+ Bio:  (bio)
+
+*Profil linki: [Here]({url})**
+
+Şirkət: ** {company}
+
+Yaradılma tarixi:  {created_at}
+
+*Depolar: * {repositories}
+
+*Blog:  (blog)
+
+*Məkan: * {location}
+
+Dİzləyicilər: *{followers} İzlədikləri:  (following}
+
+except Exception as e:
+
+print(str(e))
+
+pass await message.reply_photo(photo-avatar_url, caption-caption)
