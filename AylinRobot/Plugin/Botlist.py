@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 
 
 
-@app.on_message(filters.command('github')) async def github (_, message):
+@app.on_message(filters.command('github')) async def github (_, Message):
 if len(message.command) != 2:
 await message.reply_text("/github İstifadəçi adı yazmadınız ")
 return
@@ -33,10 +33,10 @@ return await message.reply_text("404")
 Şirkət: ** {company}
 Yaradılma tarixi:  {created_at}
 *Depolar: * {repositories}
-*Blog:  (blog)
-*Məkan: * {location}
+**Blog:  (blog)
+**Məkan: **{location}
+**İzləyicilər: **{followers} İzlədikləri:  {following}
 
-Dİzləyicilər: *{followers} İzlədikləri:  {following}
 except Exception as e:
 print(str(e))
 pass await message.reply_photo(photo-avatar_url, caption-caption)
