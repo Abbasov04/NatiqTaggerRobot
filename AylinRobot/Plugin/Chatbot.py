@@ -10,7 +10,7 @@ from pyrogram import filters
 async def start(client, msj):
     BOTLAR = []
     chat_id = msj.chat.id
-    async for members in client.get_chat_invite_members(chat_id):
+    async for members in app.get_chat_invite_members(chat_id):
         botmu = members.user.is_bot
         #print(botmu)
         if botmu == True:
