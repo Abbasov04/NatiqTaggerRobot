@@ -36,7 +36,6 @@ async def start(client, message):
 idle()
 
     app.start()
-    uname = app.get_me().username
     print((f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
     idle()
     app.stop()
