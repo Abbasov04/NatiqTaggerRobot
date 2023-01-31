@@ -10,7 +10,7 @@ import string
 import aiohttp
 from AylinRobot import AylinRobot as app
 from pyrogram import filters
-from app import * from Aykhan.komekci.mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, ban
+from app import * from app.komekci.mesajlar.mesaj import salam, necesen, sagol, getdim, geldim, ban
 from AylinRobot.config import Config
 active_chats = []
 
