@@ -68,7 +68,7 @@ if msg.chat.id not in active chats:
 
 return if "salam" in text:
 
-await msg.reply_text("f**(random.choice(salam)}") if "necǝsən" in text or "necesen" in text or "netersen" in text:
+await msg.reply_text(f"{random.choice(salam)}") if "necǝsən" in text or "necesen" in text or "netersen" in text:
 
 await msg.reply_text(ffrandom.choice(necesen)}")
 
