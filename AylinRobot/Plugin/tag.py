@@ -38,7 +38,7 @@ await message.reply_text(text)
 
 return
 
-await message.reply_text("**ChatBot onsuzda aktivdir !***)
+await message.reply_text("**ChatBot onsuzda aktivdir !**")
 
 return
 
@@ -56,7 +56,7 @@ else:
 
 await message.reply_text("/chatbot [ON] və yaxud [OFF] yazmadınız")
 
-@aykhan2.on_message(filters.text)
+@app.on_message(filters.text)
 
 async def start(_, msg: Message):
 
@@ -68,7 +68,7 @@ if msg.chat.id not in active chats:
 
 return if "salam" in text:
 
-await msg.reply_text(f*(random.choice(salam)}") if "necǝsən" in text or "necesen" in text or "netersen" in text:
+await msg.reply_text("f**(random.choice(salam)}") if "necǝsən" in text or "necesen" in text or "netersen" in text:
 
 await msg.reply_text(ffrandom.choice(necesen)}")
 
@@ -76,8 +76,8 @@ if "sagol" in text or "sağol" in text or "saqol" in text: await msg.reply_text(
 
 if "getdim" in text or "gedim" in text or "gediram" in text or "gedirem" in text:
 
-await msg.reply_text(f(random.choice(getdim)}") if "geldim" in text or "galdim" in text or "gal" in text or "galiram" in text:
+await msg.reply_text(f(random.choice("getdim)}") if "geldim" in text or "galdim" in text or "gal" in text or "galirəm" in text:
 
 await msg.reply_text(f"{random.choice(geldim)}")
 
-if "ban" in text or "mute" in text or "purge" in text or "gban" in text: awalt msg.reply_text("{random.choice(ban)}")
+if "ban" in text or "mute" in text or "purge" in text or "gban" in text: awalt msg.reply_text(f"{random.choice(ban)}")
