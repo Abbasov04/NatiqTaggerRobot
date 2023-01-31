@@ -70,13 +70,13 @@ return if "salam" in text:
 
 await msg.reply_text(f"{random.choice(salam)}") if "necǝsən" in text or "necesen" in text or "netersen" in text:
 
-await msg.reply_text(ffrandom.choice(necesen)}")
+await msg.reply_text(f"{random.choice(necesen)}")
 
-if "sagol" in text or "sağol" in text or "saqol" in text: await msg.reply_text("frandom. choice( sagol)}")
+if "sagol" in text or "sağol" in text or "saqol" in text: await msg.reply_text(f"{random. choice(sagol)}")
 
 if "getdim" in text or "gedim" in text or "gediram" in text or "gedirem" in text:
 
-await msg.reply_text(f(random.choice("getdim)}") if "geldim" in text or "galdim" in text or "gal" in text or "galirəm" in text:
+await msg.reply_text(f"{random.choice(getdim)}") if "geldim" in text or "galdim" in text or "gal" in text or "galirəm" in text:
 
 await msg.reply_text(f"{random.choice(geldim)}")
 
