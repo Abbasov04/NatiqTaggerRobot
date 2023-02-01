@@ -72,6 +72,6 @@ async def cb_data(client, message):
     elif message.data == "axtar":
         await message.message.edit_text(
             text=Translation.AXTARIS_TEXT,
-            reply_markup=Button.AXTARIS_BUTTONS,
+            reply_markup=Button.AXTAR_BUTTONS,
             disable_web_page_preview=True
         )        
