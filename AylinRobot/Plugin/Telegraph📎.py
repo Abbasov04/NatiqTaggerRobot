@@ -2,14 +2,13 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-import os
+import os, pyrogram
 from telegraph import upload_file
-import pyrogram
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
 from AylinRobot import LOGGER
-from pyrogram import idle, filters
-from pyrogram import filters, Client
+from pyrogram import idle, Client, filters
+from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,InlineKeyboardMarkup, InlineKeyboardButton,CallbackQuery, InlineQuery)
 
