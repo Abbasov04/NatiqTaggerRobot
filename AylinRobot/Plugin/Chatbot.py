@@ -4,7 +4,8 @@ import aiohttp
 from AylinRobot import AylinRobot as app
 from pyrogram import filters
 
-from app import * from app.mesajlar.mesaj import mesaj
+from app.mesajlar.mesaj import mesaj
+
 from AylinRobot.config import Config
 
 active_chats = []
