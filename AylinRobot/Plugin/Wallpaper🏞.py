@@ -1,6 +1,12 @@
+# @AylinRobot
+#@MusicAzBot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
 import random
 from time import time
 from random import choice
+from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
