@@ -1,12 +1,15 @@
-from AylinRobot.config import Config
+# @AylinRobot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
 from AylinRobot import AylinRobot as app
 from helpers.filters import command, other_filters
 import os, youtube_dl, requests, aiohttp, wget, time
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
+from AylinRobot.config import Config
 from yt_dlp import YoutubeDL
 from pyrogram import Client, filters
-import yt_dlp
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
