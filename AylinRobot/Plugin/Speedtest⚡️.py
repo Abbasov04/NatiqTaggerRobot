@@ -18,6 +18,7 @@ def bytes(size: float) -> str:
 
 
 @app.on_message(filters.command("speedtest") & filters.user(Config.OWNER_ID))
+    message.delete()
 async def statsguwid(_, message):
     m = await message.reply_text("⚡️ Sürət testi")
     try:
