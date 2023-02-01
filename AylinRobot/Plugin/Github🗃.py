@@ -8,8 +8,6 @@ from AylinRobot import AylinRobot as app
 from pyrogram import idle, Client filters
 
 
-
-
 @app.on_message(filters.command('github'))
 async def github(_, message):
     if len(message.command) != 2:
@@ -21,7 +19,6 @@ async def github(_, message):
         async with session.get(URL) as request:
             if request.status == 404:
                 return await message.reply_text("404")
-# aykhan026
             result = await request.json()
             try:
                 url = result['html_url']
