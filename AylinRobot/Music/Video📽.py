@@ -2,10 +2,8 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-import requests, os, aiohttp, yt_dlp, wget
+import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
 from pyrogram import Client, filters
-from youtube_search import YoutubeSearch
-from yt_dlp import YoutubeDL
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
 
