@@ -37,6 +37,9 @@ class Translation(object):
 🔮 Istifadə: /broadcast_pin
 📃 Açıqlama: Qruplarda yayım edər və pinləyər.
 
+🔮 Istifadə: /dyno
+📃 Açıqlama: Heroku Dyno Miqdarını Ölçər.
+
 """
 
     MUSIC_TEXT = """
