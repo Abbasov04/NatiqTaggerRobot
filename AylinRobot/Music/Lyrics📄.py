@@ -1,3 +1,9 @@
+# @AylinRobot
+#@MusicAzBot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
+
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 from AylinRobot.config import Config
@@ -24,7 +30,7 @@ async def lrsearch(_, message: Message):
     if S is None:
         return await m.edit("Mahnı sözləri tapılmadı: 🥹")
     xxx = f"""
-** Yüklədi {Config.BOT_USERNAME} ❤**
+**🙋‍♀️ Yüklədi {Config.BOT_USERNAME} ❤**
 
 **Axtarılan Mahnı:-** __{query}__
  **Tapılmış Mahnı Sözləri:-** __{S.title}__
