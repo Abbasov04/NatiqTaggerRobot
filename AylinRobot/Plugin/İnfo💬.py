@@ -31,7 +31,7 @@ async def who_is(client, message):
         await status_message.edit(str(error))
         return
     if from_user is None:
-        await status_message.edit("Etibarlı İstifadəçi_ID / göstərilməyib")
+        await status_message.edit("Etibarlı İstifadəçi_ID / göstərilməyib 🙄")
         return
     
     first_name = from_user.first_name or ""
