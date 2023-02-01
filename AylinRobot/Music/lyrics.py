@@ -17,19 +17,19 @@ from pyrogram.types import (
 async def lrsearch(_, message: Message):
     if len(message.command) < 2:
         return await message.reply_text("**İstifadə:**\n\n/lyrics [ Musiqi Adı]")
-    m = await message.reply_text("Mahnı sözləri axtarılır")
+    m = await message.reply_text("✍️ Mahnı sözləri axtarılır")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
     y.verbose = False
     S = y.search_song(query, get_full_info=False)
     if S is None:
-        return await m.edit("Lyrics not found :p")
+        return await m.edit("Mahnı sözləri tapılmadı: 🥹")
     xxx = f"""
-** Yüklədi {Config.BOT_USERNAME} 🇦🇿**
+** Yüklədi {Config.BOT_USERNAME} ❤**
 
 **Axtarılan Mahnı:-** __{query}__
- **Found Lyrics For:-** __{S.title}__
+ **Tapılmış Mahnı Sözləri:-** __{S.title}__
  **Rəssam:-** {S.artist}
 
  **__ Mahnı sözləri:__**
