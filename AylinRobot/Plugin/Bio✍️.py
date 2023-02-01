@@ -1,16 +1,14 @@
 # @AylinRobot
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
-# Mamana Salam De 
 
-
-import random, os
+import os
 from time import time
 from random import choice
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import idle, filters
+from pyrogram import idle
 from AylinRobot.config import Config
 from pyrogram import Client, filters
 
