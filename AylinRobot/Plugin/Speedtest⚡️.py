@@ -1,10 +1,7 @@
-import os
+import os, wget, speedtest
 from AylinRobot import AylinRobot as app
-import speedtest
-import wget
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
 from AylinRobot.config import Config
 
 def bytes(size: float) -> str:
@@ -22,32 +19,32 @@ def bytes(size: float) -> str:
 
 @app.on_message(filters.command("speedtest") & filters.user(Config.OWNER_ID))
 async def statsguwid(_, message):
-    m = await message.reply_text("Sürət testi")
+    m = await message.reply_text("⚡️ Sürət testi")
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        m = await m.edit("Sürət Testini yükləyin")
+        m = await m.edit("⚙️ Sürət Testini yükləyin")
         test.download()
-        m = await m.edit("Yükləmə Sürət Testi işləyir")
+        m = await m.edit("🔄 Yükləmə Sürət Testi işləyir")
         test.upload()
         test.results.share()
         result = test.results.dict()
     except Exception as e:
         return await m.edit(e)
-    m = await m.edit("SpeedTest Nəticələrinin Paylaşılması")
+    m = await m.edit("📥 SpeedTest Nəticələrinin Paylaşılması")
     path = wget.download(result["share"])
 
-    output = f"""**Speedtest Nəticələri**
+    output = f"""**📊 Speedtest Nəticələri**
     
-<u>**Client:**</u>
+<u>**Müştəri:**</u>
 **__ISP:__** {result['client']['isp']}
-**__Country:__** {result['client']['country']}
+**__Ölkə:__** {result['client']['country']}
   
 <u>**Server:**</u>
-**__Name:__** {result['server']['name']}
-**__Country:__** {result['server']['country']}, {result['server']['cc']}
+**__Ad:__** {result['server']['name']}
+**__Ölkə:__** {result['server']['country']}, {result['server']['cc']}
 **__Sponsor:__** {result['server']['sponsor']}
-**__Latency:__** {result['server']['latency']}  
+**__Gecikmə:__** {result['server']['latency']}  
 **__Ping:__** {result['ping']}"""
     msg = await app.send_photo(
         chat_id=message.chat.id, photo=path, caption=output
