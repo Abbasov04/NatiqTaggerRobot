@@ -189,7 +189,7 @@ photolist = [
 ]
 
 @app.on_message(filters.command("soxri") & ~filters.edited)
-    message.delete()
+    m.delete()
 async def test_bot(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
