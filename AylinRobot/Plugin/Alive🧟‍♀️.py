@@ -1,3 +1,7 @@
+# @AylinRobot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
 from pyrogram.types import Message, User
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
@@ -43,8 +47,7 @@ async def _human_time_duration(seconds):
 
 
 @app.on_message(
-    command(["alive"]) & filters.group & ~filters.edited
-)
+command(["alive"])& ~filters.edited)
 async def start_group(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
