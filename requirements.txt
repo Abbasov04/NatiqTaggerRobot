@@ -12,7 +12,6 @@ requests
 aiohttp
 aiofiles
 asyncio
-youtube_search
 python-arq
 search_engine_parser
 wget 
@@ -23,10 +22,7 @@ ujson
 psutil
 future
 dnspython
-yt-dlp
 yt_dlp
-speedtest-cli
-youtube_search
 OpenCC
 pytube
 pillow
