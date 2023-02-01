@@ -70,7 +70,7 @@ async def roll_dice(client, message):
     )
 
 
-@app.on_message(filters.command(["basket"))
+@app.on_message(filters.command(["basket"]))
 async def basketball(client, message):
     rep_mesg_id = message.message_id
     if message.reply_to_message:
