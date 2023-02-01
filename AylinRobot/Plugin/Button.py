@@ -45,4 +45,7 @@ EYLENCE_BUTTONS = InlineKeyboardMarkup(
 SAHIB_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 ELAVE_BUTTONS = InlineKeyboardMarkup(
-[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]]) 
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+AXTAR_BUTTONS = InlineKeyboardMarkup(
+[[
+InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
