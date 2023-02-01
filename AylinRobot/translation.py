@@ -92,6 +92,9 @@ Bazada *2881* Şəhid adı mövcuddur
 🔮 Istifadə: /jackpot
 📃 Açıqlama: jackpot atar
 
+🔮 Istifadə: /basket
+📃 Açıqlama: basket atar
+
 """
 
     EYLENCE_TEXT = """
