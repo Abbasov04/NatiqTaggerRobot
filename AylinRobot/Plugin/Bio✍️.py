@@ -2,6 +2,7 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
+import random
 import os
 from time import time
 from random import choice
