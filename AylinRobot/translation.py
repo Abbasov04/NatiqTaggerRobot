@@ -1,5 +1,9 @@
+# @AylinRobot
+#@MusicAzBot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from AylinRobot.config import Config
 
 class Translation(object):
 
