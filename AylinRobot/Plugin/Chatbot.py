@@ -8,9 +8,6 @@ from Mesajlar.Mesajlar import Mesajlar
 
 from AylinRobot.config import Config
 
-active_chats = []
-
-
 #### ChatBot Açıb Bağlama
 
 @app.on_message(filters.command("chatbot") & filters.user(Config.OWNER_ID))
