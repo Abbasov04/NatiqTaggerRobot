@@ -4,9 +4,6 @@ import random
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 from pyrogram import Client, filters
-
-
-
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 
@@ -18,8 +15,8 @@ GOAL_E_MOJI = "⚽"
 BASKETBALL = "🏀"
 
 
-@app.on_message(filters.command(["throw"]))
-async def throw_dart(client, message):
+@app.on_message(filters.command(["ox"]))
+async def ox(client, message):
     rep_mesg_id = message.message_id
     if message.reply_to_message:
         rep_mesg_id = message.reply_to_message.message_id
@@ -31,7 +28,7 @@ async def throw_dart(client, message):
     )
 
 
-@app.on_message(filters.command(["bg"]))
+@app.on_message(filters.command(["bowling"]))
 async def bowling(client, message):
     rep_mesg_id = message.message_id
     if message.reply_to_message:
@@ -44,8 +41,8 @@ async def bowling(client, message):
     )
 
 
-@app.on_message(filters.command(["luck"]))
-async def luck_cownd(client, message):
+@app.on_message(filters.command(["jackpot"]))
+async def jackpot(client, message):
     rep_mesg_id = message.message_id
     if message.reply_to_message:
         rep_mesg_id = message.reply_to_message.message_id
@@ -57,8 +54,8 @@ async def luck_cownd(client, message):
     )
 
 
-@app.on_message(filters.command(["ball"]))
-async def roll_dice(client, message):
+@app.on_message(filters.command(["top"]))
+async def top(client, message):
     rep_mesg_id = message.message_id
     if message.reply_to_message:
         rep_mesg_id = message.reply_to_message.message_id
@@ -71,7 +68,7 @@ async def roll_dice(client, message):
 
 
 @app.on_message(filters.command(["basket"]))
-async def basketball(client, message):
+async def basket(client, message):
     rep_mesg_id = message.message_id
     if message.reply_to_message:
         rep_mesg_id = message.reply_to_message.message_id
