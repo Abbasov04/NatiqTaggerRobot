@@ -2,7 +2,8 @@ from AylinRobot.config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot import LOGGER
   
-### START BUTTONU    
+### START BUTTONU 
+
 START_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton("👾 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
 InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.SUPPORT}"),
@@ -13,6 +14,8 @@ InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Confi
 ],[                
 InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
 InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),]])
+
+#### KÖMƏK BUTTONU
 
 HELP_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
@@ -30,10 +33,9 @@ InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
     
 ### GERİ BUTTONU    
-    
+
 MUSIC_BUTTONS = InlineKeyboardMarkup(
-[[
-InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 TELEGRAPH_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 SEHID_BUTTONS = InlineKeyboardMarkup(
