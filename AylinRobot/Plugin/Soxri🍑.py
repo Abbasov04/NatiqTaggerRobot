@@ -193,7 +193,7 @@ async def test_bot(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
     end = round(time() - start, 2)
-    photo = random.choice(soxri)
+    soxri = random.choice(soxri)
     text = f"❤️ **{Config.BOT_USERNAME} Sizin Üçün Rondom Bir Şəkil Seçdi**"
     await bot.send_photo(m.chat.id, soxri=soxri, caption=text)
     await replymsg.delete()
