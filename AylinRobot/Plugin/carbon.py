@@ -1,18 +1,13 @@
-import logging
-
-import time
+import logging, time
 from pyrogram import Client, filters, idle
-from AylinRobot import AylinRobot as app
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-import pyrogram
-from AylinRobot.config import Config
-from datetime import datetime
-
-from pyrogram.errors import FloodWait
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram import Client, idle, filters
 from io import BytesIO
 from aiohttp import ClientSession
+from AylinRobot import AylinRobot as app
+from AylinRobot.config import Config
+from datetime import datetime
+from pyrogram.errors import FloodWait
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+
 #--------------------------------------------------------------
 
 
