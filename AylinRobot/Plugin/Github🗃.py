@@ -5,7 +5,7 @@
 import aiohttp
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import idle, Client filters
+from pyrogram import idle, Client, filters
 
 
 @app.on_message(filters.command('github'))
