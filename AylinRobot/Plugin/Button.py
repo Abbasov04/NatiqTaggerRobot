@@ -13,6 +13,7 @@ InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Confi
 ],[                
 InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
 InlineKeyboardButton("🎵 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),]])
+
 HELP_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
 InlineKeyboardButton('⭐ Telegraph', callback_data='tg')
@@ -23,6 +24,7 @@ InlineKeyboardButton('🇦🇿 Şəhidlər', callback_data='sehıd'),
 InlineKeyboardButton('🌀 Əyləncə', callback_data='eylence'),
 InlineKeyboardButton('Əlavələr', callback_data='elave'),
 ],[
+InlineKeyboardButton('Axtarış', callback_data='axtar'),  
 InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'), 
 ],[        
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
