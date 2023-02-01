@@ -3,28 +3,16 @@ from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-import pyrogram
 from AylinRobot.config import Config
 from datetime import datetime
-
 from os import path
 from time import time
-from datetime import datetime
-
 from pyrogram.errors import FloodWait
 from sys import version_info
-from time import time
-
 from helpers.filters import command, other_filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
-
 from helpers import __version__
 from helpers.filters import command
-from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-
 __major__ = 0
 __minor__ = 2
 __micro__ = 1
@@ -97,8 +85,8 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 bot status:\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
+        "🤖 Bot Statusu:\n"
+        f"• **İş Vaxtı:** `{uptime}`\n"
+        f"• **Başlama Vaxtı:** `{START_TIME_ISO}`"
     )
     
