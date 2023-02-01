@@ -12,7 +12,6 @@ from AylinRobot.config import Config
 
 @app.on_message(filters.command("chatbot") & filters.user(Config.OWNER_ID))
 async def chatbot_status(_, message):
-global active_chats
 if len(message.command) != 2: await message.reply_text("/chatbot [ON] va yaxud [OFF] yazmadınız")
 return
 status = message.text.split(None, 1) [1] chat_id = message.chat.id
