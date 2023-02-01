@@ -6,12 +6,13 @@
 import random
 from time import time
 from random import choice
+from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
-from pyrogram import idle, filters
+from pyrogram import Client, idle, filters
 from AylinRobot.config import Config
-from pyrogram import Client, filters
+
 
 
 temalar = [" [Aylin](https://t.me/addtheme/sf158WSw7LWOtpvV) ",
