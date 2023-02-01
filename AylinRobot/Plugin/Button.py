@@ -47,5 +47,4 @@ SAHIB_BUTTONS = InlineKeyboardMarkup(
 ELAVE_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 AXTAR_BUTTONS = InlineKeyboardMarkup(
-[[
-InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
