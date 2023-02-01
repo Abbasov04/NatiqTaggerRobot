@@ -7,12 +7,10 @@ from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 from helpers.filters import command
 from pyrogram import Client, filters, idle
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 import pyrogram
 from pyrogram.errors import FloodWait
-from AylinRobot.config import Config
 from datetime import datetime
-
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 
 @app.on_message(filters.command('id'))
 def ids(_, message):
