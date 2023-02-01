@@ -190,13 +190,11 @@ photolist = [
 ]
 
 
-#### Botun FloodWait Olmaması Üçün Göstərilən Rəqəm 10 Məsləhətlidir
-
 @app.on_message(filters.command(["soxri"]) & ~filters.edited)
 async def test_bot(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
-    end = round(time(,1) - start, 30)
+    end = round(time() - start, 1)
     photo = random.choice(photolist)
     text = f"❤️ **{Config.BOT_USERNAME} Sizin Üçün Rondom Bir Şəkil Seçdi**"
     await bot.send_photo(m.chat.id, photo=photo, caption=text)
