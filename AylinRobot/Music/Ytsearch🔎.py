@@ -4,12 +4,11 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 
-import json, logging
 from AylinRobot import AylinRobot as app
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from helpers.filters import command
-from youtube_search import YoutubeSearch
+import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp, json, logging
 from pyrogram import Client
 from pyrogram.types import (
     CallbackQuery,
