@@ -192,7 +192,7 @@ photolist = [
 async def test_bot(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
-    end = round(time() - start, 30)
+    end = round(time() - start, 10)
     photo = random.choice(photolist)
     text = f"❤️ **{Config.BOT_USERNAME} Sizin Üçün Rondom Bir Şəkil Seçdi**"
     await bot.send_photo(m.chat.id, photo=photo, caption=text)
