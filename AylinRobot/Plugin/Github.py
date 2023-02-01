@@ -1,9 +1,12 @@
+# @AylinRobot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
+import aiohttp
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import idle, filters
-from pyrogram import Client, filters
-import aiohttp
-from pyrogram import Client, filters
+from pyrogram import idle, Client filters
+
 
 
 
