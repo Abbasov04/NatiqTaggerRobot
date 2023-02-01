@@ -52,9 +52,6 @@ class Translation(object):
 🧩 Nümunə: /lyrics Rei - Ah Canım Sevgilim
 📃 Açıqlama: Musiqinin sözlərini tapır.
 
-🔮 Istifadə: /search
-🧩 Nümunə: /search Rei - Ah Canım Sevgilim
-📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
 """
 
     TELEGRAPH_TEXT = """
@@ -142,5 +139,18 @@ Bazada *2881* Şəhid adı mövcuddur
 
 🔮 Istifadə: /alive
 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
+
+"""
+
+
+    AXTARIS_TEXT = """
+
+🔮 Istifadə: /github 
+🧩 Nümunə: /github hesenovhuseyn
+📃 Açıqlama: Github Axtarışı Edər.
+
+🔮 Istifadə: /search
+🧩 Nümunə: /search Rei - Ah Canım Sevgilim
+📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
 
 """
