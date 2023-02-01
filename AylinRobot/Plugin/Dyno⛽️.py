@@ -2,17 +2,11 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
+import heroku3, requests, time, math, os
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import idle, filters
-from AylinRobot.config import Config
-from pyrogram import Client, filters
-import os
-import math
-import time
-import heroku3
-import requests
+from pyrogram import idle, Client, filters
 from AylinRobot.config import Config
 
 
@@ -59,19 +53,19 @@ async def bot_status(client,message):
                 leftperc = math.floor(quota_left / total_quota * 100)
 
                 quota_details = f"""
-💫SERVER STATUS💫
-💠 ToTal dyno ➪ {total}hr 𝖿𝗋𝖾𝖾 𝖽𝗒𝗇𝗈!
+💫SERVER STATUSU💫
+💠 Toplam dyno ➪ {total} saat !
  
-💠 Dyno used ➪ {used} 𝖧𝗈𝗎𝗋𝗌 ( {usedperc}% )
+💠 Dyno istifadə olunub ➪ {used} Saat ( {usedperc}%)
         
-💠 Dyno remaining ➪ {hours} 𝖧𝗈𝗎𝗋𝗌 ( {leftperc}% )
+💠 Dyno qalıb ➪ {hours} Saat ( {leftperc}% )
         
-💠 Approximate days ➪ {days} days left!"""
+💠 Təxmini günlər ➪ {days} gün qaldı!"""
 
             else:
                 quota_details = ""
         except:
-            print("Check your Heroku API key")
+            print("Heroku API açarınızı yoxlayın")
             quota_details = ""
     else:
         quota_details = ""
@@ -91,9 +85,8 @@ async def bot_status(client,message):
         disk = ""
 
     await message.reply_text(
-        "𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝘀𝘁𝗮𝘁𝘂𝘀 𝗼𝗳 𝘆𝗼𝘂𝗿 𝗕𝗼𝘁\n\n"
-        "DB Status\n"
-        f"➪ 𝖡𝗈𝗍 𝖴𝗉𝗍𝗂𝗆𝖾: {uptime}\n"
+        "Bot DB Statusunuzun Cari Vəziyyəti\n"
+        f"➪ Botun işləmə müddəti: {uptime}\n"
         f"{quota_details}"
         f"{disk}",
         quote=True,
