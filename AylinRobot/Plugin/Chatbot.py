@@ -4,7 +4,7 @@ import aiohttp
 from AylinRobot import AylinRobot as app
 from pyrogram import filters
 
-from Mesajlar.Mesajlsr import Mesajlar
+from Mesajlar.Mesajlar import Mesajlar
 
 from AylinRobot.config import Config
 
