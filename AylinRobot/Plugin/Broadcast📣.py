@@ -477,5 +477,3 @@ def humanbytes(size):
 
 ########### ÇOKLU DİL ##############
 class LAN(object):
-
-
