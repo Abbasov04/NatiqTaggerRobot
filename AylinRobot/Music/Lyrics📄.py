@@ -35,7 +35,9 @@ async def lrsearch(_, message: Message):
 **🙋‍♀️ Yüklədi {Config.BOT_USERNAME} ❤**
 
 **🎶 Axtarılan Mahnı:-** __{query}__
+
  **📖 Tapılmış Mahnı Sözləri:-** __{S.title}__
+ 
  **✍️ Rəssam:-** {S.artist}
 
  **📄 __Mahnı sözləri:__**
