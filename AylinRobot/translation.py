@@ -239,7 +239,6 @@ Bu sebep yasaklandığınız için @{} tarafından otomatik olarak oluşturulmu�
 """
     BLOCKS = """
 🆔 **İstifadəçi ID**: `{}`\n⏱ **Vaxt**: `{}`\n🗓 **Qadağan edildiyi tarix**: `{}`\n💬 **Səbəb**: `{}`\n\n"""
-    TOTAL_BLOCK = 
-"""
+    TOTAL_BLOCK = """
 🚷 **Ümumi əngəllənən:** `{}`\n\n{}
 """
