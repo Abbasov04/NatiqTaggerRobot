@@ -28,9 +28,9 @@ buttons = {
 }
 
 
-@app.on_message(filters.command(["song"]) & ~filters.edited)
+@app.on_message(filters.command(["song"])) & ~filters.edited)
 async def song(client, message):
-    m = await message.delete()  
+   message.delete()  
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
     chutiya = "["+user_name+"](tg://user?id="+str(user_id)+")"
