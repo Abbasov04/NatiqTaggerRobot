@@ -20,4 +20,5 @@ async def commit(_, message):
 
 @app.on_callback_query(filters.regex("deyis"))
 async def deyis(_, query: CallbackQuery):
+    await query.sleep(1)  
     await query.edit_message_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
