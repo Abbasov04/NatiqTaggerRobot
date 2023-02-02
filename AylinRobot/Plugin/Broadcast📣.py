@@ -1,5 +1,5 @@
 import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
-from AylinRobot.translation import translation
+from AylinRobot.translation import *
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
