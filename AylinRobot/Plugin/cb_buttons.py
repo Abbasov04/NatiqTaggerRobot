@@ -74,4 +74,10 @@ async def cb_data(client, message):
             text=Translation.AXTARIS_TEXT,
             reply_markup=Button.AXTAR_BUTTONS,
             disable_web_page_preview=True
-        )        
+        )   
+    elif message.data == "tagger":
+        await message.message.edit_text(
+            text=Translation.TAGGER_TEXT,
+            reply_markup=Button.TAGGER_BUTTONS,
+            disable_web_page_preview=True
+        )                
