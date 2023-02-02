@@ -27,10 +27,10 @@ InlineKeyboardButton('🇦🇿 Şəhidlər', callback_data='sehıd'),
 InlineKeyboardButton('🌀 Əyləncə', callback_data='eylence'),
 InlineKeyboardButton('Əlavələr', callback_data='elave'),
 ],[
-InlineKeyboardButton('Axtarış', callback_data='axtar'),  
-InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
-],[
+InlineKeyboardButton('Axtarış', callback_data='axtar'),
 InlineKeyboardButton('Tagger', callback_data='tag'),    
+],[
+InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
 ],[        
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
     
