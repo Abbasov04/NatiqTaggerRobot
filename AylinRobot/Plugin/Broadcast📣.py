@@ -210,7 +210,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
         else:
             await db.add_user(chat_id)
             chat = bot.get_chat(chat_id)
-            if str(chat_id).startswith("-100"):
+            if str(chat_id).startswith(f"{Config.LOG_CHANNEL}"):
                 new_chat_id = str(chat_id)[4:]
             else:
                 new_chat_id = str(chat_id)[1:]
@@ -408,7 +408,7 @@ async def ban(c: Client, m: Message):
                 traceback.print_exc()
                 ban_log_text += LAN.KULLANICI_BILGILENDIRMEME.format(traceback.format_exc())
         await db.ban_user(user_id, ban_duration, ban_reason)
-        await c.send_message(Config.LOG_CHANNEL, ban_log_text)
+        await c.send_message(Config.BAN_GROUP, ban_log_text)
         await m.reply_text(ban_log_text, quote=True)
 
 
@@ -432,7 +432,7 @@ async def unban(c: Client, m: Message):
                 traceback.print_exc()
                 unban_log_text += LAN.KULLANICI_BILGILENDIRMEME.format(traceback.format_exc())
         await db.remove_ban(user_id)
-        await c.send_message(Config.LOG_CHANNEL, unban_log_text)
+        await c.send_message(Config.BAN_GROUP, unban_log_text)
         await m.reply_text(unban_log_text, quote=True)
 
 
