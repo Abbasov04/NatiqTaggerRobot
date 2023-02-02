@@ -34,11 +34,11 @@ async def lrsearch(_, message: Message):
     xxx = f"""
 **🙋‍♀️ Yüklədi {Config.BOT_USERNAME} ❤**
 
-**Axtarılan Mahnı:-** __{query}__
- **Tapılmış Mahnı Sözləri:-** __{S.title}__
- **Rəssam:-** {S.artist}
+**🎶 Axtarılan Mahnı:-** __{query}__
+ **📖 Tapılmış Mahnı Sözləri:-** __{S.title}__
+ **✍️ Rəssam:-** {S.artist}
 
- **__ Mahnı sözləri:__**
+ **📄 __Mahnı sözləri:__**
 
 {S.lyrics}"""
     if len(xxx) > 4096:
