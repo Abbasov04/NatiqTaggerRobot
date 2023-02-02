@@ -11,7 +11,7 @@ from helpers.filters import command
 from pyrogram import Client, filters
 from os import system, execle, environ
 from AylinRobot.config import Config
-
+from helpers.utils.formatters import bytes
 
 @app.on_message(command(["hiz"]) & ~filters.edited)
 async def run_speedtest(_, message: Message):
