@@ -10,7 +10,7 @@ class Translation(object):
     START_TEXT = """
 **Salam {} 👋**
 
-**Mənim Adım  ️️️️️️{} 🙋‍♀️ Mən Azərbaycan Dilində Çox Özəllikili Telegram Botuyam Bacarıqlarımı Görmək Üçün `💠 Kömək` Buttonuna Toxun**
+**Mənim Adım  ️️️️️️{} 🙋‍♀️ Mən Azərbaycan Dilində Çox Özəllikili Telegram Botuyam Bacarıqlarımı Görmək Üçün `📚 Kömək` Buttonuna Toxun**
 
 """    
     HELP_TEXT = """
