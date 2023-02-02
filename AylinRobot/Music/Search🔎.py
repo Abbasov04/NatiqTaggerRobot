@@ -25,9 +25,8 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@app.on_message(command(["search"]))
-async def ytsearch(_, message: Message):
-  
+@app.on_message(filters.command(["search"]) & ~filters.edited)
+async def search(_, message: Message):
     try:
         if len(message.command) < 2:
             await message.reply_text("/search **Ah Canım Sevgilim!**")
