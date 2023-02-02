@@ -17,6 +17,7 @@ search_engine_parser
 wget 
 lyricsgenius
 ffmpeg-python
+speedtest-cli
 Pillow
 ujson
 psutil
