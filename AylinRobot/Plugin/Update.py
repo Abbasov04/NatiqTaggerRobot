@@ -9,7 +9,6 @@ from pyrogram.types import Message
 from helpers.filters import command
 from pyrogram import Client, filters
 from os import system, execle, environ
-from git.exc import InvalidGitRepositoryError
 from AylinRobot.config import Config
 
 
