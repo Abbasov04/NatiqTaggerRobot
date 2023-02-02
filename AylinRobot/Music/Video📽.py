@@ -13,7 +13,7 @@ from helpers.filters import command
 @app.on_message(
     command(["video"]) & ~filters.edite)
 async def vsong(client, message):
-  msg = await message.delete()
+   message.delete()
     ydl_opts = {
         "format": "best",
         "keepvideo": True,
