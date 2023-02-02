@@ -162,6 +162,15 @@ Bazada *2881* Şəhid adı mövcuddur
 
 """
 
+    TAGGER_TEXT = """
+
+🔮 Istifadə: /tag
+📃 Açıqlama: İstifadəçiləri Tək Tək Tag Edər.
+
+"""
+
+
+
 ##### Broadcast Mesajları
 
 
