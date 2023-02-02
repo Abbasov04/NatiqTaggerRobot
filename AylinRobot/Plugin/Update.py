@@ -12,10 +12,39 @@ from os import system, execle, environ
 from AylinRobot.config import Config
 
 
-@app.on_message(command(["restart"]) &(Config.OWNER_ID)& ~filters.edited)
-async def restart_bot(_, message: Message):
-    msg = await message.reply("`Botu yenidən başladın...`")
-    args = [sys.executable, "AylinRobot"]
-    await msg.edit("✅ bot yenidən işə salındı\n\n• indi bu botu yenidən istifadə edə bilərsiniz.")
-    execle(sys.executable, *args, environ)
-    return
+@app.on_message(command(["hiz"]) & ~filters.edited)
+async def run_speedtest(_, message: Message):
+    m = await message.reply_text("⚡️ çalışan sunucu hız testi")
+    try:
+        test = speedtest.Speedtest()
+        test.get_best_server()
+        m = await m.edit("⚡️ indirme hızını çalıştırma..")
+        test.download()
+        m = await m.edit("⚡️ yükleme hızını çalıştırma...")
+        test.upload()
+        test.results.share()
+        result = test.results.dict()
+    except Exception as e:
+        await m.edit(e)
+        return
+    m = await m.edit("🔄 en hızlı sonuçları paylaşma")
+    path = wget.download(result["share"])
+
+    output = f"""💡 **Hız Testi Sonuçları**
+    
+<u>**Client:**</u>
+**ISP:** {result['client']['isp']}
+**Ülke:** {result['client']['country']}
+  
+<u>**sunucu:**</u>
+**İsim:** {result['server']['name']}
+**Ülke:** {result['server']['country']}, {result['server']['cc']}
+**Sponsor:** {result['server']['sponsor']}
+**gecikme:** {result['server']['latency']}
+
+⚡️ **Ping:** {result['ping']}"""
+    msg = await app.send_photo(
+        chat_id=message.chat.id, photo=path, caption=output
+    )
+    os.remove(path)
+    await m.delete()
