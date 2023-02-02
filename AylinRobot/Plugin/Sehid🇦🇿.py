@@ -7,7 +7,6 @@ from AylinRobot import AylinRobot as app
 from Sehid import random_line
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from cryptography.fernet import Fernet
 
 
 button = InlineKeyboardMarkup([
