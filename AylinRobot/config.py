@@ -1,3 +1,7 @@
+# @AylinRobot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
 import os
 
 
@@ -18,7 +22,7 @@ class Config:
    COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "05a017d5-e3e5-424d-941f-3e60645e3141")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
-   BOTLIST = os.environ.get("BOTLIST", "RomotlarimBot")
+   CHANNEL = os.environ.get("CHANNEL", "HuseynH")
    SUPPORT = os.environ.get("SUPPORT", "HuseynH")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/f6c186e3c581a223856c4.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
