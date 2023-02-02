@@ -10,9 +10,8 @@ from AylinRobot import AylinRobot as app
 from helpers.filters import command
 
 
-@app.on_message(
-    command(["video"]) & ~filters.edite)
-async def vsong(client, message):
+@app.on_message(filters.command(["video"]) & ~filters.edited)
+async def video(client, message):
     ydl_opts = {
         "format": "best",
         "keepvideo": True,
