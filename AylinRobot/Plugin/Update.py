@@ -52,8 +52,7 @@ def updater():
     return bool(changelog)
 
 
-@Client.on_message(command(["update", f"update@{BOT_USERNAME}"]) & ~filters.edited)
-@sudo_users_only
+@app.on_message(command(["update"]) &(Config.OWNER_ID)& ~filters.edited)
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
     msg = await message.reply("🔄 `Akış işleniyor...`")
