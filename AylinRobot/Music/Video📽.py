@@ -13,7 +13,6 @@ from helpers.filters import command
 @app.on_message(
     command(["video"]) & ~filters.edite)
 async def vsong(client, message):
-   message.delete()
     ydl_opts = {
         "format": "best",
         "keepvideo": True,
@@ -22,6 +21,7 @@ async def vsong(client, message):
         "outtmpl": "%(title)s.%(ext)s",
         "quite": True,
     }
+   message.delete()    
     query = " ".join(message.command[1:])
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
