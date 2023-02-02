@@ -20,7 +20,7 @@ from pyrogram.types import (
 
 @app.on_message(filters.command(["lyrics"]) & ~filters.edited)
 async def lrsearch(_, message: Message):
-await message.delete()  
+message.delete()  
     if len(message.command) < 2:
         return await message.reply_text("**İstifadə:**\n\n/lyrics [ Musiqi Adı]")
     m = await message.reply_text("✍️ Mahnı sözləri axtarılır")
