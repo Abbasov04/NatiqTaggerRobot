@@ -398,10 +398,10 @@ async def ban(c: Client, m: Message):
                 ban_log_text += translation.GROUP_BILGILENDIRILDI
             except BaseException:
                 traceback.print_exc()
-                ban_log_text += LAN.GRUP_BILGILENDIRILEMEDI.format(traceback.format_exc())
+                ban_log_text += translation.GRUP_BILGILENDIRILEMEDI.format(traceback.format_exc())
         else:
             try:    
-                ban_log_text = LAN.USER_BANNED.format(m.from_user.mention, user_id, ban_duration, ban_reason)
+                ban_log_text = translation.USER_BANNED.format(m.from_user.mention, user_id, ban_duration, ban_reason)
                 await c.send_message(user_id, translation.AFTER_BAN_USER.format(ban_reason))
                 ban_log_text += translation.KULLANICI_BILGILENDIRME
             except BaseException:
