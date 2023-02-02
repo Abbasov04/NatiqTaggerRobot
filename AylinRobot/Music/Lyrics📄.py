@@ -7,7 +7,8 @@
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 from AylinRobot.config import Config
-import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp, lyricsgenius
+import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
+from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
 from pyrogram.types import Message, User
 from pyrogram.types import (
