@@ -3,7 +3,7 @@ import re
 import sys
 import asyncio
 import subprocess
-import speedtest
+import speedtest, wget
 from asyncio import sleep
 from AylinRobot import AylinRobot as app
 from pyrogram.types import Message
