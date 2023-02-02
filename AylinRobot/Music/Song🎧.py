@@ -4,7 +4,7 @@
 
 from AylinRobot import AylinRobot as app
 from helpers.filters import command, other_filters
-import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp, YoutubeSearch
+import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp, youtube_search, pytube
 from pyrogram.handlers import MessageHandler
 from AylinRobot.config import Config
 from pyrogram import Client, filters
