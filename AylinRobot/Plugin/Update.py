@@ -1,9 +1,4 @@
-import os
-import re
-import sys
-import asyncio
-import subprocess
-import speedtest, wget
+import speedtest, wget, subprocess, asyncio, sys, re, os
 from asyncio import sleep
 from AylinRobot import AylinRobot as app
 from pyrogram.types import Message
@@ -24,7 +19,7 @@ async def run_speedtest(_, message: Message):
         m = await m.edit("⚡️ yükleme hızını çalıştırma...")
         test.upload()
         test.results.share()
-        result = test.results.dict()
+        result = test.results.dict(*args)
     except Exception as e:
         await m.edit(e)
         return
