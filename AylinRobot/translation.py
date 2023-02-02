@@ -162,6 +162,9 @@ Bazada *2881* Şəhid adı mövcuddur
 
 """
 
+##### Broadcast Mesajları
+
+
 class LAN(object):
 
 
