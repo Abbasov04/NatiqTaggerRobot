@@ -12,8 +12,10 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 async def commit(_, message):
     await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
     
-button = InlineKeyboardMarkup(,
-  [[InlineKeyboard Button("🔄 Dəyiş", callback_data="deyis")], Button("🔄 Dəyiş", callback_data="deyis"))]]),
+button = InlineKeyboardMarkup([
+    [InlineKeyboardButton("🔄Dəyiş", callback_data="deyis")],
+    [(Button("🔄Dəyiş", callback_data="deyis")]
+])])
 
 @app.on_callback_query(filters.regex(["deyis"]))
 async def deyis(_, query: CallbackQuery):
