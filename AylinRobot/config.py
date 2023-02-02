@@ -14,7 +14,7 @@ class Config:
    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001898638971"))
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobotPlaylist")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001727904239"))
-   COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
+    COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ !").split())
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "05a017d5-e3e5-424d-941f-3e60645e3141")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
    BOTLIST = os.environ.get("BOTLIST", "RomotlarimBot")
