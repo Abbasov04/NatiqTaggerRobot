@@ -5,7 +5,6 @@ import asyncio
 import subprocess
 from asyncio import sleep
 from AylinRobot import AylinRobot as app
-from git import Repo
 from pyrogram.types import Message
 from helpers.filters import command
 from pyrogram import Client, filters
