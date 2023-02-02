@@ -23,7 +23,6 @@ psutil
 future
 dnspython
 yt_dlp
-YoutubeSearch
 OpenCC
 pytube
 pillow
