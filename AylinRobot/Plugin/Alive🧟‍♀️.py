@@ -56,7 +56,7 @@ async def start_group(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🤖 Botlist", url=f"https://t.me/{Config.BOTLIST}"),
+                InlineKeyboardButton("🤖 Botlist", url=f"https://t.me/{Config.CHANNEL}"),
                 InlineKeyboardButton(
                     "🎧 Playlist Kanalı", url=f"https://t.me/{Config.PLAYLIST_NAME}"
                 ),
