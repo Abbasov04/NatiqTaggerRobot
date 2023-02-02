@@ -28,6 +28,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @app.on_message(filters.command(["search"]) & ~filters.edited)
 async def search(_, message: Message):
+    m = await message.delete()  
     try:
         if len(message.command) < 2:
             await message.reply_text("/search **Ah Canım Sevgilim!**")
