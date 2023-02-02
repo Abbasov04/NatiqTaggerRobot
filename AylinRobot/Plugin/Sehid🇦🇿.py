@@ -14,9 +14,9 @@ async def commit(_, message):
     
 button = InlineKeyboardMarkup([
     [InlineKeyboard
-    Button("🔄 Dəyiş", callback_data="deyis")
+    Button("🔄 Dəyiş", callback_data="deyis"),
     ]
-     Button("🔄 Dəyiş", callback_data="deyis")
+     Button("🔄 Dəyiş", callback_data="deyis"),
      )
      ]    
 ])
