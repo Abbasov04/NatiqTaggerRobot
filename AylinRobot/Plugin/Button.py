@@ -28,7 +28,9 @@ InlineKeyboardButton('🌀 Əyləncə', callback_data='eylence'),
 InlineKeyboardButton('Əlavələr', callback_data='elave'),
 ],[
 InlineKeyboardButton('Axtarış', callback_data='axtar'),  
-InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'), 
+InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
+],[
+InlineKeyboardButton('Tagger', callback_data='tag'),    
 ],[        
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
     
@@ -49,4 +51,6 @@ SAHIB_BUTTONS = InlineKeyboardMarkup(
 ELAVE_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 AXTAR_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+TAGGER_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
