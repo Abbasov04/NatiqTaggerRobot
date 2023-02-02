@@ -420,17 +420,17 @@ async def unban(c: Client, m: Message):
             user_id = m.reply_to_message.from_user.id
         else:
             if len(m.command) <= 1:
-                return await m.reply(LAN.NEED_USER)
+                return await m.reply(translation.NEED_USER)
             else:
                 user_id = int(m.command[1])
-        unban_log_text = LAN.UNBANNED_USER.format(m.from_user.mention, user_id)
+        unban_log_text = translation.UNBANNED_USER.format(m.from_user.mention, user_id)
         if not str(user_id).startswith("-"):
             try:
-                await c.send_message(user_id, LAN.USER_UNBAN_NOTIFY)
+                await c.send_message(user_id, translation.USER_UNBAN_NOTIFY)
                 unban_log_text += LAN.KULLANICI_BILGILENDIRME
             except BaseException:
                 traceback.print_exc()
-                unban_log_text += LAN.KULLANICI_BILGILENDIRMEME.format(traceback.format_exc())
+                unban_log_text += translation.KULLANICI_BILGILENDIRMEME.format(traceback.format_exc())
         await db.remove_ban(user_id)
         await c.send_message(Config.LOG_CHANNEL, unban_log_text)
         await m.reply_text(unban_log_text, quote=True)
@@ -449,8 +449,8 @@ async def _banned_usrs(_, m: Message):
         banned_on = banned_user["ban_status"]["banned_on"]
         ban_reason = banned_user["ban_status"]["ban_reason"]
         banned_usr_count += 1
-        text += LAN.BLOCKS.format(user_id, ban_duration, banned_on, ban_reason)
-    reply_text = LAN.TOTAL_BLOCK.format(banned_usr_count, text)
+        text += translation.BLOCKS.format(user_id, ban_duration, banned_on, ban_reason)
+    reply_text = translation.TOTAL_BLOCK.format(banned_usr_count, text)
     if len(reply_text) > 4096:
         with open("banned-user-list.txt", "w") as f:
             f.write(reply_text)
