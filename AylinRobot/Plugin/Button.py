@@ -36,12 +36,6 @@ InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
 InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 
-
-BH_BUTTONS = InlineKeyboardMarkup(
-[[InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
-InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
-
-
 ### GERİ BUTTONU    
 
 MUSIC_BUTTONS = InlineKeyboardMarkup(
