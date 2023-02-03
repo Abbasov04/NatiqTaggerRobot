@@ -22,6 +22,7 @@ class Translation(object):
 
     BH_TEXT = """
 **🙋‍♀️ Salam {} Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
+
 ✨ Bot Versiyası: v0.7.0
 🍀 Pyrogram Versiyası: 1.4.16
 ✨ Python Versiyası: 3.11.1
@@ -29,7 +30,7 @@ class Translation(object):
 👨‍💻 Mənim Sahibim {} 
 📆 {} -Un İstifadəyə Verilmə Tarixi `20.11.2022` 
 
-**⚠️ Qeyd Botun Qrupunuzda Xətasıs İşləməsi Üçün Admin Əmirlərindən Sadəcə Mesajları Silmə Yetkisi Verin**
+**⚠️ Qeyd Botun Qrupunuzda İşləməsi Üçün Admin Əmirlərindən Sadəcə Mesajları Silmə 🗑 Yetkisi Verin**
 """
 
 
