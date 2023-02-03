@@ -80,8 +80,4 @@ async def cb_data(client, message):
             text=Translation.TAGGER_TEXT,
             reply_markup=Button.TAGGER_BUTTONS,
             disable_web_page_preview=True
-        )
-
-@app.on_callback_query(filters.regex("close"))
-async def close(_, query: CallbackQuery):
-    await query.message.delete()        
+        )                
