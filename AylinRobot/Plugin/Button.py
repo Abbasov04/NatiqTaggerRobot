@@ -38,7 +38,8 @@ InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 ### GERİ BUTTONU    
 
 MUSIC_BUTTONS = InlineKeyboardMarkup(
-[[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+[[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
+InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 TELEGRAPH_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 SEHID_BUTTONS = InlineKeyboardMarkup(
