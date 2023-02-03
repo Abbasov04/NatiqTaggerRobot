@@ -16,9 +16,10 @@ button = reply_markup=InlineKeyboardMarkup(
 [[InlineKeyboardButton("🇦🇿 Dəyiş", callback_data="back_data"),
 InlineKeyboardButton("🔐 Bağla", callback_data="close")]]) 
 
-    else "close" in cb_data:
-          await cmd.message.delete()
-          await cmd.message.reply_to_message.delete()
+            reply_markup=Translation.START_BUTTONS,
+        )
+    else:
+        await message.message.delete()
     
 @app.on_callback_query(filters.regex("deyis"))
 async def deyis(_, query: CallbackQuery):
