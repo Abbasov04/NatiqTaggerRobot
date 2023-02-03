@@ -81,3 +81,13 @@ async def cb_data(client, message):
             reply_markup=Button.TAGGER_BUTTONS,
             disable_web_page_preview=True
         )                
+
+
+        await message.message.edit(
+            text=Translation.START_TEXT.format(message.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup=Translation.START_BUTTONS,
+        )
+    else:
+        await message.message.delete()
+        
