@@ -21,6 +21,12 @@ async def cb_data(client, message):
             reply_markup=Button.START_BUTTONS,
             disable_web_page_preview=True,
         )
+    elif message.data == "bh":
+        await message.message.edit_text(
+            text=Translation.BH_TEXT.format(message.from_user.mention),
+            reply_markup=Button.BH_BUTTONS,
+            disable_web_page_preview=True
+        )        
     elif message.data == "help":
         await message.message.edit_text(
             text=Translation.HELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
@@ -81,12 +87,6 @@ async def cb_data(client, message):
             reply_markup=Button.TAGGER_BUTTONS,
             disable_web_page_preview=True
         )                
-    elif message.data == "bh":
-        await message.message.edit_text(
-            text=Translation.BH_TEXT.format(message.from_user.mention),
-            reply_markup=Button.BH_BUTTONS,
-            disable_web_page_preview=True
-        )
     else:
         await message.message.delete()
         
