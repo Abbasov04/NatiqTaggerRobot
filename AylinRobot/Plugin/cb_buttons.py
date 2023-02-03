@@ -65,7 +65,7 @@ async def cb_data(client, message):
         ) 
     elif message.data == "elave":
         await message.message.edit_text(
-            text=Translation.ELAVELER_TEXT,
+            text=Translation.ELAVELER_TEXT.format(message.from_user.mention),
             reply_markup=Button.ELAVE_BUTTONS,
             disable_web_page_preview=True
         ) 
