@@ -17,7 +17,7 @@ from AylinRobot import AylinRobot as app
 async def cb_data(client, message):
     if message.data == "home":
         await message.message.edit_text(
-            text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+            text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
             reply_markup=Button.START_BUTTONS,
             disable_web_page_preview=True,
         )
@@ -81,6 +81,12 @@ async def cb_data(client, message):
             reply_markup=Button.TAGGER_BUTTONS,
             disable_web_page_preview=True
         )                
+    elif message.data == "bh":
+        await message.message.edit_text(
+            text=Translation.BH_TEXT.format(message.from_user.mention),
+            reply_markup=Button.HELP_BUTTONS,
+            disable_web_page_preview=True
+        )        
     else:
         await message.message.delete()
         
