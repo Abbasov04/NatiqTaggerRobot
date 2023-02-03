@@ -31,9 +31,10 @@ InlineKeyboardButton('Axtarış', callback_data='axtar'),
 InlineKeyboardButton('Tagger', callback_data='tag'),    
 ],[
 InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
-],[        
+],[    
+InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
-InlineKeyboardButton('Close ❎', callback_data='close')    
+
 ### GERİ BUTTONU    
 
 MUSIC_BUTTONS = InlineKeyboardMarkup(
