@@ -12,7 +12,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 async def commit(_, message):
     await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
     
-button = [[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
+button = ( [[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 InlineKeyboardButton('🇦🇿 Dəyiş', callback_data='deyis'),]])
 
 
