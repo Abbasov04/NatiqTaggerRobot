@@ -13,14 +13,12 @@ async def commit(_, message):
     await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
     
 button = reply_markup=InlineKeyboardMarkup(
-                 [
-                     [
-                      InlineKeyboardButton("⬇️ BACK", callback_data="back_data"),
-                      InlineKeyboardButton("🔐 CLOSE", callback_data="close_data")
-                     ]
- 
-                 ] 
-             ) 
+[[InlineKeyboardButton("🇦🇿 Dəyiş", callback_data="back_data"),
+InlineKeyboardButton("🔐 Bağla", callback_data="close")]]) 
+
+    elif "close_data" in cb_data:
+          await cmd.message.delete()
+          await cmd.message.reply_to_message.delete()
     
 @app.on_callback_query(filters.regex("deyis"))
 async def deyis(_, query: CallbackQuery):
