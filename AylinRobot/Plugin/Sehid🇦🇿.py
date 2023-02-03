@@ -14,7 +14,7 @@ async def commit(_, message):
     
 button = reply_markup=InlineKeyboardMarkup(
 [[InlineKeyboardButton("🇦🇿 Şəhid", callback_data="deyis"),
-InlineKeyboardButton("🔐 Bağla", callback_data="close")]]), 
+InlineKeyboardButton("🔐 Bağla", callback_data="close")]])
 
 
 @app.on_callback_query(filters.regex("deyis"))
