@@ -8,13 +8,15 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-**Salam {} 👋**
+**🙋‍♀️ Salam {}**
 
 **Mənim Adım  ️️️️️️{} 🙋‍♀️ Mən Azərbaycan Dilində Çox Özəllikili Telegram Botuyam Bacarıqlarımı Görmək Üçün `📚 Kömək` Buttonuna Toxun**
 
+👨‍💻 **Sahibim** {}
+
 """    
     HELP_TEXT = """
-**{} 🙈 Əmrlərim Bunlardır  Buttonlara toxunaraq istədiyiniz əmr haqqında məlumat ala bilərsiniz**
+**🙋‍♀️ Salam {} 💁‍♀️ {} - Un ℹ️ Əmrləri  Bunlardır Aşağıdakı ⤵️ Buttonlara Toxunaraq istədiyiniz ℹ️ Əmr ℹ️ Haqqında Məlumat Ala Bilərsiniz 🥰**
 
 """
 
