@@ -16,7 +16,7 @@ class Translation(object):
 
 """    
     HELP_TEXT = """
-**🙋‍♀️ Salam {} 💁‍♀️ {} - Un ℹ️ Əmrləri  Bunlardır Aşağıdakı ⤵️ Buttonlara Toxunaraq istədiyiniz ℹ️ Əmr ℹ️ Haqqında Məlumat Ala Bilərsiniz 🥰**
+**🙋‍♀️ Salam {} 💁‍♀️ {} - Un  Əmrləri  Bunlardır Aşağıdakı Buttonlara Toxunaraq istədiyiniz  Əmr Haqqında Məlumat Ala Bilərsiniz 🥰**
 
 """
 
