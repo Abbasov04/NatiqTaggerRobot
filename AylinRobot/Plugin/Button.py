@@ -39,6 +39,7 @@ InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 
 BH_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
+InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 
 
 ### GERİ BUTTONU    
