@@ -36,6 +36,11 @@ InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
 InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 
+### BOT İNFO
+BH_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
+InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+
 ### GERİ BUTTONU    
 
 MUSIC_BUTTONS = InlineKeyboardMarkup(
