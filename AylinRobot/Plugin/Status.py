@@ -34,7 +34,7 @@ async def priw(client, message):
 
 @app.on_message(filters.command("tag")
 	& filters.group)
-async def tag(client: app, message: Message):
+async def tektag(client: app, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
