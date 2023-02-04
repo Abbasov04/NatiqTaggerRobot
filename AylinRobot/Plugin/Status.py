@@ -23,6 +23,8 @@ WDUR = False
 
 GRUP = []
 
+MENTION = "[{}](tg://user?id={})"
+
 def btag():
 	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻Sahibim", url="https://t.me/sjrvan")]]
 	BUTTON=[[InlineKeyboardButton(text="Yeniliklər Kanalı📣", url="https://t.me/seninkanal")]]
@@ -87,10 +89,10 @@ async def ta(client: Client, message: Message):
 		
 @app.on_message(filters.group
 	& filters.command("cancel"))
-async def stop(client: app, message: Message):
+async def stop(client: Client, message: Message):
 	global DUR
 	chat = message.chat
-	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			if SORGU == None:
 				await message.reply_text("Aktiv bir all prosesi yoxdur😕👍🏻")
