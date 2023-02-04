@@ -47,7 +47,7 @@ async def tag(client: app, message: Message):
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
 				reply_markup=btag()
 				)
-			time.sleep(1)
+			time.sleep(3)
 			SORGU = True
 			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
