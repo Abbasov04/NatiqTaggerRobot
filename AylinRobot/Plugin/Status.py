@@ -24,16 +24,15 @@ GRUP = []
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
-	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻Sahibim", url="https://t.me/sjrvan")]]
 	BUTTON=[[InlineKeyboardButton(text="Yeniliklər Kanalı📣", url="https://t.me/seninkanal")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 
-@app.on_message(filters.command(["admin", "all"]) & filters.private)
+@app.on_message(filters.command(["admin", "tag"]) & filters.private)
 async def priw(client, message):
 	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
 
-@app.on_message(filters.command("all")
+@app.on_message(filters.command("tag")
 	& filters.group)
 async def tag(client: app, message: Message):
 	global DUR
@@ -47,7 +46,7 @@ async def tag(client: app, message: Message):
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
+			async for member in app.iter_chat_members(chat_id=chat.id, filter="tag"):
 				if DUR:
 					DUR=False
 					SORGU = None
