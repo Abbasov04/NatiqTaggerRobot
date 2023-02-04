@@ -24,6 +24,8 @@ WDUR = False
 GRUP = []
 
 MENTION = "[{}](tg://user?id={})"
+MESSAGE = "Salam! {}, Əyləncə Dolu Qrupumuza Xoş Gəldin🥳!Qaydalara riaət etdikcə səndə favori userlərimizdən biri olacaqsan🤩!Əminəmki Nümunəvi Userlərdən biri olacaqsan!🥰"
+
 
 def btag():
 	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻Sahibim", url="https://t.me/sjrvan")]]
@@ -47,7 +49,7 @@ async def tag(client: app, message: Message):
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
 				reply_markup=btag()
 				)
-			time.sleep(3)
+			time.sleep(1)
 			SORGU = True
 			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
@@ -72,7 +74,7 @@ async def ta(client: app, message: Message):
 			await message.reply_text(f"{message.from_user.mention} Adminləri tag etməyimi istədi⚡️ Adminləri Tag Edirəm Boss!🥳",
 				reply_markup=btag()
 				)
-			time.sleep(3)
+			time.sleep(1)
 			SORGU = True
 			async for member in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 				if DUR:
