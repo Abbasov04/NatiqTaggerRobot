@@ -16,7 +16,7 @@ class Translation(object):
 ║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
 ║▻ `📚 Kömək` Buttonuna Toxun
 ╚═════════════════
-👨‍💻 **Sahibim** @{}
+👨‍💻 **Sahibim** ♒️ @{}
 
 """    
     HELP_TEXT = """
