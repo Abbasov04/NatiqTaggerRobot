@@ -11,12 +11,12 @@ class Translation(object):
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {}**
 ║
-║▻ 🤭 Mənim Adım  ️️️️️️{} Mən 
+║▻ 🙎‍♀️ Mənim Adım  ️️️️️️{} Mən 
 ║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
-║▻ Telegram Botuyam Bacarıqlarımı Görmək Üçün
+║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
 ║▻ `📚 Kömək` Buttonuna Toxun
 ╚═════════════════
-👨‍💻 **Sahibim** {}
+👨‍💻 **Sahibim** @{}
 
 """    
     HELP_TEXT = """
