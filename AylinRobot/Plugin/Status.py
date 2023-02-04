@@ -19,6 +19,12 @@ from AylinRobot.config import Config
 DUR = False
 SORGU = None
 
+def btag():
+	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻Sahibim", url="https://t.me/sjrvan")]]
+	BUTTON=[[InlineKeyboardButton(text="Yeniliklər Kanalı📣", url="https://t.me/seninkanal")]]
+	return InlineKeyboardMarkup(BUTTON)
+
+
 @app.on_message(filters.command(["admin", "all"]) & filters.private)
 async def priw(client, message):
 	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
