@@ -23,13 +23,13 @@ async def cb_data(client, message):
         )
     elif message.data == "bh":
         await message.message.edit_text(
-            text=Translation.BH_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+            text=Translation.BH_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
             reply_markup=Button.BH_BUTTONS,
             disable_web_page_preview=True
         )
     elif message.data == "help":
         await message.message.edit_text(
-            text=Translation.HELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME),
+            text=Translation.HELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
             reply_markup=Button.HELP_BUTTONS,
             disable_web_page_preview=True
         )
