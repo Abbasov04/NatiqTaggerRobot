@@ -33,6 +33,11 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
+def bstart():
+	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻Sahibim", url="https://t.me/sjrvan")]]
+	BUTTON+=[[InlineKeyboardButton(text="Məni Qrupa Əlavə Et✅", url=f"https://t.me/seninbot?startgroup=true")]]
+	return InlineKeyboardMarkup(BUTTON)
+
 @app.on_message(filters.command(["admin", "all"]) & filters.private)
 async def priw(client, message):
 	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
@@ -49,7 +54,7 @@ async def tag(client: app, message: Message):
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
 				reply_markup=btag()
 				)
-			time.sleep(1.5)
+			time.sleep(1)
 			SORGU = True
 			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
