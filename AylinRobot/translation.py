@@ -107,103 +107,103 @@ class Translation(object):
     SEHID_TEXT = """
 ╔═════════════════
 ║▻ 🔮 Istifadə: /sehid 
-║▻ 📃 Açıqlama:  Bu əmr vaistəsiylə sizə *Şəhid* adları göndərəcəm
+║▻ 📃 Açıqlama:  Bu əmr vaistəsiylə sizə **Şəhid** adları göndərəcəm
 ╚═════════════════
 ╔═════════════════
-║▻ 🥀 *Allah bütün Şəhidimizə rəhmət eləsin*
+║▻ 🥀 **Allah bütün Şəhidimizə rəhmət eləsin**
 ║▻ 🤲 Qazilərimizə şəfa versin 
 ║▻ 😔 Başın sağolsun Azərbaycan 🇦🇿
-║▻ 🇦🇿 Bazada *2881* Şəhid adı mövcuddur
+║▻ 🇦🇿 Bazada **2881** Şəhid adı mövcuddur
 ╚═════════════════
 """ 
     OYUN_TEXT = """
-
-🔮 Istifadə: /zer
-📃 Açıqlama: zər atar
-
-🔮 Istifadə: /top
-📃 Açıqlama: top atar
-
-🔮 Istifadə: /bowling
-📃 Açıqlama: bowling atar
-
-🔮 Istifadə: /ox
-📃 Açıqlama: ox atar
-
-🔮 Istifadə: /jackpot
-📃 Açıqlama: jackpot atar
-
-🔮 Istifadə: /basket
-📃 Açıqlama: basket atar
-
+╔═════════════════
+║▻ 🔮 Istifadə: /zer
+║▻ 📃 Açıqlama: zər atar
+║
+║▻ 🔮 Istifadə: /top
+║▻ 📃 Açıqlama: top atar
+║
+║▻ 🔮 Istifadə: /bowling
+║▻ 📃 Açıqlama: bowling atar
+║
+║▻ 🔮 Istifadə: /ox
+║▻ 📃 Açıqlama: ox atar
+║
+║▻ 🔮 Istifadə: /jackpot
+║▻ 📃 Açıqlama: jackpot atar
+║
+║▻ 🔮 Istifadə: /basket
+║▻ 📃 Açıqlama: basket atar
+╚═════════════════
 """
 
     EYLENCE_TEXT = """
-
-🔮 Istifadə: /soxri 
-📃 Açıqlama: Rondom 16+ Şəkillər Atar.
-
-🔮 Istifadə: /pisik
-📃 Açıqlama: Rondom Pişik Şəkili Atar
-
-🔮 Istifadə: /anime
-📃 Açıqlama: Rondom Anime Şəkili Atar
-
-🔮 Istifadə: /masin
-📃 Açıqlama: Rondom Maşın Şəkili Atar
-
-🔮 Istifadə: /masin2
-📃 Açıqlama: Rondom Maşın Videosu Atar
-
-🔮 Istifadə: /tema
-📃 Açıqlama: Rondom Telegram Teması Atar
-
-🔮 Istifadə: /pp
-📃 Açıqlama: Rondom Profil Şəkili Atar
-
-🔮 Istifadə: /sevgi
-📃 Açıqlama: Hazır Sevgi Yə Aid Sözlər Atar.
-
-🔮 Istifadə: /bio
-📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.
-
+╔═════════════════
+║▻ 🔮 Istifadə: /soxri 
+║▻ 📃 Açıqlama: Rondom 16+ Şəkillər Atar.
+║
+║▻ 🔮 Istifadə: /pisik
+║▻ 📃 Açıqlama: Rondom Pişik Şəkili Atar
+║
+║▻ 🔮 Istifadə: /anime
+║▻ 📃 Açıqlama: Rondom Anime Şəkili Atar
+║
+║▻ 🔮 Istifadə: /masin
+║▻ 📃 Açıqlama: Rondom Maşın Şəkili Atar
+║
+║▻ 🔮 Istifadə: /masin2
+║▻ 📃 Açıqlama: Rondom Maşın Videosu Atar
+║
+║▻ 🔮 Istifadə: /tema
+║▻ 📃 Açıqlama: Rondom Telegram Teması Atar
+║
+║▻ 🔮 Istifadə: /pp
+║▻ 📃 Açıqlama: Rondom Profil Şəkili Atar
+║
+║▻ 🔮 Istifadə: /sevgi
+║▻ 📃 Açıqlama: Hazır Sevgi Yə Aid Sözlər Atar.
+║
+║▻ 🔮 Istifadə: /bio
+║▻ 📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.
+╚═════════════════
 """
 
 
     ELAVELER_TEXT = """
-
-🔮 Istifadə: /carbon
-📃 Açıqlama: Yazdığınız mesajı şəkilə çevirin
-
-🔮 Istifadə: /id
-📃 Açıqlama: İstifadəçinin s ID alın.
-
-🔮 Istifadə: /info
-📃 Açıqlama: İstifadəçi haqqında məlumat verər
-
-🔮 Istifadə: /alive
-📃 Açıqlama: Botun işlək olduğunu yoxlayar.
-
+╔═════════════════
+║▻ 🔮 Istifadə: /carbon
+║▻ 📃 Açıqlama: Yazdığınız mesajı şəkilə çevirin
+║
+║▻ 🔮 Istifadə: /id
+║▻ 📃 Açıqlama: İstifadəçinin ID alın.
+║
+║▻ 🔮 Istifadə: /info
+║▻ 📃 Açıqlama: İstifadəçi haqqında məlumat verər
+║
+║▻ 🔮 Istifadə: /alive
+║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
+╚═════════════════
 """
 
 
     AXTARIS_TEXT = """
-
-🔮 Istifadə: /github 
-🧩 Nümunə: /github HesenovHuseyn
-📃 Açıqlama: Github Axtarışı Edər.
-
-🔮 Istifadə: /search
-🧩 Nümunə: /search Rei - Ah Canım Sevgilim
-📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
-
+╔═════════════════
+║▻ 🔮 Istifadə: /github 
+║▻ 🧩 Nümunə: /github HesenovHuseyn
+║▻ 📃 Açıqlama: Github Axtarışı Edər.
+║
+║▻ 🔮 Istifadə: /search
+║▻ 🧩 Nümunə: /search Rei - Ah Canım Sevgilim
+║▻ 📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
+╚═════════════════
 """
 
     TAGGER_TEXT = """
-
-🔮 Istifadə: /tag
-📃 Açıqlama: İstifadəçiləri Tək Tək Tag Edər.
-
+╔═════════════════
+║▻ 🔮 Istifadə: /tag
+║▻ 📃 Açıqlama: İstifadəçiləri Tək Tək Tag Edər.
+╚═════════════════
 """
 
 
