@@ -50,19 +50,19 @@ async def tag(client: Client, message: Message):
 		
 @app.on_message(filters.command("admin")
 	& filters.group)
-async def ta(client: app, message: Message):
+async def ta(client: Client, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
 	chat = message.chat
-	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			await message.reply_text(f"{message.from_user.mention} Adminləri tag etməyimi istədi⚡️ Adminləri Tag Edirəm Boss!🥳",
 				reply_markup=btag()
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
+			async for member in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
 				if DUR:
 					DUR=False
 					SORGU = None
