@@ -67,4 +67,4 @@ TAGGER_BUTTONS = InlineKeyboardMarkup(
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 BH_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
-InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
+InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
