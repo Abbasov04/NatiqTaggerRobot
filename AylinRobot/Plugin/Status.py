@@ -18,6 +18,10 @@ from AylinRobot.config import Config
 
 DUR = False
 SORGU = None
+WSORGU = None
+WDUR = False
+
+GRUP = []
 
 def btag():
 	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻Sahibim", url="https://t.me/sjrvan")]]
