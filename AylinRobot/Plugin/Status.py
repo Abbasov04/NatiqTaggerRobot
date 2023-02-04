@@ -30,20 +30,20 @@ async def tag(client: app, message: Message):
 	global SORGU
 	msg = " ".join(message.command[1:])
 	chat = message.chat
-	async for mem in bot.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
 				reply_markup=btag()
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in client.iter_chat_members(chat_id=chat.id, filter="all"):
+			async for member in Client.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
 					DUR=False
 					SORGU = None
 					break
 				time.sleep(1)
-				await bot.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
+				await Client.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
 				time.sleep(1.5)
 		if message.from_user.id != mem.user.id:
 			pass
