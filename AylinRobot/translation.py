@@ -181,7 +181,7 @@ Bazada *2881* Şəhid adı mövcuddur
     AXTARIS_TEXT = """
 
 🔮 Istifadə: /github 
-🧩 Nümunə: /github hesenovhuseyn
+🧩 Nümunə: /github HesenovHuseyn
 📃 Açıqlama: Github Axtarışı Edər.
 
 🔮 Istifadə: /search
