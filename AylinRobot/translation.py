@@ -21,7 +21,9 @@ class Translation(object):
 """    
     HELP_TEXT = """
 ╔═════════════════
-║▻ **🙋‍♀️ Salam {} 💁‍♀️ {} - Un  
+║▻ **🙋‍♀️ Salam {} 
+║
+║▻ 💁‍♀️ {} - Un  
 ║▻ 📚 Əmrləri  Bunlardır Aşağıdakı 
 ║▻ 🖲 Buttonlara Toxunaraq istədiyiniz
 ║▻ ✔️ Əmr Haqqında Məlumat Ala Bilərsiniz 
