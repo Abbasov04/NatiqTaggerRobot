@@ -18,11 +18,6 @@ from AylinRobot.config import Config
 
 DUR = False
 SORGU = None
-WSORGU = None
-WDUR = False
-
-GRUP = []
-
 
 @app.on_message(filters.command("all")
 	& filters.group)
