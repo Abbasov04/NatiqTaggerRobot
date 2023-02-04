@@ -19,31 +19,31 @@ from AylinRobot.config import Config
 DUR = False
 SORGU = None
 
-@app.on_message(filters.command(["admin", "tag"]) & filters.private)
+@app.on_message(filters.command(["admin", "all"]) & filters.private)
 async def priw(client, message):
 	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
-	
-@app.on_message(filters.command("tag")
+
+@app.on_message(filters.command("all")
 	& filters.group)
-async def tag(client, message):
+async def tag(client: bot, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
 	chat = message.chat
-	async for mem in client.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in bot.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
-				reply_markup=tag()
+				reply_markup=btag()
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in client.iter_chat_members(chat_id=chat.id, filter="tag"):
+			async for member in client.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
 					DUR=False
 					SORGU = None
 					break
 				time.sleep(1)
-				await client.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
+				await bot.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
 				time.sleep(1.5)
 		if message.from_user.id != mem.user.id:
 			pass
