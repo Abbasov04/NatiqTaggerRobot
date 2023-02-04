@@ -35,7 +35,7 @@ class Translation(object):
     BH_TEXT = """
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {} 
-║▻ 🙎‍♀️ 🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
+║▻ 🙎‍♀️ {}🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
 ║
 ║▻ ✨ Bot Versiyası: v0.7.0
 ║▻ 🍀 Pyrogram Versiyası: 1.4.16
