@@ -47,7 +47,7 @@ class Translation(object):
 ╔═════════════════
 ║▻ **⚠️ Qeyd Botun Qrupunuzda İşləməsi 
 ║▻ Üçün Admin Əmirlərindən Sadəcə 
-║▻ Mesajları Silmə 🗑 Yetkisi Verin**
+║▻ 💬 Mesajları Silmə 🚫 Yetkisi Verin**
 ╚═════════════════
 """
 
