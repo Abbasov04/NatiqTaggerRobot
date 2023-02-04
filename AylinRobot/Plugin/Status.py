@@ -23,21 +23,21 @@ SORGU = None
 async def priw(client, message):
 	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
 
-@app.on_message(filters.command("all")
+@app.on_message(filters.command("tag")
 	& filters.group)
-async def tag(client: app, message: Message):
+async def tag(client: client, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
 	chat = message.chat
-	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in client.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
 				reply_markup=btag()
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
+			async for member in client.iter_chat_members(chat_id=chat.id, filter="tag"):
 				if DUR:
 					DUR=False
 					SORGU = None
