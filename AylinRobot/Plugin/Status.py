@@ -19,13 +19,13 @@ from AylinRobot.config import Config
 DUR = False
 SORGU = None
 
-@app.on_message(filters.command(["admin", "all"]) & filters.private)
+@app.on_message(filters.command(["admin", "tag"]) & filters.private)
 async def priw(client, message):
 	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
-
+	
 @app.on_message(filters.command("tag")
 	& filters.group)
-async def tag(client: client, message: Message):
+async def tag(client, message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
@@ -43,7 +43,7 @@ async def tag(client: client, message: Message):
 					SORGU = None
 					break
 				time.sleep(1)
-				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
+				await client.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
 				time.sleep(1.5)
 		if message.from_user.id != mem.user.id:
 			pass
