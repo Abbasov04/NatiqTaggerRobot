@@ -33,7 +33,7 @@ async def tag(client, message):
 	async for mem in client.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
-				reply_markup=btag()
+				reply_markup=tag()
 				)
 			time.sleep(1)
 			SORGU = True
