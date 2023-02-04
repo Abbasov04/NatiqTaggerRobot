@@ -44,14 +44,14 @@ async def tektag(client: app, message: Message):
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
 				reply_markup=btag()
 				)
-			time.sleep(1.5)
+			time.sleep(1)
 			SORGU = True
 			async for member in app.iter_chat_members(chat_id=chat.id, filter="tag"):
 				if DUR:
 					DUR=False
 					SORGU = None
 					break
-				time.sleep(1.5)
+				time.sleep(1)
 				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
 				time.sleep(1.5)
 		if message.from_user.id != mem.user.id:
@@ -92,7 +92,7 @@ async def stop(client: app, message: Message):
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			if SORGU == None:
-				await message.reply_text("Aktiv bir all prosesi yoxdur😕👍🏻")
+				await message.reply_text("Aktiv Bir Tag Prosesi Yoxdur😕👍🏻")
 				return
 
 			DUR = True
