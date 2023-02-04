@@ -37,44 +37,44 @@ async def priw(client, message):
 
 @app.on_message(filters.command("all")
 	& filters.group)
-async def tag(client: Client, message: Message):
+async def tag(client: app, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
 	chat = message.chat
-	async for mem in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
 				reply_markup=btag()
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in Client.iter_chat_members(chat_id=chat.id, filter="all"):
+			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
 					DUR=False
 					SORGU = None
 					break
 				time.sleep(1)
-				await Client.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
+				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
 				time.sleep(1.5)
 		if message.from_user.id != mem.user.id:
 			pass
 		
 @app.on_message(filters.command("admin")
 	& filters.group)
-async def ta(client: Client, message: Message):
+async def ta(client: app, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
 	chat = message.chat
-	async for mem in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			await message.reply_text(f"{message.from_user.mention} Adminləri tag etməyimi istədi⚡️ Adminləri Tag Edirəm Boss!🥳",
 				reply_markup=btag()
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
+			async for member in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 				if DUR:
 					DUR=False
 					SORGU = None
@@ -89,10 +89,10 @@ async def ta(client: Client, message: Message):
 		
 @app.on_message(filters.group
 	& filters.command("cancel"))
-async def stop(client: Client, message: Message):
+async def stop(client: app, message: Message):
 	global DUR
 	chat = message.chat
-	async for mem in Client.iter_chat_members(chat_id=chat.id, filter="administrators"):
+	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			if SORGU == None:
 				await message.reply_text("Aktiv bir all prosesi yoxdur😕👍🏻")
