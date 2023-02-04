@@ -46,7 +46,7 @@ async def tektag(client: app, message: Message):
 				)
 			time.sleep(1)
 			SORGU = True
-			async for member in app.iter_chat_members(chat_id=chat.id, filter="tag"):
+			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
 					DUR=False
 					SORGU = None
