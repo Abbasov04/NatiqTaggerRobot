@@ -101,3 +101,13 @@ async def stop(client: app, message: Message):
 		if message.from_user.id != mem.user.id:
 			pass
 	
+	
+@app.on_message(filters.group & filters.new_chat_members)
+def welcome(client, message):
+	global WDUR
+	global WSORGU
+	WSORGU=True
+	for i in message.new_chat_members:
+		new_members = MENTION.format(i.first_name, i.id)
+		text = MESSAGE.format(new_members)
+		message.reply(text, disable_web_page_preview=True)	
