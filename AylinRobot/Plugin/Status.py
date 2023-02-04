@@ -19,6 +19,10 @@ from AylinRobot.config import Config
 DUR = False
 SORGU = None
 
+@app.on_message(filters.command(["admin", "all"]) & filters.private)
+async def priw(client, message):
+	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
+
 @app.on_message(filters.command("all")
 	& filters.group)
 async def tag(client: app, message: Message):
