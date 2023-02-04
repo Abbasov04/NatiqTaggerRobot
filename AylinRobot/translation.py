@@ -34,15 +34,15 @@ class Translation(object):
 
     BH_TEXT = """
 ╔═════════════════
-║▻ **🙋‍♀️ Salam {} {} Azərbaycan Dilində 
-║▻ Çox Özəllikli Telegram Botudur...**
+║▻ **🙋‍♀️ Salam {} 
+║▻ 🙎‍♀️ {} 🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
 ║
 ║▻ ✨ Bot Versiyası: v0.7.0
 ║▻ 🍀 Pyrogram Versiyası: 1.4.16
 ║▻ ✨ Python Versiyası: 3.11.1
 ║▻ ⚙️ Server [Heroku](https://heroku.com)
-║▻ 👨‍💻 Mənim Sahibim {} 
-║▻ 📆 {} {} -Un İstifadəyə Verilmə Tarixi `20.11.2022` 
+║▻ 👨‍💻 Mənim Sahibim {}
+║▻ 📆 {} -Un İstifadəyə Verilmə Tarixi `20.11.2022` 
 ╚═════════════════
 ╔═════════════════
 ║▻ **⚠️ Qeyd Botun Qrupunuzda İşləməsi 
