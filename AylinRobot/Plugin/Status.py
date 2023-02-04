@@ -25,7 +25,7 @@ async def priw(client, message):
 
 @app.on_message(filters.command("all")
 	& filters.group)
-async def tag(client: app, message: Message):
+async def tag(client: Client, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
