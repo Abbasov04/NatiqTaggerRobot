@@ -20,8 +20,12 @@ class Translation(object):
 
 """    
     HELP_TEXT = """
-**🙋‍♀️ Salam {} 💁‍♀️ {} - Un  Əmrləri  Bunlardır Aşağıdakı Buttonlara Toxunaraq istədiyiniz  Əmr Haqqında Məlumat Ala Bilərsiniz 🥰**
-
+╔═════════════════
+║▻ **🙋‍♀️ Salam {} 💁‍♀️ {} - Un  
+║▻ 📚 Əmrləri  Bunlardır Aşağıdakı 
+║▻ 🖲 Buttonlara Toxunaraq istədiyiniz
+║▻ ✔️ Əmr Haqqında Məlumat Ala Bilərsiniz 
+╚═════════════════
 """
 
 ### Bot Haqqında Ümumi Məlumat
