@@ -13,9 +13,8 @@ class Translation(object):
 ║
 ║▻ 🤭 Mənim Adım  ️️️️️️{} Mən 
 ║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
-║▻ Telegram Botuyam Bacarıqlarımı Görmək
-║▻ Üçün `📚 Kömək` Buttonuna Toxun
-║▻ 
+║▻ Telegram Botuyam Bacarıqlarımı Görmək Üçün
+║▻ `📚 Kömək` Buttonuna Toxun
 ╚═════════════════
 👨‍💻 **Sahibim** {}
 
