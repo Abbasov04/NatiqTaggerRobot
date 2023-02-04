@@ -7,8 +7,6 @@ import sys
 import os
 import time
 import random
-from time import time
-from random import choice
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 from pyrogram.errors import FloodWait
