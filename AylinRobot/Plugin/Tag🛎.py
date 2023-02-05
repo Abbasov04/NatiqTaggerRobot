@@ -72,7 +72,7 @@ async def tag(client: app, message: Message):
 			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
 					DUR=False
-					SORGU = "Bir Mesaj Yaz"
+					SORGU = False
 					break
 				time.sleep(1)
 				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
