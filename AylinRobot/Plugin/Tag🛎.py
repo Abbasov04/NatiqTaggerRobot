@@ -23,7 +23,7 @@ def btag():
 
 
 def bstart():
-	BUTTON = [[InlineKeyboardButton("😔 Dayandır", callback_data="tag")]]	
+	BUTTON = [[InlineKeyboardButton("😔 Dayandır", callback_data="tag"),],]	
 	
 return InlineKeyboardMarkup(BUTTON)
 
