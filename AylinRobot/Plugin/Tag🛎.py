@@ -25,7 +25,7 @@ def btag():
 
 
 @app.on_message(
-	filters.command(["admin", "tag"])
+	filters.command(["admin", "tektag"])
 	& filters.private)
 async def priw(client, message):
 	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")
@@ -37,11 +37,11 @@ async def priw(client, message):
 async def tag(client: app, message: Message):
 	global DUR
 	global SORGU
-	msg = " ".join(message.command[1:])
+	msg = " ".join(message.command[5:])
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"Tək Tək Tag Prosesi Başladı Tagı Başlatan {message.from_user.mention} Tagı Dayandırmaq Üçün /cancel Yazın",
+			await message.reply_text(f"{message.from_user.mention}\nTək-Tək Tag Prosesi Başladı Tagı Başlatan\nTagı Dayandırmaq Üçün\n/cancel Yazın",
 				reply_markup=btag()
 				)
 			time.sleep(1)
@@ -53,7 +53,7 @@ async def tag(client: app, message: Message):
 					break
 				time.sleep(1)
 				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
-				time.sleep(1.5)
+				time.sleep(1)
 		if message.from_user.id != mem.user.id:
 			pass
 		
@@ -69,7 +69,7 @@ async def ta(client: app, message: Message):
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"Adminləri Tag Etməyimi İstəyən {message.from_user.mention} 🥳 Tagı Dayandırmaq Üçün /cancel Yazın",
+			await message.reply_text(f"{message.from_user.mention}\nAdminləri Tag Etməyimi İstədi\nTagı Dayandırmaq Üçün\n/cancel Yazın",
 				reply_markup=btag()
 				)
 			time.sleep(1)
@@ -81,7 +81,7 @@ async def ta(client: app, message: Message):
 					break
 				time.sleep(1)
 				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
-				time.sleep(1.5)
+				time.sleep(1)
 		if message.from_user.id != mem.user.id:
 			pass
 
