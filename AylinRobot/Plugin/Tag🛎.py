@@ -25,10 +25,11 @@ def btag():
 
 
 
-@app.on_message(filters.command(["admin", "tag"]) & filters.groups)
-async def priw(client, message):
-	await message.reply_text("**💭 allows you to play music on groups through the new Telegram's voice chats!**💡 Find out all the **Bot's commands** and how they work by clicking on the **» ⚙️ Commands** button!"),
-  reply_markup=InlineKeyboardMarkup(
+@app.on_message(command(["tag"]) & ~filters.edited)
+async def donate(client: Client, message: Message):
+    await message.reply_text(
+        f"__Hi **{message.from_user.mention()}**, it's great if you want to support this bot 😇. Tap the button below to continue__" ),
+       reply_markup=InlineKeyboardMarkup(
   [[InlineKeyboardButton("⚙️ Command​​", callback_data="ta")]])
 
 
