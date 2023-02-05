@@ -38,7 +38,7 @@ async def tag(client: app, message: Message):
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"{message.from_user.mention}\nTag Prosesini Başlatdı\nTagı Dayandırmaq Üçün\n/cancel Yazın",
+			await message.reply_text(f"{message.from_user.mention}\nTag Prosesini Başlatdı 🥰\nTagı Dayandırmaq Üçün\n/cancel Yazın 🙎‍♀️",
 				reply_markup=btag()
 				)
 			time.sleep(1)
