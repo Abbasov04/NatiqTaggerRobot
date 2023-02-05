@@ -22,26 +22,20 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-def bstart():
-	BUTTON = [[InlineKeyboardButton("😔 Dayandır", callback_data="tag"),],]	
-	
+def btag():
+	BUTTON = [[InlineKeyboardButton("😔 Dayandır", callback_data="tag"),],]
 return InlineKeyboardMarkup(BUTTON)
 
-@app.on_message(
-	filters.command("tag")
-	& filters.group
-	)
-async def start(client, message):
+@app.on_message(filters.command("tag") & filters.group)
+async def tag(client, message):
 	if message.chat.id != GRUP:
 		GRUP.append(message.chat.id)
 	else:
 		pass
 	await message.reply_text(f"Salam! {message.from_user.mention}\n\nMən [@Şirvan](https://t.me/sjrvan) tərəfindən hazırlanan tag botuyam!⚡️\n\nKomutlarla Bağlı Məlumat üçün /help yaz!🥰",
 		disable_web_page_preview=True,
-		reply_markup=bstart()
+		reply_markup=btag()
 		)
-
-
 
 ### Tək-Tək Tağ Edər
 
