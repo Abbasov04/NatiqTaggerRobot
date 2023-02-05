@@ -23,7 +23,7 @@ def btag():
 
 
 
-@app.on_message(command("tag") & filters.private & ~filters.edited)
+@app.on_message(command("tag") & filters.groups & ~filters.edited)
 async def start_(client: Client, message: Message):
 await message.reply_text(
 f"""<b>✨ Welcome {message.from_user.mention()}!</b>
