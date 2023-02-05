@@ -5,7 +5,6 @@
 import motor.motor_asyncio
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from AylinRobot.config import Config
-from helpers.database.chats import add_served_chat, blacklisted_chats, get_served_chats
 
 db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
 mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
@@ -81,3 +80,36 @@ class Database:
 
     async def get_all_banned_users(self): # Veritabınızdaki yasaklı kullanıcılar listesini verir.
         return self.col.find({"ban_status.is_banned": True})
+
+################## KULLANICI KONTROLLERİ #############
+async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
+    chat_id = cmd.chat.id
+    if not await db.is_user_exist(chat_id):
+        if cmd.chat.type == "private":
+            await db.add_user(chat_id)
+            await app.send_message(Config.LOG_CHANNEL,LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
+        else:
+            await db.add_user(chat_id)
+            chat = bot.get_chat(chat_id)
+            if str(chat_id).startswith(f"{Config.LOG_CHANNEL}"):
+                new_chat_id = str(chat_id)[4:]
+            else:
+                new_chat_id = str(chat_id)[1:]
+            await app.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
+
+    ban_status = await db.get_ban_status(chat_id) # Yasaklı Kullanıcı Kontrolü
+    if ban_status["is_banned"]:
+        if int((datetime.date.today() - datetime.date.fromisoformat(ban_status["banned_on"])).days) > int(ban_status["ban_duration"]):
+            await db.remove_ban(chat_id)
+        else:
+            if Config.SUPPORT:
+                msj = f"@{Config.SUPPORT}"
+            else:
+                msj = f"[{LAN.SAHIBIME}](tg://user?id={Config.OWNER_ID})"
+            if cmd.chat.type == "private":
+                await cmd.reply_text(LAN.PRIVATE_BAN.format(msj), quote=True)
+            else:
+                await cmd.reply_text(LAN.GROUP_BAN.format(msj),quote=True)
+                await app.leave_chat(cmd.chat.id)
+            return
+    await cmd.continue_propagation()        
