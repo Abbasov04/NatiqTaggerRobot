@@ -22,7 +22,7 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-def btag():
+def bt():
 	BUTTON = [[InlineKeyboardButton("😔 Dayandır", callback_data="tag"),],]
   return InlineKeyboardMarkup(BUTTON)
 
@@ -34,7 +34,7 @@ async def tag(client, message):
 		pass
 	await message.reply_text(f"Salam! {message.from_user.mention}\n\nMən [@Şirvan](https://t.me/sjrvan) tərəfindən hazırlanan tag botuyam!⚡️\n\nKomutlarla Bağlı Məlumat üçün /help yaz!🥰",
 		disable_web_page_preview=True,
-		reply_markup=btag()
+		reply_markup=bt()
 		)
 
 ### Tək-Tək Tağ Edər
