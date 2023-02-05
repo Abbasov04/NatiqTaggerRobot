@@ -22,7 +22,7 @@ def btag():
 	BUTTON = [[InlineKeyboardButton("Command", callback_data="cbhplay"),              InlineKeyboardButton("🗑️ Close", callback_data="closed"),
                 ],
             ]
-        ),
+        )
     )
 	return InlineKeyboardMarkup(BUTTON)
 
