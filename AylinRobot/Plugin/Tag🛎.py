@@ -7,7 +7,6 @@ import time
 import random
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters, emoji, idle
-from pyrogram import filters
 from AylinRobot import LOGGER
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
@@ -26,7 +25,7 @@ def btag():
 
 
 
-@app.on_message(command(["tag"]) & ~filters.edited)
+@app.on_message(command(["tag"])
 async def donate(client: Client, message: Message):
     await message.reply_text(
         f"__Hi **{message.from_user.mention()}**, it's great if you want to support this bot 😇. Tap the button below to continue__",
