@@ -1,3 +1,9 @@
+# @AylinRobot
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
+
+
 import random
 from time import time
 from random import choice
