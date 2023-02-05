@@ -7,6 +7,7 @@ import time
 import random
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters, emoji, idle
+from pyrogram import filters
 from AylinRobot import LOGGER
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
