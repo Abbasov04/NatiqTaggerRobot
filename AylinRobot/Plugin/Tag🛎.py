@@ -14,9 +14,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 DUR = False
 SORGU = None
-
-GRUP = []
-
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
@@ -25,7 +22,7 @@ def btag():
 
 
 @app.on_message(
-	filters.command(["admin", "tektag"])
+	filters.command(["admin", "tag"])
 	& filters.private)
 async def priw(client, message):
 	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")
@@ -37,7 +34,7 @@ async def priw(client, message):
 async def tag(client: app, message: Message):
 	global DUR
 	global SORGU
-	msg = " ".join(message.command[5:])
+	msg = " ".join(message.command[1:])
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
