@@ -30,8 +30,7 @@ async def priw(client, message):
 
 ### Tək-Tək Tağ Edər
 
-@app.on_message(filters.command("tag")
-	& filters.group)
+@app.on_callback_query(filters.regex("tag")& filters.group)
 async def tektag(client: app, message: Message):
 	global DUR
 	global SORGU
