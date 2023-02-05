@@ -38,7 +38,7 @@ async def tag(client: app, message: Message):
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"{message.from_user.mention}\nTag Prosesini Başlatdı 🥰\nTagı Dayandırmaq Üçün\n/cancel Yazın 🙎‍♀️",
+			await message.reply_text(f"{message.from_user.mention}\n**Tag Prosesini Başlatdı 🥰**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın 🙎‍♀️**",
 				reply_markup=btag()
 				)
 			time.sleep(1)
@@ -49,7 +49,7 @@ async def tag(client: app, message: Message):
 					SORGU = None
 					break
 				time.sleep(1)
-				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg} Bayaqdan səni gözləyirəm gəl 🥰")
+				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg} **Bayaqdan səni gözləyirəm gəl 🥰**")
 				time.sleep(1)
 		if message.from_user.id != mem.user.id:
 			pass
@@ -66,7 +66,7 @@ async def ta(client: app, message: Message):
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"{message.from_user.mention}\nAdminləri Tag Etməyimi İstədi\nTagı Dayandırmaq Üçün\n/cancel Yazın",
+			await message.reply_text(f"{message.from_user.mention}\n**Adminləri Tag Etməyimi İstədi 🤓**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın**",
 				reply_markup=btag()
 				)
 			time.sleep(1)
@@ -92,10 +92,10 @@ async def stop(client: app, message: Message):
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			if SORGU == None:
-				await message.reply_text("Hmmm Aktiv Bir Tag Prosesi Yoxdur 😕👍🏻")
+				await message.reply_text("**Hmmm Aktiv Bir Tag Prosesi Yoxdur 😕👍🏻**")
 				return
 
 			DUR = True
-			await message.reply_text(f"{message.from_user.mention} Tag prosesini dayandırdı 😒")	
+			await message.reply_text(f"{message.from_user.mention} **Tag prosesini dayandırdı 😒 Artığ Tağ Etmərəm 🥹**")	
 		if message.from_user.id != mem.user.id:
 			pass
