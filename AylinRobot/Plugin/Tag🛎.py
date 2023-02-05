@@ -20,7 +20,7 @@ GRUP = []
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
-	BUTTON = [[InlineKeyboardButton(text="👨‍💻 Sahibim", url=f"https://t.me/{Config.OWNER_NAME}"),              InlineKeyboardButton("👨‍💻 Sahibim", url=f"https://t.me/{Config.OWNER_NAME}"),],]	
+	BUTTON = [[InlineKeyboardButton(text="👨‍💻 Sahibim", url=f"https://t.me/{Config.OWNER_NAME}"),              InlineKeyboardButton("🎧 Playlis", url=f"https://t.me/{Config.PLAYLIST_NAME}"),],]	
 	return InlineKeyboardMarkup(BUTTON)
 
 
