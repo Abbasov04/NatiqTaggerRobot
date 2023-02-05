@@ -28,7 +28,7 @@ def btag():
 @app.on_message(filters.command("tag") & ~filters.group)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**Mövcud Əmrlərimi Görmək Üçün Help Buttonuna Toxunun**""",
+        f"""**Mövcud Əmrlərimi Görmək Üçün Help Buttonuna Toxunun**"""),
         reply_markup=InlineKeyboardMarku( [[InlineKeyboardButton("⚙️ Command​​", callback_data="tag"),],]
 
 
