@@ -37,8 +37,7 @@ async def start_(client: Client, message: Message):
 
 💡 Find out all the **Bot's commands** and how they work by clicking on the **» ⚙️ Commands** button!""",
         reply_markup=InlineKeyboardMarkup(
-          [[InlineKeyboardButton("⚙️ Command​​", callback_data="ta"),  
-           "❔ About me​​", callback_data="cbabout"),],]),
+          [[InlineKeyboardButton("⚙️ Command​​", callback_data="ta")]])
 
 
 
