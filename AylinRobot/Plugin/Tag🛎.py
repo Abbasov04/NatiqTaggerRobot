@@ -23,7 +23,6 @@ def btag():
                     )
                 ]
             ]
-        )
 	return InlineKeyboardMarkup(BUTTON)
 
 
