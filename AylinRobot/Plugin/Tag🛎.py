@@ -24,9 +24,7 @@ def btag():
 
 @app.on_message(command("tag") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
-    await message.reply_text(
-        f"""<b>✨ Welcome {message.from_user.mention()}!</b>
-
+    await message.reply_text(f"""<b>✨ Welcome {message.from_user.mention()}!</b>
 **💭 allows you to play music on groups through the new Telegram's voice chats!**
 
 💡 Find out all the **Bot's commands** and how they work by clicking on the **» ⚙️ Commands** button!""",
