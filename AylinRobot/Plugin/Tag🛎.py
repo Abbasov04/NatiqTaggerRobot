@@ -24,10 +24,10 @@ def btag():
 
 @app.on_message(filters.command(["tag"]) & ~filters.edited)
 async def commit(_, message):
-    await message.reply_text( reply_markup=TAGBUTTON)
+    await message.reply_text("Salam Aşağıdakı Buttona Toxun" reply_markup=TAGBUTTON)
 
 
-TAGBUTTON =InlineKeyboardMarku( [[InlineKeyboardButton("Tag", callback_data="tg"),],]
+TAGBUTTON =InlineKeyboardMarku( [[InlineKeyboardButton("Tag", callback_data="tg")]]
 
 
 
