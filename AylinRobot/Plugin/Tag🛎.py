@@ -10,8 +10,7 @@ from pyrogram import Client, filters, emoji, idle
 from AylinRobot import LOGGER
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
-from pyrogram.types import Message, Chat, InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
 
 DUR = False
 SORGU = None
