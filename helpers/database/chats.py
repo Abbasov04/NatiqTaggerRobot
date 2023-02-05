@@ -4,7 +4,7 @@
 
 from typing import Dict, List, Union
 
-from helpers import db
+from helpers.database import db
 
 
 chatsdb = db.chats
