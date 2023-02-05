@@ -29,7 +29,7 @@ def btag():
 async def ghelp(_, message: Message):
     await message.reply_text(
         f"""**Mövcud Əmrlərimi Görmək Üçün Help Buttonuna Toxunun**""",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚙️ Command​​", callback_data="tag"),)]])
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚙️ Command​​", callback_data="tag"),)],])
     )
 
 
