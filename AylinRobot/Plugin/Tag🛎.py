@@ -25,7 +25,7 @@ def btag():
 
 @app.on_message(command("tag") & filters.groups & ~filters.edited)
 async def start_(client: Client, message: Message):
-await message.reply_text(f" {message.from_user.mention()}",
+       await message.reply_text(f" {message.from_user.mention()}",
 reply_markup=InlineKeyboardMarkup( [[InlineKeyboardButton("Tag", callback_data="ta")]])
 
 
