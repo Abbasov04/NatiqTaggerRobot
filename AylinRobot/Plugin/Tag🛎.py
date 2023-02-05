@@ -23,7 +23,8 @@ def btag():
 
 
 def bstart():
-	TAG=[[InlineKeyboardButton("😔 Dayandır", callback_data="cancel")]]	
+	TAG=[[InlineKeyboardButton("😔 Dayandır", callback_data="tag")]]	
+return InlineKeyboardMarkup(TAG)
 
 @app.on_message(
 	filters.command("tag")
