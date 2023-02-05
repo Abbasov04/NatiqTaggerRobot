@@ -19,13 +19,13 @@ SORGU = None
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
-
+	BUTTON = reply_markup=InlineKeyboardMarkup( [[InlineKeyboardButton(text="Sahibim ✨", url=f"h🎧 ttps://t.me/{Config.PLAYLIST_NAME}"),    InlineKeyboardButton("😔 Dayandır", callback_data="cancel")]])
 	return InlineKeyboardMarkup(BUTTON)
 
 
 @app.on_message(filters.command(["admin", "tag"]) & filters.private)
 async def priw(client, message):
-	await message.reply_text("Hmm burada 2miz olduğumuz üçün və 2 mizdə online olduğumuz üçün bu əmri qruplarda işlət!🤠")
+	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")
 
 
 ### Tək-Tək Tağ Edər
