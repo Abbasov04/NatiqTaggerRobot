@@ -24,6 +24,13 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
+@app.on_message(
+	filters.command(["admin", "tag"])
+	& filters.private)
+async def priw(client, message):
+	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")
+
+
 ### Tək-Tək Tağ Edər
 
 @app.on_message(filters.command("tag") & filters.group)
@@ -78,11 +85,10 @@ async def ta(client: app, message: Message):
 		if message.from_user.id != mem.user.id:
 			pass
 
-
-
 ### Tag Prosesin Dayandırar
 
-@app.on_callback_query(filters.regex("cancel"))
+@app.on_message(filters.group
+	& filters.command("cancel"))
 async def stop(client: app, message: Message):
 	global DUR
 	chat = message.chat
