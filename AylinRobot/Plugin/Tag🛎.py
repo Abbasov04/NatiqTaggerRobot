@@ -75,7 +75,7 @@ async def tag(client: app, message: Message):
 					SORGU = "bir mesaj yazın"
 					break
 				time.sleep(1)
-				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {emoji}")
+				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
 				time.sleep(1)
 		if message.from_user.id != mem.user.id:
 			pass		
