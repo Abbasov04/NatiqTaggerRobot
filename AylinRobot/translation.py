@@ -204,6 +204,9 @@ class Translation(object):
 ╔═════════════════
 ║▻ 🔮 Istifadə: /tag
 ║▻ 📃 Açıqlama: İstifadəçiləri Tək Tək Tag Edər.
+║ 
+║▻ 🔮 Istifadə: /admin
+║▻ 📃 Açıqlama: Adminləri Tag Edər.
 ╚═════════════════
 """
 
