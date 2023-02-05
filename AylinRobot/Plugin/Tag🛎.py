@@ -11,6 +11,7 @@ from AylinRobot import LOGGER
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import Message, Chat, InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 DUR = False
 SORGU = None
@@ -18,7 +19,7 @@ SORGU = None
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
-	BUTTON=[[InlineKeyboardButton(text="📝 Sahibim ", url=f"{Config.OWNER_NAME}"), InlineKeyboardButton(text="🎧 Playlist", url=f"{Config.PLAYLIST_NAME}")]],
+	BUTTON=([[InlineKeyboardButton(text="📝 Sahibim ", url=f"{Config.OWNER_NAME}"), InlineKeyboardButton(text="🎧 Playlist", url=f"{Config.PLAYLIST_NAME}"),]])
 	return InlineKeyboardMarkup(BUTTON)
 
 
