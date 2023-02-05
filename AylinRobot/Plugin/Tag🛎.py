@@ -82,8 +82,7 @@ async def ta(client: app, message: Message):
 
 ### Tag Prosesin Dayandırar
 
-@app.on_message(filters.group
-	& filters.command("cancel"))
+@app.on_callback_query(filters.regex("cancel"))
 async def stop(client: app, message: Message):
 	global DUR
 	chat = message.chat
