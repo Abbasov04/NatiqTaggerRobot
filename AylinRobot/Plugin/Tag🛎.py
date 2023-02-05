@@ -19,8 +19,7 @@ SORGU = None
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
-	BUTTON=[[            InlineKeyboardButton(text="🗑 Bağla", callback_data="close_"),
-  InlineKeyboardButton(text="⬅️ Geri", callback_data="HOME"),],]
+	BUTTON=[[InlineKeyboardButton(text="📝 Sahibim ", url=f"{Config.OWNER_NAME}"), InlineKeyboardButton(text="🎧 Playlist", url=f"{Config.PLAYLIST_NAME}"),]],
 	return InlineKeyboardMarkup(BUTTON)
 
 
