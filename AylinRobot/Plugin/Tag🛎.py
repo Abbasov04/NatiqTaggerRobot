@@ -22,11 +22,6 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-@app.on_message(filters.command(["admin", "tag"]) & filters.private)
-async def priw(client, message):
-	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")
-
-
 @app.on_message(command("tag") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
