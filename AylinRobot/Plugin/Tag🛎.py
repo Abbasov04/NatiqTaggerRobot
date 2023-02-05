@@ -54,35 +54,6 @@ async def tag(client: app, message: Message):
 		if message.from_user.id != mem.user.id:
 			pass
 		
-
-		
-@app.on_message(filters.command("all") & filters.group)
-async def tag(client: app, message: Message):
-	global DUR
-	global SORGU
-	msg = " ".join(message.command[1:])
-	chat = message.chat
-	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
-		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"{message.from_user.mention}\n**Tag Prosesini Başlatdı 🥰**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın 🙎‍♀️**",
-				reply_markup=btag()
-				)
-			time.sleep(1)
-			SORGU = True
-			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
-				if DUR:
-					DUR=False
-					SORGU = False
-					break
-				time.sleep(1)
-				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
-				time.sleep(1)
-		if message.from_user.id != mem.user.id:
-			pass		
-		
-		
-		
-		
 		
 ### Sadəcə Adminləri Tağ Edər		
 		
