@@ -13,7 +13,7 @@ from AylinRobot.config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
 
 DUR = False
-SORGU = True
+SORGU = None
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
@@ -72,7 +72,7 @@ async def tag(client: app, message: Message):
 			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
 				if DUR:
 					DUR=False
-					SORGU = True
+					SORGU = "Bir Mesaj Yaz"
 					break
 				time.sleep(1)
 				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {msg}")
