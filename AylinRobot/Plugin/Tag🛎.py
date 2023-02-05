@@ -28,7 +28,6 @@ def btag():
 
 @app.on_message(filters.command("tag") & filters.group)
 async def tag(client: app, message: Message):
-	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")  
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
@@ -48,6 +47,7 @@ async def tag(client: app, message: Message):
 				time.sleep(1)
 				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} **Bayaqdan səni gözləyirəm gəl 🥰**")
 				time.sleep(1)
+	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")				
 		if message.from_user.id != mem.user.id:
 			pass
 		
