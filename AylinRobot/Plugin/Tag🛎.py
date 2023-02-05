@@ -13,7 +13,8 @@ from AylinRobot.config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
 
 DUR = False
-SORGU = None
+SORGU = "Salam Bir Mesaj Yazın"
+
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
@@ -53,6 +54,34 @@ async def tag(client: app, message: Message):
 				time.sleep(1)
 		if message.from_user.id != mem.user.id:
 			pass
+		
+		
+@app.on_message(filters.command("etag") & filters.group)
+async def tag(client: app, message: Message):
+	global DUR
+	global SORGU
+	msg = " ".join(message.command[1:])
+	chat = message.chat
+	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
+		if message.from_user.id == mem.user.id:
+			await message.reply_text(f"{message.from_user.mention}\n**Tag Prosesini Başlatdı 🥰**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın 🙎‍♀️**",
+				reply_markup=btag()
+				)
+			time.sleep(1)
+			SORGU = True
+			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
+				if DUR:
+					DUR=False
+					SORGU = "bir mesaj yazın"
+					break
+				time.sleep(1)
+				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} {emoji}")
+				time.sleep(1)
+		if message.from_user.id != mem.user.id:
+			pass		
+		
+		
+		
 		
 		
 ### Sadəcə Adminləri Tağ Edər		
