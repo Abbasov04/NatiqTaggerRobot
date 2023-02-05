@@ -20,7 +20,7 @@ MENTION = "[{}](tg://user?id={})"
 def btag():
 	BUTTON=
 [[InlineKeyboardButton(text="📝 Sahibim ", url=f"{Config.OWNER_NAME}")
-	InlineKeyboardButton(text="🎧 Playlist", url=f"{Config.PLAYLIST_NAME}")]])
+	InlineKeyboardButton(text="🎧 Playlist", url=f"{Config.PLAYLIST_NAME}")]]),
 	return InlineKeyboardMarkup(BUTTON)
 
 
