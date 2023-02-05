@@ -14,7 +14,9 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 DUR = False
 SORGU = None
+
 GRUP = []
+
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
@@ -22,25 +24,10 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-def bt():
-	BUTTON = [[InlineKeyboardButton("😔 Dayandır", callback_data="tag"),],]
-  return InlineKeyboardMarkup(BUTTON)
-
-@app.on_message(filters.command("tag") & filters.group)
-async def tag(client, message):
-	if message.chat.id != GRUP:
-		GRUP.append(message.chat.id)
-	else:
-		pass
-	await message.reply_text(f"Salam! {message.from_user.mention}\n\nMən [@Şirvan](https://t.me/sjrvan) tərəfindən hazırlanan tag botuyam!⚡️\n\nKomutlarla Bağlı Məlumat üçün /help yaz!🥰",
-		disable_web_page_preview=True,
-		reply_markup=bt()
-		)
-
 ### Tək-Tək Tağ Edər
 
-@app.on_callback_query(filters.regex("tg")& filters.group)
-async def tektag(client: app, message: Message):
+@app.on_message(filters.command("tag") & filters.group)
+async def tag(client: app, message: Message):
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
