@@ -20,7 +20,7 @@ GRUP = []
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
-	BUTTON = [[InlineKeyboardButton(text="👨‍💻 Sahibim", url=f"https://t.me/{Config.OWNER_NAME}"),              InlineKeyboardButton("🎧 Playlis", url=f"https://t.me/{Config.PLAYLIST_NAME}"),],]	
+	BUTTON = [[InlineKeyboardButton(text="👨‍💻 Sahibim", url=f"https://t.me/{Config.OWNER_NAME}"),              InlineKeyboardButton("🎧 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"),],]	
 	return InlineKeyboardMarkup(BUTTON)
 
 
@@ -41,7 +41,7 @@ async def tag(client: app, message: Message):
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"{message.from_user.mention} Tag Prosesini Başlatdı! Hərkəsi Tag Edirəm Boss!⚡️",
+			await message.reply_text(f"Tək Tək Tag Prosesi Başladı Tagı Başlatan {message.from_user.mention} Tagı Dayandırmaq Üçün /cancel Yazın",
 				reply_markup=btag()
 				)
 			time.sleep(1)
@@ -69,7 +69,7 @@ async def ta(client: app, message: Message):
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"{message.from_user.mention} Adminləri tag etməyimi istədi⚡️ Adminləri Tag Edirəm Boss!🥳",
+			await message.reply_text(f"Adminləri Tag Etməyimi İstəyən {message.from_user.mention} 🥳 Tagı Dayandırmaq Üçün /cancel Yazın",
 				reply_markup=btag()
 				)
 			time.sleep(1)
@@ -95,10 +95,10 @@ async def stop(client: app, message: Message):
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
 			if SORGU == None:
-				await message.reply_text("Aktiv Bir Tag Prosesi Yoxdur😕👍🏻")
+				await message.reply_text("Hmmm Aktiv Bir Tag Prosesi Yoxdur 😕👍🏻")
 				return
 
 			DUR = True
-			await message.reply_text(f"{message.from_user.mention} Tag prosesini dayandırdı❌ Tamam heçkəsi tag etmirəm😒")	
+			await message.reply_text(f"{message.from_user.mention} Tag prosesini dayandırdı 😒")	
 		if message.from_user.id != mem.user.id:
 			pass
