@@ -34,7 +34,7 @@ async def donate(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "⚙️ Command​​", callback_data="tag"
-                    ),
+                    )
                 ]
             ]
         )
