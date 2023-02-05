@@ -209,7 +209,7 @@ class Translation(object):
     TAGGER_TEXT = """
 ╔═════════════════
 ║▻ 🔮 Istifadə: /tag
-║▻ 📃 Açıqlama: İstifadəçiləri Tək Tək Tag Edər.
+║▻ 📃 Açıqlama: İstifadəçiləri  Səbəbsiz Tag Edər.
 ║ 
 ║▻ 🔮 Istifadə: /admin
 ║▻ 📃 Açıqlama: Adminləri Tag Edər.
