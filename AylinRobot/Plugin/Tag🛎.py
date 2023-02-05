@@ -21,17 +21,14 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-@app.on_message(
-	filters.command(["admin", "tag"])
-	& filters.private)
-async def priw(client, message):
-	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")
 
 
-### Tək-Tək Tağ Edər
+
+### Səbəbsiz Tag Edər
 
 @app.on_message(filters.command("tag") & filters.group)
 async def tag(client: app, message: Message):
+	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")  
 	global DUR
 	global SORGU
 	msg = " ".join(message.command[1:])
@@ -56,7 +53,6 @@ async def tag(client: app, message: Message):
 		
 		
 ### Sadəcə Adminləri Tağ Edər		
-		
 @app.on_message(filters.command("admin")
 	& filters.group)
 async def ta(client: app, message: Message):
