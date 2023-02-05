@@ -18,7 +18,7 @@ SORGU = None
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
-	BUTTON=[[InlineKeyboardButton(text="Yeniliklər Kanalı📣", url="https://t.me/seninkanal")]]
+	BUTTON=[[InlineKeyboardButton(text="🎧 Playlist", url=f"{Config.PLAYLIST_NAME}")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 
