@@ -25,20 +25,12 @@ def btag():
 
 
 
-@app.on_message(command(["tag"])
-async def donate(client: Client, message: Message):
+@app.on_message(filters.command("tag") & ~filters.group)
+async def ghelp(_, message: Message):
     await message.reply_text(
-        f"__Hi **{message.from_user.mention()}**, it's great if you want to support this bot 😇. Tap the button below to continue__",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "⚙️ Command​​", callback_data="tag"
-                    )
-                ]
-            ]
-        )
-    ),
+        f"""**Mövcud Əmrlərimi Görmək Üçün Help Buttonuna Toxunun**""",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚙️ Command​​", callback_data="tag"),)]])
+    )
 
 
 
