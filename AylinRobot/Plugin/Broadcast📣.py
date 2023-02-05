@@ -5,6 +5,7 @@ from AylinRobot import AylinRobot as app
 from helpers.filters import command
 from pyrogram import Client as USER
 from helpers.database.chats import add_served_chat, blacklisted_chats, get_served_chats
+from helpers.database.database import *
 import motor.motor_asyncio
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram.types import Message
@@ -192,12 +193,6 @@ class Database:
 
     async def get_all_banned_users(self): # Veritabınızdaki yasaklı kullanıcılar listesini verir.
         return self.col.find({"ban_status.is_banned": True})
-
-
-db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
-mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
-dcmdb = mongo_db_veritabani.handlers
-
 
 
 ################## KULLANICI KONTROLLERİ #############
