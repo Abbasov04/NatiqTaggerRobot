@@ -13,13 +13,13 @@ InlineKeyboardButton('📚 Kömək', callback_data='help'),
 ],[        
 InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),
 ],[                
-InlineKeyboardButton('Sahibim🧑‍💻',  url=f"https://t.me/{Config.OWNER_NAME}"),
-InlineKeyboardButton('🎵 Playlist', url=f"https://t.me/{Config.PLAYLIST_NAME}"),]])
+InlineKeyboardButton('👨‍💻 Sahibim',  url=f"https://t.me/{Config.OWNER_NAME}"),
+InlineKeyboardButton('🎧 Playlist', url=f"https://t.me/{Config.PLAYLIST_NAME}"),]])
 
 #### KÖMƏK BUTTONU
 
 HELP_BUTTONS = InlineKeyboardMarkup(
-[[InlineKeyboardButton('🎵 Musiqi', callback_data='musıc'),
+[[InlineKeyboardButton('🎧 Musiqi', callback_data='musıc'),
 InlineKeyboardButton('⭐ Telegraph', callback_data='tg')
 ],[
 InlineKeyboardButton('🎮 Oyunlar', callback_data='oyun'),
