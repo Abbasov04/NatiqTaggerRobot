@@ -22,9 +22,9 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-@app.on_message(command("tag") & filters.group & ~filters.edited)
-async def start_(client: Client, message: Message):
-    await message.reply_text(( reply_markup=TAGBUTTON)
+@app.on_message(filters.command(["tag"]) & ~filters.edited)
+async def commit(_, message):
+    await message.reply_text( reply_markup=TAGBUTTON)
 
 
 TAGBUTTON =InlineKeyboardMarku( [[InlineKeyboardButton("Tag", callback_data="tg"),],]
