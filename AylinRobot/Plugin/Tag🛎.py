@@ -80,8 +80,8 @@ async def ta(client: app, message: Message):
 		if message.from_user.id != mem.user.id:
 			pass
 
-### Tag Prosesin Dayandırar
 
+### Tag Prosesin Dayandırar
 @app.on_message(filters.group
 	& filters.command("cancel"))
 async def stop(client: app, message: Message):
