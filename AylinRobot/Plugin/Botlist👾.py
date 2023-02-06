@@ -8,6 +8,7 @@ from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 from AylinRobot.config import Config
 from pyrogram import Client, idle, filters
+import enmus
 
 @app.on_message(filters.command('list') & filters.group)
 async def start(client, msj):
