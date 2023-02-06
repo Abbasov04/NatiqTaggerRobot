@@ -20,7 +20,7 @@ async def my_handler(client, msj):
     chat_id = msj.chat.id
 
     BU_QRUP_USERLERI = []
-    async for member in app.iter_chat_members(chat_id):
+    async for member in client.iter_chat_members(chat_id):
         if member.user.is_bot == True:
             pass
         elif member.user.is_bot == False:
