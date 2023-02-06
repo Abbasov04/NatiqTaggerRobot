@@ -16,7 +16,7 @@ from pyrogram import idle, filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 
-from app.mesajlar.mesajlar import salam, necesen, sagol, getdim, geldim, ban
+from mesajlar.mesajlar import salam, necesen, sagol, getdim, geldim, ban
 active_chats = []
 # Chatbot açıb bağlamaq üçün manual modul aykhan026
 @app.on_message(filters.command("chatbot") & filters.group)
