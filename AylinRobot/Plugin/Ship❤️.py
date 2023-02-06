@@ -21,7 +21,7 @@ async def my_handler(client, msj):
     w = await client.send_message(chat_id, f"{Config.BOT_USERNAME} Sizin Üçün Rondom Cütlük Seçir")
 
     BU_QRUP_USERLERI = []
-    async for member in client.iter_chat_members(chat_id):
+    async for member in app.iter_chat_members(chat_id):
         if member.user.is_bot == True:
             pass
         elif member.user.is_bot == False:
