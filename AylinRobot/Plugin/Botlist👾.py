@@ -38,4 +38,4 @@ async def start(client, msj):
 
     #adminsiyahi = '\n'.join(ADMINS)
     t = f"Qrupdaki adminler\n{adminsiyahi}"
-    await client.send_message(chat_id, t)    
+    await app.send_message(chat_id, t)    
