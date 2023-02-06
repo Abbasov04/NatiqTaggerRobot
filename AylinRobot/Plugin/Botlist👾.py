@@ -32,7 +32,7 @@ async def start(client, msj):
     chat_id = msj.chat.id
     reply = msj.reply_to_message
     ADMINS = []
-    async for m in app.get_chat_members(chat_id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+    async for m in app.iter_chat_members(chat_id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
         ADMINS.append(m.user.mention)
         adminsiyahi = '\n'.join(ADMINS)
 
