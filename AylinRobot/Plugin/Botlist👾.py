@@ -25,19 +25,19 @@ async def start(client, msj):
     await client.send_message(chat_id, botlarsiyahi)
 
 
-@app.on_message(filters.command('admins') & filters.group)
-async def adminlist(client: app, message: Message):
+@app.on_message(filters.command('adminlist') & filters.group)
+async def adminlist(client: Client, message: Message):
     replyid = None
     toolong = False
     if len(message.text.split()) >= 2:
         chat = message.text.split(None, 1)[1]
-        grup = await app.get_chat(chat)
+        grup = await client.get_chat(chat)
     else:
         chat = message.chat.id
-        grup = await app.get_chat(chat)
+        grup = await client.get_chat(chat)
     if message.reply_to_message:
         replyid = message.reply_to_message.message_id
-    alladmins = app.iter_chat_members(chat, filter="administrators")
+    alladmins = client.iter_chat_members(chat, filter="administrators")
     creator = []
     admin = []
     badmin = []
