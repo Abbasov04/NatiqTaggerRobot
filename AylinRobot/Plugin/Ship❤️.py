@@ -3,6 +3,7 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 import random
+import time
 from time import time
 from random import choice
 from pyrogram.types import Message
