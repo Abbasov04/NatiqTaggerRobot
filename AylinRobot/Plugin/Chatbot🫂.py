@@ -1,7 +1,4 @@
 
-
-
-<BatBin/>
 # Bu modul 29.01.2023 tarixində 
 # aykhan026 və @guliyev_di (Famil) tərəfindən yazılıb
 # License: https://github.com/aykhan026/AykhanRoBot/LICENSE
