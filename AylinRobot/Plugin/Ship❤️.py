@@ -2,7 +2,6 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-import sleep
 import random
 import time
 from time import time
@@ -46,14 +45,14 @@ async def my_handler(client, msj):
                     await client.delete_messages(chat_id, w.id)
                     await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
             elif rnduser != sevgi2:
-                time.sleep(2.5)
+                time.sleep(2)
                 await client.delete_messages(chat_id, w.id)
                 await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
         elif rnduser != sevgi2:
-            time.sleep(2.5)
+            time.sleep(2)
             await client.delete_messages(chat_id, w.id)
             await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
     elif rnduser != sevgi2:
-        time.sleep(2.5)
+        time.sleep(2)
         await client.delete_messages(chat_id, w.id)
         await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
