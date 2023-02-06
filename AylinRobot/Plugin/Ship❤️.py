@@ -18,10 +18,10 @@ from AylinRobot.config import Config
 async def my_handler(client, msj):
     chat_id = msj.chat.id
 
-    w = await app.send_message(chat_id, f"{Config.BOT_USERNAME} Sizin Üçün Rondom Cütlük Seçir")
+    w = await client.send_message(chat_id, f"{Config.BOT_USERNAME} Sizin Üçün Rondom Cütlük Seçir")
 
     BU_QRUP_USERLERI = []
-    async for member in app.iter_chat_members(chat_id):
+    async for member in client.iter_chat_members(chat_id):
         if member.user.is_bot == True:
             pass
         elif member.user.is_bot == False:
@@ -39,20 +39,20 @@ async def my_handler(client, msj):
             if rnduser == sevgi2:
                 rnduser = random.choice(BU_QRUP_USERLERI)
                 if rnduser == sevgi2:
-                    await app.send_message(chat_id, f"{msj.from_user.mention} yeniden cehd edin")
+                    await client.send_message(chat_id, f"{msj.from_user.mention} yeniden cehd edin")
                 elif rnduser != sevgi2:
                     time.sleep(2.5)
-                    await app.delete_messages(chat_id, w.id)
-                    await app.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+                    await client.delete_messages(chat_id, w.id)
+                    await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
             elif rnduser != sevgi2:
                 time.sleep(2.5)
-                await app.delete_messages(chat_id, w.id)
-                await app.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+                await client.delete_messages(chat_id, w.id)
+                await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
         elif rnduser != sevgi2:
             time.sleep(2.5)
-            await app.delete_messages(chat_id, w.id)
-            await app.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+            await client.delete_messages(chat_id, w.id)
+            await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
     elif rnduser != sevgi2:
         time.sleep(2.5)
-        await app.delete_messages(chat_id, w.id)
-        await app.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+        await client.delete_messages(chat_id, w.id)
+        await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
