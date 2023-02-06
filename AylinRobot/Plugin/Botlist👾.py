@@ -25,7 +25,7 @@ async def start(client, msj):
     await client.send_message(chat_id, botlarsiyahi)
 
 
-@app.on_message(filters.me & filters.command(["admins", "adminlist"], ["."]))
+@app.on_message(filters.command('admins') & filters.group)
 async def adminlist(client: app, message: Message):
     replyid = None
     toolong = False
