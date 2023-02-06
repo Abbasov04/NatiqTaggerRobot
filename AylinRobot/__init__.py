@@ -1,7 +1,6 @@
 import logging
 from pyrogram import Client
 from AylinRobot.config import Config
-from pyrogram import enums
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
