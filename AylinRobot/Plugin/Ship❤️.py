@@ -2,6 +2,7 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
+import sleep
 import random
 import time
 from time import time
