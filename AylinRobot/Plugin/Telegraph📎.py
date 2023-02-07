@@ -5,7 +5,6 @@
 import os, pyrogram
 from telegraph import upload_file
 from AylinRobot import AylinRobot as app
-from helpers.filters import command
 from AylinRobot import LOGGER
 from pyrogram import idle, Client, filters
 from pyrogram.errors import FloodWait
