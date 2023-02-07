@@ -1,4 +1,4 @@
-pyrogram==1.4.16
+pyrogram==1.4.6
 py-tgcalls
 tglogging
 sqlalchemy
