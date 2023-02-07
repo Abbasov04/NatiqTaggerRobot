@@ -15,7 +15,7 @@ from AylinRobot.config import Config
 
 
 @app.on_message(filters.command("ship") & filters.group)
-async def my_handler(client, msj):
+async def ship(client, msj):
     chat_id = msj.chat.id
 
     w = await client.send_message(chat_id, f"{Config.BOT_USERNAME} Sizin Üçün Rondom Cütlük Seçir")
