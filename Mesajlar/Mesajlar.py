@@ -3,6 +3,8 @@ from pyrogram import idle, filters
 from AylinRobot import AylinRobot as app
 from AylinRobot import LOGGER
 
+active_chats = []
+
 @app.on_message(filters.text)
 async def start(_, msg: Message):
     global active_chats
