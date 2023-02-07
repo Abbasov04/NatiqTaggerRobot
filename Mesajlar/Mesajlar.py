@@ -1,3 +1,34 @@
+from pyrogram.types import Message
+from AylinRobot import AylinRobot as app
+from AylinRobot import LOGGER
+
+@app.on_message(filters.text)
+async def start(_, msg: Message):
+    global active_chats
+    text = msg.text.lower()
+    chat_id = msg.chat.id
+    if msg.chat.id not in active_chats:
+        return
+    if "salam" in text:
+        await msg.reply_text(f"{random.choice(salam)}")
+    if "necəsən" in text or "necesen" in text or "netersen" in text:
+        await msg.reply_text(f"{random.choice(necesen)}")
+    if "sagol" in text or "sağol" in text or "saqol" in text:
+        await msg.reply_text(f"{random.choice(sagol)}")
+    if "getdim" in text or "gedim" in text or "gedirəm" in text or "gedirem" in text:
+        await msg.reply_text(f"{random.choice(getdim)}")
+    if "geldim" in text or "gəldim" in text or "gəl" in text or "gəlirəm" in text:
+        await msg.reply_text(f"{random.choice(geldim)}")
+    if "ban" in text or "mute" in text or "purge" in text or "gban" in text:
+        await msg.reply_text(f"{random.choice(ban)}")
+
+
+
+
+
+
+
+
 salam = (
 "Salam",
 "Salam Kişi",
