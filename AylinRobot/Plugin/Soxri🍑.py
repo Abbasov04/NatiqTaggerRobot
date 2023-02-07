@@ -9,7 +9,7 @@ from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram.errors import FloodWait
 from AylinRobot import LOGGER
-from pyrogram import idle, filters
+from pyrogram import idle
 from AylinRobot.config import Config
 
 
@@ -190,7 +190,7 @@ photolist = [
 ]
 
 
-@app.on_message(filters.command(["soxri"]) & ~filters.edited)
+@app.on_message(filters.command(["soxri"]))
 async def test_bot(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
