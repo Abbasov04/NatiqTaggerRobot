@@ -9,7 +9,7 @@ from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram.errors import FloodWait
 from AylinRobot import LOGGER
-from pyrogram import idle
+from pyrogram import idle, filters
 from AylinRobot.config import Config
 
 
