@@ -229,7 +229,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
                 await cmd.reply_text(LAN.PRIVATE_BAN.format(msj), quote=True)
             else:
                 await cmd.reply_text(LAN.GROUP_BAN.format(msj),quote=True)
-                await app.leave_chat(cmd.chat.id)
+                await bot.leave_chat(cmd.chat.id)
             return
     await cmd.continue_propagation()
 
