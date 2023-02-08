@@ -20,7 +20,7 @@ photolist = ["https://te.legra.ph/file/abd505920b3b17aa96f28.jpg","https://te.le
 photolist = ["https://te.legra.ph/file/7c9892f18201efb39ff6a.mp4","https://te.legra.ph/file/b5340b9c1e6afb70e33b7.mp4","https://te.legra.ph/file/80604fecab9479ba086af.mp4","https://te.legra.ph/file/91e54b9e647b32017c4e6.mp4","https://te.legra.ph/file/ff6eecd8f11b172ef2099.mp4","https://te.legra.ph/file/0bf2b591c657bed225a29.mp4","https://te.legra.ph/file/875d1d69269abb1f4b2e2.mp4","https://te.legra.ph/file/c643aa58fb8cb18f55878.mp4","https://te.legra.ph/file/2bd4d8a8742fcedc9db8c.mp4","https://te.legra.ph/file/67eb47d9804f2ce9fb193.mp4","https://te.legra.ph/file/b231918cb8cfa655026b4.mp4","https://te.legra.ph/file/0796ddbb1d989aa7a88e3.mp4","https://te.legra.ph/file/6fd365494294937ae473e.mp4","https://te.legra.ph/file/7bff3368892504cd8967f.mp4","https://te.legra.ph/file/d97f64716c664a08243e6.mp4","https://te.legra.ph/file/3a04fc5bac35d4ec313e7.mp4","https://te.legra.ph/file/d24f126020cc49f97e580.mp4","https://te.legra.ph/file/5f0b2be3f96e952ee576d.mp4","https://te.legra.ph/file/11eef49944e033be32e09.mp4","https://te.legra.ph/file/b21cbe0b6610529503cf1.mp4","https://te.legra.ph/file/25481f0412b0532313c9a.mp4","https://te.legra.ph/file/1c67075297f2869c15a66.mp4","https://te.legra.ph/file/aec86a0165ea3dfef0c62.mp4","https://te.legra.ph/file/1c9894f8a36b9d15b873c.mp4","https://te.legra.ph/file/3c00d56c8393394771ff6.mp4","https://te.legra.ph/file/017517df1045cdae90ec4.mp4","https://te.legra.ph/file/0b10fa75246c3fa5cf43c.mp4","https://te.legra.ph/file/4e40d2e958fceaac189a6.mp4","https://te.legra.ph/file/3b2395f9f7dcd179f6007.mp4"]
 
 
-@app.on_message(filters.command("masin") & ~filters.edited)
+@app.on_message(command("masın") & ~filters.edited)
 async def test_bot(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Maşın Şəkili Seçilir...**")
@@ -31,7 +31,7 @@ async def test_bot(bot: app, m: Message):
     await replymsg.delete()
     
     
-@app.on_message(filters.command("masin2") & ~filters.edited)
+@app.on_message(command("masın2") & ~filters.edited)
 async def test_app(app: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Maşın Videosu Seçilir...**")
