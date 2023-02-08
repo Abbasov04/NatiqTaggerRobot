@@ -12,7 +12,7 @@ from helpers.filters import command, other_filters
 
 BOT_START_TIME = time.time()
 
-@app.on_message(command("dyno") & ~filters.edited)     
+@app.on_message(command(["dyno"]) & ~filters.edited)     
 async def bot_status(client,message):
     if Config.HEROKU_API_KEY:
         try:
