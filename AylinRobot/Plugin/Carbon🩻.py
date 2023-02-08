@@ -1,6 +1,7 @@
 import logging, time
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
 from io import BytesIO
+from helpers.filters import command, other_filters
 from aiohttp import ClientSession
 from AylinRobot import AylinRobot as app
 from datetime import datetime
@@ -25,7 +26,7 @@ async def make_carbon(code):
     image.name = "carbon.png"
     return image
 
-@app.on_message(filters.command("carbon"))
+@app.on_message(command("carbon") & ~filters.edited)
 async def carbon_func(bot: app, msg: Message):
     m = await msg.reply_text("`Hazırlanır`")
     carbon = await make_carbon(msg.reply_to_message.text)
