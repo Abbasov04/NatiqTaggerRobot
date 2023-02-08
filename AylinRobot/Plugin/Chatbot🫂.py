@@ -11,6 +11,7 @@ from pyrogram import idle, filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from Mesajlar.Mesajlar import salam, necesen, sagol, getdim, geldim, ban
+from pyrogram import idle, filters
 
 active_chats = []
 
