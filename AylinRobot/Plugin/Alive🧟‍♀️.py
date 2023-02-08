@@ -2,10 +2,9 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-from pyrogram.types import Message, User
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters, idle
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, User
 from AylinRobot.config import Config
 from datetime import datetime
 from os import path
