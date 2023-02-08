@@ -3,6 +3,7 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 import time
+from time import time
 import random
 from random import choice
 from pyrogram.types import Message
@@ -190,7 +191,7 @@ photolist = [
 ]
 
 
-@app.on_message(filters.command("soxri") & ~filters.edited)
+@app.on_message(filters.command(["soxri"]) & ~filters.edited)
 async def test_bot(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
