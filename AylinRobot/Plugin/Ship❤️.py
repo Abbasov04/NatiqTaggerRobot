@@ -12,8 +12,7 @@ from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 
 
-@app.on_message(
-command(["ship"])& ~filters.edited)
+@app.on_message(command(["ship"]) & filters.group & ~filters.edited)
 async def my_handler(client, msj):
     chat_id = msj.chat.id
 
