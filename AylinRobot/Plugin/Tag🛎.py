@@ -1,13 +1,11 @@
 # @AylinRobot
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
-import sys
-import os
-import time
-import random
+
+import random, time, os, sys
 from AylinRobot import AylinRobot as app
-from pyrogram import Client, filters, emoji, idle
-from AylinRobot import LOGGER
+from pyrogram import Client, filters, emoji
+from helpers.filters import command, other_filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
@@ -21,15 +19,10 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-@app.on_message(
-	filters.command(["admin", "tag"])
-	& filters.private)
-async def priw(client, message):
-	await message.reply_text("🚫 Bu Əmri Qrupda İşlət")
-
 
 ### Səbəbsiz Tag Edər
-@app.on_message(filters.command("tag") & filters.group)
+@app.on_message(command(["tag"]) & filters.group & ~filters.edited
+)
 async def tag(client: app, message: Message):
 	global DUR
 	global SORGU
@@ -55,8 +48,7 @@ async def tag(client: app, message: Message):
 		
 		
 ### Sadəcə Adminləri Tağ Edər		
-@app.on_message(filters.command("admin")
-	& filters.group)
+@app.on_message(command(["admin"]) & filters.group & ~filters.edited)
 async def ta(client: app, message: Message):
 	global DUR
 	global SORGU
@@ -82,8 +74,8 @@ async def ta(client: app, message: Message):
 
 
 ### Tag Prosesin Dayandırar
-@app.on_message(filters.group
-	& filters.command("cancel"))
+@app.on_message(command(["cancel"]) & filters.group & ~filters.edited
+)
 async def stop(client: app, message: Message):
 	global DUR
 	chat = message.chat
