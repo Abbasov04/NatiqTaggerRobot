@@ -11,12 +11,10 @@ from pyrogram import idle, filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from Mesajlar.Mesajlar import salam, necesen, sagol, getdim, geldim, ban
-from pyrogram import idle, filters
 
 active_chats = []
 
-@app.on_message(
-command(["chatbot"])& ~filters.edited) & filters.group)
+@app.on_message(command(["chatbot"]) & filters.group & ~filters.edited)
 async def chatbot_status(_, message):
     global active_chats
     if len(message.command) != 2:
