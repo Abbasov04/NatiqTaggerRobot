@@ -9,7 +9,6 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from helpers.filters import command, other_filters
 from AylinRobot import AylinRobot as app
-from AylinRobot import LOGGER
 from pyrogram import Client, filters
 from AylinRobot.config import Config
 
