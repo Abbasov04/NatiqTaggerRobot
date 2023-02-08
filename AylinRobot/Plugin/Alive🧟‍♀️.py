@@ -4,7 +4,6 @@
 
 from pyrogram.types import Message, User
 from AylinRobot import AylinRobot as app
-from AylinRobot import LOGGER
 from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot.config import Config
