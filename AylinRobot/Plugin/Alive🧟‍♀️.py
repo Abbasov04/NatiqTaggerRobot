@@ -44,8 +44,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@app.on_message(
-command(["alive"])& ~filters.edited)
+@app.on_message(command(["alive"]) & filters.group & ~filters.edited)
 async def start_group(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
