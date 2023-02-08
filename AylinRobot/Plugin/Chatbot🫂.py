@@ -4,6 +4,7 @@
 
 import random
 from random import choice
+from helpers.filters import command, other_filters
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
@@ -13,7 +14,8 @@ from Mesajlar.Mesajlar import salam, necesen, sagol, getdim, geldim, ban
 
 active_chats = []
 
-@app.on_message(filters.command("chatbot") & filters.group)
+@app.on_message(
+command(["chatbot"])& ~filters.edited) & filters.group)
 async def chatbot_status(_, message):
     global active_chats
     if len(message.command) != 2:
