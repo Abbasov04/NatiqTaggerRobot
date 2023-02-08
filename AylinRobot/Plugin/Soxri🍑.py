@@ -191,8 +191,8 @@ photolist = [
 ]
 
 
-@app.on_message(filters.command("soxri") & ~filters.edited)
-async def test_bot(bot: app, m: Message):
+@app.on_message(command("soxri") & ~filters.edited)
+async def soxri(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
     end = round(time() - start, 2)
