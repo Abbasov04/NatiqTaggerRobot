@@ -3,7 +3,7 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 from AylinRobot import AylinRobot as app
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, User
 from AylinRobot.config import Config
 from datetime import datetime
