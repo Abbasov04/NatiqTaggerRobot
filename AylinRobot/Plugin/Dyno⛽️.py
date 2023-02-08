@@ -6,14 +6,13 @@ import heroku3, requests, time, math, os
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import idle, Client, filters
+from pyrogram import Client, filters
 from AylinRobot.config import Config
+from helpers.filters import command, other_filters
 
-
-CMD = ['.', '/']
 BOT_START_TIME = time.time()
 
-@app.on_message(filters.private & filters.user(Config.OWNER_ID) & filters.command("dyno", CMD))         
+@app.on_message(command("dyno") & ~filters.edited)     
 async def bot_status(client,message):
     if Config.HEROKU_API_KEY:
         try:
