@@ -8,7 +8,6 @@ from time import time
 from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from AylinRobot import LOGGER
 from pyrogram import idle, filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
