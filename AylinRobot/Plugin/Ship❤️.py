@@ -3,10 +3,9 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 import random
-import time
-from time import time
 from random import choice
 from pyrogram.types import Message
+from helpers.filters import command, other_filters
 from AylinRobot import AylinRobot as app
 from pyrogram import idle, filters
 from pyrogram.errors import FloodWait
