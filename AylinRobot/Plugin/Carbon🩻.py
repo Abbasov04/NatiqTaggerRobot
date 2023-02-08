@@ -10,7 +10,23 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 #--------------------------------------------------------------
 
-@app.on_message(filters.command("carbon"))
+
+aiohttpsession = ClientSession()
+
+
+async def get_http_status_code(url: str) -> int:
+    async with aiohttpsession.head(url) as resp:
+        return resp.status
+    
+
+async def make_carbon(code):
+    url = "https://carbonara.vercel.app/api/cook"
+    async with aiohttpsession.post(url, json={"code": code}) as resp:
+        image = BytesIO(await resp.read())
+    image.name = "carbon.png"
+    return image
+
+@app.on_message(command("carbon") & ~filters.edited)
 async def carbon_func(client, msg):
     reply = msg.reply_to_message
     if reply:
