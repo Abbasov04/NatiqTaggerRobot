@@ -16,7 +16,7 @@ photolist = ["https://telegra.ph/file/ebe8512750e0006a19d13.jpg","https://telegr
 
 @app.on_message(command(["soxri"]) & ~filters.edited)
 async def test_bot(bot: app, m: Message):
-    start = time(2.5)
+    start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Anime Şəkili Seçilir...**")
     end = round(time() - start, 2)
     photo = random.choice(photolist)
