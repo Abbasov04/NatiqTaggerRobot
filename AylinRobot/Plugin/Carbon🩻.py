@@ -26,7 +26,7 @@ async def make_carbon(code):
     image.name = "carbon.png"
     return image
 
-@app.on_message(command("carbon") & ~filters.edited)
+@app.on_message(command(["carbon"]) & ~filters.edited)
 async def carbon_func(bot: app, msg: Message):
     m = await msg.reply_text("`Hazırlanır`")
     carbon = await make_carbon(msg.reply_to_message.text)
