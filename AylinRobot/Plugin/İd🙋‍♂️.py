@@ -11,7 +11,7 @@ from pyrogram.errors import FloodWait
 from datetime import datetime
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery, User
 
-@app.on_message(command(["id"]) & ~filters.edited)
+@app.on_message(command("id") & ~filters.edited)
 def ids(_, message):
     reply = message.reply_to_message
     if reply:
