@@ -9,7 +9,7 @@ from AylinRobot.config import Config
 
 
 
-@app.on_message(command("info") & ~filters.edited)
+@app.on_message(command(["info"]) & ~filters.edited)
 async def info(client, message):
     """ istifadəçi məlumatını çıxarın """
     status_message = await message.reply_text(
