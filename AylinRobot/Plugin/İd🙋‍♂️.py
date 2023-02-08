@@ -2,17 +2,16 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-from pyrogram.types import Message, User
 from AylinRobot import AylinRobot as app
-from AylinRobot import LOGGER
 from helpers.filters import command
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
 import pyrogram
+from helpers.filters import command, other_filters
 from pyrogram.errors import FloodWait
 from datetime import datetime
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery, User
 
-@app.on_message(filters.command('id'))
+@app.on_message(command("id") & ~filters.edited)
 def ids(_, message):
     reply = message.reply_to_message
     if reply:
