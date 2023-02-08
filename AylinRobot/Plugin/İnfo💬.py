@@ -1,24 +1,16 @@
-import os
-import asyncio
-import time
-import shlex
-import requests
+import os, asyncio, time, shlex, requests, pyrogram
 from helpers.extract_user import extract_user, last_online
+from helpers.filters import command, other_filters
 from datetime import datetime
-import pyrogram
 from AylinRobot import AylinRobot as app
 from helpers.filters import command
-from AylinRobot import LOGGER
-from pyrogram import idle, filters
 from pyrogram import filters, Client
 from AylinRobot.config import Config
 
 
 
-@app.on_message(
-    filters.command(["info"])
-)
-async def who_is(client, message):
+@app.on_message(command("info") & ~filters.edited)
+async def info(client, message):
     """ istifadəçi məlumatını çıxarın """
     status_message = await message.reply_text(
         "🔎"
