@@ -3,8 +3,6 @@
 # Repo Açığdısa İcazəsis Götürmə
 
 import random
-import time
-from time import time
 from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
