@@ -50,8 +50,6 @@ async def start(_, msg: Message):
     chat_id = msg.chat.id
     if msg.chat.id not in active_chats:
         return
-    if text.startwith("/"):
-      pass      
     if "salam" in text:
         await msg.reply_text(f"{random.choice(salam)}")
     if "necəsən" in text or "necesen" in text or "netersen" in text:
