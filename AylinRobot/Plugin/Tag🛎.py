@@ -12,6 +12,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 DUR = False
 SORGU = None
+tagAktiv = False
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
@@ -81,7 +82,7 @@ async def eTag(client, msj):
     mojiler = ["🛎", "🌌", "🎉", "😱", "😶‍", "🌫", "🥶"]
     reply = msj.reply_to_message
 
-    if DUR == False:
+    if tagAktiv == False:
         userler = []
         await client.send_message(chat_id, f"tag prosesi baslayir ayuye")
         members = app.get_chat_members(chat_id)
@@ -95,16 +96,16 @@ async def eTag(client, msj):
             sayUser = len(userler) + 1
             print(sayUser)
             tagMesaji = msj.text.split(" ", 1)[1]
-            DUR = True
+            tagAktiv = True
             for i in range(0, sayUser):
                 try:
                     await client.send_message(chat_id, f"[{random.choice(mojiler)}](tg://user?id={userler[i]})\n\n{tagMesaji}")
                     time.sleep(3)
                 except IndexError:
                     await client.send_message(chat_id, f"Userleri tag etme prosesi bitdi")
-                    DUR = False
+                    tagAktiv = False
         except IndexError:
-            DUR = True
+            tagAktiv = True
             sayUser = len(userler) + 1
             print(sayUser)
             for i in range(0, sayUser):
@@ -113,7 +114,7 @@ async def eTag(client, msj):
                     time.sleep(3)
                 except IndexError:
                     await client.send_message(chat_id, f"Userleri tag etme prosesi bitdi")
-                    DUR = False
+                    tagAktiv = False
 
 
 
