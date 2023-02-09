@@ -75,7 +75,7 @@ async def ta(client: app, message: Message):
 
 
 @app.on_message(filters.command("etag") & filters.group)
-async def eTag(client, msj):
+async def etag(client, msj):
     global tagAktiv
     chat_id = msj.chat.id
 
@@ -84,7 +84,7 @@ async def eTag(client, msj):
 
     if tagAktiv == False:
         userler = []
-        await client.send_message(chat_id, f"tag prosesi baslayir ayuye")
+        await client.send_message(chat_id, f"{message.from_user.mention}\n**Emojili Tag Etməyimi İstədi 🤭**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın**")
         members = app.iter_chat_members(chat_id)
         async for m in members:
             if m.user.is_bot == True:
@@ -95,7 +95,7 @@ async def eTag(client, msj):
 
             sayUser = len(userler) + 1
             print(sayUser)
-            tagMesaji = msj.text.split(" ", 1)[2]
+            tagMesaji = msj.text.split(" ", 1)[1]
             tagAktiv = True
             for i in range(0, sayUser):
                 try:
