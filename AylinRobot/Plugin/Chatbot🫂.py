@@ -7,7 +7,8 @@ from random import choice
 from helpers.filters import command, other_filters
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import idle, filters
+from pyrogram import filters
+from AylinRobot import AylinRobot as app2
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from Mesajlar.Mesajlar import salam, necesen, sagol, getdim, geldim, ban
