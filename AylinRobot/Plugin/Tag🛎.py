@@ -95,7 +95,7 @@ async def eTag(client, msj):
 
             sayUser = len(userler) + 1
             print(sayUser)
-            tagMesaji = msj.text.split(" ", 1)[1]
+            tagMesaji = msj.text.split(" ", 1)[2]
             tagAktiv = True
             for i in range(0, sayUser):
                 try:
