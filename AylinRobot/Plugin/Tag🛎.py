@@ -106,7 +106,7 @@ async def eTag(client, msj):
                     tagAktiv = False
         except IndexError:
             tagAktiv = True
-            sayUser = len(userler) + 1
+            sayUser = len(userler) + 5
             print(sayUser)
             for i in range(0, sayUser):
                 try:
