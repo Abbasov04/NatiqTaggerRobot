@@ -85,7 +85,7 @@ async def eTag(client, msj):
     if tagAktiv == False:
         userler = []
         await client.send_message(chat_id, f"tag prosesi baslayir ayuye")
-        members = app.get_chat_members(chat_id)
+        members = app.iter_chat_members(chat_id)
         async for m in members:
             if m.user.is_bot == True:
                 pass
@@ -93,7 +93,7 @@ async def eTag(client, msj):
                 userler.append(str(m.user.id))
         try:
 
-            sayUser = len(userler) + 1
+            sayUser = len(userler) + 5
             print(sayUser)
             tagMesaji = msj.text.split(" ", 1)[1]
             tagAktiv = True
