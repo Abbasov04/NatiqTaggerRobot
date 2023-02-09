@@ -43,7 +43,9 @@ async def chatbot_status(_, message):
         await message.reply_text("/chatbot [ON] və yaxud [OFF] yazmadınız")
         
         
-
+@app.on_message(filters.text)
+async def start(_, msg: Message):
+    global active_chats
     text = msg.text.lower()
     chat_id = msg.chat.id
     if msg.chat.id not in active_chats:
