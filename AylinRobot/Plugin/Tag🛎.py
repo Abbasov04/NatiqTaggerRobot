@@ -93,7 +93,7 @@ async def eTag(client, msj):
                 userler.append(str(m.user.id))
         try:
 
-            sayUser = len(userler) + 5
+            sayUser = len(userler) + 1
             print(sayUser)
             tagMesaji = msj.text.split(" ", 1)[1]
             tagAktiv = True
@@ -106,7 +106,7 @@ async def eTag(client, msj):
                     tagAktiv = False
         except IndexError:
             tagAktiv = True
-            sayUser = len(userler) + 5
+            sayUser = len(userler) + 1
             print(sayUser)
             for i in range(0, sayUser):
                 try:
