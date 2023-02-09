@@ -38,6 +38,18 @@ async def chatbot_status(_, message):
             return
         await message.reply_text("⚠️ **ChatBot onsuzda deaktivdir !**")
         return
+    
+    else:
+        await message.reply_text("/chatbot [ON] və yaxud [OFF] yazmadınız")
+        
+        
+@app2.on_message(filters.text)
+async def start(_, msg: Message):
+    global active_chats
+    text = msg.text.lower()
+    chat_id = msg.chat.id
+    if msg.chat.id not in active_chats:
+        return
     if "salam" in text:
         await msg.reply_text(f"{random.choice(salam)}")
     if "necəsən" in text or "necesen" in text or "netersen" in text:
@@ -50,10 +62,3 @@ async def chatbot_status(_, message):
         await msg.reply_text(f"{random.choice(geldim)}")
     if "ban" in text or "mute" in text or "purge" in text or "gban" in text:
         await msg.reply_text(f"{random.choice(ban)}")
-
-    
-    else:
-        await message.reply_text("/chatbot [ON] və yaxud [OFF] yazmadınız")
-        
-        
-
