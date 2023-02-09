@@ -81,7 +81,7 @@ async def eTag(client, msj):
     mojiler = ["🛎", "🌌", "🎉", "😱", "😶‍", "🌫", "🥶"]
     reply = msj.reply_to_message
 
-    if tagAktiv == False:
+    if DUR == False:
         userler = []
         await client.send_message(chat_id, f"tag prosesi baslayir ayuye")
         members = app.get_chat_members(chat_id)
@@ -95,16 +95,16 @@ async def eTag(client, msj):
             sayUser = len(userler) + 1
             print(sayUser)
             tagMesaji = msj.text.split(" ", 1)[1]
-            tagAktiv = True
+            DUR = True
             for i in range(0, sayUser):
                 try:
                     await client.send_message(chat_id, f"[{random.choice(mojiler)}](tg://user?id={userler[i]})\n\n{tagMesaji}")
                     time.sleep(3)
                 except IndexError:
                     await client.send_message(chat_id, f"Userleri tag etme prosesi bitdi")
-                    tagAktiv = False
+                    DUR = False
         except IndexError:
-            tagAktiv = True
+            DUR = True
             sayUser = len(userler) + 1
             print(sayUser)
             for i in range(0, sayUser):
@@ -113,7 +113,7 @@ async def eTag(client, msj):
                     time.sleep(3)
                 except IndexError:
                     await client.send_message(chat_id, f"Userleri tag etme prosesi bitdi")
-                    tagAktiv = False
+                    DUR = False
 
 
 
