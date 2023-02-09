@@ -8,7 +8,6 @@ from helpers.filters import command, other_filters
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import filters
-from AylinRobot import AylinRobot as app2
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from Mesajlar.Mesajlar import salam, necesen, sagol, getdim, geldim, ban
@@ -44,7 +43,7 @@ async def chatbot_status(_, message):
         await message.reply_text("/chatbot [ON] və yaxud [OFF] yazmadınız")
         
         
-@app2.on_message(filters.text)
+@app.on_message(filters.text)
 async def start(_, msg: Message):
     global active_chats
     text = msg.text.lower()
