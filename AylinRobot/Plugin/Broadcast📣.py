@@ -21,29 +21,6 @@ from pyrogram.errors import (
 )
 
 
-@app.on_message(filters.command("delcmd") & ~filters.private)
-async def delcmdc(bot: Client, message: Message):
-    if len(message.command) != 2:
-        return await message.reply_text("Bu komutu kullanmak için komutunuzun yanına 'off' ya da 'on' yazınız.")
-    durum = message.text.split(None, 1)[1].strip()
-    durum = durum.lower()
-    chat_id = message.chat.id
-
-    if durum == "on":
-        if await delcmd_is_on(message.chat.id):
-            return await message.reply_text("Komut Silme Zaten Açık.")
-        else:
-            await delcmd_on(chat_id)
-            await message.reply_text("Bu sohbet için Komut Silme özelliği başarıyla etkinleştirildi.")
-
-    elif durum == "off":
-        await delcmd_off(chat_id)
-        await message.reply_text("Bu Sohbet için Komut Silme özelliği başarıyla devre dışı bırakıldı.")
-    else:
-        await message.reply_text("Bu komutu kullanmak için komutunuzun yanına 'off' ya da 'on' yazınız.")
-
-
-
 
 chat_watcher_group = 10
 
@@ -328,31 +305,6 @@ async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
     else:
         await m.reply_document(document="broadcast-logs-g4rip.txt", caption=LAN.BROADCAST_STOPPED.format(completed_in, total_users, done, success, failed), quote=True,)
     os.remove("broadcast-logs-g4rip.txt")
-
-
-
-# Genelde müzik botlarının mesaj silme özelliği olur. Bu özelliği ReadMe.md dosyasındaki örnekteki gibi kullanabilirsiniz.
-delcmdmdb = dcmdb.admins
-
-async def delcmd_is_on(chat_id: int) -> bool: # Grup için mesaj silme özeliğinin açık olup olmadığını kontrol eder.
-    chat = await delcmdmdb.find_one({"chat_id": chat_id})
-    return not chat
-
-
-async def delcmd_on(chat_id: int): # Grup için mesaj silme özeliğini açar.
-    already_del = await delcmd_is_on(chat_id)
-    if already_del:
-        return
-    return await delcmdmdb.delete_one({"chat_id": chat_id})
-
-
-async def delcmd_off(chat_id: int): # Grup için mesaj silme özeliğini kapatır.
-    already_del = await delcmd_is_on(chat_id)
-    if not already_del:
-        return
-    return await delcmdmdb.insert_one({"chat_id": chat_id})
-
-
 
 ################# SAHİP KOMUTLARI #############
 
