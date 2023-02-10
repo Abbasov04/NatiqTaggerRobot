@@ -7,8 +7,7 @@ import random
 from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import filters
-from helpers.filters import command, other_filters
+from pyrogram import Client, filters
 from AylinRobot.config import Config
 
 
@@ -17,7 +16,7 @@ photolist = ["https://telegra.ph/file/1559957902ea74780464c.jpg","https://telegr
  
  
 
-@app.on_message(command("pisik") & ~filters.edited)
+@app.on_message(filters.command("pisik") & filters.user(Config.BOT_OWNER))
 async def pisik(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Pişik Şəkili Seçilir...**")
