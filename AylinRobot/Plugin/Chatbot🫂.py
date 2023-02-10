@@ -6,7 +6,7 @@ import random
 from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import Client, filters, command
+from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from Mesajlar.Mesajlar import salam, necesen, sagol, getdim, geldim, ban
