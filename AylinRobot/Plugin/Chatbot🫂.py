@@ -13,7 +13,7 @@ from Mesajlar.Mesajlar import salam, necesen, sagol, getdim, geldim, ban
 
 active_chats = []
 
-@app.on_message(filters.command(["chatbot"])~& filters.group)
+@app.on_message(filters.command(["chatbot"]) & filters.group)
 async def chatbot_status(_, message):
     global active_chats
     if len(message.command) != 2:
