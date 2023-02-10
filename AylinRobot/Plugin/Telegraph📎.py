@@ -11,7 +11,7 @@ from AylinRobot.config import Config
 from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,InlineKeyboardMarkup, InlineKeyboardButton,CallbackQuery, InlineQuery)
 
 
-@app.on_message(filters.command("tgm")
+@app.on_message(filters.command("tgm"))
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
