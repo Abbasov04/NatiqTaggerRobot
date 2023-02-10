@@ -47,7 +47,7 @@ async def tag(client: app, message: Message):
 		
 		
 ### Sadəcə Adminləri Tağ Edər		
-@app.on_message(command(["admin"]) & filters.group)
+@app.on_message(filters.command(["admin"]) & filters.group)
 async def ta(client: app, message: Message):
 	global DUR
 	global SORGU
@@ -118,7 +118,7 @@ async def etag(client, msj):
 
 
 ### Tag Prosesin Dayandırar
-@app.on_message(command(["cancel"]) & filters.group)
+@app.on_message(filters.command(["cancel"]) & filters.group)
 async def stop(client: app, message: Message):
 	global DUR
 	chat = message.chat
