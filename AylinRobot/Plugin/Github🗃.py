@@ -8,7 +8,7 @@ from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 
 
-@app.on_message(filters.command("github")
+@app.on_message(filters.command("github"))
 async def github(_, message):
     if len(message.command) != 2:
         await message.reply_text("/github İstifadəçi adı yazmadınız 😐")
