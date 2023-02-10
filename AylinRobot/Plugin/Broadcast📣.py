@@ -309,7 +309,7 @@ async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
 ################# SAHİP KOMUTLARI #############
 
 # Verileri listeleme komutu
-@app.on_message(filters.command("stats") & filters.user(Config.OWNER_ID))
+@app.on_message(filters.command(["stats"]) & filters.user(Config.OWNER_ID))
 async def botstats(app: Client, message: Message):
     g4rip = await app.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
     all_users = await db.get_all_users()
