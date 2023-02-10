@@ -1,4 +1,4 @@
-pyrogram==1.4.16
+pyrogram
 py-tgcalls
 tglogging
 sqlalchemy
@@ -38,6 +38,5 @@ future
 pymongo[srv]
 bs4
 Heroku3
-telethon
 telegram
 python-arq
