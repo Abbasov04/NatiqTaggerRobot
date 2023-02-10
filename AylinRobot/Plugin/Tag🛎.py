@@ -4,7 +4,7 @@
 
 import random, time, os, sys
 from AylinRobot import AylinRobot as app
-from pyrogram import Client, filters, emoji, command
+from pyrogram import Client, filters, emoji
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
@@ -21,7 +21,7 @@ def btag():
 
 
 ### Səbəbsiz Tag Edər
-@app.on_message(command(["tag"]) & filters.group)
+@app.on_message(filters.command(["tag"]) & filters.group)
 async def tag(client: app, message: Message):
 	global DUR
 	global SORGU
