@@ -27,7 +27,7 @@ buttons = {
 }
 
 
-@app.on_message(commands=['song'])
+@app.on_message(filters.command(["song"]))
 def song(client, message):
 
     message.delete()
