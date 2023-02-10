@@ -104,7 +104,7 @@ async def broadcast_pin(_, message):
 # Broadcast without pinned
 
 
-@app.on_message(filters.command(["gcast"])) & filters.user(Config.OWNER_ID)
+@app.on_message(filters.command(["gcast"]) & filters.user(Config.OWNER_ID))
 async def broadcast_message(_, message):
     if len(message.command) < 2:
         return await message.reply_text("**Usage**:\n/gcast [message]")
