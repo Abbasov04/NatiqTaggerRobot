@@ -4,7 +4,7 @@
 
 import random, time, os, sys
 from AylinRobot import AylinRobot as app
-from pyrogram import Client, filters, emoji
+from pyrogram import Client, filters, emoji, command
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
