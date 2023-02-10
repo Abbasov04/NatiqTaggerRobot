@@ -12,7 +12,6 @@ from os import path
 from time import time
 from pyrogram.errors import FloodWait
 from sys import version_info
-from helpers.filters import command, other_filters
 from helpers import __version__
 from helpers.filters import command
 from pyrogram import __version__ as pyrover
@@ -46,7 +45,7 @@ async def _human_time_duration(seconds):
 
 
 @app.on_message(command(["alive"]) & filters.group & ~filters.edited)
-async def start_group(client: Client, message: Message):
+async def Alive(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
@@ -69,25 +68,3 @@ async def start_group(client: Client, message: Message):
         caption=alive,
         reply_markup=keyboard,
     )
-    
-    
-    
-@app.on_message(command(["ping"]) & ~filters.edited)
-async def ping_pong(client: Client, message: Message):
-    start = time()
-    m_reply = await message.reply_text("pinging...")
-    delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
-
-
-@app.on_message(command(["uptime"]) & ~filters.edited)
-async def get_uptime(client: Client, message: Message):
-    current_time = datetime.utcnow()
-    uptime_sec = (current_time - START_TIME).total_seconds()
-    uptime = await _human_time_duration(int(uptime_sec))
-    await message.reply_text(
-        "🤖 Bot Statusu:\n"
-        f"• **İş Vaxtı:** `{uptime}`\n"
-        f"• **Başlama Vaxtı:** `{START_TIME_ISO}`"
-    )
-    
