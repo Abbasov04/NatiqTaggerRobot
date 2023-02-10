@@ -5,7 +5,6 @@
 import random, time, os, sys
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters, emoji
-from helpers.filters import command, other_filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
@@ -22,8 +21,7 @@ def btag():
 
 
 ### Səbəbsiz Tag Edər
-@app.on_message(command(["tag"]) & filters.group & ~filters.edited
-)
+@app.on_message(command(["tag"]) & filters.group)
 async def tag(client: app, message: Message):
 	global DUR
 	global SORGU
@@ -49,7 +47,7 @@ async def tag(client: app, message: Message):
 		
 		
 ### Sadəcə Adminləri Tağ Edər		
-@app.on_message(command(["admin"]) & filters.group & ~filters.edited)
+@app.on_message(command(["admin"]) & filters.group)
 async def ta(client: app, message: Message):
 	global DUR
 	global SORGU
@@ -120,8 +118,7 @@ async def etag(client, msj):
 
 
 ### Tag Prosesin Dayandırar
-@app.on_message(command(["cancel"]) & filters.group & ~filters.edited
-)
+@app.on_message(command(["cancel"]) & filters.group)
 async def stop(client: app, message: Message):
 	global DUR
 	chat = message.chat
