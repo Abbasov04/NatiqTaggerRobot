@@ -12,6 +12,6 @@ sevgi = ["**Sen yeter ki çocukluk yap. Gönlümde salıncağın hazır.**", "**
 
 
 
-@app.on_message(filters.command("alive")
+@app.on_message(filters.command("sevgi")
 async def alive(bot: Client, msg: Message):
     await msg.reply(random.choice(sevgi))
