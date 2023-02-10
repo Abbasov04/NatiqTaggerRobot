@@ -4,7 +4,6 @@
 
 import random, os
 from random import choice
-from helpers.filters import command, other_filters
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
@@ -13,6 +12,6 @@ sevgi = ["**Sen yeter ki çocukluk yap. Gönlümde salıncağın hazır.**", "**
 
 
 
-@app.on_message(command("sevgi") & ~filters.edited)
+@app.on_message(filters.command("alive")
 async def alive(bot: Client, msg: Message):
     await msg.reply(random.choice(sevgi))
