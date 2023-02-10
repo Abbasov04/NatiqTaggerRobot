@@ -13,7 +13,6 @@ from time import time
 from pyrogram.errors import FloodWait
 from sys import version_info
 from helpers import __version__
-from helpers.filters import command
 from pyrogram import __version__ as pyrover
 __major__ = 0
 __minor__ = 2
@@ -44,7 +43,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@app.on_message(command(["alive"]) & filters.group & ~filters.edited)
+@app.on_message(commands=['alive'])
 async def Alive(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
