@@ -2,9 +2,8 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-import time
 from time import time
-import random
+import random, time
 from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
