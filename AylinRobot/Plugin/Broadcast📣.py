@@ -138,7 +138,7 @@ class Database:
         self.db = self._client[database_name]
         self.col = self.db.users
 
-    def new_user(self, id): # Veritabanına yeni kullanıcı ekler
+    def new_user(self, id):
         return dict(
             id=id,
             join_date=datetime.date.today().isoformat(),
@@ -177,7 +177,7 @@ class Database:
         )
         await self.col.update_one({"id": user_id}, {"$set": {"ban_status": ban_status}})
 
-    async def remove_ban(self, id): # Veritabanınızdaki yasaklılar listesinde bulunan bir kullanıcın yasağını kaldırır.
+    async def remove_ban(self, id):
         ban_status = dict(
             is_banned=False,
             ban_duration=0,
@@ -186,7 +186,7 @@ class Database:
         )
         await self.col.update_one({"id": id}, {"$set": {"ban_status": ban_status}})
 
-    async def get_ban_status(self, id): # Bir kullanıcın veritabanınızda yasaklılar listesinde olup olmadığını kontrol eder.
+    async def get_ban_status(self, id):
         default = dict(
             is_banned=False,
             ban_duration=0,
@@ -196,7 +196,7 @@ class Database:
         user = await self.col.find_one({"id": int(id)})
         return user.get("ban_status", default)
 
-    async def get_all_banned_users(self): # Veritabınızdaki yasaklı kullanıcılar listesini verir.
+    async def get_all_banned_users(self):
         return self.col.find({"ban_status.is_banned": True})
 
 
@@ -204,10 +204,7 @@ db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
 mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
 dcmdb = mongo_db_veritabani.handlers
 
-
-
-################## KULLANICI KONTROLLERİ #############
-async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
+async def handle_user_status(bot: Client, cmd: Message):
     chat_id = cmd.chat.id
     if not await db.is_user_exist(chat_id):
         if cmd.chat.type == "private":
@@ -222,7 +219,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
                 new_chat_id = str(chat_id)[1:]
             await app.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
 
-    ban_status = await db.get_ban_status(chat_id) # Yasaklı Kullanıcı Kontrolü
+    ban_status = await db.get_ban_status(chat_id)
     if ban_status["is_banned"]:
         if int((datetime.date.today() - datetime.date.fromisoformat(ban_status["banned_on"])).days) > int(ban_status["ban_duration"]):
             await db.remove_ban(chat_id)
@@ -241,8 +238,6 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
 
 
 
-
-############### Broadcast araçları ###########
 broadcast_ids = {}
 
 
@@ -307,31 +302,6 @@ async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
     else:
         await m.reply_document(document="broadcast-logs-g4rip.txt", caption=LAN.BROADCAST_STOPPED.format(completed_in, total_users, done, success, failed), quote=True,)
     os.remove("broadcast-logs-g4rip.txt")
-
-
-
-# Genelde müzik botlarının mesaj silme özelliği olur. Bu özelliği ReadMe.md dosyasındaki örnekteki gibi kullanabilirsiniz.
-delcmdmdb = dcmdb.admins
-
-async def delcmd_is_on(chat_id: int) -> bool: # Grup için mesaj silme özeliğinin açık olup olmadığını kontrol eder.
-    chat = await delcmdmdb.find_one({"chat_id": chat_id})
-    return not chat
-
-
-async def delcmd_on(chat_id: int): # Grup için mesaj silme özeliğini açar.
-    already_del = await delcmd_is_on(chat_id)
-    if already_del:
-        return
-    return await delcmdmdb.delete_one({"chat_id": chat_id})
-
-
-async def delcmd_off(chat_id: int): # Grup için mesaj silme özeliğini kapatır.
-    already_del = await delcmd_is_on(chat_id)
-    if not already_del:
-        return
-    return await delcmdmdb.insert_one({"chat_id": chat_id})
-
-
 
 ################# SAHİP KOMUTLARI #############
 
