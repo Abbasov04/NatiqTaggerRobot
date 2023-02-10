@@ -5,14 +5,13 @@
 import random
 from random import choice
 from pyrogram.types import Message
-from helpers.filters import command, other_filters
 from AylinRobot import AylinRobot as app
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 
 
-@app.on_message(command(["ship"]) & filters.group & ~filters.edited)
+@app.on_message(command(["ship"]) & filters.group)
 async def my_handler(client, msj):
     chat_id = msj.chat.id
 
