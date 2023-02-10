@@ -6,6 +6,7 @@ import shutil, psutil, traceback, os, datetime, random, string, time, traceback,
 from AylinRobot.translation import *
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
+
 from pyrogram import Client as USER
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
 import motor.motor_asyncio
@@ -44,7 +45,7 @@ async def chat_watcher_func(_, message):
 
 
 
-@app.on_message(command("broadcast_pin") & filters.user(Config.OWNER_ID))
+@app.on_message(filters.command("broadcast_pin") & filters.user(Config.OWNER_ID)
 async def broadcast_message(_, message):
     if not message.reply_to_message:
         pass
@@ -103,7 +104,7 @@ async def broadcast_message(_, message):
 # Broadcast without pinned
 
 
-@app.on_message(command("gcast") & filters.user(Config.OWNER_ID))
+@app.on_message(filters.command("gcast") & filters.user(Config.OWNER_ID)
 async def broadcast_message(_, message):
     if len(message.command) < 2:
         return await message.reply_text("**Usage**:\n/gcast [message]")
