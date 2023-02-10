@@ -2,7 +2,7 @@ from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 
 
-
+dcmdb = mongo_db_veritabani.handlers
 
 delcmdmdb = dcmdb.admins
 
