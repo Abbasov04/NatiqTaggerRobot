@@ -2,8 +2,6 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-
-
 import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from AylinRobot.translation import *
 from AylinRobot.config import Config
@@ -21,6 +19,29 @@ from pyrogram.errors import (
     PeerIdInvalid,
     UserIsBlocked,
 )
+
+
+@app.on_message(filters.command("delcmd") & ~filters.private)
+async def delcmdc(bot: Client, message: Message):
+    if len(message.command) != 2:
+        return await message.reply_text("Bu komutu kullanmak için komutunuzun yanına 'off' ya da 'on' yazınız.")
+    durum = message.text.split(None, 1)[1].strip()
+    durum = durum.lower()
+    chat_id = message.chat.id
+
+    if durum == "on":
+        if await delcmd_is_on(message.chat.id):
+            return await message.reply_text("Komut Silme Zaten Açık.")
+        else:
+            await delcmd_on(chat_id)
+            await message.reply_text("Bu sohbet için Komut Silme özelliği başarıyla etkinleştirildi.")
+
+    elif durum == "off":
+        await delcmd_off(chat_id)
+        await message.reply_text("Bu Sohbet için Komut Silme özelliği başarıyla devre dışı bırakıldı.")
+    else:
+        await message.reply_text("Bu komutu kullanmak için komutunuzun yanına 'off' ya da 'on' yazınız.")
+
 
 
 
