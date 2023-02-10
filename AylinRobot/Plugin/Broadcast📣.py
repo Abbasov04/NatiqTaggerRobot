@@ -6,7 +6,6 @@ import shutil, psutil, traceback, os, datetime, random, string, time, traceback,
 from AylinRobot.translation import *
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
-from helpers.filters import command, other_filters
 from pyrogram import Client as USER
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
 import motor.motor_asyncio
@@ -104,7 +103,7 @@ async def broadcast_message(_, message):
 # Broadcast without pinned
 
 
-@app.on_message(command("gcast") & filters.user(Config.OWNER_ID) & ~filters.edited)
+@app.on_message(command("gcast") & filters.user(Config.OWNER_ID))
 async def broadcast_message(_, message):
     if len(message.command) < 2:
         return await message.reply_text("**Usage**:\n/gcast [message]")
