@@ -5,9 +5,8 @@
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from AylinRobot import LOGGER
 from AylinRobot.config import Config
-from pyrogram import Client, idle, filters
+from pyrogram import Client, filters
 
 @app.on_message(filters.command('list') & filters.group)
 async def start(client, msj):
