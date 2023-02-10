@@ -46,7 +46,7 @@ async def chat_watcher_func(_, message):
 
 
 @app.on_message(filters.command(["broadcast_pin"]) & filters.user(Config.OWNER_ID)
-async def broadcast_pin(_, message):
+async def botstats(app: Client, message: Message):
     if not message.reply_to_message:
         pass
     else:
