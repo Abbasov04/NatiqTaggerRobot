@@ -3,6 +3,7 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 from AylinRobot import AylinRobot as app
+from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
 from youtube_search import YoutubeSearch
