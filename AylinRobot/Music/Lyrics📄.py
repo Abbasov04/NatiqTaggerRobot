@@ -18,7 +18,7 @@ from pyrogram.types import (
 )
 
 
-@app.on_message(filters.command(["lyrics"]) & ~filters.edited)
+@app.on_message(filters.command(["lyrics"]))
 async def lyrics(_, message: Message):
     m = await message.delete()  
     if len(message.command) < 2:
