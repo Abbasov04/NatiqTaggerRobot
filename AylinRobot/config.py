@@ -4,7 +4,6 @@
 
 import os
 
-
 class Config:
 
    API_ID = int(os.getenv("API_ID", "8953338"))
@@ -19,7 +18,6 @@ class Config:
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobotPlaylist")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001727904239"))
    BAN_GROUP = int(os.environ.get("BAN_GROUP", "-1001820370604"))
-   COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "05a017d5-e3e5-424d-941f-3e60645e3141")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
    CHANNEL = os.environ.get("CHANNEL", "HuseynH")
