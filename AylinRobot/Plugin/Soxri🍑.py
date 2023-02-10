@@ -7,7 +7,7 @@ from time import time
 import random
 from random import choice
 from pyrogram.types import Message
-from pyrogram import filters
+from pyrogram import Client, filters
 from AylinRobot import AylinRobot as app
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
