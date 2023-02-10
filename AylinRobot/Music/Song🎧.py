@@ -7,6 +7,7 @@ from pyrogram.errors import FloodWait
 import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
+from helpers.filters import command, other_filters
 from AylinRobot.config import Config
 from pyrogram import Client, filters
 from pyrogram.types import (
@@ -28,7 +29,7 @@ buttons = {
 }
 
 
-@app.on_message(filters.command(['song']))
+@app.on_message(command("song") & ~filters.edited)
 def song(client, message):
 
     message.delete()
