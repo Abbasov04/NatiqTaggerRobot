@@ -4,6 +4,7 @@ from AylinRobot.config import Config
 from aiohttp import ClientSession
 from AylinRobot import AylinRobot as app
 from datetime import datetime
+from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -25,7 +26,7 @@ async def make_carbon(code):
     image.name = "carbon.png"
     return image
 
-@app.on_message(commands=['carbon'])
+@app.on_message(filters.command("carbon")
 async def carbon_func(client, msg):
     reply = msg.reply_to_message
     if reply:
