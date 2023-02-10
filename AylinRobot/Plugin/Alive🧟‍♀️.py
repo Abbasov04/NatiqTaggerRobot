@@ -5,7 +5,7 @@
 import time
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, User
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AylinRobot.config import Config
 from datetime import datetime
 from os import path
@@ -43,7 +43,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@app.on_message(filters.command('alive'))
+@app.on_message(filters.command("alive")
 async def Alive(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
