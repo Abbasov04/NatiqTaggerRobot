@@ -46,7 +46,7 @@ async def chat_watcher_func(_, message):
 
 
 @app.on_message(filters.command("broadcast_pin") & filters.user(Config.OWNER_ID)
-async def broadcast_message(_, message):
+async def broadcast_message(_, Message):
     if not message.reply_to_message:
         pass
     else:
@@ -105,7 +105,7 @@ async def broadcast_message(_, message):
 
 
 @app.on_message(filters.command("gcast") & filters.user(Config.OWNER_ID)
-async def broadcast_message(_, message):
+async def broadcast_message(_, Message):
     if len(message.command) < 2:
         return await message.reply_text("**Usage**:\n/gcast [message]")
     sleep_time = 0.1
