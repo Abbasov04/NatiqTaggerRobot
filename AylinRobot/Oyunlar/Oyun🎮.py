@@ -2,8 +2,6 @@ import os
 import logging
 import random
 from AylinRobot import AylinRobot as app
-from AylinRobot import LOGGER
-from pyrogram import Client, filters
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 
