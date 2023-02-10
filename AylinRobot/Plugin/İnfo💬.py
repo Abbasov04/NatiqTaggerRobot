@@ -4,16 +4,14 @@
 
 import os, asyncio, time, shlex, requests, pyrogram
 from helpers.extract_user import extract_user, last_online
-from helpers.filters import command, other_filters
 from datetime import datetime
 from AylinRobot import AylinRobot as app
-from helpers.filters import command
 from pyrogram import filters, Client
 from AylinRobot.config import Config
 
 
 
-@app.on_message(command("info") & ~filters.edited)
+@app.on_message(filters.command("info")
 async def info(client, message):
     """ istifadəçi məlumatını çıxarın """
     status_message = await message.reply_text(
