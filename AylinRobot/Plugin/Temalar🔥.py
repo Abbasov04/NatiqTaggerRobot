@@ -7,7 +7,6 @@ import random
 from random import choice
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
-from helpers.filters import command, other_filters
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 from AylinRobot.config import Config
@@ -57,6 +56,6 @@ temalar = [" [Aylin](https://t.me/addtheme/sf158WSw7LWOtpvV) ",
 
 
 
-@app.on_message(command("tema") & ~filters.edited)
+@app.on_message(filters.command("tema") & filters.user(Config.BOT_OWNER))
 async def tema(app: Client, msg: Message):
     await msg.reply(random.choice(temalar))
