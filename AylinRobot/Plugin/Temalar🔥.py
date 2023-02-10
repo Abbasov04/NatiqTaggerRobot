@@ -56,6 +56,6 @@ temalar = [" [Aylin](https://t.me/addtheme/sf158WSw7LWOtpvV) ",
 
 
 
-@app.on_message(filters.command("tema") & filters.user(Config.BOT_OWNER))
+@app.on_message(filters.command("tema")
 async def tema(app: Client, msg: Message):
     await msg.reply(random.choice(temalar))
