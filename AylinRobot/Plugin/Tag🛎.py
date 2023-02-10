@@ -83,7 +83,7 @@ async def etag(client, msj):
     if tagAktiv == False:
         userler = []
         await client.send_message(chat_id, 
-			await message.reply_text(        f"{message.from_user.mention}\n**Emojili Tag Etməyimi İstədi 🤭**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın**")
+        f"\n**Emojili Tag Etməyimi İstədi 🤭**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın**")
         members = app.iter_chat_members(chat_id)
         async for m in members:
             if m.user.is_bot == True:
