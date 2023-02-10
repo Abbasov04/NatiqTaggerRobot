@@ -7,11 +7,12 @@ from AylinRobot.translation import *
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from helpers.filters import command, other_filters
-from pyrogram import as USER, filters, __version__, Client
+from pyrogram import Client as USER, filters,
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
 import motor.motor_asyncio
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram.types import Message
+from pyrogram import Client, __version__
 from pyrogram.errors import (
     FloodWait,
     InputUserDeactivated,
