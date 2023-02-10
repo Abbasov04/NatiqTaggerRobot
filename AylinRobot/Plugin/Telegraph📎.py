@@ -5,14 +5,13 @@
 import os, pyrogram
 from telegraph import upload_file
 from AylinRobot import AylinRobot as app
-from helpers.filters import command, other_filters
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,InlineKeyboardMarkup, InlineKeyboardButton,CallbackQuery, InlineQuery)
 
 
-@app.on_message(command("tgm") & ~filters.edited)
+@app.on_message(filters.command("tgm")
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
