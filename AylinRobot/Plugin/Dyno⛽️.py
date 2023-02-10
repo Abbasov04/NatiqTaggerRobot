@@ -6,7 +6,6 @@ import heroku3, requests, time, math, os
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import Client as USER, filters
 from AylinRobot.config import Config
 
 BOT_START_TIME = time.time()
