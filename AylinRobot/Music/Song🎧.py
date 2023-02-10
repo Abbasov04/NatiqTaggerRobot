@@ -8,7 +8,6 @@ import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
 from AylinRobot.config import Config
-from pyrogram import Client, filters
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
