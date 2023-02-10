@@ -45,8 +45,8 @@ async def chat_watcher_func(_, message):
 
 
 
-@app.on_message(filters.command("broadcast_pin") & filters.user(Config.OWNER_ID)
-async def broadcast_message(_, message):
+@app.on_message(filters.command(["broadcast_pin"]) & filters.user(Config.OWNER_ID)
+async def broadcast_pin(_, message):
     if not message.reply_to_message:
         pass
     else:
