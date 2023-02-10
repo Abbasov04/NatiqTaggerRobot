@@ -6,10 +6,9 @@ import aiohttp
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
-from helpers.filters import command, other_filters
 
 
-@app.on_message(command(["github"]) & ~filters.edited)
+@app.on_message(filters.command("github")
 async def github(_, message):
     if len(message.command) != 2:
         await message.reply_text("/github İstifadəçi adı yazmadınız 😐")
