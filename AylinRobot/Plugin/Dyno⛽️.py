@@ -11,7 +11,7 @@ from AylinRobot.config import Config
 
 BOT_START_TIME = time.time()
 
-@app.on_message(filters.command(["dyno"]) & filters.user(Config.BOT_ID))  
+@app.on_message(filters.command(["dyno"]) & filters.user(Config.OWNER_ID))  
 async def bot_status(client,message):
     if Config.HEROKU_API_KEY:
         try:
