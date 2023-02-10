@@ -6,7 +6,7 @@ import heroku3, requests, time, math, os
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from pyrogram import Client, filters as USER
+from pyrogram import Client as USER, filters
 from AylinRobot.config import Config
 from helpers.filters import command, other_filters
 
