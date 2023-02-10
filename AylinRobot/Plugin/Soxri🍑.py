@@ -9,7 +9,6 @@ from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram.errors import FloodWait
-from pyrogram import filters
 from AylinRobot.config import Config
 
 
@@ -190,7 +189,7 @@ photolist = [
 ]
 
 
-@app.on_message(filters.command(['soxri']))
+@app.on_message(commands=['soxri'])
 async def soxri(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
