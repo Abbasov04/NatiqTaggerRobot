@@ -26,7 +26,7 @@ async def make_carbon(code):
     image.name = "carbon.png"
     return image
 
-@app.on_message(filters.command("carbon")
+@app.on_message(filters.command("carbon"))
 async def carbon_func(client, msg):
     reply = msg.reply_to_message
     if reply:
