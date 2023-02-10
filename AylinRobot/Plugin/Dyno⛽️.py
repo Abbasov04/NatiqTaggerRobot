@@ -8,7 +8,6 @@ from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from pyrogram import Client as USER, filters
 from AylinRobot.config import Config
-from helpers.filters import command, other_filters
 
 BOT_START_TIME = time.time()
 
