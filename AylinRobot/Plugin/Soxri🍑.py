@@ -8,7 +8,6 @@ import random
 from random import choice
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-from helpers.filters import command, other_filters
 from pyrogram.errors import FloodWait
 from pyrogram import filters
 from AylinRobot.config import Config
