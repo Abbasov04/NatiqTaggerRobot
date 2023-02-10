@@ -16,7 +16,7 @@ photolist = ["https://telegra.ph/file/1559957902ea74780464c.jpg","https://telegr
  
  
 
-@app.on_message(filters.command("pisik") & filters.user(Config.BOT_OWNER))
+@app.on_message(filters.command("pisik"))
 async def pisik(bot: app, m: Message):
     start = time()
     replymsg = await m.reply_text("**❤ Rondom Bir Pişik Şəkili Seçilir...**")
