@@ -1,6 +1,7 @@
 import random, os, logging, asyncio
 from telethon import Button
 from telethon import TelegramClient, events
+from telethon import TelegramClient
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import events, Button
@@ -94,3 +95,5 @@ async def tag_admin(event):
 async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
+
+client.run_until_disconnected()
