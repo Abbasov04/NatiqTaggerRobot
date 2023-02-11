@@ -23,33 +23,6 @@ def btag():
 	return InlineKeyboardMarkup(BUTTON)
 
 
-
-### Səbəbsiz Tag Edər
-@app.on_message(filters.command(["tag"]) & filters.group)
-async def tag(client: app, message: Message):
-	global DUR
-	global SORGU
-	msg = " ".join(message.command[1:])
-	chat = message.chat
-	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
-		if message.from_user.id == mem.user.id:
-			await message.reply_text(f"{message.from_user.mention}\n**Tag Prosesini Başlatdı 🥰**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın 🙎‍♀️**",
-				reply_markup=btag()
-				)
-			time.sleep(1)
-			SORGU = True
-			async for member in app.iter_chat_members(chat_id=chat.id, filter="all"):
-				if DUR:
-					DUR=False
-					SORGU = None
-					break
-				time.sleep(1)
-				await app.send_message(chat_id=chat.id, text=f"{member.user.mention} **Bayaqdan səni gözləyirəm gəl 🥰**")
-				time.sleep(1)
-		if message.from_user.id != mem.user.id:
-			pass
-		
-		
 ### Sadəcə Adminləri Tağ Edər		
 @app.on_message(filters.command(["admin"]) & filters.group)
 async def ta(client: app, message: Message):
@@ -76,29 +49,10 @@ async def ta(client: app, message: Message):
 			pass
 
 
-
-
-
-### Tag Prosesin Dayandırar
-@app.on_message(filters.command(["cancel"]) & filters.group)
-async def stop(client: app, message: Message):
-	global tagAktiv
-	chat = message.chat
-	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
-		if message.from_user.id == mem.user.id:
-			if tagAktiv == None:
-				await message.reply_text("**Aktiv Bir Tag Prosesi Yoxdur 😕👍🏻**")
-				return
-
-			tagAktiv = True
-			await message.reply_text(f"{message.from_user.mention} **Tag prosesini dayandırdı 😒**")	
-		if message.from_user.id != mem.user.id:
-			pass
-
-
 @app.on_message(filters.command("etag") & filters.group)
 async def eTag(client, msj):
     global tagAktiv
+    global DUR
     chat_id = msj.chat.id
     mojiler = ["🛎", "🌌", "🎉", "😱", "😶‍", "🌫", "🥶"]
     reply = msj.reply_to_message
@@ -138,7 +92,27 @@ async def eTag(client, msj):
                     time.sleep(2)
                     tagAktiv = True
                 except IndexError:
-                    tagAktiv = False
+                    DUR = False
                     await client.send_message(chat_id, f"bitdi ")
     else:
         pass			
+
+
+
+
+
+### Tag Prosesin Dayandırar
+@app.on_message(filters.command(["cancel"]) & filters.group)
+async def stop(client: app, message: Message):
+	global DUR
+	chat = message.chat
+	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
+		if message.from_user.id == mem.user.id:
+			if DUR == None:
+				await message.reply_text("**Aktiv Bir Tag Prosesi Yoxdur 😕👍🏻**")
+				return
+
+			DUR = True
+			await message.reply_text(f"{message.from_user.mention} **Tag prosesini dayandırdı 😒**")	
+		if message.from_user.id != mem.user.id:
+			pass
