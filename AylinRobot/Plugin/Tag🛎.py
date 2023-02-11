@@ -72,49 +72,6 @@ async def ta(client: app, message: Message):
 			pass
 
 
-@app.on_message(filters.command("etag") & filters.group)
-async def etag(client, msj):
-    global tagAktiv
-    chat_id = msj.chat.id
-
-    mojiler = ["🛎", "🌌", "🎉", "😱", "😶‍", "🌫", "🥶"]
-    reply = msj.reply_to_message
-
-    if tagAktiv == False:
-        userler = []
-        await client.send_message(chat_id, 
-        f"\n**Emojili Tag Etməyimi İstədi 🤭**\n**Tagı Dayandırmaq Üçün**\n/cancel Yazın**")
-        members = app.iter_chat_members(chat_id)
-        async for m in members:
-            if m.user.is_bot == True:
-                pass
-            else:
-                userler.append(str(m.user.id))
-        try:
-
-            sayUser = len(userler) + 1
-            print(sayUser)
-            tagMesaji = msj.text.split(" ", 1)[1]
-            tagAktiv = True
-            for i in range(0, sayUser):
-                try:
-                    await client.send_message(chat_id, f"[{random.choice(mojiler)}](tg://user?id={userler[i]})\n\n{tagMesaji}")
-                    time.sleep(3)
-                except IndexError:
-                    await client.send_message(chat_id, f"Userleri tag etme prosesi bitdi")
-                    tagAktiv = False
-        except IndexError:
-            tagAktiv = True
-            sayUser = len(userler) + 1
-            print(sayUser)
-            for i in range(0, sayUser):
-                try:
-                    await client.send_message(chat_id, f"[{random.choice(mojiler)}](tg://user?id={userler[i]})")
-                    time.sleep(3)
-                except IndexError:
-                    await client.send_message(chat_id, f"Userleri tag etme prosesi bitdi")
-                    tagAktiv = False
-
 
 
 
@@ -133,7 +90,6 @@ async def stop(client: app, message: Message):
 			await message.reply_text(f"{message.from_user.mention} **Tag prosesini dayandırdı 😒**")	
 		if message.from_user.id != mem.user.id:
 			pass
-
 
 
 @app.on_message(filters.command("ttg") & filters.group)
