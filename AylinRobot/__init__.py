@@ -21,3 +21,18 @@ AylinRobot = Client(
     api_id = Config.API_ID,
     api_hash = Config.API_HASH
 )
+
+
+
+TOKEN    = config.TOKEN
+
+API_ID   = config.API_ID
+
+API_HASH = config.API_HASH
+
+basicConfig(format="%(asctime)s - %(levelname)s - %(message)s", level=INFO)
+
+logger = getLogger(__name__)
+
+_ = TelegramClient('AylinRobot', api_id=API_ID, api_hash=API_HASH)
+bot = _.start(bot_token=TOKEN)
