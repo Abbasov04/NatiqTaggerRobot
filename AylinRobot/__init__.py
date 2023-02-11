@@ -24,11 +24,11 @@ AylinRobot = Client(
 
 
 
-TOKEN    = config.TOKEN
+TOKEN    = Config.TOKEN
 
-API_ID   = config.API_ID
+API_ID   = Config.API_ID
 
-API_HASH = config.API_HASH
+API_HASH = Config.API_HASH
 
 basicConfig(format="%(asctime)s - %(levelname)s - %(message)s", level=INFO)
 
