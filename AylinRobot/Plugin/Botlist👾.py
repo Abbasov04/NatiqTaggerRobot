@@ -2,6 +2,7 @@
 #@MusicAzBot
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
+import search
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
