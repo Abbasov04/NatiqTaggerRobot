@@ -2,7 +2,7 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-from AylinRobot import *
+from AylinRobot.Telethonedalet import *
 
 def __list_all_modules():
     from os.path import dirname, basename, isfile
