@@ -7,6 +7,8 @@
 import logging
 from pyrogram import Client
 from AylinRobot.config import Config
+from telethon import TelegramClient
+
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
