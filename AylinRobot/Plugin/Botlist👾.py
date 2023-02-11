@@ -1,7 +1,7 @@
 # @AylinRobot
 #@MusicAzBot
 # Repo Açığdısa İcazəsis Götürmə Oğlum
-
+import enums
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
@@ -34,4 +34,19 @@ async def delAcc(client, msj):
             DELETED.append(str(m.user.id)) # silinen hesablar
 
     shesablar = '\n'.join(DELETED) 
-    await app.send_message(chat_id, f"silinen hesablarin sayi - {len(DELETED)}\n\n{shesablar}")    
+    await app.send_message(chat_id, f"silinen hesablarin sayi - {len(DELETED)}\n\n{shesablar}") 
+    
+
+# adminlist
+@app.on_message(filters.command('alist'))
+async def start(client, msj):
+    chat_id = msj.chat.id
+    reply = msj.reply_to_message
+    ADMINS = []
+    async for m in app.iter_chat_members(chat_id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+        ADMINS.append(m.user.mention)
+        adminsiyahi = '\n'.join(ADMINS)
+
+    #adminsiyahi = '\n'.join(ADMINS)
+    t = f"Qrupdaki adminler\n{adminsiyahi}"
+    await client.send_message(chat_id, t)    
