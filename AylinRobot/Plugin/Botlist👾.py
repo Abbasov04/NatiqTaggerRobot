@@ -40,5 +40,5 @@ async def delAcc(client, msj):
 @app.on_message(filters.command(['google']))
 def google_search(client, message):
     input_word = message.command[1]
-    results = app.search.google(input_word)
+    results = client.search.google(input_word)
     message.reply_text(f"Axtariş uzre melumat '{input_word}':\n\n{results}")
