@@ -28,7 +28,7 @@ async def make_carbon(code):
 
 @app.on_message(filters.command("carbon"))
 async def carbon_func(client, msg):
-  await msg.delete()
+   msg.delete()
     reply = msg.reply_to_message
     if reply:
         m = await msg.reply_text("️🤓 Carbonu hazırlayıram...")
