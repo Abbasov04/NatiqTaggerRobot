@@ -11,7 +11,9 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 DUR = False
 SORGU = None
+
 tagAktiv = False
+
 MENTION = "[{}](tg://user?id={})"
 
 def btag():
