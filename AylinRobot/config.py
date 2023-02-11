@@ -1,6 +1,9 @@
 # @AylinRobot
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
+# Reponu Satan Kodların Götürən Kimliyindən Aslı Olmayaraq Peysərdi
+
+
 
 import os
 
