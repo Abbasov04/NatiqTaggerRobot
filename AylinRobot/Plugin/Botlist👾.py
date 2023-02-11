@@ -22,3 +22,16 @@ async def start(client, msj):
 
     botlarsiyahi = '\n'.join(BOTLAR)
     await client.send_message(chat_id, botlarsiyahi)
+    
+    
+@app.on_message(filters.command("del") & filters.group)
+async def delAcc(client, msj):
+    chat_id = msj.chat.id
+    DELETED = []
+    members = app.iter_chat_members(chat_id)
+    async for m in members:
+        if m.user.is_deleted == True:
+            DELETED.append(str(m.user.id)) # silinen hesablar
+
+    shesablar = '\n'.join(DELETED) 
+    await app.send_message(chat_id, f"silinen hesablarin sayi - {len(DELETED)}\n\n{shesablar}")    
