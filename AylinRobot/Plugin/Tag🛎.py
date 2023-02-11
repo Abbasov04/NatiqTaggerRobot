@@ -9,11 +9,11 @@ from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery, ChatPermissions
 
+DUR = False
 
+SORGU = None
 
-TAGAKTİV = None
-
-TAGDEAKTİV = False
+tagAktiv = False
 
 
 MENTION = "[{}](tg://user?id={})"
@@ -98,8 +98,7 @@ async def stop(client: app, message: Message):
 
 @app.on_message(filters.command("etag") & filters.group)
 async def eTag(client, msj):
-    global TAGAktiv
-    global TAGDEAKTİV
+    global tagAktiv
     chat_id = msj.chat.id
     mojiler = ["🛎", "🌌", "🎉", "😱", "😶‍", "🌫", "🥶"]
     reply = msj.reply_to_message
@@ -119,9 +118,7 @@ async def eTag(client, msj):
     t = s / 5
     ysay = t + 1
     ysay = int(ysay)
-				if TAGDEAKTİV:
-					TAGDEAKTİV =False
-					TAGDEAKTİV = None
+    if tagAktiv == False:
         for i in range(0, ysay):
             if mesaj == True:
                 try:
@@ -139,9 +136,9 @@ async def eTag(client, msj):
                     for i in range(0, 5):
                         userler.pop(0)
                     time.sleep(2)
-                    TAGDEAKTİV = True
+                    tagAktiv = True
                 except IndexError:
-                    TAGDEAKTİV = False
+                    tagAktiv = False
                     await client.send_message(chat_id, f"bitdi ")
     else:
         pass			
