@@ -17,7 +17,7 @@ from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from AylinRobot.Plugin import *
 from AylinRobot.Music import *
 from AylinRobot.Oyunlar import *
-from AylinRobot.Telethonedalet
+from AylinRobot.Telethonedalet import *
 from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AylinRobot import AylinRobot as app
