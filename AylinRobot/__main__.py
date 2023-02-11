@@ -1,9 +1,9 @@
 # @AylinRobot
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
+# Reponu Satan Kodları Götürən Kimliyindən Adlı Olmayaraq Peysərdi
 
 import os
-import time
 import psutil
 import shutil
 import string
@@ -17,6 +17,7 @@ from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from AylinRobot.Plugin import *
 from AylinRobot.Music import *
 from AylinRobot.Oyunlar import *
+from AylinRobot.Telethon import *
 from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AylinRobot import AylinRobot as app
