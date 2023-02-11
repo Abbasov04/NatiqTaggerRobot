@@ -2,6 +2,7 @@
 # t.me/aykhan_s | t.me/edalet_22
 # GitHub: EdaletRoBot
 
+from pyrogram import Client
 from telethon import events
 from telethon import TelegramClient
 from telethon.tl.types import ChannelParticipantsAdmins
