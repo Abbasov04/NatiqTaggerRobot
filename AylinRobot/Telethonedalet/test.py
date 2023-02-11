@@ -5,7 +5,7 @@ from telethon import events
 from telethon import TelegramClient
 from telethon.tl.types import ChannelParticipantsAdmins
 import random
-from Config import Config 
+from AylinRobot.config import Config
 
 
 edalet = TelegramClient('edalet', API_ID, API_HASH).start(bot_token=bot_token)
