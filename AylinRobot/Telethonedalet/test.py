@@ -9,7 +9,12 @@ import random
 from AylinRobot.config import Config
 
 
-   Client = TelegramClient('AylinRobot', API_ID, API_HASH).start(bot_token=bot_token)
+AylinRobot = Client(
+    'AylinRobot',
+    bot_token = Config.BOT_TOKEN,
+    api_id = Config.API_ID,
+    api_hash = Config.API_HASH
+)
 
 SAHIB = 586648198
 
