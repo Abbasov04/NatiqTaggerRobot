@@ -133,3 +133,57 @@ async def stop(client: app, message: Message):
 			await message.reply_text(f"{message.from_user.mention} **Tag prosesini dayandırdı 😒**")	
 		if message.from_user.id != mem.user.id:
 			pass
+
+
+
+@app.on_message(filters.command("ttg") & filters.group)
+async def eTag(client, msj):
+    # ayuyes @c9ala
+    global tagAktiv
+    chat_id = msj.chat.id
+    mojiler = ["🛎", "🌌", "🎉", "😱", "😶‍", "🌫", "🥶"]
+    reply = msj.reply_to_message
+    userler = []
+    await client.send_message(chat_id, f"[tag prosesi baslayir ayuye](https://t.me/)")
+    time.sleep(2)
+    members = app.iter_chat_members(chat_id)
+    async for m in members:
+        userler.append(m.user.id) # BOTLARI TAG ETMEYINI ISTEMIRSINIZSE, BURANI SILIN ASAGIDAKI KODDA DA # SILIN
+        #if m.user.is_bot == True:
+        #    pass
+        #else:
+        #    userler.append(str(m.user.id))
+    try:
+        tagMesaji = msj.text.split(" ", 1)[1]
+        mesaj  = True
+    except IndexError:
+        mesaj = False
+    usrsay = len(userler)
+    s = 5 * round(usrsay / 5)
+    t = s / 5
+    ysay = t + 1
+    ysay = int(ysay)
+    if tagAktiv == False:
+        for i in range(0, ysay):
+            if mesaj == True:
+                try:
+                    await client.send_message(chat_id, f"[{random.choice(mojiler)}](tg://user?id={userler[0]}) [{random.choice(mojiler)}](tg://user?id={userler[1]}) [{random.choice(mojiler)}](tg://user?id={userler[2]}) [{random.choice(mojiler)}](tg://user?id={userler[3]}) [{random.choice(mojiler)}](tg://user?id={userler[4]})\n\n{tagMesaji}")
+                    for i in range(0, 5):
+                        userler.pop(0)
+                    time.sleep(2)
+                    tagAktiv = True
+                except IndexError:
+                    tagAktiv = False
+                    await client.send_message(chat_id, f"bitdi ")
+            else:
+                try:
+                    await client.send_message(chat_id, f"[{random.choice(mojiler)}](tg://user?id={userler[0]}) [{random.choice(mojiler)}](tg://user?id={userler[1]}) [{random.choice(mojiler)}](tg://user?id={userler[2]}) [{random.choice(mojiler)}](tg://user?id={userler[3]}) [{random.choice(mojiler)}](tg://user?id={userler[4]})")
+                    for i in range(0, 5):
+                        userler.pop(0)
+                    time.sleep(2)
+                    tagAktiv = True
+                except IndexError:
+                    tagAktiv = False
+                    await client.send_message(chat_id, f"bitdi ")
+    else:
+        pass			
