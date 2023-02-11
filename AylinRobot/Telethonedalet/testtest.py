@@ -10,7 +10,7 @@ from AylinRobot.config import Config
 
 edalet = TelegramClient('edalet', API_ID, API_HASH).start(bot_token=bot_token)
 
-@edalet.on(events.NewMessage(pattern="^/start$"))
+@edalet.on(events.NewMessage(pattern="^/husnu$"))
 async def start(event):
   if event.is_private:
      await event.reply(f"Salam, men hüsnü")
