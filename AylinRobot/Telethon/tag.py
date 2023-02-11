@@ -16,14 +16,7 @@ from AylinRobot.config import Config
 from telethon.tl.functions.users import GetFullUserRequest
 
 
-  edalet = 
-  TelegramClient(
-    'edalet', 
-    Config.API_ID, 
-    Config.API_HASH).start(bot_token=bot_token)
 
-
-#Bu kodda olan • By @EdaletRoBot yazisini silen gelib mene Ata deyer
 @edalet.on(events.NewMessage(pattern="^/banda ?(.*)"))
 async def banda(event):
     if not event.is_group:
