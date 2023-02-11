@@ -7,7 +7,7 @@
 import logging
 from pyrogram import Client
 from AylinRobot.config import Config
-from telethon import TelegramClient
+from AylinRobot import TelegramClient
 
 
 logging.basicConfig(
@@ -16,7 +16,7 @@ logging.basicConfig(
 
 LOGGER = logging.getLogger(__name__)
 
-telethon = TelegramClient(
+AylinRobot = TelegramClient(
    "Fallen", 
     bot_token = Config.BOT_TOKEN,
     api_id = Config.API_ID,
