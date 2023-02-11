@@ -1,6 +1,7 @@
 # t.me/RoBotlarimTg | YouTube: RoBotlarimTg | t.me/EdaletSup
 # t.me/aykhan_s | t.me/edalet_22
 # GitHub: EdaletRoBot
+
 from telethon import events
 from telethon import TelegramClient
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -8,11 +9,11 @@ import random
 from AylinRobot.config import Config
 
 
-edalet = TelegramClient('edalet', API_ID, API_HASH).start(bot_token=bot_token)
+   Client = TelegramClient('AylinRobot', API_ID, API_HASH).start(bot_token=bot_token)
 
 SAHIB = 586648198
 
-@edalet.on(events.NewMessage(pattern="^/pin$"))
+@client.on(events.NewMessage(pattern="^/pin$"))
 async def pin(event):
     if event.sender_id == SAHIB:
         if not event.reply_to_msg_id:
@@ -22,7 +23,7 @@ async def pin(event):
     else:
         await event.reply("Sən sahib deyilsən pinləməyə çalışma")
 
-@edalet.on(events.NewMessage(pattern="^/unpin$"))
+@client.on(events.NewMessage(pattern="^/unpin$"))
 async def unpin(event):
     if event.sender_id == SAHIB:
         if not event.reply_to_msg_id:
@@ -35,4 +36,4 @@ async def unpin(event):
 
 
 print(">> Bot işləyir narahat olmayın. @edalet_22 Məlumat almaq üçün <<")
-edalet.run_until_disconnected()
+client.run_until_disconnected()
