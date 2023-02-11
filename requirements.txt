@@ -41,3 +41,4 @@ Heroku3
 telegram
 python-arq
 telethon
+search
