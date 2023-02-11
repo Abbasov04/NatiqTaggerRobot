@@ -14,6 +14,14 @@ logging.basicConfig(
 
 LOGGER = logging.getLogger(__name__)
 
+telethn = TelegramClient(
+   "Fallen", 
+    bot_token = Config.BOT_TOKEN,
+    api_id = Config.API_ID,
+    api_hash = Config.API_HASH
+)
+
+
 AylinRobot = Client(
     'AylinRobot',
     bot_token = Config.BOT_TOKEN,
