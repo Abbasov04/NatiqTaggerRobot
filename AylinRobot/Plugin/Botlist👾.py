@@ -2,7 +2,6 @@
 #@MusicAzBot
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-import search
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
@@ -38,8 +37,3 @@ async def delAcc(client, msj):
     await app.send_message(chat_id, f"silinen hesablarin sayi - {len(DELETED)}\n\n{shesablar}") 
     
     
-@app.on_message(filters.command(['google']))
-def google_search(client, message):
-    input_word = message.command[1]
-    results = client.search.google(input_word)
-    message.reply_text(f"Axtariş uzre melumat '{input_word}':\n\n{results}")
