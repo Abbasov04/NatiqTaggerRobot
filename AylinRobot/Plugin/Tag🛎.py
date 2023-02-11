@@ -86,7 +86,7 @@ async def stop(client: app, message: Message):
 				await message.reply_text("**Aktiv Bir Tag Prosesi Yoxdur 😕👍🏻**")
 				return
 
-			DUR = True
+			tagAktiv = True
 			await message.reply_text(f"{message.from_user.mention} **Tag prosesini dayandırdı 😒**")	
 		if message.from_user.id != mem.user.id:
 			pass
