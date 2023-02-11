@@ -51,7 +51,7 @@ async def ta(client: app, message: Message):
 
 @app.on_message(filters.command("etag") & filters.group)
 async def eTag(client, msj):
-    global tagAktiv
+    global DUR
     global DUR
     chat_id = msj.chat.id
     mojiler = ["🛎", "🌌", "🎉", "😱", "😶‍", "🌫", "🥶"]
@@ -80,9 +80,9 @@ async def eTag(client, msj):
                     for i in range(0, 5):
                         userler.pop(0)
                     time.sleep(2)
-                    tagAktiv = True
+                    DUR = True
                 except IndexError:
-                    tagAktiv = False
+                    DUR = False
                     await client.send_message(chat_id, f"bitdi ")
             else:
                 try:
@@ -90,7 +90,7 @@ async def eTag(client, msj):
                     for i in range(0, 5):
                         userler.pop(0)
                     time.sleep(2)
-                    tagAktiv = True
+                    DUR = True
                 except IndexError:
                     DUR = False
                     await client.send_message(chat_id, f"bitdi ")
