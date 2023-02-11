@@ -6,8 +6,6 @@
 import logging
 from pyrogram import Client
 from AylinRobot.config import Config
-from telethon import TelegramClient
-from logging import *
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -23,16 +21,7 @@ AylinRobot = Client(
 )
 
 
+## Telethon Kodları Sahib #HuseynH 
+## Botu Satışa Qoyan Peysərdi Bu Qədər Söyüşü Qəbul Edirsən Sən Sə Ged Boynuva Buz Qoy
 
-TOKEN    = Config.TOKEN
 
-API_ID   = Config.API_ID
-
-API_HASH = Config.API_HASH
-
-basicConfig(format="%(asctime)s - %(levelname)s - %(message)s", level=INFO)
-
-logger = getLogger(__name__)
-
-_ = TelegramClient('AylinRobot', api_id=API_ID, api_hash=API_HASH)
-bot = _.start(bot_token=TOKEN)
