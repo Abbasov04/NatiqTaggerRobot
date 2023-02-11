@@ -96,4 +96,6 @@ async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
 
+print(">> Bot işləyir narahat olmayın. @Rahid_7 Məlumat almaq üçün <<")
+app.start()
 client.run_until_disconnected()
