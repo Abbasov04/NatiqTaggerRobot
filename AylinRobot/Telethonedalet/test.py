@@ -6,13 +6,10 @@ from telethon import events
 from telethon import TelegramClient
 from telethon.tl.types import ChannelParticipantsAdmins
 import random
+from AylinRobot.config import Config
 
+edalet = TelegramClient('edalet', API_ID, API_HASH).start(BOT_TOKEN=BOT_TOKEN)
 
-edalet = TelegramClient('edalet', API_ID, API_HASH).start(bot_token=bot_token)
-
-API_ID = 8953338
-API_HASH = "fe21f223cb02d8f7c1cbda651f553a45"
-bot_token = "5910888289:AAHOmBFyKIwc4XtbiZnkOQWk2-EZtx6BrT8"
 
 #@edalet_22 terefindən @RoBotlarimTg üçün yazilib silmədən istifadə edin
 @edalet.on(events.NewMessage(pattern="^/idid ?(.*)"))
