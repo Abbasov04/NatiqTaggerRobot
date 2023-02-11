@@ -82,7 +82,7 @@ async def stop(client: app, message: Message):
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
-			if SORGU == None:
+			if tagAktiv == None:
 				await message.reply_text("**Aktiv Bir Tag Prosesi Yoxdur 😕👍🏻**")
 				return
 
