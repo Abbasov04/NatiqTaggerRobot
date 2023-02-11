@@ -16,7 +16,7 @@ logging.basicConfig(
 
 LOGGER = logging.getLogger(__name__)
 
-telethn = TelegramClient(
+telethon = TelegramClient(
    "Fallen", 
     bot_token = Config.BOT_TOKEN,
     api_id = Config.API_ID,
