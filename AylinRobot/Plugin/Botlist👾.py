@@ -37,7 +37,7 @@ async def delAcc(client, msj):
     await app.send_message(chat_id, f"silinen hesablarin sayi - {len(DELETED)}\n\n{shesablar}") 
     
     
-@app.on_message(filters.commands=['google'])
+@app.on_message(filters.commands=['google']))
 def google_search(client, message):
     input_word = message.command[1]
     results = app.search.google(input_word)
