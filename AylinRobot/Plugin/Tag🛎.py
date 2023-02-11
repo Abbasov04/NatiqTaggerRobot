@@ -78,7 +78,7 @@ async def ta(client: app, message: Message):
 ### Tag Prosesin Dayandırar
 @app.on_message(filters.command(["cancel"]) & filters.group)
 async def stop(client: app, message: Message):
-	global DUR
+	global tagAktiv
 	chat = message.chat
 	async for mem in app.iter_chat_members(chat_id=chat.id, filter="administrators"):
 		if message.from_user.id == mem.user.id:
