@@ -17,7 +17,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-@edalet.on(events.NewMessage(pattern="^/banda ?(.*)"))
+@client.on(events.NewMessage(pattern="^/banda ?(.*)"))
 async def banda(event):
     if not event.is_group:
         return await event.reply("Bu əmr qruplar üçün etibarlıdır!")
