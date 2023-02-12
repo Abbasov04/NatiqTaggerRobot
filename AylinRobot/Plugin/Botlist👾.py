@@ -11,6 +11,12 @@ from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 from pyrogram import Client, filters
 
+from pyrogram.types import Message
+import os
+import asyncio
+from pyrogram import enums
+from pyrogram.enums import ChatMemberStatus
+
 @app.on_message(filters.command('list') & filters.group)
 async def start(client, msj):
     BOTLAR = []
