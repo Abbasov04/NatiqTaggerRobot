@@ -19,9 +19,3 @@ AylinRobot = Client(
     api_id = Config.API_ID,
     api_hash = Config.API_HASH
 )
-
-
-## Telethon Kodları Sahib #HuseynH 
-## Botu Satışa Qoyan Peysərdi Bu Qədər Söyüşü Qəbul Edirsən Sən Sə Ged Boynuva Buz Qoy
-
-
