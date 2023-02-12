@@ -2,6 +2,9 @@
 #@MusicAzBot
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
+import time
+from asyncio import sleep
+from time import time
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
@@ -26,6 +29,8 @@ async def start(client, msj):
     
 @app.on_message(filters.command("del") & filters.group)
 async def delAcc(client, msj):
+    await msj.reply("Axxxxxmmjb")
+    await sleep(2)
     chat_id = msj.chat.id
     DELETED = []
     members = app.iter_chat_members(chat_id)
