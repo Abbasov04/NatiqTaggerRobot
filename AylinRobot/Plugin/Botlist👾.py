@@ -31,7 +31,7 @@ async def start(client, msj):
 async def delAcc(client, msg):
     await msg.reply("Silinən Hesablar Axtarılır")
     await sleep(2.5)    
-   msg = await msg.delete()
+    await msg.delete()
     await ms.reply("Silinən Hesablar Göndərilir")    
     await sleep(2.5)
   ms = await msg.delete()
