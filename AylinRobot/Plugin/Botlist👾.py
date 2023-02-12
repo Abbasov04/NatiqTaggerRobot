@@ -34,7 +34,7 @@ async def delAcc(client, msg):
     await msg.delete()
     await ms.reply("Silinən Hesablar Göndərilir")    
     await sleep(2.5)
-  ms = await msg.delete()
+    await msg.delete()
     chat_id = msg.chat.id
     DELETED = []
     members = app.iter_chat_members(chat_id)
