@@ -44,5 +44,5 @@ async def delAcc(client, msg):
             DELETED.append(str(m.user.id)) # silinen hesablar
 
     shesablar = '\n'.join(DELETED)
-    await app.delete_messages(chat_id, b.id)
+    await app.delete_messages(chat_id)
     await app.send_message(chat_id, f"🙎‍♀️ botun adi Silinən Hesabları Tapdı Silinən Hesablar- 👻 {len(DELETED)} {shesablar} 🙋‍♀️ Axtaran {msg.from_user.mention}")
