@@ -29,19 +29,16 @@ async def start(client, msj):
     
 @app.on_message(filters.command("del") & filters.group)
 async def delAcc(client, msg):
-    await msg.reply("Silinən Hesablar Axtarılır")
-    await sleep(2.5)
-    await sleep(2.5)    
-    await msg.delete()
-    await msg.reply("Silinən Hesablar Göndərilir")    
-    await sleep(2.5)
-    await msg.delete()
+      start = time()
+    replymsg = await msg.reply("Silinən Hesablar Axtarılır")
+    end = round(time() - start, 2)    
+    replymsg await msg.reply("Silinən Hesablar Göndərilir")    
     chat_id = msg.chat.id
     DELETED = []
     members = app.iter_chat_members(chat_id)
     async for m in members:
         if m.user.is_deleted == True:
             DELETED.append(str(m.user.id)) # silinen hesablar
-
+    await replymsg.delete()
     shesablar = '\n'.join(DELETED) 
     await app.send_message(chat_id, f"🙎‍♀️ {Config.BOT_USERNAME} Silinən Hesabları Tapdı Silinən Hesablar- 👻 {len(DELETED)} {shesablar} 🙋‍♀️ Axtaran {msg.from_user.mention}")
