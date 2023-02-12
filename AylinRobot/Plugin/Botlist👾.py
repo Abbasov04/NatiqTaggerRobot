@@ -38,12 +38,12 @@ async def remove(client, message):
   global stopProcess
   try: 
     try:
-      sender = await teletips.get_chat_member(message.chat.id, message.from_user.id)
+      sender = await teletips.iter_chat_member(message.chat.id, message.from_user.id)
       has_permissions = sender.privileges
     except:
       has_permissions = message.sender_chat  
     if has_permissions:
-      bot = await teletips.get_chat_member(message.chat.id, "self")
+      bot = await teletips.iter_chat_member(message.chat.id, "self")
       if bot.status == ChatMemberStatus.MEMBER:
         await message.reply("🕹 | I need admin permissions to remove deleted accounts.")  
       else:  
