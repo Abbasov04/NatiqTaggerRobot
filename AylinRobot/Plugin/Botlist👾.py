@@ -4,7 +4,6 @@
 
 import time
 from asyncio import sleep
-from time import time
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
