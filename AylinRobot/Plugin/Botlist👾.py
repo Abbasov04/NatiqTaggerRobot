@@ -4,6 +4,7 @@
 
 import time
 from asyncio import sleep
+from time import time
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
@@ -30,10 +31,10 @@ async def start(client, msj):
 async def delAcc(client, msg):
     chat_id = msg.chat.id
     a = await client.send_message(chat_id, "Silinən Hesablar Axtarılır")
-    time.sleep(2.5)
+    await time.sleep(2.5)
     await app.delete_messages(chat_id, a.id)
     b = await client.send_message(chat_id, "Silinən Hesablar Göndərilir")
-    time.sleep(2.5)
+   await time.sleep(2.5)
     DELETED = []
     members = app.iter_chat_members(chat_id)
     async for m in members:
