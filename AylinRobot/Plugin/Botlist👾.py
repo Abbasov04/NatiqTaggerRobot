@@ -29,9 +29,8 @@ async def start(client, msj):
     
 @app.on_message(filters.command("del") & filters.group)
 async def delAcc(client, msj):
-    await msj.reply("Axxxxxmmjb")
+    await msj.reply("Silinən Hesablar Axtarılır")
     await sleep(2.5)
-  client.delete_messages(chat_id)
     chat_id = msj.chat.id
     DELETED = []
     members = app.iter_chat_members(chat_id)
