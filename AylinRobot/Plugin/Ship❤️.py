@@ -37,10 +37,10 @@ async def my_handler(client, msj):
                     await client.send_message(chat_id, f"{msj.from_user.mention} yeniden cehd edin")
                 elif rnduser != sevgi2:
                     await client.send_message(chat_id,
-                                              f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+                                              f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 101)}%❤️")
             elif rnduser != sevgi2:
                 await client.send_message(chat_id,
-                                          f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+                                          f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 101)}%❤️")
         elif rnduser != sevgi2:
             await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 101)}%❤️")
     elif rnduser != sevgi2:
