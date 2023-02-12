@@ -42,3 +42,22 @@ async def delAcc(client, msg):
 
     shesablar = '\n'.join(DELETED) 
     await app.send_message(chat_id, f"🙎‍♀️ {Config.BOT_USERNAME} Silinən Hesabları Tapdı Silinən Hesablar- 👻 {len(DELETED)} {shesablar} 🙋‍♀️ Axtaran {msg.from_user.mention}")
+    
+@app.on_message(filters.command("bots"))
+async def bots(client, message):  
+  try:    
+    botList = []
+    async for bot in teletips.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
+      botList.append(bot.user)
+    lenBotList = len(botList) 
+    text3  = f"**ʙᴏᴛ ʟɪsᴛ - {message.chat.title}**\n\n🤖 ʙᴏᴛ\n"
+    while len(botList) > 1:
+      bot = botList.pop(0)
+      text3 += f"├ @{bot.username}\n"    
+    else:    
+      bot = botList.pop(0)
+      text3 += f"└ @{bot.username}\n\n"
+      text3 += f"**ᴊᴜᴍʟᴀʜ ᴛᴏᴛᴀʟ ʙᴏᴛ**: {lenBotList}"  
+      await teletips.send_message(message.chat.id, text3)
+  except FloodWait as e:
+    await asyncio.sleep(e.value)
