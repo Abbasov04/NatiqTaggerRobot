@@ -5,7 +5,7 @@ from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import asyncio
-from pyrogram import Client, filters, Worker, emoji
+from pyrogram import Client, filters as Worker, emoji
 
 MENTION = "{}"  
 MESSAGE = "{} Xoş Gəldin {}!" 
