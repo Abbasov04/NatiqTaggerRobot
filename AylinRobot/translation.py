@@ -211,8 +211,8 @@ class Translation(object):
 ║▻ 🔮 Istifadə: /tag
 ║▻ 📃 Açıqlama: İstifadəçiləri  Səbəbsiz Tag Edər.
 ║ 
-║▻ 🔮 Istifadə: /admin
-║▻ 📃 Açıqlama: Adminləri Tag Edər.
+║▻ 🔮 Istifadə: /cancel
+║▻ 📃 Açıqlama: Tag Prosesini  Dayandırar.
 ╚═════════════════
 """
 
