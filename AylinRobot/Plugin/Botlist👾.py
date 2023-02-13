@@ -125,7 +125,7 @@ async def admins(client, message):
       else:
         pass   
     lenAdminList= len(ownerList) + len(adminList)  
-    text2 = f"**GROUP STAFF - {message.chat.title}**\n\n"
+    text2 = f"{message.chat.title}** Qrupundakı Adminlərin Siyahısı**\n\n"
     try:
       owner = ownerList[0]
       if owner.username == None:
@@ -141,15 +141,15 @@ async def admins(client, message):
       while len(adminList) > 1:
         admin = adminList.pop(0)
         if admin.username == None:
-          text2 += f"├ {admin.mention}\n"
+          text2 += f"├ ❤️{admin.mention}\n"
         else:
-          text2 += f"├ @{admin.username}\n"    
+          text2 += f"├ ❤️@{admin.username}\n"    
       else:    
         admin = adminList.pop(0)
         if admin.username == None:
-          text2 += f"└ {admin.mention}\n\n"
+          text2 += f"└ ❤️{admin.mention}\n\n"
         else:
-          text2 += f"└ @{admin.username}\n\n"
+          text2 += f"└ ❤️@{admin.username}\n\n"
       text2 += f"✅ | **İdarəçilərin ümumi sayı**: {lenAdminList}\n❌ | Botlar və gizli adminlər rədd edildi."  
       await app.send_message(message.chat.id, text2)           
   except FloodWait as e:
