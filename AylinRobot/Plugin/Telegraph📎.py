@@ -8,7 +8,6 @@ from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
-from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,InlineKeyboardMarkup, InlineKeyboardButton,CallbackQuery, InlineQuery)
 
 
 @app.on_message(filters.command("tgm"))
