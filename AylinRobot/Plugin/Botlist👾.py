@@ -162,7 +162,7 @@ async def bots(client, message):
     async for bot in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
       botList.append(bot.user)
     lenBotList = len(botList) 
-    text3  = f"**QRUPUNUZDAKI BOTLAR** `{message.chat.title}`\n💁‍♀️ **Axtarış Edən** {message.from_user.mention}\n\n**{Config.BOT_USERNAME}**\n\n"
+    text3  = f"`{message.chat.title}`**Qrupundakı Botlar**\n💁‍♀️ **Axtarış Edən** {message.from_user.mention}\n\n@{Config.BOT_USERNAME} **Sizin Üçün Botların Siyahısın Gətirdi**\n\n"
     while len(botList) > 1:
       bot = botList.pop(0)
       text3 += f"├ 🔮 @{bot.username}\n"    
