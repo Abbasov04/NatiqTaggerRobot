@@ -30,10 +30,8 @@ async def my_handler(client, msj):
 
     if rnduser == sevgi2:
         rnduser = random.choice(BU_QRUP_USERLERI)
-        # sevgi2 = random.choice(BU_QRUP_USERLERI)
         if rnduser == sevgi2:
             rnduser = random.choice(BU_QRUP_USERLERI)
-            # sevgi2 = random.choice(BU_QRUP_USERLERI)
             if rnduser == sevgi2:
                 rnduser = random.choice(BU_QRUP_USERLERI)
                 if rnduser == sevgi2:
