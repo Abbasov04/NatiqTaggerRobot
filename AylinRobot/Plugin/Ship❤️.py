@@ -15,7 +15,7 @@ from AylinRobot.config import Config
 async def my_handler(client, msj):
     chat_id = msj.chat.id
 
-    w = await client.send_message(chat_id, f"Cütlük Seçilir")
+    w = await client.send_message(chat_id, f"{Config.BOT_USERNAME} Rondom Bir Cütlük Seçir")
 
     BU_QRUP_USERLERI = []
     async for member in client.get_chat_members(chat_id):
