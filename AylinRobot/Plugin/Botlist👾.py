@@ -168,7 +168,7 @@ async def bots(client, message):
       text3 += f"├ 🔮 @{bot.username}\n"    
     else:    
       bot = botList.pop(0)
-      text3 += f"└ 🔮@{bot.username}\n\n"
+      text3 += f"└ 🔮 @{bot.username}\n\n"
       text3 += f"**✅ Botların Ümumi Sayı**: {lenBotList}"  
       await app.send_message(message.chat.id, text3)
   except FloodWait as e:
