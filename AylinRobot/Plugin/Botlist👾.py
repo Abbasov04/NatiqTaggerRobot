@@ -103,12 +103,12 @@ async def remove(client, message):
   global stopProcess
   try: 
     try:
-      sender = await teletips.get_chat_member(message.chat.id, message.from_user.id)
+      sender = await app.get_chat_member(message.chat.id, message.from_user.id)
       has_permissions = sender.privileges
     except:
       has_permissions = message.sender_chat  
     if has_permissions:
-      bot = await teletips.get_chat_member(message.chat.id, "self")
+      bot = await app.get_chat_member(message.chat.id, "self")
       if bot.status == ChatMemberStatus.MEMBER:
         await message.reply("🕹 | ʟᴏ ʙᴇʟᴜᴍ ᴊᴀᴅɪ ᴀᴅᴍɪɴ ʙᴇɢᴏ ʙᴜᴀᴛ ʜᴀᴘᴜs ᴛᴏʟᴏʟ ᴀᴍᴀᴛ sɪʜ.")  
       else:  
