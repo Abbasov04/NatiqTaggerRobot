@@ -41,16 +41,16 @@ async def my_handler(client, msj):
                 elif rnduser != sevgi2:
                     await sleep(2.5)
                     await client.delete_messages(chat_id, w.id)
-                    await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+                    await client.send_message(chat_id, f"**Leyli Və Məcnun**\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
             elif rnduser != sevgi2:
                 await sleep(2.5)
                 await client.delete_messages(chat_id, w.id)
-                await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+                await client.send_message(chat_id, f"**Leyli Və Məcnun**\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
         elif rnduser != sevgi2:
             await sleep(2.5)
             await client.delete_messages(chat_id, w.id)
-            await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+            await client.send_message(chat_id, f"**Leyli Və Məcnun**\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
     elif rnduser != sevgi2:
         await sleep(2.5)
         await client.delete_messages(chat_id, w.id)
-        await client.send_message(chat_id, f"Leyli ve Mecnun\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
+        await client.send_message(chat_id, f"**Leyli Və Məcnun**\n\n{rnduser} + {sevgi2} = {random.randint(0, 100)}%❤️")
