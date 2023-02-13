@@ -159,7 +159,7 @@ async def admins(client, message):
 async def bots(client, message):  
   try:    
     botList = []
-    async for bot in teletips.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
+    async for bot in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
       botList.append(bot.user)
     lenBotList = len(botList) 
     text3  = f"**BOT LIST** - `{message.chat.title}`\n\n🤖 __Bots__\n"
