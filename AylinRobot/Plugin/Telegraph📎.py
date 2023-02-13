@@ -42,7 +42,7 @@ async def telegraph(client, message):
     try:
         response = upload_file(download_location)
     except Exception as document:
-        await message.reply(message, text=document)
+        await message.reply(message=document)
     else:
         await message.reply(f"**Budur Sizin Teleqraf Linkiniz :\n\nhttps://telegra.ph{response[0]}**", disable_web_page_preview=False)
     finally:
