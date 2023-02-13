@@ -3,7 +3,6 @@ import logging
 import random
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
-from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 
 
@@ -17,6 +16,7 @@ DICE = "🎲"
 
 @app.on_message(filters.command(["ox"]))
 async def ox(client, message):
+    rep_mesg_id = message.message_id
     if message.reply_to_message:
         rep_mesg_id = message.reply_to_message.message_id
     await client.send_dice(
