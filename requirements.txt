@@ -29,15 +29,11 @@ OpenCC
 pytube
 pillow
 hachoir
-dnspython
 pyromod
 psutil
 ffmpeg
-python-arq
 future
 pymongo[srv]
 bs4
 Heroku3
 telegram
-python-arq
-telethon
