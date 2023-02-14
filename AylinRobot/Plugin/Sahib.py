@@ -30,7 +30,7 @@ async def _(client, callback_query):
 	c_soru=random.choice(C_LİST) # Random Bir Cesaret Sorusu Seçelim
 	user = callback_query.from_user # Kullanıcın Kimliğini Alalım
 
-	c_q_d, user_id = callback_query.data.split() # Buttonlarımızın Komutlarını Alalım
+	c_q_d, user_id = callback_query.data_split() # Buttonlarımızın Komutlarını Alalım
 
 	# Sorunun Sorulmasını İsteyen Kişinin Komutu Kullanan Kullanıcı Olup Olmadığını Kontrol Edelim
 	if str(user.id) == str(user_id):
@@ -46,7 +46,7 @@ async def _(client, callback_query):
 
 		if c_q_d == "c_data":
 			await callback_query.answer(text="Cəsarət Sualını İstədiniz", show_alert=False)
-			await client.delete_messages(
+			await app.delete_messages(
 				chat_id=callback_query.message_chat_id,
 				message_ids=callback_query.message_message_id)
 			await callback_query.message.reply_text("**{user} Cəsarət Sualı İstədi** __{c_soru}__".format(user=user.mention, c_soru=c_soru))
@@ -65,7 +65,7 @@ async def _(client, message):
   global MOD
   user = message.from_user
   
-  if user.id not in OWNER_ID:
+  if user.id not in Config.OWNER_ID:
     await message.reply_text("**[?]** **Sən Admin Deyilsən!**")
     return
   MOD="cekle"
