@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from helpers import db
+from helpers.Database import db
 
 
 chatsdb = db.chats
