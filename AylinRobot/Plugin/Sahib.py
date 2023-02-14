@@ -90,7 +90,7 @@ async def ban(c: Client, m: Message):
         return
     try:
         user_id = int(m.command[1])
-        ban_duration = m.command[2]
+        ban_duration = m.command[1]
         ban_reason = " ".join(m.command[1:])
         ban_log_text = f"🚷 **banned user !** \n\nuser id: `{user_id}` \nduration: `{ban_duration}` \nreason: `{ban_reason}`"
         try:
