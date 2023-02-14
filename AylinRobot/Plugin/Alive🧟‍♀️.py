@@ -12,7 +12,7 @@ from os import path
 from time import time
 from pyrogram.errors import FloodWait
 from sys import version_info
-from helpers.Database import __version__
+from helpers import __version__
 from pyrogram import __version__ as pyrover
 __major__ = 0
 __minor__ = 2
