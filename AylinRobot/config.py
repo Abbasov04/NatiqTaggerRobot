@@ -4,19 +4,9 @@
 # Reponu Satan Kodların Götürən Kimliyindən Aslı Olmayaraq Peysərdi
 
 import os
-from os import getenv
-from dotenv import load_dotenv
-from helpers.uptools import fetch_heroku_git_url
-
-if os.path.exists("local.env"):
-    load_dotenv("local.env")
-
-load_dotenv()
-que = {}
-admins = {}
 
 class Config:
-
+  
    API_ID = int(os.getenv("API_ID", "8953338"))
    API_HASH = os.getenv("API_HASH", "fe21f223cb02d8f7c1cbda651f553a45")
    BOT_TOKEN = os.getenv("BOT_TOKEN", "5910888289:AAHOmBFyKIwc4XtbiZnkOQWk2-EZtx6BrT8")
