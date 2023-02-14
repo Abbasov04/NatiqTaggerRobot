@@ -15,7 +15,6 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 que = {}
-admins = {}
 
 class Config:
 
