@@ -32,6 +32,7 @@ class Config:
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "05a017d5-e3e5-424d-941f-3e60645e3141")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
    CHANNEL = os.environ.get("CHANNEL", "HuseynH")
+   BOT_NAME = os.environ.get("BOT_NAME", "Aylin")   
    SUPPORT = os.environ.get("SUPPORT", "HuseynH")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/e0332fa83406aa14ef0a1.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
