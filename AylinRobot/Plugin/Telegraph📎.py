@@ -21,7 +21,7 @@ async def tgm(client, message):
             local_path = await message.reply_to_message.download(location, progress=progress)
             await text.edit_text("📤 Telegraph Lingi Göndərilir...")
             upload_path = upload_file(local_path) 
-            await text.edit_text(f"**🌐 Budur Sizin Telegraph Linginiz**:\n<code>https://telegra.ph{upload_path[0]}</code>Ling Bot 💁‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})")     
+            await text.edit_text(f"**🌐 Budur Sizin Telegraph Linginiz**:\nhttps://telegra.ph{upload_path[0]} Göndərdi 🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME}) İstədi 💁‍♀️ {message.from_user.mention}")     
             os.remove(local_path) 
         except Exception as e:
             await text.edit_text(f"**❌ |  Fayl yükləmə uğursuz oldu\n\n<Səbəb: Bu mesajda endirilə bilən media yoxdur**")
