@@ -31,7 +31,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from helpers.Database.database import db
 from helpers.Database.dbtools import main_broadcast_handler
-from AylinRobot.Music.Song🎧 import get_text, humanbytes
+from AylinRobot.Music.Song import get_text, humanbytes
 
 
 users_db = MongoClient(DATABASE_URL)['users']
