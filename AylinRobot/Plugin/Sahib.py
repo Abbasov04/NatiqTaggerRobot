@@ -165,8 +165,8 @@ async def _banned_usrs(_, m: Message):
 
 # ====== UPDATER ======
 
-REPO_ = UPSTREAM_REPO
-BRANCH_ = U_BRANCH
+REPO_ = Config.UPSTREAM_REPO
+BRANCH_ = Config.U_BRANCH
 
 async def aexec(code, client, message):
     exec(
@@ -196,20 +196,20 @@ async def updatebot(_, message: Message):
         else:
             origin = repo.create_remote("upstream", REPO_)
         origin.fetch()
-        repo.create_head(U_BRANCH, origin.refs.main)
+        repo.create_head(Config.U_BRANCH, origin.refs.main)
         repo.heads.main.set_tracking_branch(origin.refs.main)
         repo.heads.main.checkout(True)
-    if repo.active_branch.name != U_BRANCH:
+    if repo.active_branch.name != Config.U_BRANCH:
         return await msg.edit(f"**sorry, you are using costum branch named:** `{repo.active_branch.name}`!\n\nchange to `{Config.U_BRANCH}` branch to continue update!")
     try:
         repo.create_remote("upstream", REPO_)
     except BaseException:
         pass
     ups_rem = repo.remote("upstream")
-    ups_rem.fetch(U_BRANCH)
-    if not HEROKU_URL:
+    ups_rem.fetch(Config.U_BRANCH)
+    if not Config.HEROKU_URL:
         try:
-            ups_rem.pull(U_BRANCH)
+            ups_rem.pull(Config.U_BRANCH)
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         await run_cmd("pip3 install --no-cache-dir -r requirements.txt")
@@ -221,13 +221,13 @@ async def updatebot(_, message: Message):
     else:
         await msg.edit("`heroku detected!`")
         await msg.edit("`updating and restarting is started, please wait for 5-10 minutes!`")
-        ups_rem.fetch(U_BRANCH)
+        ups_rem.fetch(Config.U_BRANCH)
         repo.git.reset("--hard", "FETCH_HEAD")
         if "heroku" in repo.remotes:
             remote = repo.remote("heroku")
-            remote.set_url(HEROKU_URL)
+            remote.set_url(Config.HEROKU_URL)
         else:
-            remote = repo.create_remote("heroku", HEROKU_URL)
+            remote = repo.create_remote("heroku", Config.HEROKU_URL)
         try:
             remote.push(refspec="HEAD:refs/heads/main", force=True)
         except BaseException as error:
@@ -263,7 +263,7 @@ async def edit_or_send_as_file(
     return
 
 
-heroku_client = heroku3.from_key(HEROKU_API_KEY) if HEROKU_API_KEY else None
+heroku_client = heroku3.from_key(Config.HEROKU_API_KEY) if Config.HEROKU_API_KEY else None
 
 
 def _check_heroku(func):
@@ -272,11 +272,11 @@ def _check_heroku(func):
         heroku_app = None
         if not heroku_client:
             await message.reply_text("`Please Add Heroku API Key To Use This Feature!`")
-        elif not HEROKU_APP_NAME:
+        elif not Config.HEROKU_APP_NAME:
             await edit_or_reply(message, "`Please Add Heroku APP Name To Use This Feature!`")
-        if HEROKU_APP_NAME and heroku_client:
+        if Config.HEROKU_APP_NAME and heroku_client:
             try:
-                heroku_app = heroku_client.app(HEROKU_APP_NAME)
+                heroku_app = heroku_client.app(Config.HEROKU_APP_NAME)
             except:
                 await message.reply_text(message, "`Heroku Api Key And App Name Doesn't Match! Check it again`")
             if heroku_app:
@@ -290,7 +290,7 @@ def _check_heroku(func):
 async def logswen(client: Client, message: Message, happ):
     msg = await message.reply_text("`please wait for a moment!`")
     logs = happ.get_log()
-    capt = f"Heroku logs of `{HEROKU_APP_NAME}`"
+    capt = f"Heroku logs of `{Config.HEROKU_APP_NAME}`"
     await edit_or_send_as_file(logs, msg, client, capt, "logs")
 
 
@@ -302,53 +302,9 @@ async def restart(client: Client, message: Message, hap):
     hap.restart()
 
 
-# Set Heroku Var
-@Client.on_message(command("setvar") & filters.user(OWNER_ID))
-@_check_heroku
-async def setvar(client: Client, message: Message, app_):
-    msg = await message.reply_text("`please wait...`")
-    heroku_var = app_.config()
-    _var = get_text(message)
-    if not _var:
-        await msg.edit("**usage:** `/setvar (var) (value)`")
-        return
-    if " " not in _var:
-        await msg.edit("**usage:** `/setvar (var) (value)`")
-        return
-    var_ = _var.split(" ", 1)
-    if len(var_) > 2:
-        await msg.edit("**usage:** `/setvar (var) (value)`")
-        return
-    _varname, _varvalue = var_
-    await msg.edit(f"**variable:** `{_varname}` \n**new value:** `{_varvalue}`")
-    heroku_var[_varname] = _varvalue
-
-
-# Delete Heroku Var
-@Client.on_message(command("delvar") & filters.user(OWNER_ID))
-@_check_heroku
-async def delvar(client: Client, message: Message, app_):
-    msg = await message.reply_text("`please wait...!`")
-    heroku_var = app_.config()
-    _var = get_text(message)
-    if not _var:
-        await msg.edit("`give a var name to delete!`")
-        return
-    if _var not in heroku_var:
-        await msg.edit("`this var doesn't exists!`")
-        return
-    await msg.edit(f"sucessfully deleted var `{_var}`")
-    del heroku_var[_var]
-
-
-# Modul From https://github.com/DevsExpo/Xtra-Plugins/blob/main/usage.py
-# Port By https://github.com/FeriEXP | https://t.me/xflicks
-# Usage Heroku Dyno
-
-
 heroku_client = None
-if HEROKU_API_KEY:
-    heroku_client = heroku3.from_key(HEROKU_API_KEY)
+if Config.HEROKU_API_KEY:
+    heroku_client = heroku3.from_key(Config.HEROKU_API_KEY)
     
 def _check_heroku(func):
     @wraps(func)
@@ -392,7 +348,7 @@ async def gib_usage(client, message, hc):
   acc_id = hc.account().id  
   headers = {
         "User-Agent": useragent,
-        "Authorization": f"Bearer {HEROKU_API_KEY}",
+        "Authorization": f"Bearer {Config.HEROKU_API_KEY}",
         "Accept": "application/vnd.heroku+json; version=3.account-quotas",
     }
   heroku_api = "https://api.heroku.com"
@@ -419,7 +375,7 @@ async def gib_usage(client, message, hc):
       AppPercentage = math.floor(App[0]["quota_used"] * 100 / quota)
   AppHours = math.floor(AppQuotaUsed / 60)
   AppMinutes = math.floor(AppQuotaUsed % 60)
-  app_name = HEROKU_APP_NAME or "Not Specified."
+  app_name = Config.HEROKU_APP_NAME or "Not Specified."
   return await msg_.edit(
         f"📅 <b>Dyno Usage {app_name}</b>\n\n"
         f"<b>✗ Usage in Hours And Minutes :</b>\n"
