@@ -37,7 +37,7 @@ async def _(client, callback_query):
 		# Kullanıcının Doğruluk Sorusu İstemiş İse Bu Kısım Calışır
 		if c_q_d == "d_data":
 			await callback_query.answer(text="Doğruluq Sualını İstədiniz", show_alert=False) # İlk Ekranda Uyarı Olarak Gösterelim
-			await client.delete_messages(
+			await app.delete_messages(
 				chat_id=callback_query.message.chat.id,
 				message_ids=callback_query.message.message_id) # Eski Mesajı Silelim
 
