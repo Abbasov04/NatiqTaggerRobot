@@ -38,8 +38,8 @@ async def _(client, callback_query):
 		if c_q_d == "d_data":
 			await callback_query.answer(text="Doğruluq Sualını İstədiniz", show_alert=False) # İlk Ekranda Uyarı Olarak Gösterelim
 			await app.delete_messages(
-				chat_id=callback_query.message.chat_id,
-				message_ids=callback_query.message.message_id) # Eski Mesajı Silelim
+				chat_id=callback_query.message_chat_id,
+				message_ids=callback_query.message_message_id) # Eski Mesajı Silelim
 
 			await callback_query.message.reply_text("**{user} Doğruluq Sualı İstədi:** __{d_soru}__".format(user=user.mention, d_soru=d_soru)) # Sonra Kullanıcıyı Etiketleyerek Sorusunu Gönderelim
 			return
@@ -47,8 +47,8 @@ async def _(client, callback_query):
 		if c_q_d == "c_data":
 			await callback_query.answer(text="Cəsarət Sualını İstədiniz", show_alert=False)
 			await client.delete_messages(
-				chat_id=callback_query.message.chat_id,
-				message_ids=callback_query.message.message_id)
+				chat_id=callback_query.message_chat_id,
+				message_ids=callback_query.message_message_id)
 			await callback_query.message.reply_text("**{user} Cəsarət Sualı İstədi** __{c_soru}__".format(user=user.mention, c_soru=c_soru))
 			return
 
