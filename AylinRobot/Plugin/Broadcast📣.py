@@ -4,7 +4,7 @@ from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from pyrogram import Client as USER
-from helpers.Database.chats import add_served_chat, blacklisted_chats, get_served_chats
+from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
 
 chat_watcher_group = 10
 
