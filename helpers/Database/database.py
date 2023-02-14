@@ -3,9 +3,9 @@ from typing import Dict, List, Union
 import motor.motor_asyncio
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 
-from KennedyMusic.config import DATABASE_URL
+from AylinRobot.config import Config
 
-MONGODB_CLI = MongoClient(DATABASE_URL)
+MONGODB_CLI = MongoClient(Config.MONGODB_URI)
 db = MONGODB_CLI.wbb
 dcmdb = db.handlers
 restart_stagedb = db.restart_stage
