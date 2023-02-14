@@ -18,8 +18,8 @@ from typing import List
 
 from pyrogram.types import Chat
 
-from KennedyMusic.cache.admins import get as gett
-from KennedyMusic.cache.admins import set
+from helpers.cache.admins import get as gett
+from helpers.cache.admins import set
 
 
 async def get_administrators(chat: Chat) -> List[int]:
