@@ -33,7 +33,7 @@ buttons = {
 }
 
 
-@app.on_message(filters.command(["song", f"song@{Config.BOT_USERNAME}"])
+@app.on_message(filters.command(["song", f"song@{Config.BOT_USERNAME}"]))
 def song(client, message):
 
     message.delete()
