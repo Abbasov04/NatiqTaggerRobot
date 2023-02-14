@@ -27,7 +27,6 @@ from os import environ, execle
 from inspect import getfullargspec
 from sys import version as pyver
 from pymongo import MongoClient
-from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from helpers.Database.database import db
