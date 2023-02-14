@@ -26,7 +26,6 @@ from functools import wraps
 from os import environ, execle
 from inspect import getfullargspec
 from sys import version as pyver
-from git import Repo
 from pymongo import MongoClient
 from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import Client, filters
