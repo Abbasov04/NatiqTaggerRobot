@@ -65,7 +65,7 @@ async def _(client, message):
   global MOD
   user = message.from_user
   
-  if user.id not in Config.OWNER_ID:
+  if user_id not in Config.OWNER_ID:
     await message.reply_text("**[?]** **Sən Admin Deyilsən!**")
     return
   MOD="cekle"
@@ -90,7 +90,7 @@ async def _(client, message):
   
   user = message.from_user
   
-  if user.id in Config.OWNER_ID:
+  if user_id in Config.OWNER_ID:
     if MOD=="cekle":
       C_LİST.append(str(message.text))
       MOD=None
