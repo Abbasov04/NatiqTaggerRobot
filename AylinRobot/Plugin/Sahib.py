@@ -38,7 +38,7 @@ async def _(client, callback_query):
 		if c_q_d == "d_data":
 			await callback_query.answer(text="Doğruluq Sualını İstədiniz", show_alert=False) # İlk Ekranda Uyarı Olarak Gösterelim
 			await app.delete_messages(
-				chat_id=callback_query.message.chat.id,
+				chat_id=callback_query.message.chat_id,
 				message_ids=callback_query.message.message_id) # Eski Mesajı Silelim
 
 			await callback_query.message.reply_text("**{user} Doğruluq Sualı İstədi:** __{d_soru}__".format(user=user.mention, d_soru=d_soru)) # Sonra Kullanıcıyı Etiketleyerek Sorusunu Gönderelim
