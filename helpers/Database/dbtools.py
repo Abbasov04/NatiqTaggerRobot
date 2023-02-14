@@ -16,7 +16,7 @@ from pyrogram.errors import (
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from AylinRobot.config import Config
-from helperes.Database.database import db, dcmdb
+from helpers.Database.database import db, dcmdb
 
 # Broadcast Tools
 
