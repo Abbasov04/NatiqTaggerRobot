@@ -1,6 +1,4 @@
 pyrogram==2.0.97
-git+https://github.com/pyrogram/pyrogram@master
-git+https://github.com/yt-dlp/yt-dlp@master
 py-tgcalls
 tglogging
 sqlalchemy
@@ -39,4 +37,3 @@ pymongo[srv]
 bs4
 Heroku3
 telegram
-gitpython
