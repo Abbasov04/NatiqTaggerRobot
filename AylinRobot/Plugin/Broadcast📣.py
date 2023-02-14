@@ -8,7 +8,7 @@ from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 
 from pyrogram import Client as USER
-from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
+from helpers.Database.chats import add_served_chat, blacklisted_chats, get_served_chats
 import motor.motor_asyncio
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram.types import Message
