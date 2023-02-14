@@ -4,6 +4,16 @@
 # Reponu Satan Kodların Götürən Kimliyindən Aslı Olmayaraq Peysərdi
 
 import os
+from os import getenv
+from dotenv import load_dotenv
+from KennedyMusic.helpers.uptools import fetch_heroku_git_url
+
+if os.path.exists("local.env"):
+    load_dotenv("local.env")
+
+load_dotenv()
+que = {}
+admins = {}
 
 class Config:
 
