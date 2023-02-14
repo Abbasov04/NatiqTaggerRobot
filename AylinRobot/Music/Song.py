@@ -3,7 +3,6 @@
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 from AylinRobot import AylinRobot as app
-from __future__ import unicode_literals
 from io import BytesIO
 from random import randint
 from urllib.parse import urlparse
