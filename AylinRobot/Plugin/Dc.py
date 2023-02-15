@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from AylinRobot.config import Config
 import random
 from pyrogram.errors import FloodWait
-from AylinRobot.sorular import D_LİST, C_LİST
+from AylinRobot.sorular import D_LIST, C_LIST
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # ============================ #
@@ -26,15 +26,15 @@ async def _(client, message):
 # Buttonlarımızı Yetkilendirelim
 @app.on_callback_query()
 async def _(client, callback_query):
-	d_soru=random.choice(D_LİST)
-	c_soru=random.choice(C_LİST)
+	d_soru=random.choice(D_LIST)
+	c_soru=random.choice(C_LIST)
 	user = callback_query.from_user 
 
 	c_q_d, user_id = callback_query.data.split()
 
 	if str(user.id) == str(user_id):
 		if c_q_d == "d_data":
-			await callback_query.answer(text="Siz doğruluğu seçdiz\n", show_alert=False)
+			await callback_query.answer(text=f"Siz doğruluğu seçdiz\n", show_alert=False)
 			await client.delete_messages(
 				chat_id=callback_query.message.chat.id,
 				message_ids=callback_query.message.message_id)
@@ -43,7 +43,7 @@ async def _(client, callback_query):
 			return
 
 		if c_q_d == "c_data":
-			await callback_query.answer(text="Cesaret Sorusu İstediniz", show_alert=False)
+			await callback_query.answer(text=f"Cesaret Sorusu İstediniz", show_alert=False)
 			await client.delete_messages(
 				chat_id=callback_query.message.chat.id,
 				message_ids=callback_query.message.message_id)
@@ -52,7 +52,7 @@ async def _(client, callback_query):
 
 
 	else:
-		await callback_query.answer(text="Bu əmri sən verməmisən!!", show_alert=False)
+		await callback_query.answer(text=f"Bu əmri sən verməmisən!!", show_alert=False)
 		return
 
 ############################
@@ -65,7 +65,7 @@ async def _(client, message):
     await message.reply_text("**Sən bot sahiblsən deyilsən!!**")
     return
   MOD="cet"
-  await message.reply_text("**Əlavə etmək istədiyiniz sualı yazın!!**")
+  await message.reply_text(f"**Əlavə etmək istədiyiniz sualı yazın!!**")
   
 @app.on_message(filters.command("det"))
 async def _(client, message):
@@ -73,27 +73,27 @@ async def _(client, message):
   user = message.from_user
   
   if user.id not in  {Config.OWNER_ID}:
-    await message.reply_text("**Sən bot sahiblsən deyilsən!!**")
+    await message.reply_text(f"**Sən bot sahiblsən deyilsən!!**")
     return
   MOD="cet"
-  await message.reply_text("**Əlavə etmək istədiyiniz sualı yazın!!**")
+  await message.reply_text(f"**Əlavə etmək istədiyiniz sualı yazın!!**")
 
 @app.on_message(filters.group)
 async def _(client, message):
   global MOD
-  global {AylinRobot.C_LIST}
-  global {AylinRobot.D_LIST}
+  global C_LIST
+  global D_LIST
   
   user = message.from_user
   
   if user.id in {Config.OWNER_ID}:
     if MOD=="cet":
-      C_LİST.append(str(message.text))
+      C_LIST.append(str(message.text))
       MOD=None
-      await message.reply_text("**Sən bot sahiblsən deyilsən!!**")
+      await message.reply_text(f"**Sən bot sahiblsən deyilsən!!**")
       return
     if MOD=="det":
-      C_LİST.append(str(message.text))
+      C_LIST.append(str(message.text))
       MOD=None
-      await message.reply_text("**Əlavə etmək istədiyiniz sualı yazın!!**")
+      await message.reply_text(f"**Əlavə etmək istədiyiniz sualı yazın!!**")
       return
