@@ -10,16 +10,16 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 async def ForceSub(bot: Client, event: Message):
 
     try:
-        invite_link = await bot.create_chat_invite_link(chat_id=(int(Config.PLAYLIST_NAME)))
+        invite_link = await bot.create_chat_invite_link(chat_id=(int(Config.PLAYLIST_ID)))
     except FloodWait as e:
         await asyncio.sleep(e.x)
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"{Config.PLAYLIST_NAME} kanalına məcburi abunə olmaq mümkün deyil\n\nXəta: {err}\n\Sahibimlə: 👨‍💻 @{Config.OWNER_NAME} Əlaqə Saxla")
+        print(f"{Config.PLAYLIST_ID} kanalına məcburi abunə olmaq mümkün deyil\n\nXəta: {err}\n\nSahibimlə: 👨‍💻 @{Config.OWNER_NAME} Əlaqə Saxla")
         return 200
     try:
-        user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL)), user_id=event.from_user.id)
+        user = await bot.get_chat_member(chat_id=(int(Config.PLAYLIST_ID)), user_id=event.from_user.id)
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=event.from_user.id,
