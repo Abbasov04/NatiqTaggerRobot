@@ -8,8 +8,8 @@ import psutil
 import shutil
 import string
 import asyncio
-from helper.database.add_user import AddUserToDatabase
-from helper.forcesub import ForceSub
+from helpers.database.add_user import AddUserToDatabase
+from helpers.forcesub import ForceSub
 from AylinRobot.config import Config
 from asyncio import TimeoutError
 from AylinRobot.translation import Translation
