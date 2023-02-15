@@ -46,6 +46,7 @@ async def ForceSub(bot: Client, event: Message):
                     ],
                 ]
             ),
+        )
         return 400
     except FloodWait as e:
         await asyncio.sleep(e.x)
