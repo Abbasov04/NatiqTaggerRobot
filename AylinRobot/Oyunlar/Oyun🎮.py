@@ -1,79 +1,29 @@
 import os
-import logging
-import random
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
-from pyrogram.errors import FloodWait
-from pyrogram.types import Message
-
-DART_E_MOJI = "🎯"
-BOWLING = "🎳"
-TRY_YOUR_LUCK = "🎰"
-GOAL_E_MOJI = "⚽"
-BASKETBALL = "🏀"
-DICE = "🎲"
 
 
-@app.on_message(filters.command(["ox"]))
-async def ox(client, message):
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
-    await client.send_dice(
-        chat_id=message.chat.id,
-        emoji=DART_E_MOJI
-    )
+@app.on_message(filters.command("zer"))
+async def roll_dice(bot, message):
+    await app.send_dice(message.chat.id, "🎲")
 
+
+@app.on_message(filters.command("ox"))                                      
+async def roll_arrow(bot, message):
+    await app.send_dice(message.chat.id, "🎯")
+
+@app.on_message(filters.command("top"))
+async def roll_goal(bot, message):
+    await app.send_dice(message.chat.id, "⚽️")
+
+@app.on_message(filters.command("jackpot"))
+async def roll_luck(bot, message):
+    await app.send_dice(message.chat.id, "🎰")
+
+@app.on_message(filters.command("basket"))
+async def roll_throw(bot, message):
+    await app.send_dice(message.chat.id, "🏀")
 
 @app.on_message(filters.command(["bowling"]))
-async def bowling(client, message):
-    rep_mesg_id = message.message_id
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
-    await client.send_dice(
-        chat_id=message.chat.id,
-        emoji=BOWLING
-    )
-
-
-@app.on_message(filters.command(["jackpot"]))
-async def jackpot(client, message):
-    rep_mesg_id = message.message_id
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
-    await client.send_dice(
-        chat_id=message.chat.id,
-        emoji=TRY_YOUR_LUCK
-    )
-
-
-@app.on_message(filters.command(["top"]))
-async def top(client, message):
-    rep_mesg_id = message.message_id
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
-    await client.send_dice(
-        chat_id=message.chat.id,
-        emoji=GOAL_E_MOJI
-    )
-
-
-@app.on_message(filters.command(["basket"]))
-async def basket(client, message):
-    rep_mesg_id = message.message_id
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
-    await client.send_dice(
-        chat_id=message.chat.id,
-        emoji=BASKETBALL
-    )
-
-@app.on_message(filters.command(["zer"]))
-async def basket(client, message):
-    rep_mesg_id = message.message_id
-    if message.reply_to_message:
-        rep_mesg_id = message.reply_to_message.message_id
-    await client.send_dice(
-        chat_id=message.chat.id,
-        emoji=DICE
-    )
-        
+async def roll_bowling(bot, message):
+    await app.send_dice(message.chat.id, "🎳")
