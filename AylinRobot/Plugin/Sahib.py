@@ -61,7 +61,7 @@ async def _(client, message):
   global MOD
   user = message.from_user
   
-  if user.id not in OWNER_ID:
+  if user.id not in {Config.OWNER_ID}:
     await message.reply_text("**Sən bot sahiblsən deyilsən!!**")
     return
   MOD="cet"
@@ -72,7 +72,7 @@ async def _(client, message):
   global MOD
   user = message.from_user
   
-  if user.id not in  OWNER_ID:
+  if user.id not in  {Config.OWNER_ID}:
     await message.reply_text("**Sən bot sahiblsən deyilsən!!**")
     return
   MOD="cet"
@@ -86,7 +86,7 @@ async def _(client, message):
   
   user = message.from_user
   
-  if user.id in OWNER_ID:
+  if user.id in {Config.OWNER_ID}:
     if MOD=="cet":
       C_LİST.append(str(message.text))
       MOD=None
