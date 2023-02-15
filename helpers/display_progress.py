@@ -1,6 +1,6 @@
 import math
 import time
-import config
+from AylinRobot.config import Config
 
 
 async def progress_for_pyrogram(current, total, ud_type, message, start):
@@ -21,7 +21,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
             ''.join(["○" for i in range(20 - math.floor(percentage / 5))])
         )
 
-        tmp = progress + config.PROGRESS.format(
+        tmp = progress + Config.PROGRESS.format(
             round(percentage, 2),
             humanbytes(current),
             humanbytes(total),
