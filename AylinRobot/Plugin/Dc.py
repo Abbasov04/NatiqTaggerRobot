@@ -8,7 +8,6 @@ from AylinRobot.sorular import D_LIST, C_LIST
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # ============================ #
-MOD = None
 
 def d_or_c(user_id):
 	BUTTON = [[InlineKeyboardButton(text="Doğruluq", callback_data = " ".join(["d_data",str(user_id)]))]]
@@ -54,46 +53,3 @@ async def _(client, callback_query):
 	else:
 		await callback_query.answer(text=f"Bu əmri sən verməmisən!!", show_alert=False)
 		return
-
-############################
-@app.on_message(filters.command("cet"))
-async def _(client, message):
-  global MOD
-  user = message.from_user
-  
-  if user.id not in {Config.OWNER_ID}:
-    await message.reply_text("**Sən bot sahiblsən deyilsən!!**")
-    return
-  MOD="cet"
-  await message.reply_text(f"**Əlavə etmək istədiyiniz sualı yazın!!**")
-  
-@app.on_message(filters.command("det"))
-async def _(client, message):
-  global MOD
-  user = message.from_user
-  
-  if user.id not in  {Config.OWNER_ID}:
-    await message.reply_text(f"**Sən bot sahiblsən deyilsən!!**")
-    return
-  MOD="cet"
-  await message.reply_text(f"**Əlavə etmək istədiyiniz sualı yazın!!**")
-
-@app.on_message(filters.group)
-async def _(client, message):
-  global MOD
-  global C_LIST
-  global D_LIST
-  
-  user = message.from_user
-  
-  if user.id in {Config.OWNER_ID}:
-    if MOD=="cet":
-      C_LIST.append(str(message.text))
-      MOD=None
-      await message.reply_text(f"**Sən bot sahiblsən deyilsən!!**")
-      return
-    if MOD=="det":
-      C_LIST.append(str(message.text))
-      MOD=None
-      await message.reply_text(f"**Əlavə etmək istədiyiniz sualı yazın!!**")
-      return
