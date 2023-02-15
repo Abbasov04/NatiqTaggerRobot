@@ -18,7 +18,6 @@ class Config:
    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001872296360"))
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobotPlaylist")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001872296360"))
-   BAN_GROUP = int(os.environ.get("BAN_GROUP", "-1001872296360"))
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "05a017d5-e3e5-424d-941f-3e60645e3141")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
    CHANNEL = os.environ.get("CHANNEL", "HuseynH")
