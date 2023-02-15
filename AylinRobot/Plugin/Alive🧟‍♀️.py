@@ -60,7 +60,7 @@ async def Alive(client: Client, message: Message):
         ]
     )
 
-    alive = f"**Haycan❤️ {message.from_user.mention()}, Mənim Adım 🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})**\n\n✨ Mən Super İşləyirəm\n🍀 Sahibim: [{Config.ALIVE_NAME}](https://t.me/{Config.OWNER_NAME})\n✨ Bot Versiyası: `v{__version__}`\n🍀 Pyrogram Versiyası: `{pyrover}`\n✨ Python Versiyası: `{__python_version__}`\n🍀 İş vaxtı Status: `{uptime}`\n\n**Məni Qrupunuza əlavə etdiyiniz üçün təşəkkürlər ** ❤"
+    alive = f"**Haycan❤️ {message.from_user.mention()}, Mənim Adım🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})**\n\n✨ Mən Super İşləyirəm\n🍀 Sahibim: [{Config.ALIVE_NAME}](https://t.me/{Config.OWNER_NAME})\n✨ Bot Versiyası: `v{__version__}`\n🍀 Pyrogram Versiyası: `{pyrover}`\n✨ Python Versiyası: `{__python_version__}`\n🍀 İş vaxtı Status: `{uptime}`\n\n**Məni Qrupunuza əlavə etdiyiniz üçün təşəkkürlər ** ❤"
 
     await message.reply_video(
         video=f"{Config.ALIVE_IMG}",
