@@ -223,3 +223,14 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
             else:
                 new_chat_id = str(chat_id)[1:]
             await app.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
+
+def humanbytes(size):
+    if not size:
+        return ""
+    power = 2**10
+    raised_to_pow = 0
+    dict_power_n = {0: "", 1: "K", 2: "M", 3: "G", 4: "T"}
+    while size > power:
+        size /= power
+        raised_to_pow += 1
+    return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"            
