@@ -6,9 +6,8 @@ from AylinRobot import AylinRobot as app
 
 
 
-@app.on_message(filters.command("log") & filters.user(5856648198)) #
+@app.on_message(filters.command("log") & filters.user(Config.OWNER_ID)) #
 async def logger(client, msj):
-    # ayuyes
     chat_id = msj.chat.id
     reply = msj.reply_to_message
     if reply:
@@ -16,7 +15,7 @@ async def logger(client, msj):
         await client.delete_messages(chat_id, msj.id)
         await client.forward_messages(
             chat_id=chat_id,
-            from_chat_id=msj.chat.id, # BURA LOG QRUPUNUN IDSINI YAZ
+            from_chat_id=msj.chat.id, {Config.LOG_CHANNEL},
             message_ids=replyid
         )
         await client.send_message(chat_id, f"{msj.from_user.mention} mesaj uğurla log qrupuna göndərildi.")
