@@ -1,4 +1,4 @@
-import config
-from helper.database.database import Database
+from AylinRobot.config import Config
+from helpers.database.database import Database
 
-db = Database(config.MONGODB_URI, config.SESSION_NAME)
+db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
