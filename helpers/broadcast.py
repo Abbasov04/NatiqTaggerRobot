@@ -15,9 +15,9 @@ broadcast_ids = {}
 
 async def send_msg(user_id, message):
     try:
-        if config.BROADCAST_AS_COPY is False:
+        if Config.BROADCAST_AS_COPY is False:
             await message.forward(chat_id=user_id)
-        elif config.BROADCAST_AS_COPY is True:
+        elif Config.BROADCAST_AS_COPY is True:
             await message.copy(chat_id=user_id)
         return 200, None
     except FloodWait as e:
@@ -41,7 +41,7 @@ async def broadcast_handler(m: Message):
         if not broadcast_ids.get(broadcast_id):
             break
     out = await m.reply_text(
-        text=f"Broadcast Started! You will be notified with log file when all the users are notified 😊\n\n@leosongdownloaderbot 🇱🇰"
+        text=f"Yayım Başladı!  Bütün istifadəçilər xəbərdar edildikdə log faylı ilə bildiriş alacaqsınız 😊\n\n🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})"
     )
     start_time = time.time()
     total_users = await db.total_users_count()
@@ -86,13 +86,13 @@ async def broadcast_handler(m: Message):
     await out.delete()
     if failed == 0:
         await m.reply_text(
-            text=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed 😊\n\n@leosongdownloaderbot 🇱🇰",
+            text=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n\n🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})",
             quote=True
         )
     else:
         await m.reply_document(
             document='broadcast.txt',
-            caption=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed 😊\n\@leosongdownloaderbot 🇱🇰",
+            caption=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n\n🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})",
             quote=True
         )
     await aiofiles.os.remove('broadcast.txt')
