@@ -96,21 +96,21 @@ async def cb_data(client, message):
                 user = await client.get_chat_member(int(Config.UPDATES_CHANNEL), message.message.chat.id)
                 if user.status == "kicked":
                     await message.message.edit(
-                        text=f"Üzr istəyirik, cənab, Məndən istifadə etmək qadağandır.  Dəstək Qrupum ilə əlaqə saxlayın @{Config.CHANNEL}.",
+                        text=f"Məndən istifadə etmək qadağandır. Sahibim @{Config.OWNER_NAME} İlə Əlaqə Saxlayın.",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
                 await message.message.edit(
-                    text="<b>Salam</b> {},\n\n<b>Siz hələ də Yeniləmələr Kanalımıza qoşulmamısınız ☹️ \nLütfən, qoşulun və 'Yenilə 🔄' düyməsini basın</b>".format(message.from_user.mention),
+                    text="<b>Salam</b> {},\n\n<b>Siz hələ də Kanalımıza qoşulmamısınız ☹️ \nLütfən, Kanalımıza qoşulun və 'Yenilə 🔄' düyməsini basın</b>".format(message.from_user.mention),
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("👨‍💻 Yeniliklər Kanalı", url=invite_link.invite_link)
+                                InlineKeyboardButton("👨‍💻 Kanalımız", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("Yenilə 🔄", callback_data="refreshme")
+                                InlineKeyboardButton("📣 Yenilə", callback_data="refreshme")
                             ]
                         ]
                     ),
@@ -119,7 +119,7 @@ async def cb_data(client, message):
                 return
             except Exception:
                 await message.message.edit(
-                    text=f"Nə isə səhv getdi.  Dəstək Qrupum @{Config.CHANNEL} ilə əlaqə saxlayın.",
+                    text=f"Nə isə səhv getdi. Sahibim @{Config.OWNER_NAME} ilə əlaqə saxlayın.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
