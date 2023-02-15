@@ -127,7 +127,7 @@ async def cb_data(client, message):
         await message.message.edit(
             text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
             disable_web_page_preview=True,
-            reply_markup=Translation.START_BUTTONS,
+            reply_markup=Button.START_BUTTONS,
         )
     else:
         await message.message.delete()
