@@ -224,6 +224,12 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
                 new_chat_id = str(chat_id)[1:]
             await app.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
 
+@app.on_message()
+async def G4RIP(app: Client, cmd: Message):
+    await handle_user_status(app, cmd)
+
+
+
 def humanbytes(size):
     if not size:
         return ""
