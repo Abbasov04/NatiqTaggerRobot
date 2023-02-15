@@ -3,6 +3,7 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
+from pyrogram.types import  Message
 from helpers.database.access_db import db
 from helpers.broadcast import broadcast_handler
 from helpers.display_progress import humanbytes
