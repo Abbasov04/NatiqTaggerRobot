@@ -21,9 +21,7 @@ async def ox(client, message):
         rep_mesg_id = message.reply_to_message.message_id
     await client.send_dice(
         chat_id=message.chat.id,
-        emoji=DART_E_MOJI,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        emoji=DART_E_MOJI
     )
 
 
@@ -34,9 +32,7 @@ async def bowling(client, message):
         rep_mesg_id = message.reply_to_message.message_id
     await client.send_dice(
         chat_id=message.chat.id,
-        emoji=BOWLING,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        emoji=BOWLING
     )
 
 
@@ -47,9 +43,7 @@ async def jackpot(client, message):
         rep_mesg_id = message.reply_to_message.message_id
     await client.send_dice(
         chat_id=message.chat.id,
-        emoji=TRY_YOUR_LUCK,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        emoji=TRY_YOUR_LUCK
     )
 
 
@@ -60,9 +54,7 @@ async def top(client, message):
         rep_mesg_id = message.reply_to_message.message_id
     await client.send_dice(
         chat_id=message.chat.id,
-        emoji=GOAL_E_MOJI,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        emoji=GOAL_E_MOJI
     )
 
 
@@ -73,9 +65,7 @@ async def basket(client, message):
         rep_mesg_id = message.reply_to_message.message_id
     await client.send_dice(
         chat_id=message.chat.id,
-        emoji=BASKETBALL,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        emoji=BASKETBALL
     )
 
 @app.on_message(filters.command(["zer"]))
@@ -85,8 +75,6 @@ async def basket(client, message):
         rep_mesg_id = message.reply_to_message.message_id
     await client.send_dice(
         chat_id=message.chat.id,
-        emoji=DICE,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        emoji=DICE
     )
         
