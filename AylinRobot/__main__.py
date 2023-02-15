@@ -8,6 +8,8 @@ import psutil
 import shutil
 import string
 import asyncio
+from helper.database.add_user import AddUserToDatabase
+from helper.forcesub import ForceSub
 from AylinRobot.config import Config
 from asyncio import TimeoutError
 from AylinRobot.translation import Translation
@@ -27,6 +29,10 @@ AylinIMG = f"{Config.START_IMG}"
 
 @app.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def start(client, message):
+    await AddUserToDatabase(client, message)
+    FSub = await ForceSub(client, message)
+    if FSub == 400:
+        return
     await message.reply_photo(
         AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME,Config.OWNER_NAME),
