@@ -1,5 +1,6 @@
-# <Leo Projects>
-# @Naviya2
+#KODU ƏKMƏ PEYSƏR 
+#SAHİB HuseynH
+#Satışa Qoymaq Qadağandır
 
 import datetime
 import motor.motor_asyncio
