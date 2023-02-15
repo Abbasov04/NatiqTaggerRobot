@@ -5,6 +5,7 @@ from random import choice
 from AylinRobot import AylinRobot as app
 from pyrogram import filters
 from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
 
 
 
