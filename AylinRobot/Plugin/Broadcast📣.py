@@ -130,5 +130,7 @@ async def botstats(app: Client, message: Message):
     disk_usage = psutil.disk_usage("/").percent
     total_users = await db.total_users_count()
     await g4rip.edit(text=LAN.STATS.format(Config.BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
-db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)    
+db = Database(Config.MONGODB_URI, Config.BOT_USERNAME) 
+mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
+dcmdb = mongo_db_veritabani.handlers
     
