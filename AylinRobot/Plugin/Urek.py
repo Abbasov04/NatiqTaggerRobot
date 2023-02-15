@@ -26,5 +26,5 @@ async def startFunc(client, msj):
     #time.sleep(1.6)
     #son = g.edit('💙💚💛💜🤍🤎♥️\n💙💚💛💜🤍🤎♥️\n💙💚💛💜🤍🤎♥️\n💙💚💛💜🤍🤎♥️\n💙💚💛💜🤍🤎♥️\n💙💚💛💜🤍🤎♥️\n💙💚💛💜🤍🤎♥️')
     await sleep(0.7)
-    client.delete_messages(chat_id, g.id)
-    client.send_message(chat_id, f"{random.choice(urekler)}")
+   await client.delete_messages(chat_id, g.id)
+   await client.send_message(chat_id, f"{random.choice(urekler)}")
