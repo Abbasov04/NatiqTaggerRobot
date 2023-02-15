@@ -10,7 +10,7 @@ from pyrogram import Client, filters
 
 
 @app.on_message(filters.command("urek"))
-def startFunc(client, msj):
+async def startFunc(client, msj):
     chat_id = msj.chat.id
     urekler = ['💙','💚','💛','💜','🤍','🤎','♥️']
     m = msj
