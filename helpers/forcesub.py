@@ -52,7 +52,7 @@ async def ForceSub(app: Client, event: Message):
         return 400
     except FloodWait as e:
         await asyncio.sleep(e.x)
-        fix_ = await ForceSub(bot, event)
+        fix_ = await ForceSub(app, event)
         return fix_
     except Exception as err:
         print(f"Nə isə səhv getdi!  Məcburi Abunə olmaq mümkün deyil.\nXəta: {err}\n\nDəstək Qrupu ilə əlaqə saxlayın: @{Config.CHANNEL}")
