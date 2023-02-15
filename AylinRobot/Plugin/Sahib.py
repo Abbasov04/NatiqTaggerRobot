@@ -47,7 +47,7 @@ async def _(client, callback_query):
 			await client.delete_messages(
 				chat_id=callback_query.message.chat.id,
 				message_ids=callback_query.message.message_id)
-			await callback_query.message.reply_text("Siz cəsarət seçdiz\n__{c_soru}__".format(user=user.mention, c_soru=c_soru))
+			await callback_query.message.reply_text(f"Siz cəsarət seçdiz\n__{c_soru}__".format(user=user.mention, c_soru=c_soru))
 			return
 
 
