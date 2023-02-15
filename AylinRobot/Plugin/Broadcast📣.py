@@ -120,7 +120,7 @@ async def broadcast_message(_, message):
 
 
 
-@app.on_message(filters.private & filters.command("status") & filters.user(config.BOT_OWNER))
+@app.on_message(filters.command("stats") & filters.user(Config.OWNER_ID))
 async def show_status_count(_, client: Message):
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
