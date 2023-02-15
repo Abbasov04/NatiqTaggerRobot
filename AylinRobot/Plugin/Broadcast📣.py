@@ -29,7 +29,7 @@ async def chat_watcher_func(_, message):
     await add_served_chat(chat_id)
 
 
-@app.on_message(filters.private & filters.command("broadcast") & filters.user(config.BOT_OWNER) & filters.reply)
+@app.on_message(filters.command("broadcastall") & filters.user(Config.OWNER_ID))
 async def _broadcast(_, client: Message):
     await broadcast_handler(client)
 
