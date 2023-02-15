@@ -27,7 +27,7 @@ from AylinRobot import LOGGER
 
 AylinIMG = f"{Config.START_IMG}"
 
-@app.on_message(filters.command(["start"]))
+@app.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def start(client, message):
     await AddUserToDatabase(client, message)
     FSub = await ForceSub(client, message)
