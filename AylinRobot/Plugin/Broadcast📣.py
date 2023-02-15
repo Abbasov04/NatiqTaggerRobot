@@ -431,7 +431,7 @@ async def _banned_usrs(_, m: Message):
         text += LAN.BLOCKS.format(user_id, ban_duration, banned_on, ban_reason)
     reply_text = LAN.TOTAL_BLOCK.format(banned_usr_count, text)
     if len(reply_text) > 4096:
-        with open("banned-user-list.txt", "w") as f:
+        with open("banned-user-list.txt") as f:
             f.write(reply_text)
         await m.reply_document("banned-user-list.txt", True)
         os.remove("banned-user-list.txt")
