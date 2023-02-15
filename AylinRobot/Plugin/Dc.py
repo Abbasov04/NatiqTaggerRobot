@@ -81,8 +81,8 @@ async def _(client, message):
 @app.on_message(filters.group)
 async def _(client, message):
   global MOD
-  global C_LİST
-  global D_LİST
+  global {AylinRobot.C_LIST}
+  global {AylinRobot.D_LIST}
   
   user = message.from_user
   
