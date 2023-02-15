@@ -5,7 +5,7 @@ import asyncio
 import datetime
 import aiofiles.os
 import traceback
-import config
+from AylinRobot.config import Config
 from helper.database.access_db import db
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
