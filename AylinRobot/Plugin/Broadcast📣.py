@@ -3,6 +3,7 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
+from AylinRobot.translation import *
 from pyrogram import Client as USER
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
 
@@ -107,3 +108,25 @@ async def broadcast_message(_, message):
         except Exception:
             pass
     await m.edit(f"✈️ **Broadcasted message in {sent} chats.**")
+
+
+@app.on_message(filters.command(["stats"]) & filters.user(Config.OWNER_ID))
+async def botstats(app: Client, message: Message):
+    g4rip = await app.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
+    all_users = await db.get_all_users()
+    groups = 0
+    pms = 0
+    async for user in all_users:
+        if str(user["id"]).startswith("-"):
+            groups += 1
+        else:
+            pms += 1
+    total, used, free = shutil.disk_usage(".")
+    total = humanbytes(total)
+    used = humanbytes(used)
+    free = humanbytes(free)
+    cpu_usage = psutil.cpu_percent()
+    ram_usage = psutil.virtual_memory().percent
+    disk_usage = psutil.disk_usage("/").percent
+    total_users = await db.total_users_count()
+    await g4rip.edit(text=LAN.STATS.format(Config.BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
