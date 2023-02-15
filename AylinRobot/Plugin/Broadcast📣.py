@@ -2,6 +2,8 @@ import asyncio
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
+import motor.motor_asyncio
+from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram.types import Message
 from pyrogram import Client, filters, __version__ as USER
 from AylinRobot.translation import *
