@@ -5,7 +5,8 @@ from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 
 
-@app.on_message(filters.command("log") & filters.user(Config.LOG_CHANNEL))
+
+@app.on_message(filters.command("log") & filters.user(5856648198)) #
 async def logger(client, msj):
     # ayuyes
     chat_id = msj.chat.id
