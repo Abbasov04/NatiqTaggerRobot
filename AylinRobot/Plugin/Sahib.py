@@ -82,7 +82,7 @@ async def _(client, message):
   MOD="cekle"
   await message.reply_text("**[?]** **Əlavə etmək istədiyiniz Doğruluq Sualını daxil edin!**")
 
-@app.on_message(filters.groups)
+@app.on_message(filters.group)
 async def _(client, message):
   global MOD
   global C_LİST
