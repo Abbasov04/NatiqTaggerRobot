@@ -22,8 +22,7 @@ async def ox(client, message):
     await client.send_dice(
         chat_id=message.chat.id,
         emoji=DART_E_MOJI,
-        disable_notification=True,
-        reply_to_message_id=rep_mesg_id
+        disable_notification=True
     )
 
 
