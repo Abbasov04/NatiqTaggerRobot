@@ -10,10 +10,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 async def ForceSub(app: Client, event: Message):
 
     try:
-        invite_link = await bot.create_chat_invite_link(chat_id=(int(Config.UPDATES_CHANNEL)))
+        invite_link = await app.create_chat_invite_link(chat_id=(int(Config.UPDATES_CHANNEL)))
     except FloodWait as e:
         await asyncio.sleep(e.x)
-        fix_ = await ForceSub(bot, event)
+        fix_ = await ForceSub(app, event)
         return fix_
     except Exception as err:
         print(f"{Config.UPDATES_CHANNEL} kanalına məcburi abunə olmaq mümkün deyil\n\nXəta: {err}\n\nDəstək Qrupu ilə əlaqə saxlayın: @{Config.CHANNEL}")
