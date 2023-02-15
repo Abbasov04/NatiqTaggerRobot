@@ -87,6 +87,48 @@ async def cb_data(client, message):
             reply_markup=Button.TAGGER_BUTTONS,
             disable_web_page_preview=True
         )                
+        
+        
+   elif message.data == "refreshme":
+        if Config.UPDATES_CHANNEL:
+            invite_link = await client.create_chat_invite_link(int(config.UPDATES_CHANNEL))
+            try:
+                user = await client.get_chat_member(int(Config.UPDATES_CHANNEL), message.message.chat.id)
+                if user.status == "kicked":
+                    await message.message.edit(
+                        text=f"Üzr istəyirik, cənab, Məndən istifadə etmək qadağandır.  Dəstək Qrupum ilə əlaqə saxlayın @{Config.CHANNEL}.",
+                        parse_mode="markdown",
+                        disable_web_page_preview=True
+                    )
+                    return
+            except UserNotParticipant:
+                await message.message.edit(
+                    text="<b>Salam</b> {},\n\n<b>Siz hələ də Yeniləmələr Kanalımıza qoşulmamısınız ☹️ \nLütfən, qoşulun və 'Yenilə 🔄' düyməsini basın</b>".format(message.from_user.mention),
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("👨‍💻 Yeniliklər Kanalı", url=invite_link.invite_link)
+                            ],
+                            [
+                                InlineKeyboardButton("Yenilə 🔄", callback_data="refreshme")
+                            ]
+                        ]
+                    ),
+                    parse_mode="HTML"
+                )
+                return
+            except Exception:
+                await message.message.edit(
+                    text=f"Nə isə səhv getdi.  Dəstək Qrupum @{Config.CHANNEL} ilə əlaqə saxlayın.",
+                    parse_mode="markdown",
+                    disable_web_page_preview=True
+                )
+                return
+        await message.message.edit(
+            text=Translation.START_TEXT.format(message.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup=Translation.START_BUTTONS,
+        )
     else:
         await message.message.delete()
         
