@@ -91,7 +91,7 @@ async def cb_data(client, message):
         
    elif message.data == "refreshme":
         if Config.UPDATES_CHANNEL:
-            invite_link = await client.create_chat_invite_link(int(config.UPDATES_CHANNEL))
+            invite_link = await client.create_chat_invite_link(int(Config.UPDATES_CHANNEL))
             try:
                 user = await client.get_chat_member(int(Config.UPDATES_CHANNEL), message.message.chat.id)
                 if user.status == "kicked":
@@ -125,7 +125,7 @@ async def cb_data(client, message):
                 )
                 return
         await message.message.edit(
-            text=Translation.START_TEXT.format(message.from_user.mention),
+            text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
             disable_web_page_preview=True,
             reply_markup=Translation.START_BUTTONS,
         )
