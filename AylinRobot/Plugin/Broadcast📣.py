@@ -367,7 +367,7 @@ async def ban(c: Client, m: Message):
         elif len(m.command) == 3:
             user_id = int(m.command[1])
             ban_duration = 9999
-            ban_reason = " ".join(m.command[2:])
+            ban_reason = " ".join(m.command[1:])
     
         if str(user_id).startswith("-"):
             try:    
