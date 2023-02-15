@@ -19,7 +19,7 @@ async def ForceSub(app: Client, event: Message):
         print(f"{Config.UPDATES_CHANNEL} kanalına məcburi abunə olmaq mümkün deyil\n\nXəta: {err}\n\nDəstək Qrupu ilə əlaqə saxlayın: @{Config.CHANNEL}")
         return 200
     try:
-        user = await app.get_chat_member(chat_id=(int(config.UPDATES_CHANNEL)), user_id=event.from_user.id)
+        user = await app.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL)), user_id=event.from_user.id)
         if user.status == "kicked":
             await app.send_message(
                 chat_id=event.from_user.id,
@@ -32,7 +32,7 @@ async def ForceSub(app: Client, event: Message):
         else:
             return 200
     except UserNotParticipant:
-        await bot.send_message(
+        await app.send_message(
             chat_id=event.from_user.id,
             text="<b>Salam {} 👋\n\nYeniləmələr Kanalımıza abunə olana qədər məndən istifadə edə bilməzsiniz ☹️\n\nOdur ki, aşağıdakı düymə ilə Yeniləmələr Kanalımıza qoşulun və 'Yenilə 🔄' düyməsini sıxın 😊</b>".format(event.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
