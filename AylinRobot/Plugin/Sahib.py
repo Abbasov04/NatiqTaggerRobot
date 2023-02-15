@@ -39,7 +39,7 @@ async def _(client, callback_query):
 				chat_id=callback_query.message.chat.id,
 				message_ids=callback_query.message.message_id)
 
-			await callback_query.message.reply_text("**{user} doğruluq sualın gəldi!:**\n\n__{d_soru}__".format(user=user.mention, d_soru=d_soru)) # Sonra Kullanıcıyı Etiketleyerek Sorusunu Gönderelim
+			await callback_query.message.reply_text(f"**{user} doğruluq sualın gəldi!:**\n\n__{d_soru}__".format(user=user.mention, d_soru=d_soru)) # Sonra Kullanıcıyı Etiketleyerek Sorusunu Gönderelim
 			return
 
 		if c_q_d == "c_data":
