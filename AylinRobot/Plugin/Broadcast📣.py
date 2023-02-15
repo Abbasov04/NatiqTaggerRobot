@@ -1,12 +1,10 @@
 import asyncio
-from pyrogram import filters
 from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 from AylinRobot import AylinRobot as app
 from pyrogram.types import Message
-from pyrogram import Client, filters, __version__
+from pyrogram import Client, filters, __version__ as USER
 from AylinRobot.translation import *
-from pyrogram import Client as USER
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
 
 chat_watcher_group = 10
