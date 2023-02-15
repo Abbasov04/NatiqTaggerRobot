@@ -86,7 +86,7 @@ async def _(client, message):
   
   user = message.from_user
   
-    if user.id in OWNER_ID:
+  if user.id in OWNER_ID:
     if MOD=="cet":
       C_LİST.append(str(message.text))
       MOD=None
