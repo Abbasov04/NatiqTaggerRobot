@@ -3,6 +3,7 @@ from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 from AylinRobot.config import Config
 import random
+from pyrogram.errors import FloodWait
 from AylinRobot.sorular import D_LİST, C_LİST
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -14,7 +15,7 @@ def d_or_c(user_id):
 	BUTTON += [[InlineKeyboardButton(text="Cəsarət", callback_data = " ".join(["c_data",str(user_id)]))]]
 	return InlineKeyboardMarkup(BUTTON)
 
-@app.on_message(filters.command("game"))
+@app.on_message(filters.command("dc"))
 async def _(client, message):
 	user = message.from_user
 
