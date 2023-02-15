@@ -7,7 +7,7 @@ from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 
-async def ForceSub(bot: Client, event: Message):
+async def ForceSub(app: Client, event: Message):
 
     try:
         invite_link = await bot.create_chat_invite_link(chat_id=(int(Config.UPDATES_CHANNEL)))
