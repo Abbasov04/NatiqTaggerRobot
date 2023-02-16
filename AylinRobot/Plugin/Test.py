@@ -37,23 +37,9 @@ class Database:
         await self.col.insert_one(user)
 
     async def is_user_exist(self, id): # Bir kullanıcının veritabında olup olmadığını kontrol eder.
-        user = await self.col.find_one({"id": int(id)})
-        return bool(user)
 
-    async def total_users_count(self): # Veritabanındaki toplam kullanıcıları sayar.
-        count = await self.col.count_documents({})
-        return count
-
-
-
-        ban_status = dict(
-            is_banned=False,
-            ban_duration=0,
-            banned_on=datetime.date.max.isoformat(),
-            ban_reason="",
-        )
-        await self.col.update_one({"id": id}, {"$set": {"ban_status": ban_status}})
-
+    async def total_users_count(self):
+      
 
 
 db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
