@@ -15,7 +15,7 @@ async def commit(_, message):
     await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup=BUTTON)
     
 BUTTON = reply_markup=InlineKeyboardMarkup(
-[[InlineKeyboardButton("🇦🇿 Şəhid", callback_data="deyis")]])
+[[InlineKeyboardButton("🇦🇿 Şəhid", callback_data="deyis")]]),
 
 BAGLA = reply_markup=InlineKeyboardMarkup(
 InlineKeyboardButton("🔐 Bağla", callback_data="close")]])
