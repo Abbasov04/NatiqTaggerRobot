@@ -97,7 +97,7 @@ async def handle_user_status(app: Client, cmd: Message): # Kullanıcı kontrolü
         else:
             await db.add_user(chat_id)
             chat = bot.get_chat(chat_id)
-            if str(chat_id).startswith(f"{Config.LOG_CHANNEL}"):
+            if str(chat_id).startswith:
                 new_chat_id = str(chat_id)[4:]
             else:
                 new_chat_id = str(chat_id)[1:]
