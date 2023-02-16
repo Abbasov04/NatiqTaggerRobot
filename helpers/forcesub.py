@@ -16,14 +16,14 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"{Config.PLAYLIST_ID} kanalına məcburi abunə olmaq mümkün deyil\n\nXəta: {err}\n\nSahibimlə: 👨‍💻 @{Config.OWNER_NAME} Əlaqə Saxla")
+        print(f"{Config.PLAYLIST_ID} Kanalına Məcburi Abunə Olmaq Mümkün Deyil\n\nXəta: {err}\n\nSahibimlə: 👨‍💻 @{Config.OWNER_NAME} Əlaqə Saxla")
         return 200
     try:
         user = await bot.get_chat_member(chat_id=(int(Config.PLAYLIST_ID)), user_id=event.from_user.id)
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=event.from_user.id,
-                text=f" Məndən istifadə etmək qadağandır ☹️\nSahibimlə 👨‍💻 @{Config.OWNER_NAME} Əlaqə Saxla..",
+                text=f" Məndən İstifadə Etmək qadağandır ☹️\nSahibimlə 👨‍💻 @{Config.OWNER_NAME} Əlaqə Saxla..",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=event.message_id
@@ -34,7 +34,7 @@ async def ForceSub(bot: Client, event: Message):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=event.from_user.id,
-            text="<b>Salam {} 👋\n\nKanalımıza abunə olana qədər məndən istifadə edə bilməzsiniz ☹️\n\nOdur ki, aşağıdakı düymə ilə Kanalımıza qoşulun və '🙋‍♀️ Yenilə' düyməsini sıxın 😊</b>".format(event.from_user.mention),
+            text="<b>Salam {} 👋\n\nKanalımıza abunə olana qədər məndən istifadə edə bilməzsiniz ☹️\n\nOdur ki, aşağıdakı düymə ilə Kanalımıza qoşulun və 🙎‍♀️ `Yenilə` düyməsini sıxın 😊</b>".format(event.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
