@@ -340,7 +340,7 @@ async def G4RIP(app: Client, cmd: Message):
 
 
 # Broadcast komutu
-@app.on_message(filters.command("broadcastall") & filters.user(Config.OWNER_ID) & filters.reply)
+@app.on_message(filters.command("test") & filters.user(Config.OWNER_ID) & filters.reply)
 async def broadcast_handler_open(_, m: Message):
     await main_broadcast_handler(m, db)
 
