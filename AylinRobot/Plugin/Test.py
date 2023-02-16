@@ -82,13 +82,6 @@ class Database:
         return self.col.find({"ban_status.is_banned": True})
 
 
-db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
-mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
-dcmdb = mongo_db_veritabani.handlers
-
-
-
-################## KULLANICI KONTROLLERİ #############
 async def handle_user_status(app: Client, cmd: Message):
     chat_id = cmd.chat.id
     if not await db.is_user_exist(chat_id):
@@ -103,10 +96,6 @@ async def handle_user_status(app: Client, cmd: Message):
                 new_chat_id = str(chat_id)[1:]
             return
     await cmd.continue_propagation()
-
-
-
-
 
 
 @app.on_message(filters.command(["stats"]) & filters.user(Config.OWNER_ID))
@@ -130,15 +119,9 @@ async def botstats(app: Client, message: Message):
     total_users = await db.total_users_count()
     await Aylin.edit(text=LAN.STATS.format(Config.BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
 
-
 @app.on_message()
 async def Aylin(app: Client, cmd: Message):
     await handle_user_status(app, cmd)
-
-
-@app.on_message(filters.command("test") & filters.user(Config.OWNER_ID) & filters.reply)
-async def broadcast_handler_open(_, m: Message):
-    await main_broadcast_handler(m, db)
 
 def humanbytes(size):
     if not size:
