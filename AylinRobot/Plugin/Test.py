@@ -146,13 +146,13 @@ async def send_msg(user_id, message): # Mesaj Gönderme
         await asyncio.sleep(int(e.x))
         return send_msg(user_id, message)
     except InputUserDeactivated:
-        return 400, f"{user_id}: {LAN.NOT_ONLINE}\n"
+        return 40, f"{user_id}: {LAN.NOT_ONLINE}\n"
     except UserIsBlocked:
-        return 400, f"{user_id}: {LAN.BOT_BLOCKED}\n"
+        return 40, f"{user_id}: {LAN.BOT_BLOCKED}\n"
     except PeerIdInvalid:
-        return 400, f"{user_id}: {LAN.USER_ID_FALSE}\n"
+        return 40, f"{user_id}: {LAN.USER_ID_FALSE}\n"
     except Exception:
-        return 500, f"{user_id}: {traceback.format_exc()}\n"
+        return 50, f"{user_id}: {traceback.format_exc()}\n"
 
 async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
     all_users = await db.get_all_users()
