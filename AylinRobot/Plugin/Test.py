@@ -141,7 +141,7 @@ async def send_msg(user_id, message): # Mesaj Gönderme
             await message.forward(chat_id=user_id)
         elif Config.BROADCAST_AS_COPY is True:
             await message.copy(chat_id=user_id)
-        return 200, None
+        return 20, None
     except FloodWait as e:
         await asyncio.sleep(int(e.x))
         return send_msg(user_id, message)
@@ -174,11 +174,11 @@ async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
             sts, msg = await send_msg(user_id=int(user["id"]), message=broadcast_msg)
             if msg is not None:
                 await broadcast_log_file.write(msg)
-            if sts == 200:
+            if sts == 20:
                 success += 1
             else:
                 failed += 1
-            if sts == 400:
+            if sts == 40:
                 await db.delete_user(user["id"])
             done += 1
             if broadcast_ids.get(broadcast_id) is None:
@@ -219,25 +219,17 @@ async def botstats(app: Client, message: Message):
     ram_usage = psutil.virtual_memory().percent
     disk_usage = psutil.disk_usage("/").percent
     total_users = await db.total_users_count()
-    await g4rip.edit(text=LAN.STATS.format(Config.BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
+    await Aylin.edit(text=LAN.STATS.format(Config.BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
 
 
-
-# Botu ilk başlatan kullanıcıların kontrolünü sağlar.
 @app.on_message()
-async def G4RIP(app: Client, cmd: Message):
+async def Aylin(app: Client, cmd: Message):
     await handle_user_status(app, cmd)
 
 
-
-# Broadcast komutu
 @app.on_message(filters.command("test") & filters.user(Config.OWNER_ID) & filters.reply)
 async def broadcast_handler_open(_, m: Message):
     await main_broadcast_handler(m, db)
-
-
-
-# Bir kullanıcı yasaklama komutu
 
 def humanbytes(size):
     if not size:
