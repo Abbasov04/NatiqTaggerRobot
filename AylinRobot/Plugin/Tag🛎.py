@@ -17,8 +17,6 @@ from pyrogram.errors import FloodWait
 
 chatQueue = []
 
-TTAG = []
-
 stopProcess = False
 
 @app.on_message(filters.command(["tag"]))
@@ -100,13 +98,13 @@ async def everyone(client, message):
     except:
       has_permissions = message.sender_chat  
     if has_permissions:
-      if len(TTAG) > 5:
+      if len(chatQueue) > 5:
         await message.reply("⛔️ | Hazırda maksimum 5 söhbətim üzərində işləyirəm. Lütfən, tezliklə yenidən cəhd edin")
       else:  
         if message.chat.id in chatQueue:
           await message.reply("🚫 | Bu çatda artıq davam edən proses var. Yenisini başlamaq üçün zəhmət olmasa /cancel əmrini işlədin.")
         else:  
-          TTAG.append(message.chat.id)
+          chatQueue.append(message.chat.id)
           if len(message.command) > 1:
             inputText = message.command[1]
           elif len(message.command) == 1:
@@ -138,7 +136,7 @@ async def everyone(client, message):
                 await app.send_message(message.chat.id, text1)
               except Exception:
                 pass  
-              await asyncio.sleep(10) 
+              await asyncio.sleep(5) 
               i+=1
             except IndexError:
               try:
@@ -150,7 +148,7 @@ async def everyone(client, message):
             await message.reply(f"✅ | **Ümumilikdə {i} üzvü uğurla tağ etdim**.\n❌ | Bot və silinmiş hesabları tağ etmədim.") 
           else:
             await message.reply(f"✅ | **Ümumilikdə {i} üzvü uğurla tağ etdim**.\n❌ | Bot və silinmiş hesabları tağ etmədim.")    
-          TTAG.remove(message.chat.id)
+          chatQueue.remove(message.chat.id)
     else:
       await message.reply("👮🏻 | Üzr istəyirik, **yalnız adminlər** bu əmri yerinə yetirə bilər.")  
   except FloodWait as e:
