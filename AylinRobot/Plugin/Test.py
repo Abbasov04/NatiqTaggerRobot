@@ -14,7 +14,11 @@ from pyrogram import Client, filters, __version__
 from pyrogram.errors import FloodWait
 
 
-
+class Database: 
+    def __init__(self, uri, database_name):
+        self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)
+        self.db = self._client[database_name]
+        self.col = self.db.users
 
     def new_user(self, id): # Veritabanına yeni kullanıcı ekler
         return dict(
@@ -40,22 +44,8 @@ from pyrogram.errors import FloodWait
         count = await self.col.count_documents({})
         return count
 
-    async def get_all_users(self): # Veritabındaki tüm kullanıcıların listesini verir.
-        return self.col.find({})
 
-    async def delete_user(self, user_id): # Veritabından bir kullanıcıyı siler.
-        await self.col.delete_many({"id": int(user_id)})
 
-    async def ban_user(self, user_id, ban_duration, ban_reason): # Veritabanınızdaki bir kullanıcıyı yasaklılar listesine ekler.
-        ban_status = dict(
-            is_banned=True,
-            ban_duration=ban_duration,
-            banned_on=datetime.date.today().isoformat(),
-            ban_reason=ban_reason,
-        )
-        await self.col.update_one({"id": user_id}, {"$set": {"ban_status": ban_status}})
-
-    async def remove_ban(self, id): # Veritabanınızdaki yasaklılar listesinde bulunan bir kullanıcın yasağını kaldırır.
         ban_status = dict(
             is_banned=False,
             ban_duration=0,
