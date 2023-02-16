@@ -150,3 +150,15 @@ async def botstats(app: Client, message: Message):
 @app.on_message()
 async def G4RIP(app: Client, cmd: Message):
     await handle_user_status(app, cmd)
+
+
+def humanbytes(size):
+    if not size:
+        return ""
+    power = 2**10
+    raised_to_pow = 0
+    dict_power_n = {0: "", 1: "K", 2: "M", 3: "G", 4: "T"}
+    while size > power:
+        size /= power
+        raised_to_pow += 1
+    return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
