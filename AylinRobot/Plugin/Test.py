@@ -107,15 +107,10 @@ async def handle_user_status(app: Client, cmd: Message): # Kullanıcı kontrolü
             await app.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
 
 
-
-
-
-
-
 # Verileri listeleme komutu
 @app.on_message(filters.command(["stats"]) & filters.user(Config.OWNER_ID))
 async def botstats(app: Client, message: Message):
-    g4rip = await app.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
+    Aylin = await app.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
     all_users = await db.get_all_users()
     groups = 0
     pms = 0
