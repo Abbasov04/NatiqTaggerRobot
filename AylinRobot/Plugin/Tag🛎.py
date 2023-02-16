@@ -137,7 +137,7 @@ async def everyone(client, message):
               except Exception:
                 pass  
               await asyncio.sleep(10) 
-              i+=10
+              i+=1
             except IndexError:
               try:
                 await app.send_message(message.chat.id, text1)  
