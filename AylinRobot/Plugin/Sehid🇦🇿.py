@@ -10,8 +10,8 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 @app.on_message(filters.command(["sehid"]))
-    message.delete()
 async def commit(_, message):
+    await message.delete()  
     await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
     
 button = reply_markup=InlineKeyboardMarkup(
