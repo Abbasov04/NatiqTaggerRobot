@@ -11,12 +11,7 @@ import motor.motor_asyncio
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram.types import Message
 from pyrogram import Client, filters, __version__
-from pyrogram.errors import (
-    FloodWait,
-    InputUserDeactivated,
-    PeerIdInvalid,
-    UserIsBlocked,
-)
+
 
 
  ##Broadcastall İkili Yayım Edər   
