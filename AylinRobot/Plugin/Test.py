@@ -11,9 +11,10 @@ import motor.motor_asyncio
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram.types import Message
 from pyrogram import Client, filters, __version__
-
+from pyrogram.errors import FloodWait
 
 async def handle_user_status(app: Client, cmd: Message):
+
 
 @app.on_message(filters.command(["stats"]) & filters.user(Config.OWNER_ID))
 async def botstats(app: Client, message: Message):
