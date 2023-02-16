@@ -106,93 +106,11 @@ async def handle_user_status(app: Client, cmd: Message): # Kullanıcı kontrolü
                 new_chat_id = str(chat_id)[1:]
             await app.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
 
-    ban_status = await db.get_ban_status(chat_id) # Yasaklı Kullanıcı Kontrolü
-    if ban_status["is_banned"]:
-        if int((datetime.date.today() - datetime.date.fromisoformat(ban_status["banned_on"])).days) > int(ban_status["ban_duration"]):
-            await db.remove_ban(chat_id)
-        else:
-            if Config.SUPPORT:
-                msj = f"@{Config.SUPPORT}"
-            else:
-                msj = f"[{LAN.SAHIBIME}](tg://user?id={Config.OWNER_ID})"
-            if cmd.chat.type == "private":
-                await cmd.reply_text(LAN.PRIVATE_BAN.format(msj), quote=True)
-            else:
-                await cmd.reply_text(LAN.GROUP_BAN.format(msj),quote=True)
-                await app.leave_chat(cmd.chat.id)
-            return
-    await cmd.continue_propagation()
 
 
 
 
-############### Broadcast araçları ###########
-broadcast_ids = {}
 
-
-async def send_msg(user_id, message): # Mesaj Gönderme
-    try:
-        if Config.BROADCAST_AS_COPY is False:
-            await message.forward(chat_id=user_id)
-        elif Config.BROADCAST_AS_COPY is True:
-            await message.copy(chat_id=user_id)
-        return 20, None
-    except FloodWait as e:
-        await asyncio.sleep(int(e.x))
-        return send_msg(user_id, message)
-    except InputUserDeactivated:
-        return 40, f"{user_id}: {LAN.NOT_ONLINE}\n"
-    except UserIsBlocked:
-        return 40, f"{user_id}: {LAN.BOT_BLOCKED}\n"
-    except PeerIdInvalid:
-        return 40, f"{user_id}: {LAN.USER_ID_FALSE}\n"
-    except Exception:
-        return 50, f"{user_id}: {traceback.format_exc()}\n"
-
-async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
-    all_users = await db.get_all_users()
-    broadcast_msg = m.reply_to_message
-    while True:
-        broadcast_id = "".join(random.choice(string.ascii_letters) for i in range(3))
-        if not broadcast_ids.get(broadcast_id):
-            break
-    out = await m.reply_text(
-        text=LAN.BROADCAST_STARTED)
-    start_time = time.time()
-    total_users = await db.total_users_count()
-    done = 0
-    failed = 0
-    success = 0
-    broadcast_ids[broadcast_id] = dict(total=total_users, current=done, failed=failed, success=success)
-    async with aiofiles.open("broadcast-logs-g4rip.txt", "w") as broadcast_log_file:
-        async for user in all_users:
-            sts, msg = await send_msg(user_id=int(user["id"]), message=broadcast_msg)
-            if msg is not None:
-                await broadcast_log_file.write(msg)
-            if sts == 20:
-                success += 1
-            else:
-                failed += 1
-            if sts == 40:
-                await db.delete_user(user["id"])
-            done += 1
-            if broadcast_ids.get(broadcast_id) is None:
-                break
-            else:
-                broadcast_ids[broadcast_id].update(
-                    dict(current=done, failed=failed, success=success))
-    if broadcast_ids.get(broadcast_id):
-        broadcast_ids.pop(broadcast_id)
-    completed_in = datetime.timedelta(seconds=int(time.time() - start_time))
-    await asyncio.sleep(3)
-    await out.delete()
-    if failed == 0:
-        await m.reply_text(text=LAN.BROADCAST_STOPPED.format(completed_in, total_users, done, success, failed), quote=True,)
-    else:
-        await m.reply_document(document="broadcast-logs-g4rip.txt", caption=LAN.BROADCAST_STOPPED.format(completed_in, total_users, done, success, failed), quote=True,)
-    os.remove("broadcast-logs-g4rip.txt")
-
-################# SAHİP KOMUTLARI #############
 
 # Verileri listeleme komutu
 @app.on_message(filters.command(["stats"]) & filters.user(Config.OWNER_ID))
