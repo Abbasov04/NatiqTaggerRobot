@@ -82,6 +82,10 @@ class Database:
         return self.col.find({"ban_status.is_banned": True})
 
 
+db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
+mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
+dcmdb = mongo_db_veritabani.handlers
+
 async def handle_user_status(app: Client, cmd: Message):
     chat_id = cmd.chat.id
     if not await db.is_user_exist(chat_id):
