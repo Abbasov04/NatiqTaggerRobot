@@ -145,8 +145,6 @@ async def botstats(app: Client, message: Message):
     await g4rip.edit(text=LAN.STATS.format(Config.BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
 
 
-
-# Botu ilk başlatan kullanıcıların kontrolünü sağlar.
 @app.on_message()
 async def G4RIP(app: Client, cmd: Message):
     await handle_user_status(app, cmd)
