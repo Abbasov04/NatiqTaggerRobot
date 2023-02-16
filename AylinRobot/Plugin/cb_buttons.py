@@ -103,7 +103,7 @@ async def cb_data(client, message):
                     return
             except UserNotParticipant:
                 await message.message.edit(
-                    text="<b>Salam</b> {},\n\n<b>Siz hələ də Kanalımıza qoşulmamısınız ☹️ \nLütfən, Kanalımıza qoşulun və 'Yenilə 🔄' düyməsini basın</b>".format(message.from_user.mention),
+                    text="<b>Salam</b> {},\n\n<b>Siz hələ də Kanalımıza qoşulmamısınız ☹️ \nLütfən, Kanalımıza qoşulun və 🙎‍♀️ `Yenilə` düyməsini basın</b>".format(message.from_user.mention),
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
