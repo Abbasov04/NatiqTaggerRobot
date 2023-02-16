@@ -33,7 +33,7 @@ async def start(client, message):
     FSub = await ForceSub(client, message)
     if FSub == 400:
         return
-    await client.send_message(message.-1001872296360, f"Yeni istifadeçi:\n\nUser: {usermention}\nUser ID: {userid}")
+    await client.send_message(Config.LOG_CHANNEL, f"Yeni istifadeçi:\n\nUser: {usermention}\nUser ID: {userid}")
     await message.reply_photo(
         AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME,Config.OWNER_NAME),
