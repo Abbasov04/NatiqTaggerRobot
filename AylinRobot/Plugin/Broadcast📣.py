@@ -139,7 +139,22 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
             else:
                 new_chat_id = str(chat_id)[1:]
             await bot.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
-
+    ban_status = await db.get_ban_status(chat_id) # Yasaklı Kullanıcı Kontrolü
+    if ban_status["is_banned"]:
+        if int((datetime.date.today() - datetime.date.fromisoformat(ban_status["banned_on"])).days) > int(ban_status["ban_duration"]):
+            await db.remove_ban(chat_id)
+        else:
+            if Config.SUPPORT:
+                msj = f"@{Config.SUPPORT}"
+            else:
+                msj = f"[{LAN.SAHIBIME}](tg://user?id={Config.OWNER_ID})"
+            if cmd.chat.type == "private":
+                await cmd.reply_text(LAN.PRIVATE_BAN.format(msj), quote=True)
+            else:
+                await cmd.reply_text(LAN.GROUP_BAN.format(msj),quote=True)
+                await app.leave_chat(cmd.chat.id)
+            return
+    await cmd.continue_propagation()
 
 
 
