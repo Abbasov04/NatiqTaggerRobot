@@ -89,7 +89,7 @@ dcmdb = mongo_db_veritabani.handlers
 
 
 ################## KULLANICI KONTROLLERİ #############
-async def handle_user_status(app: Client, cmd: Message): # Kullanıcı kontrolü
+async def handle_user_status(app: Client, cmd: Message):
     chat_id = cmd.chat.id
     if not await db.is_user_exist(chat_id):
         if cmd.chat.type == "private":
