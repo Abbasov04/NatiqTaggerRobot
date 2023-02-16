@@ -7,6 +7,8 @@ import shutil, psutil, traceback, os, datetime, random, string, time, traceback,
 from AylinRobot.translation import *
 from pyrogram.types import  Message
 from helpers.database.access_db import db
+from pyrogram.types import Message
+from pyrogram import Client, filters, __version__
 from helpers.broadcast import broadcast_handler
 from pyrogram import Client as USER
 from helpers.chats import add_served_chat, blacklisted_chats, get_served_chats
