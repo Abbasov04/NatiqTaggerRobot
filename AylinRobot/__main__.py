@@ -1,7 +1,7 @@
 # @AylinRobot
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
-# Reponu Satan Kodları Götürən Kimliyindən Adlı Olmayaraq Peysərdi
+# Reponu Satan Kodları Götürən Kimliyindən Aslı Olmayaraq Peysərdi
 
 import os
 import psutil
