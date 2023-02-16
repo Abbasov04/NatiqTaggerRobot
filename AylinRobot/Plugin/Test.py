@@ -14,6 +14,22 @@ from pyrogram import Client, filters, __version__
 from pyrogram.errors import FloodWait
 
 
+class Database: 
+    def __init__(self, uri, database_name):
+        self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)
+        self.db = self._client[database_name]
+        self.col = self.db.users
+
+        user = self.new_user(id)
+        await self.col.insert_one(user)
+
+    async def is_user_exist(self, id): # Bir kullanıcının veritabında olup olmadığını kontrol eder.
+        user = await self.col.find_one({"id": int(id)})
+        return bool(user)
+
+    async def total_users_count(self):
+
+
 db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
 mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
 dcmdb = mongo_db_veritabani.handlers
