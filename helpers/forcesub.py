@@ -1,4 +1,5 @@
-# © Naviya2
+# HuseynH
+# Kodu Satan Peysərdi
 
 import asyncio
 from AylinRobot.config import Config
