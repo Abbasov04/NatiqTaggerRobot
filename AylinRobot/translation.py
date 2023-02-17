@@ -58,15 +58,6 @@ class Translation(object):
 ║▻ 🔮 Istifadə: /stats
 ║▻ 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
 ║
-║▻ 🔮 Istifadə: /block
-║▻ 📃 Açıqlama: İstifadəçini Və Ya Qrupu Bloklayar.
-║
-║▻ 🔮 Istifadə: /unblock
-║▻ 📃 Açıqlama: Bloku Açar.
-║
-║▻ 🔮 Istifadə: /blocklist
-║▻ 📃 Açıqlama: Blok olunanların siyahısını göstərər.
-║
 ║▻ 🔮 Istifadə: /broadcastall
 ║▻ 📃 Açıqlama: Qrupa Və Şəxsiyə Yayım Edər.
 ║
