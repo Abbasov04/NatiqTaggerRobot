@@ -18,7 +18,7 @@ async def _(client, message):
     
 def sehid(user_id):
 	BUTTON = [[InlineKeyboardButton(text="🇦🇿 Səhid", callback_data = " ".join(["deyis",str(user_id)]))]]
-	BUTTON += [[InlineKeyboardButton(text="🔐 Bağla", callback_data (["close"]))]]
+	BUTTON += [[InlineKeyboardButton("🔐 Bağla", callback_data="close"),]])
 	return InlineKeyboardMarkup(BUTTON)
 
 
