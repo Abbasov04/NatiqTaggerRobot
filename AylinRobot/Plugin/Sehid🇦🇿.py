@@ -9,11 +9,7 @@ from pyrogram.errors import FloodWait
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-@app.on_message(filters.command("sehid"))
+@app.on_message(filters.command(["sehid"]))
 async def _(client, message):
 	await message.delete()
-	await message.reply_text(await random_line('Sehid/sehid.txt')),
-			reply_markup=(BUTTON)	
-    
-BUTTON = reply_markup=InlineKeyboardMarkup(
-[[InlineKeyboardButton("🔐 Bağla", callback_data="close")]])
+	await message.reply_text(await random_line('Sehid/sehid.txt'))
