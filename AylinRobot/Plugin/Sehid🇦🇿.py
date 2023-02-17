@@ -12,8 +12,9 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 @app.on_message(filters.command("sehid"))
 async def _(client, message):
 	user = message.from_user
+	await message.reply_text(text="{} Əmri İcra Etdi!".format(user.mention,
 message.delete()	
-	await message.reply_text(text="{} Əmri İcra Etdi!".format(user.mention, await random_line('Sehid/sehid.txt')), 
+	await random_line('Sehid/sehid.txt')), 
 			reply_markup=(BUTTON)
 		)
     
