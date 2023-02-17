@@ -27,7 +27,7 @@ def sehid(user_id):
 	if str(user.id) == str(user_id):
 		if sehid == "deyis":	
 
-@app.on_callback_query(filters.regex("deyis"))
+@app.on_callback_query()
 async def deyis(_, query: CallbackQuery):
     await query.edit_message_text(text="{} Əmri İcra Etdi!".format(user.mention, await random_line('Sehid/sehid.txt')), 
     reply_markup=d_or_c(user.id)
