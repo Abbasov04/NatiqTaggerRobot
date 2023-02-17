@@ -22,10 +22,8 @@ def sehid(user_id):
 	return InlineKeyboardMarkup(BUTTON)
 
 
-@app.on_callback_query()
-async def _(client, callback_query):
-	sehid=random.choice(sehid)
-	user = callback_query.from_user 
+@app.on_callback_query(filters.regex("deyis"))
+async def deyis(_, query: CallbackQuery):
     await query.edit_message_text(text="{} Əmri İcra Etdi!".format(user.mention, await random_line('Sehid/sehid.txt')), 
     reply_markup=d_or_c(user.id)
 		)
