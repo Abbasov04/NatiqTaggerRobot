@@ -14,7 +14,6 @@ async def _(client, message):
 	user = message.from_user
 	await message.reply_text(text="{} Əmri İcra Etdi!".format(user.mention, await random_line('Sehid/sehid.txt')), (user.mention),
 		reply_markup=sehid(user.id)
-		)
     
 def sehid(user_id):
 	BUTTON = [[InlineKeyboardButton(text="🇦🇿 Səhid", callback_data = " ".join(["deyis",str(user_id)]))]]
