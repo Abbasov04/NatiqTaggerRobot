@@ -11,12 +11,12 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 @app.on_message(filters.command("sehid"))
 async def _(client, message):
+  await message.delete()	  
 	user = message.from_user
-	await message.reply_text(text="{} Əmri İcra Etdi!".format(user.mention,
-  await message.delete()	
-	await random_line('Sehid/sehid.txt')), 
+	await message.reply_text(text="{} Əmri İcra Etdi!".format(user.mention, 
+  await random_line('Sehid/sehid.txt')),
 			reply_markup=(BUTTON)
-		)
+		)	
     
 BUTTON = reply_markup=InlineKeyboardMarkup(
 [[InlineKeyboardButton("🇦🇿 Şəhid", callback_data="sehid"),
