@@ -39,7 +39,7 @@ class Translation(object):
 ║▻ 🙎‍♀️ {} 🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
 ║
 ║▻ ✨ Bot Versiyası: v0.7.0
-║▻ 🍀 Pyrogram Versiyası: 1.4.16
+║▻ 🍀 Pyrogram Versiyası: 2.0.97
 ║▻ ✨ Python Versiyası: 3.11.1
 ║▻ ⚙️ Server [Heroku](https://heroku.com)
 ║▻ 👨‍💻 Mənim Sahibim @{}
@@ -188,8 +188,11 @@ class Translation(object):
 ║▻ 🔮 Istifadə: /alive
 ║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
 ║
-║▻ 🔮 Istifadə: /list
+║▻ 🔮 Istifadə: /bots
 ║▻ 📃 Açıqlama: Qrupunuzda Olan Botları Göstərər.
+║
+║▻ 🔮 Istifadə: /alist
+║▻ 📃 Açıqlama: Qrupunuzda Olan Adminləri Göstərər.
 ╚═════════════════
 """
 
@@ -213,6 +216,9 @@ class Translation(object):
 ║ 
 ║▻ 🔮 Istifadə: /cancel
 ║▻ 📃 Açıqlama: Tag Prosesini  Dayandırar.
+║
+║▻ 🔮 Istifadə: /tektag
+║▻ 📃 Açıqlama:  İstifadəçiləri Tək-Tək Tag Edər.
 ╚═════════════════
 """
 
