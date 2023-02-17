@@ -19,7 +19,6 @@ async def _(client, message):
 BUTTON = reply_markup=InlineKeyboardMarkup(
 [[InlineKeyboardButton("🇦🇿 Şəhid", callback_data="deyis"),
 InlineKeyboardButton("🔐 Bağla", callback_data="close")]])
-	return InlineKeyboardMarkup(BUTTON)
 
 
 @app.on_callback_query(filters.regex("deyis"))
