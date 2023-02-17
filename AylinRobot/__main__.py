@@ -33,7 +33,7 @@ async def start(client, message):
     FSub = await ForceSub(client, message)
     if FSub == 400:
         return
-    await client.send_message(Config.LOG_CHANNEL, f"🙋‍♀️ Yeni İstifadəçi:\n🙎‍♀️ Ad: {message.from_user.mention}\n🧟‍♀️ ID:`{message.from_user.id}`\n🌐 DC ID: {message.from_user.dc_id}\n📱 Telefon Nömrəsi:{message.from_user.phone_number}\n🇦🇿 DİL: {message.from_user.language_code}\nStatus: {str(message.from_user.status)[11:]}\n\n💁‍♀️ Bot: [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})")
+    await client.send_message(Config.LOG_CHANNEL, f"🙋‍♀️ Yeni İstifadəçi:\n\n🙎‍♀️ Ad: {message.from_user.mention}\n🧟‍♀️ ID:`{message.from_user.id}`\n🌐 DC ID: {message.from_user.dc_id}\n📱 Telefon Nömrəsi:{message.from_user.phone_number}\n🇦🇿 DİL: {message.from_user.language_code}\n\n💁‍♀️ Bot: [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})")
     await message.reply_photo(
         AylinIMG,
         caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME,Config.OWNER_NAME, Config.BOT_NAME),
