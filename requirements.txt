@@ -37,3 +37,4 @@ pymongo[srv]
 bs4
 Heroku3
 telegram
+yt-dlp
