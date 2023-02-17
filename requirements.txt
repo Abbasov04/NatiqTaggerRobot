@@ -24,6 +24,7 @@ psutil
 future
 dnspython
 yt_dlp
+yt-dlp
 youtube_search
 OpenCC
 pytube
