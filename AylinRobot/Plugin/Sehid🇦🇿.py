@@ -17,11 +17,13 @@ async def _(client, message):
 		)
     
 def d_or_c(user_id):
-	BUTTON = [[InlineKeyboardButton(text="Sehid", callback_data = " ".join(["d_data",str(user_id)]))]]
-	BUTTON += [[InlineKeyboardButton(text="Sehid", callback_data = " ".join(["c_data",str(user_id)]))]]
+	BUTTON = [[InlineKeyboardButton(text="🇦🇿 Səhid", callback_data = " ".join(["deyis",str(user_id)]))]]
+	BUTTON += [[InlineKeyboardButton(text="🔐 Bağla", callback_data = " ".join(["close",str(user_id)]))]]
 	return InlineKeyboardMarkup(BUTTON)
 
 
 @app.on_callback_query(filters.regex("deyis"))
 async def deyis(_, query: CallbackQuery):
-    await query.edit_message_text(text="{} Əmri İcra Etdi!".format(user.mention, await random_line('Sehid/sehid.txt')), reply_markup=button)
+    await query.edit_message_text(text="{} Əmri İcra Etdi!".format(user.mention, await random_line('Sehid/sehid.txt')), 
+    reply_markup=d_or_c(user.id)
+		)
