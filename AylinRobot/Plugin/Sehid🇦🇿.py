@@ -22,7 +22,10 @@ def sehid(user_id):
 	return InlineKeyboardMarkup(BUTTON)
 
 	sehid=random.choice(sehid)
-	user = callback_query.from_user   
+	user = callback_query.from_user 
+	sehid, user_id = callback_query.data.split()
+	if str(user.id) == str(user_id):
+		if sehid == "deyis":	
 
 @app.on_callback_query(filters.regex("deyis"))
 async def deyis(_, query: CallbackQuery):
