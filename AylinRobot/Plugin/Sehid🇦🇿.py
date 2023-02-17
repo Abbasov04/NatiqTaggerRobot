@@ -24,9 +24,6 @@ InlineKeyboardButton("🔐 Bağla", callback_data="close")]])
 
 @app.on_callback_query(filters.regex("sehid"))
 async def deyis(_, query: CallbackQuery):
+    await time.sleep(5) 
     await query.edit_message_text((await random_line('Sehid/sehid.txt')),
-    reply_markup=(BUTTON)), show_alert=False)     
-    
-else:
-		await callback_query.answer(text="Bu əmri sən verməmisən!!", show_alert=False)
-		return    
+    reply_markup=(BUTTON))    
