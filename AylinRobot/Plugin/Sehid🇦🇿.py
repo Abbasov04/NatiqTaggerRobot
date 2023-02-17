@@ -15,8 +15,10 @@ async def commit(_, message):
     await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
     
 button = reply_markup=InlineKeyboardMarkup(
-[[InlineKeyboardButton("🇦🇿 Şəhid", callback_data="deyis"),
-InlineKeyboardButton("🔐 Bağla", callback_data="close")]])
+[[InlineKeyboardButton("🇦🇿 Şəhid", callback_data="deyis")]])
+
+button = reply_markup=InlineKeyboardMarkup(
+[[InlineKeyboardButton("🔐 Bağla", callback_data="close")]])
 
 
 @app.on_callback_query(filters.regex("deyis"))
