@@ -12,7 +12,6 @@ requests
 aiohttp
 aiofiles
 asyncio
-python-arq
 search_engine_parser
 wget 
 lyricsgenius
