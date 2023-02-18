@@ -8,8 +8,6 @@ import psutil
 import shutil
 import string
 import asyncio
-from helpers.database.add_user import AddUserToDatabase
-from helpers.forcesub import ForceSub
 from AylinRobot.config import Config
 from asyncio import TimeoutError
 from AylinRobot.translation import Translation
@@ -28,10 +26,6 @@ AylinIMG = f"{Config.START_IMG}"
 
 @app.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def start(client, message):
-    await AddUserToDatabase(client, message)
-    FSub = await ForceSub(client, message)
-    if FSub == 400:
-        return
     await client.send_message(Config.LOG_CHANNEL,
         f"**🙋‍♀️ Yeni İstifadəçi**:\n\n**🙎‍♀️ Ad**: {message.from_user.mention}\n**🧟‍♀️ ID**:`{message.from_user.id}`\n**🌐 DC ID**: {message.from_user.dc_id}**\n📱 Telefon Nömrəsi**:{message.from_user.phone_number} \n**🇦🇿 DİL**: {message.from_user.language_code} \n**💁‍♀️ Bot**: [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})")
     await message.reply_photo(
@@ -44,10 +38,6 @@ async def start(client, message):
     
 @app.on_message(filters.group & filters.incoming & filters.command(['start']))
 async def start(client, message):
-    await AddUserToDatabase(client, message)
-    FSub = await ForceSub(client, message)
-    if FSub == 400:
-        return    
     await message.reply_photo(
         AylinIMG,
         caption=Translation.GSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
