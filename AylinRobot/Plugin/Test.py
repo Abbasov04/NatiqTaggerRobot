@@ -98,12 +98,6 @@ async def youtube_cb(b, cb):
             "You ain't the person who requested to play the song!", show_alert=True
         )
         return
-    await cb.message.edit("▱▱▱▱▱▱")
-    await cb.message.edit("▰▱▱▱▱▱")
-    await cb.message.edit("▰▰▱▱▱▱")
-    await cb.message.edit("▰▰▰▱▱▱")
-    await cb.message.edit("▰▰▰▰▱▱")
-    await cb.message.edit("▰▰▰▰▰▱")
     await cb.message.edit("▰▰▰▰▰▰")
 
     x = int(x)
@@ -148,6 +142,5 @@ async def youtube_cb(b, cb):
     try:
         os.remove(audio_file)
         os.remove(preview)
-        await cb.message.delete()
     except BaseException:
         pass
