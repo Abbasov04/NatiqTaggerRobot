@@ -4,6 +4,7 @@
 
 import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
 from AylinRobot import AylinRobot as app
+from pyrogram import enums
 from random import randint
 from urllib.parse import urlparse
 from pyrogram.errors import FloodWait, MessageNotModified
@@ -98,7 +99,7 @@ def song(client, message):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
         m.edit("📤 Yüklənir..")
-        message.reply_audio(audio_file, caption=caption_for_private, quote=False, title=title, duration=dur, thumb=thumb_name, parse_mode="md", performer = f"{Config.PLAYLIST_NAME}", reply_markup=buttons['markup_for_private'])
+        message.reply_audio(audio_file, caption=caption_for_private, quote=False, title=title, duration=dur, thumb=thumb_name, enums_parse_mode="md", performer = f"{Config.PLAYLIST_NAME}", reply_markup=buttons['markup_for_private'])
         m.delete()
         app.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=caption_for_logchannel, performer = f"{Config.BOT_USERNAME}", title=title, duration=dur, thumb=thumb_name, reply_markup=buttons['add_to_group'])
     except Exception as e:
