@@ -1,7 +1,8 @@
 from AylinRobot.config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
   
-### START BUTTONU 
+### START BUTTONU Satışa Qoyan Peysərdi 
+### HuseynH
 
 START_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('📢 Kanal', url=f"https://t.me/{Config.CHANNEL}"),
@@ -58,6 +59,8 @@ InlineKeyboardButton('🔐 Bağla', callback_data='close'),
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 
 GHELP_BUTTONS = InlineKeyboardMarkup(
+InlineKeyboardButton(
+text='♒️ Kömək', url=f'https://t.me/{Config.BOT_USERNAME}'),]])  
 [[InlineKeyboardButton('🔐 Bağla', callback_data='close'),]])   
 
 ### GERİ BUTTONU    
