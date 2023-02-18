@@ -39,7 +39,7 @@ InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 ## Grup Help Button
  
  ### Sahib HuseynH Əkən Peysərdi
-GHELP_BUTTONS = InlineKeyboardMarkup(
+PMHELP_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('🎧 Musiqi', callback_data='musıc'),
 InlineKeyboardButton('⭐ Telegraph', callback_data='tg')
 ],[
@@ -57,7 +57,8 @@ InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
 InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 
-
+GHELP_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 
 ### GERİ BUTTONU    
 
