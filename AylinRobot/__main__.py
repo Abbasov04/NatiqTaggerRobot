@@ -55,15 +55,20 @@ async def ghelp(client, message):
     
 
     elif len(msg.command) >= 2:
-        query = message.command[1]
+        query = msg.command[1]
         if query.startswith("help"):
-            if message.chat.type == "private":
-async def ghelp(client, message):
-    await message.reply_photo(
-        AylinIMG,
-        caption=Translation.PMHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
-        reply_markup=Button.PMHELP_BUTTONS
-    )          
+            if msg.chat.type == "private":
+                await bot.send_message(
+                    chat_id=msg.chat.id,
+                    caption=Translation.PMHELP.format(Config.BOT_USERNAME),
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton(
+                                    Button.PMHELP, callback_data="cb_commands"
+                                ),
+                    disable_web_page_preview=True,
+                )
 
     
     
