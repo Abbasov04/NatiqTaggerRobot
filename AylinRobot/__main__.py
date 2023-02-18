@@ -50,7 +50,7 @@ async def start(client, message):
         return    
     await message.reply_photo(
         AylinIMG,
-        caption=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME,Config.OWNER_NAME, Config.BOT_NAME),
+        caption=Translation.GSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME,Config.OWNER_NAME, Config.BOT_NAME),
         reply_markup=Button.START_BUTTONS
     )      
     
