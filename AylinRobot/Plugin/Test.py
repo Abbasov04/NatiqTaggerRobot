@@ -3,8 +3,10 @@ from pyrogram import idle, filters
 import requests
 import wget
 from AylinRobot import AylinRobot as app
+from yt_dlp import YoutubeDL
+from pyrogram import Client, filters
+import yt_dlp
 from AylinRobot.config import Config
-import yt_dlp as youtube_dl
 from pyrogram import filters, Client
 from pyrogram.types import *
 from pyrogram.types import Message
