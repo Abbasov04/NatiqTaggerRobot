@@ -54,7 +54,10 @@ async def ghelp(client, message):
     )          
     
 
-@app.on_message(filters.private & filters.incoming & filters.command(['help']))
+    elif len(msg.command) >= 2:
+        query = message.command[1]
+        if query.startswith("help"):
+            if message.chat.type == "private":
 async def ghelp(client, message):
     await message.reply_photo(
         AylinIMG,
