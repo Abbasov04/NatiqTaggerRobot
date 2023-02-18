@@ -70,7 +70,7 @@ async def hg(bot: Client, msg: Message):
     caption = caption(caption)
     for new_user in msg.new_chat_members:
         if new_user.id == Config.BOT_ID:
-            await msg.reply(f"Ssss"
+            await msg.reply(f"Ssss")
 ## HuseynH Əkən Pesi Dii
         elif new_user.id == Config.OWNER_ID:
             await msg.reply(f"Budur Sahibim Gəldi")    
