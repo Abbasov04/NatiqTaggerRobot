@@ -1,6 +1,5 @@
 import os
 from pyrogram import idle, filters
-from config import *
 import requests
 import wget
 from AylinRobot import AylinRobot as app
