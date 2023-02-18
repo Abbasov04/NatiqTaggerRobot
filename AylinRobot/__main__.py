@@ -40,7 +40,8 @@ async def start(client, message):
 async def start(client, message):
     await message.reply_photo(
         AylinIMG,
-        caption=Translation.GSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
+        caption=Translation.GSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME)
+    
     
     
 app.start()
