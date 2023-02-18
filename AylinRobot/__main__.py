@@ -56,7 +56,7 @@ async def ghelp(client, message):
 
 @app.on_message(filters.private & filters.incoming & filters.command(['help']))
 async def ghelp(client, message):
-        caption=Translation.PMHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
+        caption=Translation.PMHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, ),
         reply_markup=Button.PMHELP_BUTTONS
     )          
 
