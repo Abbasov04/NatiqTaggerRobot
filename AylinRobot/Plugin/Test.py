@@ -5,7 +5,6 @@ import wget
 from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 import yt_dlp as youtube_dl
-import YoutubeDL
 from pyrogram import filters, Client
 from pyrogram.types import *
 from pyrogram.types import Message
