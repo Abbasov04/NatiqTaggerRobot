@@ -1,3 +1,35 @@
+import os
+from pyrogram import idle, filters
+from config import *
+import requests
+import wget
+from AylinRobot import AylinRobot as app
+from AylinRobot.config import Config
+import yt_dlp as youtube_dl
+from pyrogram import filters, Client
+from pyrogram.types import *
+from pyrogram.types import Message
+from pyrogram import *
+from youtube_search import YoutubeSearch
+from youtubesearchpython import SearchVideos
+import asyncio
+import math
+from tswift import Song
+import io
+import re
+import time
+import aiofiles
+import aiohttp
+import wget
+import os
+from asyncio import get_running_loop
+from functools import partial
+from io import BytesIO
+from urllib.parse import urlparse
+import ffmpeg
+from epic import bot 
+import lyricsgenius
+from youtubesearchpython import VideosSearch
 
 
 
