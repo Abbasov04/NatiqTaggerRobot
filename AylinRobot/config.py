@@ -25,3 +25,4 @@ class Config:
    SUPPORT = os.environ.get("SUPPORT", "HuseynH")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/762b8f8fd5671ab812d18.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
+   BOT_ID = os.environ.get("BOT_ID", "5910888289")
