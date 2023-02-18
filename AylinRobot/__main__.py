@@ -53,6 +53,15 @@ async def ghelp(client, message):
         reply_markup=Button.GHELP_BUTTONS
     )          
     
+
+@app.on_message(filters.private & filters.incoming & filters.command(['help']))
+async def ghelp(client, message):
+    await message.reply_photo(
+        AylinIMG,
+        caption=Translation.GHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
+        reply_markup=Button.GHELP_BUTTONS
+    )          
+
     
     
 app.start()
