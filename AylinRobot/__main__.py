@@ -63,11 +63,6 @@ async def ghelp(client, message):
     )          
 
     
-        elif new_user.id == Config.OWNER_ID:
-            await msg.reply(f"Budur Sahibim Gəldi")    
-    
-    
-    
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 idle()
