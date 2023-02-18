@@ -66,7 +66,7 @@ async def ghelp(client, message):
     
 @app.on_message(filters.new_chat_members, group=1)
 async def hg(bot: Client, msg: Message):
-    caption = await get_str(msg.chat.id)
+    caption = await (msg.chat.id)
     caption = caption(caption)
     for new_user in msg.new_chat_members:
         if new_user.id == Config.BOT_ID:
