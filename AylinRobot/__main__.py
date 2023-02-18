@@ -54,14 +54,14 @@ async def ghelp(client, message):
     )          
     
 
-    elif len(message.command):
-       query = message.command[1]
-    if query.startswith("help"):
-    if message.chat.type == "private":
-    await bot.send_message(
-        chat_id=message.chat.id,
-        caption=Translation.PMHELP.format(Config.BOT_USERNAME),
-         reply_markup=Button.GHELP_BUTTONS     
+    elif len(msg.command) >= 2:
+        query = msg.command[1]
+        if query.startswith("help"):
+            if msg.chat.type == "private":
+                await bot.send_message(
+                    chat_id=msg.chat.id,
+                    caption=Translation.PMHELP.format(Config.BOT_USERNAME),
+                   reply_markup=Button.GHELP_BUTTONS
 
     
     
