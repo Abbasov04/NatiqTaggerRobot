@@ -39,7 +39,9 @@ class Translation(object):
 ╚═════════════════
 """    
 
-
+   PMHELP_TEXT = """
+   {}
+"""
     HELP_TEXT = """
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {} 
