@@ -59,7 +59,7 @@ InlineKeyboardButton('🔐 Bağla', callback_data='close'),
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
 
 GHELP_BUTTONS = InlineKeyboardMarkup(
-[[InlineKeyboardButton('♒️ Kömək', url=f"https://t.me/{Config.BOT_USERNAME}?helpgroup=true"), InlineKeyboardButton('🔐 Bağla', callback_data='close'),]])   
+[[InlineKeyboardButton('♒️ Kömək', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"), InlineKeyboardButton('🔐 Bağla', callback_data='close'),]])   
 
 ### GERİ BUTTONU    
 
