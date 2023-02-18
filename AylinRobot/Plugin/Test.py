@@ -13,7 +13,6 @@ from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 import asyncio
 import math
-from tswift import Song
 import io
 import re
 import time
@@ -26,7 +25,6 @@ from functools import partial
 from io import BytesIO
 from urllib.parse import urlparse
 import ffmpeg
-from epic import bot 
 import lyricsgenius
 from youtubesearchpython import VideosSearch
 
