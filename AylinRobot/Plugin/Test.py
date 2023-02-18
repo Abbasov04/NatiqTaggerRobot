@@ -122,10 +122,8 @@ async def youtube_cb(b, cb):
         audio_file = ydl.prepare_filename(info_dict)
         ydl.process_info(info_dict)
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
-    await cb.message.reply_audio( chat_id=Config.PLAYLIST_ID), 
-        audio_file,
-        thumb=preview,
-        duration=int(info_dict["duration"]),
+    await cb.message.reply_audio( 
+     await cb.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=caption_for_logchannel, performer = f"{Config.BOT_USERNAME}", title=title, duration=dur, thumb=thumb_name(info_dict["duration"]),
         caption=(f"""
  ━━━━━━━━━━━━━━━━━━━━━━━━━━┑
 💽 𝙽𝚊𝚖𝚎 : __[{title}]({link})__
