@@ -90,10 +90,10 @@ async def cb_data(client, message):
         
         
     elif message.data == "refreshme":
-        if Config.PLAYLIST_ID:
-            invite_link = await client.create_chat_invite_link(int(Config.PLAYLIST_ID))
+        if Config.KANAL:
+            invite_link = await client.create_chat_invite_link(int(Config.KANAL))
             try:
-                user = await client.get_chat_member(int(Config.PLAYLIST_ID), message.message.chat.id)
+                user = await client.get_chat_member(int(Config.KANAL), message.message.chat.id)
                 if user.status == "kicked":
                     await message.message.edit(
                         text=f"Məndən istifadə etmək qadağandır. Sahibim @{Config.OWNER_NAME} İlə Əlaqə Saxlayın.",
