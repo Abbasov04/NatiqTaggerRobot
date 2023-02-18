@@ -87,47 +87,5 @@ async def cb_data(client, message):
             reply_markup=Button.TAGGER_BUTTONS,
             disable_web_page_preview=True
         )                
-        
-        
-    elif message.data == "refreshme":
-        if Config.KANAL:
-            invite_link = await client.create_chat_invite_link(int(Config.KANAL))
-            try:
-                user = await client.get_chat_member(int(Config.KANAL), message.message.chat.id)
-                if user.status == "kicked":
-                    await message.message.edit(
-                        text=f"Məndən istifadə etmək qadağandır. Sahibim @{Config.OWNER_NAME} İlə Əlaqə Saxlayın.",
-                        parse_mode="markdown",
-                        disable_web_page_preview=True
-                    )
-                    return
-            except UserNotParticipant:
-                await message.message.edit(
-                    text="<b>Salam</b> {},\n\n<b>Siz hələ də Kanalımıza qoşulmamısınız ☹️ \nLütfən, Kanalımıza qoşulun və 🙎‍♀️ `Yenilə` düyməsini basın</b>".format(message.from_user.mention),
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("👨‍💻 Kanalımız", url=invite_link.invite_link)
-                            ],
-                            [
-                                InlineKeyboardButton("📣 Yenilə", callback_data="refreshme")
-                            ]
-                        ]
-                    ),
-                )
-                return
-            except Exception:
-                await message.message.edit(
-                    text=f"Nə isə səhv getdi. Sahibim @{Config.OWNER_NAME} ilə əlaqə saxlayın.",
-                    parse_mode="markdown",
-                    disable_web_page_preview=True
-                )
-                return
-        await message.message.edit(
-            text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
-            disable_web_page_preview=True,
-            reply_markup=Button.START_BUTTONS,
-        )
-    else:
         await message.message.delete()
         
