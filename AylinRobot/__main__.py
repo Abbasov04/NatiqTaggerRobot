@@ -42,7 +42,6 @@ async def gstart(client, message):
         AylinIMG,
         caption=Translation.GSTART_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
         reply_markup=Button.BAGLA_BUTTONS
-    )      
     
     
 @app.on_message(filters.group & filters.incoming & filters.command(['help']))
