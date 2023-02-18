@@ -147,11 +147,3 @@ async def youtube_cb(b, cb):
         await cb.message.delete()
     except BaseException:
         pass
-
-
-@app.on_callback_query(filters.regex(pattern=r"close"))
-async def close(b, cb):
-    await cb.answer("Closed!")
-    await cb.message.delete()
-
-
