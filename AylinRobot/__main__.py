@@ -58,7 +58,6 @@ async def ghelp(client, message):
 async def ghelp(client, message):
         caption=Translation.PMHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, ),
         reply_markup=Button.PMHELP_BUTTONS
-    )          
 
     
     
