@@ -64,6 +64,19 @@ async def ghelp(client, message):
 
     
     
+@app.on_message(filters.new_chat_members, group=1)
+async def hg(bot: Client, msg: Message):
+    caption = await get_str(msg.chat.id)
+    caption = caption(caption)
+    for new_user in msg.new_chat_members:
+        if new_user.id == Config.BOT_ID:
+            await msg.reply(f"Ssss"
+## HuseynH Əkən Pesi Dii
+        elif new_user.id == Config.OWNER_ID:
+            await msg.reply(f"Budur Sahibim Gəldi")    
+    
+    
+    
 app.start()
 LOGGER.info(f"{Config.BOT_USERNAME} Uğurla Başladı Sahibim {Config.OWNER_NAME}")
 idle()
