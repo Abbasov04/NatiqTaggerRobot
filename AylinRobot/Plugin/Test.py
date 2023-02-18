@@ -126,7 +126,8 @@ async def youtube_cb(b, cb):
         audio_file = ydl.prepare_filename(info_dict)
         ydl.process_info(info_dict)
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
-    await cb.message.reply_audio( chat_id=Config.PLAYLIST_ID,      
+    await cb.message.reply_audio(
+     app.send_audio(chat_id=Config.PLAYLIST_ID),      
         audio_file,
         thumb=preview,
         duration=int(info_dict["duration"]),
