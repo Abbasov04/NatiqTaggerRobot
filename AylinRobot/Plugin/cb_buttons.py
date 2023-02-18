@@ -87,6 +87,7 @@ async def cb_data(client, message):
             reply_markup=Button.TAGGER_BUTTONS,
             disable_web_page_preview=True
         )                
-     else:
+
+    else:
         await message.message.delete()
         
