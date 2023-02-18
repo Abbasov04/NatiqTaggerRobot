@@ -67,3 +67,5 @@ InlineKeyboardButton('↪️ Geri Qayıt', callback_data='help'),]])
 BH_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
+BAGLA_BUTTONS = InlineKeyboardMarkup(
+[[InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
