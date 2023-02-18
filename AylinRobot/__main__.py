@@ -54,7 +54,7 @@ async def ghelp(client, message):
     )          
     
 
-    elif len(msg.command) >= 2:
+    elif len(msg.command):
         query = msg.command[1]
         if query.startswith("help"):
             if msg.chat.type == "private":
