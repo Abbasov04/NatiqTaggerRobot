@@ -39,7 +39,7 @@ class Translation(object):
 ╚═════════════════
 """    
 
-   PMHELP_TEXT = """
+    PMHELP_TEXT = """
    {} Salam
 """
     HELP_TEXT = """
