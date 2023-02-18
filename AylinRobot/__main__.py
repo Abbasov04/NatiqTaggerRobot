@@ -56,8 +56,6 @@ async def ghelp(client, message):
 
 @app.on_message(filters.private & filters.incoming & filters.command(['help']))
 async def ghelp(client, message):
-    await message.reply_photo(
-        AylinIMG,
         caption=Translation.PMHELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
         reply_markup=Button.PMHELP_BUTTONS
     )          
