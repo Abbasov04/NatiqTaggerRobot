@@ -98,12 +98,6 @@ async def youtube_cb(b, cb):
             "You ain't the person who requested to play the song!", show_alert=True
         )
         return
-    await cb.message.edit("▱▱▱▱▱▱")
-    await cb.message.edit("▰▱▱▱▱▱")
-    await cb.message.edit("▰▰▱▱▱▱")
-    await cb.message.edit("▰▰▰▱▱▱")
-    await cb.message.edit("▰▰▰▰▱▱")
-    await cb.message.edit("▰▰▰▰▰▱")
     await cb.message.edit("▰▰▰▰▰▰")
 
     x = int(x)
@@ -128,7 +122,10 @@ async def youtube_cb(b, cb):
         audio_file = ydl.prepare_filename(info_dict)
         ydl.process_info(info_dict)
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
-    await cb.message.reply_audio(await cb.send_audio(Config.PLAYLIST_ID, audio_file, thumb=preview, duration=int(info_dict["duration"]),
+    await cb.message.reply_audio(
+        audio_file,
+        thumb=preview,
+        duration=int(info_dict["duration"]),
         caption=(f"""
  ━━━━━━━━━━━━━━━━━━━━━━━━━━┑
 💽 𝙽𝚊𝚖𝚎 : __[{title}]({link})__
