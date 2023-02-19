@@ -146,6 +146,7 @@ async def youtube_cb(b, cb):
 **├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
 **╰───────────────**
 '''
+    )
     try:
         os.remove(audio_file)
         os.remove(preview)
