@@ -124,8 +124,8 @@ async def youtube_cb(b, cb):
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
     await cb.message.reply_audio(
         audio_file,
-        thumb=preview),
-        duration=int(info_dict["duration"]),
+        thumb=preview,
+        duration=int(info_dict["duration"])),
         caption_for_logchannel =( f'''
 **╭───────────────**
 **├▷ 🎧 Başlıq: [{title}]({link})**
