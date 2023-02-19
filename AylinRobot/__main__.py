@@ -38,6 +38,8 @@ async def start(client, message):
     
 @app.on_message(filters.group & filters.incoming & filters.command(['start']))
 async def gstart(client, message):
+    await message.reply_photo(
+        AylinIMG,
         caption=Translation.GSTART_TEXT.format(Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME)
     
     
