@@ -7,7 +7,7 @@ import os
 from AylinRobot.translation import Translation
 from AylinRobot.Plugin import Button
 from AylinRobot.config import Config
-from pyrogram import Client
+from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot import AylinRobot as app
