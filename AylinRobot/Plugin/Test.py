@@ -32,7 +32,7 @@ from youtubesearchpython import VideosSearch
 
 
 
-@app.on_message(filters.command(["song", "search", "music"]))
+@app.on_message(filters.command(["music"]))
 async def ytsearch(client, message):
     try:
         if len(message.command) < 2:
