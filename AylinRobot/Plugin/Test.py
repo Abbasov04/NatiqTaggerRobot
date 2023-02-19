@@ -72,7 +72,7 @@ async def ytsearch(client, message):
                             "❰ ❺ ❱", callback_data=f"plll 4|{query}|{user_id}"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Close", callback_data="close")],
+                    [InlineKeyboardButton(text="🔐 Bağla", callback_data="close")],
                 ]
             )
             await msg.edit(toxxt, reply_markup=koyboard, disable_web_page_preview=True)
