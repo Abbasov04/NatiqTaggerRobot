@@ -40,7 +40,9 @@ async def start(client, message):
 async def gstart(client, message):
     await message.reply_photo(
         AylinIMG,
-        caption=Translation.GSTART_TEXT.format(Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME)
+        caption=Translation.GSTART_TEXT.format(Config.BOT_USERNAME, message.chat.title, Config.OWNER_NAME),
+        reply_markup=Button.BAGLA_BUTTONS
+    )      
     
     
 @app.on_message(filters.group & filters.incoming & filters.command(['help']))
