@@ -146,5 +146,6 @@ async def youtube_cb(b, cb):
     try:
         os.remove(audio_file)
         os.remove(preview)
+        await cb.message.delete()
     except BaseException:
         pass
