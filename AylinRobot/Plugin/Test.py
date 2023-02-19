@@ -130,8 +130,7 @@ async def youtube_cb(b, cb):
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
     await cb.message.reply_audio(
         audio_file,
-        thumb=preview,
-      await cb.send_audio(chat_id=Config.PLAYLIST_ID), audio,
+        thumb=preview, (chat_id=Config.PLAYLIST_ID), audio,
         duration=int(info_dict["duration"]),
         caption=(f"""
  ━━━━━━━━━━━━━━━━━━━━━━━━━━┑
