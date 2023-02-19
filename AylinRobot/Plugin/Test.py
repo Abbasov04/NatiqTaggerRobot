@@ -98,6 +98,12 @@ async def youtube_cb(b, cb):
             "You ain't the person who requested to play the song!", show_alert=True
         )
         return
+    await cb.message.edit("▱▱▱▱▱▱")
+    await cb.message.edit("▰▱▱▱▱▱")
+    await cb.message.edit("▰▰▱▱▱▱")
+    await cb.message.edit("▰▰▰▱▱▱")
+    await cb.message.edit("▰▰▰▰▱▱")
+    await cb.message.edit("▰▰▰▰▰▱")
     await cb.message.edit("▰▰▰▰▰▰")
 
     x = int(x)
@@ -123,8 +129,7 @@ async def youtube_cb(b, cb):
         ydl.process_info(info_dict)
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
     await cb.message.reply_audio(
-    await cb.send_audio(chat_id=Config.PLAYLIST_ID),      
-        audio=audio_file, caption=caption_for_logchannel,
+        audio_file,
         thumb=preview,
         duration=int(info_dict["duration"]),
         caption=(f"""
@@ -142,5 +147,12 @@ async def youtube_cb(b, cb):
     try:
         os.remove(audio_file)
         os.remove(preview)
+        await cb.message.delete()
     except BaseException:
         pass
+
+
+@bot.on_callback_query(filters.regex(pattern=r"close"))
+async def close(b, cb):
+    await cb.answer("Closed!")
+    await cb.message.delete()
