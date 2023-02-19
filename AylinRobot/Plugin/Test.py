@@ -126,7 +126,7 @@ async def youtube_cb(b, cb):
         audio_file,
         thumb=preview,
         duration=int(info_dict["duration"]),
-        caption_for_logchannel = f'''
+        caption_for_logchannel =( f'''
 **╭───────────────**
 **├▷ 🎧 Başlıq: [{title}]({link})**
 **├───────────────**
