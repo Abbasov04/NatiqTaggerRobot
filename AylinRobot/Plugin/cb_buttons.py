@@ -7,7 +7,7 @@ import os
 from AylinRobot.translation import Translation
 from AylinRobot.Plugin import Button
 from AylinRobot.config import Config
-from pyrogram import Client, filters
+from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from AylinRobot import AylinRobot as app
@@ -88,8 +88,6 @@ async def cb_data(client, message):
             disable_web_page_preview=True
         )                
 
-@app.on_callback_query(filters.regex(pattern=r"close"))
-async def close(b, cb):
-    await cb.answer("Closed!")
-    await cb.message.delete()
+    else:
+        await message.message.delete()
         
