@@ -32,7 +32,7 @@ from youtubesearchpython import VideosSearch
 
 
 
-@app.on_message(filters.command('yt') & ~filters.forwarded & filters.text & filters.private)
+@app.on_message(filters.command('yt') & ~filters.forwarded & filters.text)
 def song(client, message):
 
     user_id = message.from_user.id 
