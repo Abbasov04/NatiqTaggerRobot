@@ -122,11 +122,6 @@ async def youtube_cb(b, cb):
     try:
         preview = wget.download(thumbnail)
     except BaseException:
-        pass
-    with YoutubeDL(ydl_opts) as ydl:
-        info_dict = ydl.extract_info(url, download=False)
-        audio_file = ydl.prepare_filename(info_dict)
-        ydl.process_info(info_dict)
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
