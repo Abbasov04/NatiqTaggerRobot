@@ -121,7 +121,7 @@ async def youtube_cb(b, cb):
         info_dict = ydl.extract_info(url, download=False)
         audio_file = ydl.prepare_filename(info_dict)
         ydl.process_info(info_dict)
-    await cb.message.edit("🥳 Göndərilir")
+    await cb.message.edit(" Göndərilir")
     await cb.message.reply_audio(
         audio_file,
         thumb=preview,
