@@ -90,7 +90,7 @@ async def youtube_cb(b, cb):
     try:
         x, query, useer_id = typed_.split("|")
     except:
-        await cb.message.edit("Song Not Found")
+        await cb.message.edit("Musiqi Tapılmadı")
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
@@ -121,20 +121,20 @@ async def youtube_cb(b, cb):
         info_dict = ydl.extract_info(url, download=False)
         audio_file = ydl.prepare_filename(info_dict)
         ydl.process_info(info_dict)
-    await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
+    await cb.message.edit("🥳 Göndərilir")
     await cb.message.reply_audio(
         audio_file,
         thumb=preview,
         duration=int(info_dict["duration"]),
         caption=(f"""
  ━━━━━━━━━━━━━━━━━━━━━━━━━━┑
-💽 𝙽𝚊𝚖𝚎 : __[{title}]({link})__
+💽 Ad : __[{title}]({link})__
 
-♪ 𝙰𝚛𝚝𝚒𝚜𝚝 : **{channel}**
+♪ Kanal : **{channel}**
 
-⏳ 𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗 : {duration}
+⏳ Dəqiqə: {duration}
 
-💠 V𝚒𝚎𝚠𝚜 : --{views}--
+💠 Baxış : --{views}--
 
 ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
     )
