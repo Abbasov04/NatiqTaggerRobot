@@ -128,9 +128,10 @@ async def youtube_cb(b, cb):
         audio_file = ydl.prepare_filename(info_dict)
         ydl.process_info(info_dict)
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
-        audio_file,
-        thumb=preview,
-        duration=int(info_dict["duration"]),
+       with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info_dict = ydl.extract_info(link, download=False)
+            audio_file = ydl.prepare_filename(info_dict)
+            ydl.process_info(info_dict)
         caption_for_logchannel = f'''
 **╭───────────────**
 **├▷ 🎧 Başlıq: [{title}]({link})**
