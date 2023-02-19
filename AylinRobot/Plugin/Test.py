@@ -72,6 +72,7 @@ async def ytsearch(client, message):
                             "❰ ❺ ❱", callback_data=f"plll 4|{query}|{user_id}"
                         ),
                     ],
+                    [InlineKeyboardButton(text="Close", callback_data="close")],
                 ]
             )
             await msg.edit(toxxt, reply_markup=koyboard, disable_web_page_preview=True)
@@ -149,3 +150,9 @@ async def youtube_cb(b, cb):
         await cb.message.delete()
     except BaseException:
         pass
+
+
+@app.on_callback_query(filters.regex(pattern=r"close"))
+async def close(b, cb):
+    await cb.answer("Closed!")
+    await cb.message.delete()
