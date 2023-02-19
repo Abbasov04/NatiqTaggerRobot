@@ -1,34 +1,32 @@
-import os
-from pyrogram import idle, filters
-import requests
-import wget
+import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
 from AylinRobot import AylinRobot as app
-from yt_dlp import YoutubeDL
-from pyrogram import Client, filters
-import yt_dlp
-from AylinRobot.config import Config
-from pyrogram import filters, Client
-from pyrogram.types import *
-from pyrogram.types import Message
-from pyrogram import *
-from youtube_search import YoutubeSearch
-from youtubesearchpython import SearchVideos
-import asyncio
-import math
-import io
-import re
-import time
-import aiofiles
-import aiohttp
-import wget
-import os
-from asyncio import get_running_loop
-from functools import partial
-from io import BytesIO
+from random import randint
 from urllib.parse import urlparse
+from pyrogram.errors import FloodWait, MessageNotModified
+from pyrogram import Client, filters
+from youtube_search import YoutubeSearch
+from pyrogram.handlers import MessageHandler
 import ffmpeg
-import lyricsgenius
-from youtubesearchpython import VideosSearch
+from AylinRobot.config import Config
+from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message
+)
+
+
+
+def time_to_seconds(time):
+    stringt = str(time)
+    return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
+
+
+buttons = {
+  "markup_for_private": InlineKeyboardMarkup([[InlineKeyboardButton('Playlist 🎧', url=f'https://t.me/{Config.PLAYLIST_NAME}')]]),
+  "add_to_group": InlineKeyboardMarkup([[InlineKeyboardButton('️✨️ Qrupa əlavə et ️✨️', url=f'https://t.me/{Config.BOT_USERNAME}?startgroup=true')]]),
+}
+
+
 
 
 
