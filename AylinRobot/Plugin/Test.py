@@ -3,7 +3,6 @@ from pyrogram import idle, filters
 import requests
 import wget
 from AylinRobot import AylinRobot as app
-from AylinRobot.Plugin.cb_button import cb_button
 from yt_dlp import YoutubeDL
 from pyrogram import Client, filters
 import yt_dlp
