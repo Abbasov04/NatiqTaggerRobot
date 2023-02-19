@@ -88,6 +88,8 @@ async def cb_data(client, message):
             disable_web_page_preview=True
         )                
 
-    else:
-        await message.message.delete()
+@app.on_callback_query(filters.regex(pattern=r"close"))
+async def close(b, cb):
+    await cb.answer("Closed!")
+    await cb.message.delete()
         
