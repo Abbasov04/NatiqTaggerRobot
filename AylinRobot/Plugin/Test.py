@@ -126,7 +126,7 @@ async def youtube_cb(b, cb):
         audio_file,
         thumb=preview,
         duration=int(info_dict["duration"])),
-        caption_for_logchannel =( f'''
+        caption_for_logchannel = f'''
 **╭───────────────**
 **├▷ 🎧 Başlıq: [{title}]({link})**
 **├───────────────**
@@ -137,7 +137,7 @@ async def youtube_cb(b, cb):
 **├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
 **╰───────────────**
 '''
-        caption_for_private =( f'''
+        caption_for_private = f'''
 **╭───────────────**
 **├▷ 🎧 Başlıq: [{title}]({link})**
 **├───────────────**
@@ -146,8 +146,6 @@ async def youtube_cb(b, cb):
 **├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
 **╰───────────────**
 '''
-    )
-      )
     try:
         os.remove(audio_file)
         os.remove(preview)
