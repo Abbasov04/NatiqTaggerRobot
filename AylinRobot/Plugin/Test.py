@@ -144,7 +144,6 @@ async def youtube_cb(b, cb):
 💠 V𝚒𝚎𝚠𝚜 : --{views}--
 
 ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
-    )
     try:
         os.remove(audio_file)
         os.remove(preview)
