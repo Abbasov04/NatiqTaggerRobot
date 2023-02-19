@@ -123,47 +123,36 @@ async def youtube_cb(b, cb):
         preview = wget.download(thumbnail)
     except BaseException:
         pass
-
+    with YoutubeDL(ydl_opts) as ydl:
+        info_dict = ydl.extract_info(url, download=False)
+        audio_file = ydl.prepare_filename(info_dict)
+        ydl.process_info(info_dict)
     await cb.message.edit("🅂🄴🄽🄳🄸🄽🄶")
-       with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info_dict = ydl.extract_info(link, download=False)
-            audio_file = ydl.prepare_filename(info_dict)
-            ydl.process_info(info_dict)
-        caption_for_logchannel = f'''
-**╭───────────────**
-**├▷ 🎧 Başlıq: [{title}]({link})**
-**├───────────────**
-**├▷ 👁‍🗨 Baxış: {views}**
-**├───────────────**
-**├▷ 👤 İstəyən: {isteyen}**
-**├───────────────**
-**├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
-**╰───────────────**
-'''
-        caption_for_private = f'''
-**╭───────────────**
-**├▷ 🎧 Başlıq: [{title}]({link})**
-**├───────────────**
-**├▷ 👁‍🗨 Baxış: {views}**
-**├───────────────**
-**├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
-**╰───────────────**
-'''
+    await cb.message.reply_audio(Config.PLAYLIST_ID,
+        audio_file,
+        thumb=preview,
+        duration=int(info_dict["duration"]),
+        caption=(f"""
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━┑
+💽 𝙽𝚊𝚖𝚎 : __[{title}]({link})__
 
-        secmul, dur, dur_arr = 1, 0, duration.split(':')
-        for i in range(len(dur_arr)-1, -1, -1):
-            dur += (int(dur_arr[i]) * secmul)
-            secmul *= 60
-    await cb.edit("📤 Yüklənir..")
-        message.reply_audio(audio_file, caption=caption_for_private, quote=False, title=title, duration=dur, thumb=thumb_name, performer = f"{Config.PLAYLIST_NAME}", reply_markup=buttons['markup_for_private'])
-    await cb.delete()
-    await cb.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=caption_for_logchannel, performer = f"{Config.BOT_USERNAME}", title=title, duration=dur, thumb=thumb_name, reply_markup=buttons['add_to_group'])
-    except Exception as e:
-        m.edit(f'**⚠️ Gözlənilməyən xəta yarandı.**\n**Xahiş edirəm xətanı {Config.OWNER_NAME} sahibimə xəbərdar et!**')
-        print(e)
+♪ 𝙰𝚛𝚝𝚒𝚜𝚝 : **{channel}**
 
+⏳ 𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗 : {duration}
+
+💠 V𝚒𝚎𝚠𝚜 : --{views}--
+
+┕━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
+    )
     try:
         os.remove(audio_file)
-        os.remove(thumb_name)
-    except Exception as e:
-        print(e)
+        os.remove(preview)
+        await cb.message.delete()
+    except BaseException:
+        pass
+
+
+@app.on_callback_query(filters.regex(pattern=r"close"))
+async def close(b, cb):
+    await cb.answer("Closed!")
+    await cb.message.delete()
