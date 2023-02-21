@@ -827,14 +827,6 @@ async def cancel(event):
   
   if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
  
- 
-@client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
-async def cancel(event):
-  global anlik_calisan
-  anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
- 
 		
 
 
@@ -849,3 +841,29 @@ async def tag_admin(event):
     else:
         await event.reply(text)
     raise StopPropagation
+    
+    
+    
+    
+SAHIB = Config.OWNER_ID
+
+@client.on(events.NewMessage(pattern="^.pin ?(.*)"))
+async def pin(event):
+    if event.sender_id == SAHIB:
+        if not event.reply_to_msg_id:
+            return await event.reply("🗨 Zəhmət Olmasa Bir Mesaja Yanıt Verin")
+        await event.reply("📌 Sahibim Mesajınlz Pinləndi!")
+        await event.client.pin_message(event.chat_id, event.reply_to_msg_id, notify=True)
+    else:
+        await event.reply(f"Sən {Config.BOT_NAME} Bota Sahib Deyilsən!\n⛔ Pinləməyə Çalışma.")
+ 
+
+@client.on(events.NewMessage(pattern="^.unpin ?(.*)"))
+async def unpin(event):
+    if event.sender_id == SAHIB:
+        if not event.reply_to_msg_id:
+            return await event.reply("🗨 Zəhmət Olmasa Pinlənmiş Mesaja Yanıt Verin")
+        await event.reply("Sahibim Pinlənmiş Mesaj Qaldırıldı")
+        await event.client.unpin_message(event.chat_id)
+    else:
+        await event.reply(f"Sən {Config.BOT_NAME} Bota Sahib Deyilsən!\n⛔ UnPinləməyə Çalışma.")    
