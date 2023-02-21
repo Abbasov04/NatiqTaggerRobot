@@ -183,9 +183,6 @@ class Translation(object):
 ║
 ║▻ 🔮 Istifadə: /alive
 ║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
-║
-║▻ 🔮 Istifadə: /list
-║▻ 📃 Açıqlama: Qrupunuzda Olan Botları Göstərər.
 ╚═════════════════
 """
 
