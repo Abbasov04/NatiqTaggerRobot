@@ -41,20 +41,22 @@ async def chatbot_status(_, message):
     else:
         await message.reply_text("/chatbot [ON] və yaxud [OFF] yazmadınız")
         
-        
-    text = msg.text.lower()
+@app.on_message(filters.text)
+async def start(_, msg: Message):
+    global active_chats        
+    Aylin = msg.text.lower()
     chat_id = msg.chat.id
     if msg.chat.id not in active_chats:
         return
-    if "salam" in text:
+    if "salam" in Aylin:
         await msg.reply_text(f"{random.choice(salam)}")
-    if "necəsən" in text or "necesen" in text or "netersen" in text:
+    if "necəsən" in text or "necesen" in Aylin or "netersen" in Aylin:
         await msg.reply_text(f"{random.choice(necesen)}")
-    if "sagol" in text or "sağol" in text or "saqol" in text:
+    if "sagol" in Aylin or "sağol" in Aylin or "saqol" in Aylin:
         await msg.reply_text(f"{random.choice(sagol)}")
-    if "getdim" in text or "gedim" in text or "gedirəm" in text or "gedirem" in text:
+    if "getdim" in Aylin or "gedim" in Aylin or "gedirəm" in Aylin or "gedirem" in Aylin:
         await msg.reply_text(f"{random.choice(getdim)}")
-    if "geldim" in text or "gəldim" in text or "gəl" in text or "gəlirəm" in text:
+    if "geldim" in Aylin or "gəldim" in Aylin or "gəl" in Aylin or "gəlirəm" in Aylin:
         await msg.reply_text(f"{random.choice(geldim)}")
-    if "ban" in text or "mute" in text or "purge" in text or "gban" in text:
+    if "ban" in Aylin or "mute" in Aylin or "purge" in text or "gban" in Aylin:
         await msg.reply_text(f"{random.choice(ban)}")
