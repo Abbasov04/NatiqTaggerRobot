@@ -38,20 +38,3 @@ logger = getLogger(__name__)
 
 _ = TelegramClient('Aylin', api_id=API_ID, api_hash=API_HASH)
 bot = _.start(bot_token=TOKEN)
-
-owner = config.OWNER
-
-anlıq = []
-
-tək = []
-
-qruplar = []
-
-istifadeci = []
-
-admins = []
-
-delay = Config.DELAY
-
-botadı = Config.BOT_USERNAME
-
