@@ -11,7 +11,7 @@ class Translation(object):
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {}**
 ║
-║▻ 🙋‍♀️ Mənim Adım  ️️️️️️🙎‍♀️ [{}](https://t.me/{Config.BOT_USERNAME}){} Mən 
+║▻ 🙋‍♀️ Mənim Adım  ️️️️️️🙎‍♀️ [{}](https://t.me/{}) Mən 
 ║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
 ║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
 ║▻ `📚 Kömək` Buttonuna Toxun
@@ -23,7 +23,7 @@ class Translation(object):
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {} 
 ║
-║▻ 💁‍♀️ ️️️️️️ [{}](https://t.me/{Config.BOT_USERNAME}){}- Un  
+║▻ 💁‍♀️ ️️️️️️ [{}](https://t.me/{})- Un  
 ║▻ 📚 Əmrləri  Bunlardır Aşağıdakı 
 ║▻ 🖲 Buttonlara Toxunaraq istədiyiniz
 ║▻ ✔️ Əmr Haqqında Məlumat Ala Bilərsiniz 
@@ -36,7 +36,7 @@ class Translation(object):
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {} 
 ║
-║▻ 🙎‍♀️ [{}](https://t.me/{Config.BOT_USERNAME}){} 🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
+║▻ 🙎‍♀️ [{}](https://t.me/{}) 🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
 ║
 ║▻ ✨ Bot Versiyası: v0.7.0
 ║▻ 🍀 Pyrogram Versiyası: 1.4.16
