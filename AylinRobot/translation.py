@@ -42,7 +42,6 @@ class Translation(object):
 ║▻ 🍀 Pyrogram Versiyası: 1.4.16
 ║▻ ✨ Python Versiyası: 3.11.1
 ║▻ ⚙️ Server [Heroku](https://heroku.com)
-║▻ 👨‍💻 Mənim Sahibim @{}
 ║▻ 📆 Botun İstifadəyə Verilmə Tarixi `20.11.2022` 
 ╚═════════════════
 ╔═════════════════
