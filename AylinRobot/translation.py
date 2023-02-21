@@ -11,7 +11,7 @@ class Translation(object):
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {}**
 ║
-║▻ 🙎‍♀️ Mənim Adım  ️️️️️️{} Mən 
+║▻ 🙋‍♀️ Mənim Adım  ️️️️️️🙎‍♀️ [{}](https://t.me/{Config.BOT_USERNAME}){} Mən 
 ║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
 ║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
 ║▻ `📚 Kömək` Buttonuna Toxun
@@ -23,7 +23,7 @@ class Translation(object):
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {} 
 ║
-║▻ 💁‍♀️ {} - Un  
+║▻ 💁‍♀️ ️️️️️️ [{}](https://t.me/{Config.BOT_USERNAME}){}- Un  
 ║▻ 📚 Əmrləri  Bunlardır Aşağıdakı 
 ║▻ 🖲 Buttonlara Toxunaraq istədiyiniz
 ║▻ ✔️ Əmr Haqqında Məlumat Ala Bilərsiniz 
