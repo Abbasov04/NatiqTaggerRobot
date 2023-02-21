@@ -8,7 +8,6 @@ from AylinRobot.config import Config
 from pyrogram import Client, filters
 import os
 import asyncio
-from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import FloodWait
 
 
