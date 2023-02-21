@@ -205,7 +205,7 @@ class Translation(object):
 ╚═════════════════
 """
 
-TAGGER_TEXT = """
+    TAGGER_TEXT = """
 ╔═════════════════
 ║▻ 🔮 Istifadə: /tag
 ║▻ 👤 Açıqlama: [Səbəb] - 5 - Li Tağ.
