@@ -9,7 +9,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from AylinRobot.config import Config
 from Telethon.Mesajlar import heyvan, sehidler, soz, mafia, emoji, seher, bayrag
 
-from Telethon.Plugin.Pin import *
+from Telethon.Plugin.Pin import Pin
 
 anlik_calisan = []
  
