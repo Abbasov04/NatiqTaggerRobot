@@ -14,8 +14,8 @@ from AylinRobot.config import Config
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
-   await message.delete()      
         await message.reply("🤕 Dəstəklənən media faylına cavab verin")
+   await message.delete()         
         return
     if not (
         (replied.photo and replied.photo.file_size <= 5242880)
