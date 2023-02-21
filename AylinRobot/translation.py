@@ -19,25 +19,6 @@ class Translation(object):
 👨‍💻 **Sahibim** ♒️ @{}
 
 """    
-
-
-    GSTART_TEXT = """
-╔═════════════════
-║▻ 🙎‍♀️️️️️️️ {} {} Grupunda Super İşləyir 🥳
-╚═════════════════
-"""    
-
-    GHELP_TEXT = """
-╔═════════════════
-║▻ 🙋‍♀️ {} 
-║
-║▻ 💁‍♀️ {}-Un Əmrləri ini  Görmək Üçün ♒️ Kömək Buttonuna Toxun ⤵️
-╚═════════════════
-"""    
-
-    PMHELP_TEXT = """
-   {} Salam
-"""
     HELP_TEXT = """
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {} 
@@ -58,7 +39,7 @@ class Translation(object):
 ║▻ 🙎‍♀️ {} 🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
 ║
 ║▻ ✨ Bot Versiyası: v0.7.0
-║▻ 🍀 Pyrogram Versiyası: 2.0.97
+║▻ 🍀 Pyrogram Versiyası: 1.4.16
 ║▻ ✨ Python Versiyası: 3.11.1
 ║▻ ⚙️ Server [Heroku](https://heroku.com)
 ║▻ 👨‍💻 Mənim Sahibim @{}
@@ -76,6 +57,15 @@ class Translation(object):
 ╔═════════════════
 ║▻ 🔮 Istifadə: /stats
 ║▻ 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
+║
+║▻ 🔮 Istifadə: /block
+║▻ 📃 Açıqlama: İstifadəçini Və Ya Qrupu Bloklayar.
+║
+║▻ 🔮 Istifadə: /unblock
+║▻ 📃 Açıqlama: Bloku Açar.
+║
+║▻ 🔮 Istifadə: /blocklist
+║▻ 📃 Açıqlama: Blok olunanların siyahısını göstərər.
 ║
 ║▻ 🔮 Istifadə: /broadcastall
 ║▻ 📃 Açıqlama: Qrupa Və Şəxsiyə Yayım Edər.
@@ -198,11 +188,8 @@ class Translation(object):
 ║▻ 🔮 Istifadə: /alive
 ║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
 ║
-║▻ 🔮 Istifadə: /bots
+║▻ 🔮 Istifadə: /list
 ║▻ 📃 Açıqlama: Qrupunuzda Olan Botları Göstərər.
-║
-║▻ 🔮 Istifadə: /alist
-║▻ 📃 Açıqlama: Qrupunuzda Olan Adminləri Göstərər.
 ╚═════════════════
 """
 
@@ -224,20 +211,93 @@ class Translation(object):
 ║▻ 🔮 Istifadə: /tag
 ║▻ 📃 Açıqlama: İstifadəçiləri  Səbəbsiz Tag Edər.
 ║ 
-║▻ 🔮 Istifadə: /cancel
-║▻ 📃 Açıqlama: Tag Prosesini  Dayandırar.
-║
-║▻ 🔮 Istifadə: /tektag
-║▻ 📃 Açıqlama:  İstifadəçiləri Tək-Tək Tag Edər.
+║▻ 🔮 Istifadə: /admin
+║▻ 📃 Açıqlama: Adminləri Tag Edər.
 ╚═════════════════
 """
 
 
+
+##### Broadcast Mesajları
+
+
 class LAN(object):
 
+
+    BILDIRIM = """
+```📣 Yeni İsmarıc``` \n\n#YENI_ISTIFADƏÇİ **botu başlatdı!** \n\n🏷 isim: `{}` \n📮 istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})"""
+    GRUP_BILDIRIM = """
+```📣 Yeni İsmarıc``` \n\n#YENI_QRUP **botu başlatdı!** \n\n🏷 Qrupa əlavə edən: `{}` \n📮 Qrupa əlavə edən istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})\n Qrupun adı: {}\n Qrupun ID: {}\n Qrupun mesaj kinki( sadəcə açıq qruplar): [Buraya Toxun](https://t.me/c/{}/{})
+
+"""
+    SAHIBIME = """
+sahibimə
+"""
+    PRIVATE_BAN = """
+Məyusam, əngəlləndiniz! Bunun bir xəta olduğunu düşünürsünüz isə {} yazın.
+ """
+    GROUP_BAN = """
+Məyusam, qrupunuz qara siyahıya əlavə olundu! Artıq burada qala bilmərəm! Bunun bir xəta olduğunu düşünürsünüz isə {} yazın.'
+"""
+    NOT_ONLINE = """
+aktiv deyil
+"""
+    BOT_BLOCKED = """
+botu əngəlləyib
+"""
+    USER_ID_FALSE = """
+istifadəçi id'i yanlışdır.
+"""
+    BROADCAST_STARTED = """
+```📤 BroadCast başladıldı! Bitəndə mesaj alacaqsınız.
+"""
+    BROADCAST_STOPPED = """
+✅ ```Broadcast uğurla tamamlandı.``` \n\n**Bu qədər vaxtda tamamlandı** `{}` \n\n**Ümumi istifadəçilər:** `{}` \n\n**Ümumi göndərmə cəhdləri:** `{}` \n\n**Uğurla göndərilən:** `{}` \n\n**Ümumi xəta:** `{}`
+"""
     STATS_STARTED = """
 {} **Zəhmət olmasa gözləyin, bilgiləri gətirirəm!**
 """
     STATS = """
 **@{} Məlumatları**\n\n**İstifadəçiləri;**\n» **Ümumi söhbətlər:** `{}`\n» **Ümumi qruplar: `{}`\n» **Ümumi PM's: `{}`\n\n**Disk İstifadəsi;**\n» **Disk'in Sahəsi:** `{}`\n» **İstifadə edilən:** `{}({}%)`\n» **Boş qalan:** `{}`\n\n**🎛 Ən yüksək istifadə dəyərləri;**\n» **CPU:** `{}%`\n» **RAM:** `{}%`\n**Versiyalar;**\n» **Pyrogram:** {}
+"""
+    BAN_REASON = """
+Bu sebep yasaklandığınız için @{} tarafından otomatik olarak oluşturulmuştur
+"""
+    NEED_USER = """
+**Zəhmət olmasa istifadəçi id'si verin.**
+"""
+    BANNED_GROUP = """
+🚷 **Qadağan olundu!\n\nQadağan edən:** {}\n**Qrup ID:** `{}` \n**Vaxt:** `{}` \n**Səbəb:** `{}`
+"""
+    AFTER_BAN_GROUP = """
+**Məyusam, qrupunuz qara siyahıya əlavə edildi! \n\nSəbəb:** `{}`\n\n**Artıq burada qala bilmərəm. Bunun bir xəta olduğunu düşünürsünüzsə, dəstək qrupuna gəlin.**
+"""
+    GROUP_BILGILENDIRILDI = """
+\n\n✅ **Qrupu bilgiləndirdim və qrupdan çıxdım.**
+"""
+    GRUP_BILGILENDIRILEMEDI = """
+\n\n❌ **Qrupu məlumatlandırarkən xəta yarandı:** \n\n`{}`
+"""
+    USER_BANNED = """
+🚷 **Qadağan olundu! \n\nQadağan edən:** {}\n **İstifadəçi ID:** `{}` \n**Vaxt:** `{}` \n**Səbəb:** `{}`
+"""
+    AFTER_BAN_USER = """
+**Məyusam, qara siyahıya əlavə edildiniz! \n\nSəbəb:** `{}`\n\n**Bundan sonra sizə xidmət etməyəcəyəm.**
+"""
+    KULLANICI_BILGILENDIRME = """
+\n\n✅ İstifadəçini məlumatlandırdım.
+"""
+    KULLANICI_BILGILENDIRMEME = """
+\n\n❌ **İstifadəçini məlumatlandırarkən xəta yarandı:** \n\n`{}`
+"""
+    UNBANNED_USER = """
+🆓 **İstifadəçinin qadağası qaldırıldı !** \nQadağanı qaldıran: {} \n**İstifadəçi ID:**{}
+"""
+    USER_UNBAN_NOTIFY = """
+🎊 Sizə gözəl bir xəbərim var! Artıq əngəliniz qaldırıldı!
+"""
+    BLOCKS = """
+🆔 **İstifadəçi ID**: `{}`\n⏱ **Vaxt**: `{}`\n🗓 **Qadağan edildiyi tarix**: `{}`\n💬 **Səbəb**: `{}`\n\n"""
+    TOTAL_BLOCK = """
+🚷 **Ümumi əngəllənən:** `{}`\n\n{}
 """
