@@ -10,11 +10,8 @@ from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 from pyrogram import Client, filters
-from pyrogram import Client, filters
 import os
 import asyncio
-from pyrogram import enums
-from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import FloodWait
 
 
@@ -24,7 +21,7 @@ async def admins(client, message):
   try: 
     adminList = []
     ownerList = []
-    async for admin in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+    async for admin in app.iter_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
       if admin.privileges.is_anonymous == False:
         if admin.user.is_bot == True:
           pass
@@ -69,7 +66,7 @@ async def admins(client, message):
 async def bots(client, message):  
   try:    
     botList = []
-    async for bot in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
+    async for bot in app.iter_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
       botList.append(bot.user)
     lenBotList = len(botList) 
     text3  = f"`{message.chat.title}`**Qrupundakı Botlar**\n💁‍♀️ **Axtarış Edən** {message.from_user.mention}\n\n@{Config.BOT_USERNAME} **Sizin Üçün Botların Siyahısın Gətirdi**\n\n"
