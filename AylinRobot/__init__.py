@@ -20,5 +20,6 @@ AylinRobot = Client(
     api_hash = Config.API_HASH
 )
 
+from telethon import TelegramClient
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
