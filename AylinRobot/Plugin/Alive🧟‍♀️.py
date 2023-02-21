@@ -45,6 +45,7 @@ async def _human_time_duration(seconds):
 
 @app.on_message(filters.command(["alive"]) & filters.group)
 async def Alive(client: Client, message: Message):
+   await message.delete()   
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
