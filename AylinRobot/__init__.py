@@ -23,7 +23,6 @@ AylinRobot = Client(
 
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
-from telethon.tl.types import
 
 
 logging.basicConfig(
