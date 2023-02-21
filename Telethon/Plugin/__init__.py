@@ -11,7 +11,7 @@
 #
 #  Repodan nəsə əkib başqasına verən kimliyindən aslı olmayaraq peysərdi. # 
 
-from bot import *
+from client import *
 
 def __list_all_modules():
     from os.path import dirname, basename, isfile
