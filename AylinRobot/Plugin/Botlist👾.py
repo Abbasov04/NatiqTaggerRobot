@@ -6,13 +6,12 @@ import time
 from asyncio import sleep
 from time import time
 from pyrogram.errors import FloodWait
-from pyrogram.types import Message
+from pyrogram.types import Message, ChatMemberStatus
 from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 from pyrogram import Client, filters
 import os
 import asyncio
-from pyrogram import ChatMemberStatus
 from pyrogram.errors import FloodWait
 
 
