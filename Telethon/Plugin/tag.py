@@ -573,11 +573,11 @@ userjoin = (
 @client.on(events.NewMessage(pattern='Husi'))
 @client.on(events.NewMessage(pattern='Husu'))
 async def handler(event):
-    await event.reply(random.choice(edalet))
+    await event.reply(random.choice(Aylin))
 
 
 
-client = (
+Aylin = (
     "Az tağ elə sahibimi",
     " rondom 1",
 )
