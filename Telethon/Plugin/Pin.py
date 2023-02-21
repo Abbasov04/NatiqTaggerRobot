@@ -12,7 +12,7 @@ async def pin(event):
         await event.reply("📌 Sahibim Mesajınlz Pinləndi!")
         await event.client.pin_message(event.chat_id, event.reply_to_msg_id, notify=True)
     else:
-        await event.reply(f"Sən {BOT_NAME} Bota Sahib Deyilsən!\n⛔ Pinləməyə Çalışma.")
+        await event.reply(f"Sən {Config.BOT_NAME} Bota Sahib Deyilsən!\n⛔ Pinləməyə Çalışma.")
  
 
 @client.on(events.NewMessage(pattern="^.unpin ?(.*)"))
@@ -22,4 +22,4 @@ async def unpin(event):
         await event.reply("Sahibim Pinlənmiş Mesaj Qaldırıldı")
         await event.client.unpin_message(event.chat_id)
     else:
-        await event.reply(f"Sən {BOT_NAME} Bota Sahib Deyilsən!\n⛔ UnPinləməyə Çalışma.")
+        await event.reply(f"Sən {Config.BOT_NAME} Bota Sahib Deyilsən!\n⛔ UnPinləməyə Çalışma.")
