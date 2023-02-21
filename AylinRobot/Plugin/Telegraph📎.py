@@ -12,9 +12,9 @@ from AylinRobot.config import Config
 
 @app.on_message(filters.command("tgm"))
 async def telegraph(client, message):
-   message.delete()
     replied = message.reply_to_message
     if not replied:
+    message.delete()      
         await message.reply("🤕 Dəstəklənən media faylına cavab verin")
         return
     if not (
