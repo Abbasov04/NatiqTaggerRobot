@@ -166,9 +166,6 @@ class Translation(object):
 ║
 ║▻ 🔮 Istifadə: /bio
 ║▻ 📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.
-║
-║▻ 🔮 Istifadə: /ship
-║▻ 📃 Açıqlama: Qrupda  Rondom  Bir Cütlük Seçər.
 ╚═════════════════
 """
 
