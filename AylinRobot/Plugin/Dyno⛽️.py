@@ -87,6 +87,7 @@ async def bot_status(client,message):
         f"➪ Botun işləmə müddəti: {uptime}\n"
         f"{quota_details}"
         f"{disk}",
-        quote=True
+        quote=True,
+        parse_mode="md"
     )
 
