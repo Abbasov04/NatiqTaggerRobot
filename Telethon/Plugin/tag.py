@@ -538,3 +538,26 @@ async def unpin(event):
         await event.client.unpin_message(event.chat_id)
     else:
         await event.reply(f"Sən {Config.BOT_NAME} Bota Sahib Deyilsən!\n⛔ UnPinləməyə Çalışma.")    
+        
+
+
+@client.on(events.ChatAction)
+async def handler(event):
+    if event.user_joined:
+        await event.reply(random.choice(userjoin))
+
+
+@client.on(events.ChatAction)
+async def handler(event):
+    if event.user_left:
+        await event.reply("Əla Birdə gəlmə")
+
+userjoin = (
+
+    "Xoş gəldin mesajı 1",
+    "Xoş gəldin mesajı 2",
+    "Xoş gəldin mesajı 3",
+    "Xoş gəldin mesajı 4",
+    "Xoş gəldin mesajı 5",
+    "",
+)
