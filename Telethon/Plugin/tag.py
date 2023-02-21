@@ -541,6 +541,9 @@ async def unpin(event):
         
 
 
+
+
+
 @client.on(events.ChatAction)
 async def handler(event):
     if event.user_joined:
@@ -560,4 +563,21 @@ userjoin = (
     "Xoş gəldin mesajı 4",
     "Xoş gəldin mesajı 5",
     "",
+)
+
+
+
+
+@client.on(events.NewMessage(pattern='@HuseynH'))
+@client.on(events.NewMessage(pattern='Huseyn_H'))
+@client.on(events.NewMessage(pattern='Husi'))
+@client.on(events.NewMessage(pattern='Husu'))
+async def handler(event):
+    await event.reply(random.choice(edalet))
+
+
+
+client = (
+    "Az tağ elə sahibimi",
+    " rondom 1",
 )
