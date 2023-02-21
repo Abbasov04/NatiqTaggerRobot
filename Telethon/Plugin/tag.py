@@ -557,9 +557,9 @@ async def handler(event):
 
 userjoin = (
 
-    "Xoş gəldin mesajı 1",
-    "Xoş gəldin mesajı 2",
-    "Xoş gəldin mesajı 3",
+    "Xoş Gəldoin",
+    "Aramıza Xoş Gəldin",
+    "Partimizə Xoş Gəldin",
     "Xoş gəldin mesajı 4",
     "Xoş gəldin mesajı 5",
     "",
@@ -569,7 +569,7 @@ userjoin = (
 
 
 @client.on(events.NewMessage(pattern='@HuseynH'))
-@client.on(events.NewMessage(pattern='Huseyn_H'))
+@client.on(events.NewMessage(pattern='@Huseyn_H'))
 @client.on(events.NewMessage(pattern='Husi'))
 @client.on(events.NewMessage(pattern='Husu'))
 async def handler(event):
@@ -579,5 +579,7 @@ async def handler(event):
 
 Aylin = (
     "Az tağ elə sahibimi",
-    " rondom 1",
+    "Hmm Mənim Sahibimlə Nə İşin Var",
+        "Ged Yat",
+    "Azzar",
 )
