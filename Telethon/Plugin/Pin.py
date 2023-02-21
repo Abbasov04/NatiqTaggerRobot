@@ -1,14 +1,20 @@
 import logging, asyncio, random
-from telethon import events
+from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
-
 from AylinRobot.config import Config
 
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(name)s - [%(levelname)s] - %(message)s'
+)
+LOGGER = logging.getLogger(__name__)
+ 
+api_id = Config.API_ID
+api_hash = Config.API_HASH
+bot_token = Config.BOT_TOKEN
 
-
-
-
+client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 SAHIB = Config.OWNER_ID
 BOT_NAME = Config.BOT_NAME
