@@ -17,19 +17,19 @@ from AylinRobot import AylinRobot as app
 async def cb_data(client, message):
     if message.data == "home":
         await message.message.edit_text(
-            text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
+            text=Translation.START_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME, Config.BOT_NAME),
             reply_markup=Button.START_BUTTONS,
             disable_web_page_preview=True,
         )
     elif message.data == "bh":
         await message.message.edit_text(
-            text=Translation.BH_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
+            text=Translation.BH_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME, Config.BOT_NAME),
             reply_markup=Button.BH_BUTTONS,
             disable_web_page_preview=True
         )
     elif message.data == "help":
         await message.message.edit_text(
-            text=Translation.HELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME),
+            text=Translation.HELP_TEXT.format(message.from_user.mention, Config.BOT_USERNAME, Config.OWNER_NAME, Config.BOT_NAME),
             reply_markup=Button.HELP_BUTTONS,
             disable_web_page_preview=True
         )
