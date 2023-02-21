@@ -6,10 +6,8 @@ from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 from pyrogram import Client, filters
-from pyrogram import Client, filters
 import os
 import asyncio
-from pyrogram import enums
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import FloodWait
 
@@ -41,7 +39,7 @@ async def everyone(client, message):
           elif len(message.command) == 1:
             inputText = ""    
           membersList = []
-          async for member in app.get_chat_members(message.chat.id):
+          async for member in app.iter_chat_members(message.chat.id):
             if member.user.is_bot == True:
               pass
             elif member.user.is_deleted == True:
