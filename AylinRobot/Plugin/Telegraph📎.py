@@ -43,7 +43,7 @@ async def telegraph(client, message):
     except Exception as document:
         await message.reply(message, text=document)
     else:
-        await message.reply(f"**🌐 Budur Sizin Telegraph Linginiz**:\n`https://telegra.ph{response[0]}`\n\nGöndərdi 🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})\n**İstədi** 💁‍♀️{message.from_user.mention}**", disable_web_page_preview=False)
+        await message.reply(f"**🌐 Budur Sizin Telegraph Linginiz**:\n`https://telegra.ph{response[0]}`\n\nGöndərdi 🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})\n**İstədi** 💁‍♀️{message.from_user.mention}**"), disable_web_page_preview=False)
     finally:
         os.remove(download_location)
     
