@@ -5,9 +5,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 from AylinRobot.config import Config
 
-
-
-
+client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 
 SAHIB = Config.OWNER_ID
