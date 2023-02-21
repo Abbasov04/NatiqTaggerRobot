@@ -30,13 +30,3 @@ class Config:
    SUPPORT = os.environ.get("SUPPORT", "HuseynH")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/425d1e4790954b3d29e87.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
-   
-   
-TOKEN = "5910888289:AAHOmBFyKIwc4XtbiZnkOQWk2-EZtx6BrT8" 
-
-  # my.telegram.org'dan alin.
-  API_ID    = 8953338   
-
-  # my.telegram.org'dan alin.
-  API_HASH  = "fe21f223cb02d8f7c1cbda651f553a45"  
-   
