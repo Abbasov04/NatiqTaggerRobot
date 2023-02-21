@@ -7,7 +7,7 @@ from AylinRobot.config import Config
 
 @client.on(events.NewMessage(pattern="^.pin ?(.*)"))
 async def pin(event):
-    if event.sender_id == {Config.OWNER_ID}
+    if event.sender_id == Config.OWNER_ID
         if not event.reply_to_msg_id:
             return await event.reply("🗨 Zəhmət Olmasa Bir Mesaja Yanıt Verin")
         await event.reply("📌 Sahibim Mesajınlz Pinləndi!")
@@ -18,7 +18,7 @@ async def pin(event):
 
 @client.on(events.NewMessage(pattern="^.unpin ?(.*)"))
 async def unpin(event):
-    if event.sender_id == {Config.OWNER_ID}
+    if event.sender_id == Config.OWNER_ID
         if not event.reply_to_msg_id:
             return await event.reply("🗨 Zəhmət Olmasa Pinlənmiş Mesaja Yanıt Verin")
         await event.reply("Sahibim Pinlənmiş Mesaj Qaldırıldı")
