@@ -10,7 +10,7 @@ from pyrogram.errors import FloodWait
 from AylinRobot.config import Config
 
     
-@app.on_message(filters.command('tgm'))
+@app.on_message(filters.command(["tgm"]))
 async def tgm(client, message):
     try:
         text = await message.reply("💁‍♀️ Emal edilir...")
