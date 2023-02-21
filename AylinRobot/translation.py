@@ -205,13 +205,25 @@ class Translation(object):
 ╚═════════════════
 """
 
-    TAGGER_TEXT = """
+TAGGER_TEXT = """
 ╔═════════════════
 ║▻ 🔮 Istifadə: /tag
-║▻ 📃 Açıqlama: İstifadəçiləri  Səbəbsiz Tag Edər.
-║ 
+║▻ 👤 Açıqlama: [Səbəb] - 5 - Li Tağ.
+║
+║▻ 🔮 Istifadə: /ttag
+║▻ 👥 Açıqlama: [Səbıb] - Təkli Tağ.
+║
+║▻ 🔮 Istifadə: /stag
+║▻ 🗨 Açıqlama: Maraqlı Sözlərlə Tağ.
+║
+║▻ 🔮 Istifadə: /etag
+║▻ 😑 Açıqlama: [Səbəb] - Emoji İlə Tağ.
+║
+║▻ 🔮 Istifadə: /btag
+║▻ 🏁 Açıqlama: [Səbəb] - Bayraqlarla Tağ
+║
 ║▻ 🔮 Istifadə: /admin
-║▻ 📃 Açıqlama: Adminləri Tag Edər.
+║▻ 👮‍♀️ Açıqlama: Adminlərin Toplu Siyahısı
 ╚═════════════════
 """
 
