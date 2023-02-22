@@ -547,7 +547,6 @@ async def unpin(event):
 @client.on(events.ChatAction)
 async def handler(event):
     if event.user_joined:
-  ad = f"[{usr.first_name}](tg://user?id={usr.id})        
         await event.reply(random.choice(userjoin))
 
 
@@ -555,10 +554,10 @@ async def handler(event):
 async def handler(event):
     if event.user_left:
         await event.reply("Əla Birdə gəlmə")
-        
+
 userjoin = (
 
-    f"{ad}Xoş Gəldoin",
+    "Xoş Gəldoin",
     "Xoş Gəldin Gözəl İnsan", 
     "Sənin Gəlişin Məni Sevindirdi", 
     "Aramıza Xoş Gəldin",
