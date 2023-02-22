@@ -552,12 +552,13 @@ async def handler(event):
 
 @client.on(events.ChatAction)
 async def handler(event):
+  ad = f"[{usr.first_name}](tg://user?id={usr.id})  
     if event.user_left:
         await event.reply("Əla Birdə gəlmə")
 
 userjoin = (
 
-    "Xoş Gəldoin",
+    f"{ad}Xoş Gəldoin",
     "Xoş Gəldin Gözəl İnsan", 
     "Sənin Gəlişin Məni Sevindirdi", 
     "Aramıza Xoş Gəldin",
