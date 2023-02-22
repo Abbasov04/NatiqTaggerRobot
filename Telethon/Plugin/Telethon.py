@@ -558,6 +558,8 @@ async def handler(event):
 userjoin = (
 
     "Xoş Gəldoin",
+    "Xoş Gəldin Gözəl İnsan", 
+    "Sənin Gəlişin Məni Sevindirdi", 
     "Aramıza Xoş Gəldin",
     "Partimizə Xoş Gəldin",
     "Bayaqdan Səni Gözləyirəm",
@@ -579,10 +581,9 @@ async def handler(event):
 
 
 Aylin = (
-    "Az tağ elə sahibimi",
-    "Hmm Mənim Sahibimlə Nə İşin Var",
-    "Ged Yat",
-    "Azzar",
+    "😒 Az tağ elə sahibimi",
+    "🤭 Hmm Mənim Sahibimlə Nə İşin Var?",
+    "😖 Ged Yat",
     "🚷 Ban Olundun !\nSəbəb: Sahibimi tağ etdiyinçün \nŞaka ya korkma 😂",
     "Burda olmasada qəlbi sizinlədi ❤️",
 )
