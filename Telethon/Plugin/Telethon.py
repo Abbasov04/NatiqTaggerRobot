@@ -546,12 +546,14 @@ async def unpin(event):
 
 @client.on(events.ChatAction)
 async def handler(event):
+  ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
     if event.user_joined:
         await event.reply(random.choice(userjoin))
 
 
 @client.on(events.ChatAction)
 async def handler(event):
+   ad = f"[{usr.first_name}](tg://user?id={usr.id}) "  
     if event.user_left:
         await event.reply("Əla Birdə gəlmə")
 
