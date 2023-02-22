@@ -560,9 +560,9 @@ userjoin = (
     "Xoş Gəldoin",
     "Aramıza Xoş Gəldin",
     "Partimizə Xoş Gəldin",
-    "Xoş gəldin mesajı 4",
-    "Xoş gəldin mesajı 5",
-    "",
+    "Bayaqdan Səni Gözləyirəm",
+    "Xoşgəldin, Pizza gətirəcəyivi düşnürdük.",
+    "Xoşgəldin, Çıxacagsansa indidən çıx 😒.",
 )
 
 
@@ -583,5 +583,6 @@ Aylin = (
     "Hmm Mənim Sahibimlə Nə İşin Var",
     "Ged Yat",
     "Azzar",
-    "Nəv Ə",
+    "🚷 Ban Olundun !\nSəbəb: Sahibimi tağ etdiyinçün \nŞaka ya korkma 😂",
+    "Burda olmasada qəlbi sizinlədi ❤️",
 )
