@@ -89,6 +89,9 @@ class Translation(object):
 ║
 ║▻ 🔮 Istifadə: /dyno
 ║▻ 📃 Açıqlama: Heroku Dyno Miqdarını Ölçər.
+║
+║▻ 🔮 Istifadə: /pin
+║▻ 📃 Açıqlama:  Yanıtlanan Mesajı Pinləyər.
 ╚═════════════════
 """
 
@@ -214,22 +217,22 @@ class Translation(object):
     TAGGER_TEXT = """
 ╔═════════════════
 ║▻ 🔮 Istifadə: /tag
-║▻ 👤 Açıqlama: [Səbəb] - 5 - Li Tağ.
+║▻ 📃  Açıqlama: [Səbəb] - 5 - Li Tağ.
 ║
 ║▻ 🔮 Istifadə: /ttag
-║▻ 👥 Açıqlama: [Səbıb] - Təkli Tağ.
+║▻ 📃  Açıqlama: [Səbıb] - Təkli Tağ.
 ║
 ║▻ 🔮 Istifadə: /stag
-║▻ 🗨 Açıqlama: Maraqlı Sözlərlə Tağ.
+║▻ 📃  Açıqlama: Maraqlı Sözlərlə Tağ.
 ║
 ║▻ 🔮 Istifadə: /etag
-║▻ 😑 Açıqlama: [Səbəb] - Emoji İlə Tağ.
+║▻ 📃  Açıqlama: [Səbəb] - Emoji İlə Tağ.
 ║
 ║▻ 🔮 Istifadə: /btag
-║▻ 🏁 Açıqlama: [Səbəb] - Bayraqlarla Tağ
+║▻ 📃  Açıqlama: [Səbəb] - Bayraqlarla Tağ
 ║
 ║▻ 🔮 Istifadə: /admin
-║▻ 👮‍♀️ Açıqlama: Adminlərin Toplu Siyahısı
+║▻ 📃 Açıqlama: Adminlərin Toplu Siyahısı
 ╚═════════════════
 """
 
