@@ -547,7 +547,6 @@ async def unpin(event):
 @client.on(events.ChatAction)
 async def handler(event):
     if event.user_joined:
-   ad = f"[{usr.first_name}](tg://user?id={usr.id}) "      
         await event.reply(random.choice(userjoin))
 
 
