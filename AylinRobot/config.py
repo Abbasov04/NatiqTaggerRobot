@@ -13,7 +13,7 @@ class Config:
 
    API_ID = int(os.getenv("API_ID", "8953338"))
    API_HASH = os.getenv("API_HASH", "fe21f223cb02d8f7c1cbda651f553a45")
-   BOT_TOKEN = os.getenv("BOT_TOKEN", "5910888289:AAHOmBFyKIwc4XtbiZnkOQWk2-EZtx6BrT8")
+   BOT_TOKEN = os.getenv("BOT_TOKEN", "5636190781:AAEKrN6CzshWjiBLgHIOPkpD0Hk-tQDevu8")
    BOT_USERNAME = os.environ.get("BOT_USERNAME", "AylinRobot")
    BOT_NAME = os.environ.get("BOT_NAME", "AylinRobot")
    OWNER_ID = int(os.environ.get("OWNER_ID","5731647757"))
@@ -24,7 +24,7 @@ class Config:
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "AylinRobotPlaylist")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001727904239"))
    BAN_GROUP = int(os.environ.get("BAN_GROUP", "-1001820370604"))
-   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "05a017d5-e3e5-424d-941f-3e60645e3141")
+   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "c59d490e-5f1a-4469-a685-101abff455db")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "HUSEYN")
    CHANNEL = os.environ.get("CHANNEL", "HuseynH")
    SUPPORT = os.environ.get("SUPPORT", "HuseynH")
