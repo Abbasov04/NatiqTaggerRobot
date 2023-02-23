@@ -571,8 +571,9 @@ userjoin = (
 
 
 @client.on(events.NewMessage(pattern=f'@{Config.OWNER_NAME}'))
-@client.on(events.NewMessage(pattern='@Husu'))
+@client.on(events.NewMessage(pattern='Huseyn'))
 @client.on(events.NewMessage(pattern='@Hesenov_H'))
+@client.on(events.NewMessage(pattern='Husi'))
 async def handler(event):
     await event.reply(random.choice(Aylin))
 
