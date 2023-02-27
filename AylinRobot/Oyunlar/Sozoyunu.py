@@ -3,7 +3,7 @@ from pyrogram import Client
 from pyrogram import filters
 from random import shuffle
 from pyrogram.types import Message
-from kelime_bot import oyun
+from AylinRobot.Oyunlar import oyun
 from helpers.kelimeler import *
 from helpers.keyboards import *
 from pyrogram.errors import FloodWait
