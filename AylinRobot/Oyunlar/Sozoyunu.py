@@ -157,44 +157,8 @@ async def buldu(c:Client, m:Message):
                 await c.send_message(m.chat.id, text)
     except KeyError:
         pass
-    
-gonderilmedi = True
-data_message = None
-EKLENEN_CHATS = []
-@app.on_message()
-async def data(c:Client, m:Message):
-    global EKLENEN_CHATS
-    global gonderilmedi
-    global data_message
-    
-    chat_id = str(m.chat.id)
-    
-    if chat_id in EKLENEN_CHATS:
-        return
-
-    if gonderilmedi:
-        data_message= await c.send_message(f"{Config.OWNER_ID}")
-        gonderilmedi = False
-        
-    
-    else:
-        chats = await c.get_messages(data_message.message_id)
-        chats = chats.text.split()
-        
-        if chat_id in chats:
-            pass
-        else:
-            chats.append(chat_id)
-            EKLENEN_CHATS.append(chat_id)
-            data_text = ""
-            for i in chats:
-                data_text += i + " "
-            await c.edit_message_text(data_message.message_id, data_text)
             
-            
-           
-            
-
+          
 
 from AylinRobot.Oyunlar import rating
 from pyrogram import Client
