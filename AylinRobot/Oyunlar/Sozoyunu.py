@@ -241,3 +241,11 @@ async def passs(c:Client, m:Message):
             await c.send_message(m.chat.id, f"<code>**❗ Keçid Düzgün Saxlanıldı! </code> \n Oyunu dayandırmaq üçün  /dayan yaza bilərsiniz ✍🏻**")
     else:
         await m.reply(f"❗ **Qrupumuzda Hal-Hazırda Aktiv Oyun Yoxdur!\n Yeni Oyuna Başlamaq Üçün /oyna Əmrindən İsdifadə Edin ✍🏻**")
+
+
+
+gonderilmedi = True
+data_message = None
+EKLENEN_CHATS = []
+            
+            
