@@ -7,6 +7,7 @@ import glob
 from time import sleep
 from pyrogram import Client
 import logging
+from AylinRobot.config import Config
 
 # THE LOGGING
 logging.basicConfig(
@@ -21,8 +22,8 @@ __all__ = [
     basename(f)[:-3] for f in modules if isfile(f) and not f.endswith("__init__.py")
 ]
 
-if OWNER_ID and len(OWNER_ID) and OWNER_ID.isdigit():
-    OWNER_ID = int(OWNER_ID)  # type: ignore
+if OWNER_ID and len(Config.OWNER_ID) and OWNER_ID.isdigit():
+    OWNER_ID = int(Config.OWNER_ID)  # type: ignore
 else:
     OWNER_ID = None  # type: ignore
 
