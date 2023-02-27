@@ -173,12 +173,12 @@ async def data(c:Client, m:Message):
         return
 
     if gonderilmedi:
-        data_message= await c.send_message(f"{Config.OWNER_ID}")
+        data_message= await c.send_message(OWNER_ID, f"{Config.OWNER_ID}")
         gonderilmedi = False
         
     
     else:
-        chats = await c.get_messages({Config.OWNER_ID}, data_message.message_id)
+        chats = await c.get_messages(OWNER_ID, data_message.message_id)
         chats = chats.text.split()
         
         if chat_id in chats:
@@ -189,7 +189,7 @@ async def data(c:Client, m:Message):
             data_text = ""
             for i in chats:
                 data_text += i + " "
-            await c.edit_message_text ({Config.OWNER_ID}, data_message.message_id, data_text)
+            await c.edit_message_text(OWNER_ID, data_message.message_id, data_text)
             
             
            
@@ -246,8 +246,8 @@ async def passs(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        if oyun[m.chat.id]["kec"] < 30:
-            oyun[m.chat.id]["kec"] += 1
+        if oyun[m.chat.id]["pas"] < 30:
+            oyun[m.chat.id]["pas"] += 1
             await c.send_message(m.chat.id,f"❗ Sizin Tam Yol Haqqınız Var!\n➡️ Növbəti Sözə Keçdim !\n✏️ Doğru söz : **<code>{oyun[m.chat.id]['kelime']}</code>**")
             
             oyun[m.chat.id]["kelime"] = kelime_sec()
