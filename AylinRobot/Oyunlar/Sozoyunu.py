@@ -81,3 +81,12 @@ async def stop(c:Client, m:Message):
     await c.send_message(m.chat.id, f"**👤 {m.from_user.mention}** Tərəfindən Oyun Sonlandırıldı\n\nYeni Oyuna Başlamaq Üçün /oyna Əmrindən İsdifadə Edin !\n\n 🏆 Xallar səyfəsi  :\n\n{siralama_text}")
     oyun[m.chat.id] = {}
     
+
+from AylinRobot.Oyunlar import oyun, rating
+from pyrogram import Client, filters
+
+
+@app.on_message(filters.command("data") & filters.user("realjihokimin")) 
+async def data(c:Client, m):
+    await m.reply(oyun)
+    await m.reply(rating)
