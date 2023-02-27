@@ -11,7 +11,7 @@ from pyrogram.types import Message
 
 
 # Oyunu başlat. 
-@app.on_message(filters.command("oyun")) 
+@app.on_message(filters.command("game")) 
 async def kelimeoyun(c:Client, m:Message):
     global oyun
     aktif = False
@@ -24,7 +24,7 @@ async def kelimeoyun(c:Client, m:Message):
     if aktif:
         await m.reply("**❗ Oyun Onsuzda Qrupnuzda Davam edir ✍🏻 \n Oyunu dayandırmaq üçün /stop yazabilərsiniz")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nHər birinizə uğurlar ❤️✨ !",reply_markup=RiyaddBlog) 
+        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nHər birinizə uğurlar ❤️✨ !",reply_markup=kanal) 
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
