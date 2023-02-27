@@ -66,7 +66,7 @@ from helpers.kelimeler import kelime_sec
 
 
 
-@app.on_message(filters.command("stop") & ~filters.group)
+@app.on_message(filters.command("stop") )
 async def stop(c:Client, m:Message):
     global oyun
     
@@ -103,7 +103,7 @@ from helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
 
 
-@app.on_message(filters.text & ~filters.group)
+@app.on_message(filters.text & filters.group)
 async def buldu(c:Client, m:Message):
     global oyun
     global rating
@@ -200,7 +200,7 @@ from helpers.kelimeler import kelime_sec
 
 
 
-@app.on_message(filters.command("pas") & ~filters.group)
+@app.on_message(filters.command("pas"))
 async def passs(c:Client, m:Message):
     global oyun
     
