@@ -193,3 +193,31 @@ async def data(c:Client, m:Message):
             await c.edit_message_text(OWNER_ID, data_message.message_id, data_text)
             
             
+
+
+from AylinRobot.Oyunlar import rating
+from pyrogram import Client
+from pyrogram import filters
+from pyrogram.types import Message
+
+
+@app.on_message(filters.command("gpuan"))
+async def ratingsa(c:Client, m:Message):
+    global rating
+    metin = """🏆 Qlobal Qrup Reytinqi :
+
+"""
+    eklenen = 0
+    puanlar = []
+    for kisi in rating:
+        puanlar.append(rating[kisi])
+    puanlar.sort(reverse = True)
+    for puan in puanlar:
+        for kisi in rating:
+            if puan == rating[kisi]:
+                metin += f"**{kisi}** : {puan}  puan\n"
+                eklenen += 50
+                if eklenen == 30:
+                    break
+                
+    await c.send_message(m.chat.id, metin)
