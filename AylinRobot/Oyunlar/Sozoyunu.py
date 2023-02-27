@@ -59,7 +59,7 @@ async def kelimeoyun(c:Client, m:Message):
 from pyrogram import Client
 from pyrogram import filters
 from random import shuffle
-from kelime_bot import USERNAME
+from AylinRobot.Oyunlar import USERNAME
 from pyrogram.types import Message
 from kelime_bot.helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
