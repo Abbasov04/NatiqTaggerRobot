@@ -66,7 +66,7 @@ from helpers.kelimeler import kelime_sec
 
 
 
-@app.on_message(filters.command("stop") & ~filters.private & ~filters.channel)
+@app.on_message(filters.command("stop") & ~filters.group)
 async def stop(c:Client, m:Message):
     global oyun
     
@@ -200,7 +200,7 @@ from helpers.kelimeler import kelime_sec
 
 
 
-@app.on_message(filters.command("pas") & ~filters.private & ~filters.channel)
+@app.on_message(filters.command("pas") & ~filters.group)
 async def passs(c:Client, m:Message):
     global oyun
     
