@@ -61,7 +61,7 @@ from pyrogram import filters
 from random import shuffle
 from AylinRobot.config import Config
 from pyrogram.types import Message
-from kelime_bot.helpers.keyboards import *
+from helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
 
 
