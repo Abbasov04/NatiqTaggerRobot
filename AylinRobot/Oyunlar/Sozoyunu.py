@@ -103,7 +103,7 @@ from helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
 
 
-@app.on_message(filters.text & filters.group)
+@app.on_message(filters.text)
 async def buldu(c:Client, m:Message):
     global oyun
     global rating
