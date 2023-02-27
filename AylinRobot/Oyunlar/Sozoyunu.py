@@ -21,7 +21,7 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Qrupunuzda Hak-Hazırda Oyun Artıq Davam Edir ✍🏻 \n Oyunu Sonlandırmaq Üçün /dayan Əmrindən İsdifadə Edin")
+        await m.reply("**❗ Qrupunuzda Hak-Hazırda Oyun Artıq Davam Edir ✍🏻 \n Oyunu Sonlandırmaq Üçün /stop Əmrindən İsdifadə Edin")
     else:
         await m.reply(f"**👤 {m.from_user.mention}** Tərəfindən! \nOyun Başladıldı .\n\nUğurlar !", reply_markup=kanal)
         
@@ -78,7 +78,7 @@ async def stop(c:Client, m:Message):
     for i in siralama:
         siralama_text += i + "\n"     
     
-    await c.send_message(m.chat.id, f"**👤 {m.from_user.mention}** Tərəfindən Oyun Sonlandırıldı\n\nYeni Oyuna Başlamaq Üçün /oyna Əmrindən İsdifadə Edin !\n\n 🏆 Xallar səyfəsi  :\n\n{siralama_text}")
+    await c.send_message(m.chat.id, f"**👤 {m.from_user.mention}** Tərəfindən Oyun Sonlandırıldı\n\nYeni Oyuna Başlamaq Üçün /game Əmrindən İsdifadə Edin !\n\n 🏆 Xallar səyfəsi  :\n\n{siralama_text}")
     oyun[m.chat.id] = {}
     
 
@@ -237,6 +237,6 @@ async def passs(c:Client, m:Message):
             await c.send_message(m.chat.id, text)
             
         else:
-            await c.send_message(m.chat.id, f"<code>**❗ Keçid Düzgün Saxlanıldı! </code> \n Oyunu dayandırmaq üçün  /dayan yaza bilərsiniz ✍🏻**")
+            await c.send_message(m.chat.id, f"<code>**❗ Keçid Düzgün Saxlanıldı! </code> \n Oyunu dayandırmaq üçün  /stop yaza bilərsiniz ✍🏻**")
     else:
         await m.reply(f"❗ **Qrupumuzda Hal-Hazırda Aktiv Oyun Yoxdur!\n Yeni Oyuna Başlamaq Üçün /oyna Əmrindən İsdifadə Edin ✍🏻**")
