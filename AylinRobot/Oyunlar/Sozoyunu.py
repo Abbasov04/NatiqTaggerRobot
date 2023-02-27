@@ -176,7 +176,6 @@ from pyrogram.types import Message
 from AylinRobot.Oyunlar import rating
 from helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
-from kelime_bot import *
 
 
 
