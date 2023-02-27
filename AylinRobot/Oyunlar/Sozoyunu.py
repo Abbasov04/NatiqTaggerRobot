@@ -146,7 +146,6 @@ async def data(c:Client, m):
 from pyrogram import Client
 from pyrogram import filters
 from random import shuffle
-from AylinRobot.Oyunlar import USERNAME
 from pyrogram.types import Message
 from helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
