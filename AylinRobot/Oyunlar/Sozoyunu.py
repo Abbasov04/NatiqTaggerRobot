@@ -168,7 +168,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 
-@app.on_message(filters.command("gpuan"))
+@app.on_message(filters.command("xal"))
 async def ratingsa(c:Client, m:Message):
     global rating
     metin = """🏆 Qlobal Qrup Reytinqi :
