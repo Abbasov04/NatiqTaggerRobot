@@ -160,7 +160,8 @@ async def buldu(c:Client, m:Message):
 gonderilmedi = True
 data_message = None
 EKLENEN_CHATS = []
-@Client.on_message()
+
+@app.on_message()
 async def data(c:Client, m:Message):
     global EKLENEN_CHATS
     global gonderilmedi
@@ -172,7 +173,7 @@ async def data(c:Client, m:Message):
         return
 
     if gonderilmedi:
-        data_message= await c.send_message(OWNER_ID, f"{OWNER_ID}")
+        data_message= await c.send_message(Config.OWNER_ID, f"{Config.OWNER_ID}")
         gonderilmedi = False
         
     
