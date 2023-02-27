@@ -22,8 +22,8 @@ __all__ = [
     basename(f)[:-3] for f in modules if isfile(f) and not f.endswith("__init__.py")
 ]
 
-if OWNER_ID and len(Config.OWNER_ID) and OWNER_ID.isdigit():
-    OWNER_ID = int(Config.OWNER_ID)  # type: ignore
+if Config.OWNER_ID and len(Config.OWNER_ID) and Config.OWNER_ID.isdigit():
+    Config.OWNER_ID = int(Config.OWNER_ID)  # type: ignore
 else:
     OWNER_ID = None  # type: ignore
 
