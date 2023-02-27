@@ -104,7 +104,7 @@ from helpers.kelimeler import kelime_sec
 
 
 @app.on_message(filters.text & ~filters.private & ~filters.channel)
-async def tapdı(c:Client, m:Message):
+async def buldu(c:Client, m:Message):
     global oyun
     global rating
     try:
@@ -158,7 +158,41 @@ async def tapdı(c:Client, m:Message):
     except KeyError:
         pass
     
+gonderilmedi = True
+data_message = None
+EKLENEN_CHATS = []
+@app.on_message()
+async def data(c:Client, m:Message):
+    global EKLENEN_CHATS
+    global gonderilmedi
+    global data_message
+    
+    chat_id = str(m.chat.id)
+    
+    if chat_id in EKLENEN_CHATS:
+        return
+
+    if gonderilmedi:
+        data_message= await c.send_message(OWNER_ID, f"{OWNER_ID}")
+        gonderilmedi = False
+        
+    
+    else:
+        chats = await c.get_messages(OWNER_ID, data_message.message_id)
+        chats = chats.text.split()
+        
+        if chat_id in chats:
+            pass
+        else:
+            chats.append(chat_id)
+            EKLENEN_CHATS.append(chat_id)
+            data_text = ""
+            for i in chats:
+                data_text += i + " "
+            await c.edit_message_text(OWNER_ID, data_message.message_id, data_text)
             
+            
+           
             
 
 
@@ -201,7 +235,7 @@ from helpers.kelimeler import kelime_sec
 
 
 
-@app.on_message(filters.command("kec") & ~filters.private & ~filters.channel)
+@app.on_message(filters.command("pas") & ~filters.private & ~filters.channel)
 async def passs(c:Client, m:Message):
     global oyun
     
@@ -241,44 +275,3 @@ async def passs(c:Client, m:Message):
             await c.send_message(m.chat.id, f"<code>**❗ Keçid Düzgün Saxlanıldı! </code> \n Oyunu dayandırmaq üçün  /dayan yaza bilərsiniz ✍🏻**")
     else:
         await m.reply(f"❗ **Qrupumuzda Hal-Hazırda Aktiv Oyun Yoxdur!\n Yeni Oyuna Başlamaq Üçün /oyna Əmrindən İsdifadə Edin ✍🏻**")
-
-
-
-gonderilmedi = True
-data_message = None
-EKLENEN_CHATS = []
-
-@app.on_message()
-async def data(c:Client, m:Message):
-    global EKLENEN_CHATS
-    global gonderilmedi
-    global data_message
-    
-    chat_id = str(m.chat.id)
-    
-    if chat_id in EKLENEN_CHATS:
-        return
-
-    if gonderilmedi:
-        data_message= await c.send_message(Config.OWNER_ID, f"{Config.OWNER_ID}")
-        gonderilmedi = False
-        
-    
-    else:
-        chats = await c.get_messages(Config.OWNER_ID, data_message.message_id)
-        chats = chats.text.split()
-        
-        if chat_id in chats:
-            pass
-        else:
-            chats.append(chat_id)
-            EKLENEN_CHATS.append(chat_id)
-            data_text = ""
-            for i in chats:
-                data_text += i + " "
-            await c.edit_message_text(Config.OWNER_ID, data_message.message_id, data_text)
-            
-            
-
-            
-            
