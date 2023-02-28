@@ -151,6 +151,22 @@ class Translation(object):
 ║▻ 🔮 Istifadə: /basket
 ║▻ 📃 Açıqlama: basket atar
 ╚═════════════════
+
+╔═════════════════
+║▻🆕️  SÖZ-OYUNU Nunun Əsas Əmrləri
+║
+║▻ 🔮 Istifadə: /game
+║▻ 📃 Açıqlama: Oyunu Başladar
+║
+║▻ 🔮 Istifadə: /kec
+║▻ 📃 Açıqlama: Çətin Sözü Keçər
+║
+║▻ 🔮 Istifadə: /stop
+║▻ 📃 Açıqlama: Mövcud Oyunu Saxlayar
+║
+║▻ 🔮 Istifadə: /skor
+║▻ 📃 Nümunə: Hır Bir Oyunçunun Reytinqi
+╚═════════════════
 """
 
     EYLENCE_TEXT = """
