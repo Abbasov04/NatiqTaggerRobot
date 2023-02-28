@@ -11,7 +11,7 @@ kelimeler = ["gözəl ","bilik","problem","təmin","ayrılmaq","zaman","su","edi
               'var', 'öz', 'gəl', 'birlikdə', 'vermək', 'amma', 'sonra', 'qədər', 'yer', 'çox', 'insanlar', 'yox', 'hər ', 'istəmək', 'il', 'çıxmaq', 'görmək', 'gün', 'biz', 'getmək', 'işləmək', 'şey', 'oyun', 'bilmək', 'əl ', 'zaman',
               'ya', 'uşaq', 'iki', 'bax', 'iş', 'in', 'böyük', 'yox', 'başlanğıc', 'yol', 'qal', 'niyə', 'sən ',
               'mövzu', 'edilməli', 'yaxşı', 'qadın', 'ev', 'ov', 'olmaq', 'demək', 'göz', 'lazımdır', 'dünya',
-              "yemək', 'heç', 'hətta', 'necə', 'hamısı', 'əleyhinə', 'tapmaq', 'belə', 'yaşamaq', 'düşünmək', 'eyni', 'içmək', 'lakin",
+              'yemək', 'heç', 'hətta', 'necə', 'hamısı', 'əleyhinə', 'tapmaq', 'belə', 'yaşamaq', 'düşünmək', 'eyni', 'içmək', 'lakin",
               'şəxs', 'onlar', 'birinci', 'görə', 'ön', 'son', 'bir', 'forma', 'vacib', 'üz', 'hər ikisi', ' göstərmək ', 'etmək',
               'alt', 'gətir', 'istifadə', 'çünki', 'yan', 'indi', 'kişi', 'onun', 'başqası', 'indi', 'on', 'səs', 'həmişə ',
               'sağ', 'durmaq', 'qız', 'hamısı', 'cəlb', 'etmək', 'danışmaq', 'pul', 'anlamaq', 'ana', 'az', 'bəzi', 'ata', 'həyat ',
