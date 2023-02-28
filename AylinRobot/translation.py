@@ -165,7 +165,7 @@ class Translation(object):
 ║▻ 📃 Açıqlama: Mövcud Oyunu Saxlayar
 ║
 ║▻ 🔮 Istifadə: /skor
-║▻ 📃 Nümunə: Hır Bir Oyunçunun Reytinqi
+║▻ 📃 Nümunə: Hər Bir Oyunçunun Reytinqi Göstərər
 ╚═════════════════
 """
 
