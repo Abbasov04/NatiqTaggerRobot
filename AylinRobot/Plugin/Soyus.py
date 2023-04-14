@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-
+from AylinRobot import AylinRobot as app
 # Kaba kelimeler listesi
 bad_words = ['göt', 'sikim', 'peysər', 'cındır', 'sikim', 'sik', 'cindir', 'peyser', 'məki', 'amcığ', 'blət', 'blə', 'qəhbə']
 
