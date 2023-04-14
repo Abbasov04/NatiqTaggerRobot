@@ -24,7 +24,7 @@ class Config:
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "DenemeKanal")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001886665096"))
    BAN_GROUP = int(os.environ.get("BAN_GROUP", "-1001886665096"))
-   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "c59d490e-5f1a-4469-a685-101abff455db")
+   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "4dc7aa73-cdde-448f-b267-5ee0a7285684")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "ATO")
    CHANNEL = os.environ.get("CHANNEL", "HuseynH")
    SUPPORT = os.environ.get("SUPPORT", "HuseynH")
