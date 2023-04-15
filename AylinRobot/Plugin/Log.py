@@ -1,7 +1,7 @@
 from AylinRobot import AylinRobot as app
 from pyrogram.errors.exceptions import ChatAdminRequired
 from pyrogram.types import Photo, Video, Animation, Audio
-from AylinRobot.filters import command
+from pyrogram import Client, filters
 
 
 CHANNEL_ID = -1001872847436
@@ -10,7 +10,7 @@ BOT_OWNER = 1347601562
 
 BOT_OWNER = 5637445914
 
-@app.on_message(command("log"))
+@app.on_message(filters.command("log"))
 async def log(client, message):
     try:
         if not message.reply_to_message:
