@@ -1,7 +1,7 @@
 from AylinRobot import AylinRobot as app
 from pyrogram.errors.exceptions import ChatAdminRequired
 from pyrogram.types import Photo, Video, Animation, Audio
-from helpers.filters import command
+from Plugin.filters import command
 
 
 CHANNEL_ID = -1001872847436
