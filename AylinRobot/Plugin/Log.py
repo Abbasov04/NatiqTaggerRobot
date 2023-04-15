@@ -1,4 +1,4 @@
-from FidanRobot import FidanRobot as app
+from AylinRobot import AylinRobot as app
 from pyrogram.errors.exceptions import ChatAdminRequired
 from pyrogram.types import Photo, Video, Animation, Audio
 from helpers.filters import command
