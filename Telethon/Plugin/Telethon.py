@@ -645,19 +645,6 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 
 
-
-
-from Telethon.Plugin import client
-from telethon import events
-import time
-
-from telethon import events, errors
-from telethon.tl.types import ChannelParticipantsAdmins
-import time
-from telethon.tl.functions.channels import GetParticipantsRequest
-from telethon.tl.types import ChannelParticipantsAdmins
-
-
 @client.on(events.NewMessage(incoming=True, pattern="^[!/]purge$"))
 async def purge_messages(event):
     start = time.perf_counter()
