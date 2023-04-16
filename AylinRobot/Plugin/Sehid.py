@@ -2,7 +2,6 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-from config import Config
 import secrets
 import string
 import aiohttp
