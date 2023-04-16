@@ -7,7 +7,6 @@ import string
 import aiohttp
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from cryptography.fernet import Fernet
 from AylinRobot.config import Config
 
 button = InlineKeyboardMarkup([
