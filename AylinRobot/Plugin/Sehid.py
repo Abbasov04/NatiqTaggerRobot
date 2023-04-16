@@ -1,4 +1,4 @@
-from config import Config
+from AylinRobot.config import Config
 import secrets
 import string
 import aiohttp
@@ -12,15 +12,15 @@ button = InlineKeyboardMarkup([
     [InlineKeyboardButton("🔄Dəyiş", callback_data="deyis")]
 ])
 
-@bot.on_message(filters.command("sehid") & ~filters.edited)
+@app.on_message(filters.command("sehid") & ~filters.edited)
 async def commit(_, message):
-    await message.reply_text((await random_line('AykhanPro/txt/sehid.txt')), reply_markup=button)
+    await message.reply_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
 
 
 
-@bot.on_callback_query(filters.regex("deyis"))
+@app.on_callback_query(filters.regex("deyis"))
 async def deyis(_, query: CallbackQuery):
-    await query.edit_message_text((await random_line('AykhanPro/txt/sehid.txt')), reply_markup=button)
+    await query.edit_message_text((await random_line('Sehid/sehid.txt')), reply_markup=button)
 
 
 bot.run()
