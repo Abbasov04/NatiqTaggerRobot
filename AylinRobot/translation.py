@@ -199,7 +199,7 @@ class Translation(object):
 ║▻ 📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.
 ║
 ║▻ 🔮 Istifadə: /eros
-║▻ 📃 Açıqlama: Qrupda bir nəfəri shipliyər
+║▻ 📃 Açıqlama: Qrupda bir nəfəri shipliyər.
 ╚═════════════════
 """
 
