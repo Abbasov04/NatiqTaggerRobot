@@ -28,5 +28,5 @@ class Config:
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "ATO")
    CHANNEL = os.environ.get("CHANNEL", "HuseynH")
    SUPPORT = os.environ.get("SUPPORT", "HuseynH")
-   ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/7b01cef8f87059387d91b.jpg") 
-   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/7b01cef8f87059387d91b.jpg")
+   ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/fe9dce4d50e2ee03d5894.jpg") 
+   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/fe9dce4d50e2ee03d5894.jpg")
