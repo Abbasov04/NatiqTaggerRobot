@@ -253,10 +253,10 @@ class LAN(object):
 sahibimə
 """
     PRIVATE_BAN = """
-Məyusam, əngəlləndiniz! Bunun bir xəta olduğunu düşünürsünüz isə {} yazın.
+Məyusam, əngəlləndiniz! Bunun bir xəta olduğunu düşünürsünüz isə @Yoxduburda @Mirzeyev_645 yazın.
  """
     GROUP_BAN = """
-Məyusam, qrupunuz qara siyahıya əlavə olundu! Artıq burada qala bilmərəm! Bunun bir xəta olduğunu düşünürsünüz isə {} yazın.'
+Məyusam, qrupunuz qara siyahıya əlavə olundu! Artıq burada qala bilmərəm! Bunun bir xəta olduğunu düşünürsünüz isə @Yoxduburda @Mirzeyev_645 yazın.'
 """
     NOT_ONLINE = """
 aktiv deyil
