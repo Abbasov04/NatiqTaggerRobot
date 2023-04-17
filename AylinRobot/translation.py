@@ -11,9 +11,10 @@ class Translation(object):
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {}**
 ║
+║▻ 👤 Mənim Adım 👤 @ATOMultiBot Mən 
 ║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
 ║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
-║▻ `📚 Kömək` Buttonuna Toxun
+║▻ 📚 Kömək Buttonuna Toxun
 ╚═════════════════
 
 """    
