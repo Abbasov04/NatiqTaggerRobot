@@ -75,10 +75,6 @@ class Translation(object):
 
     MUSIC_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /song 
-║▻ 🧩 Nümunə: /song Rei - Ah Canım Sevgilim
-║▻ 📃 Açıqlama: Musiqi yükləyir.
-║
 ║▻ 🔮 Istifadə: /video
 ║▻ 🧩  Nümunə:/video Rei - Ah Canım Sevgilim
 ║▻ 📃 Açıqlama: Video yükləyir.
