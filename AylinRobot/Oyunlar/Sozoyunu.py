@@ -40,7 +40,7 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/20 
+🎯 Raund : {oyun[m.chat.id]['round']}/50 
 📝 Tapılacaq Söz :   <code>{kelime_list}</code>
 💰 Yığdınız Xal: 1
 🔎 İlk Hərf: 1. {oyun[m.chat.id]["kelime"][0]}
@@ -86,7 +86,7 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/20 
+🎯 Raund : {oyun[m.chat.id]['round']}/50  
 📝 Tapılacaq Sözlər :   <code>{kelime_list}</code>
 💰 Qazandığın Xal : 1
 🔎 İlk hərf : 1. {oyun[m.chat.id]["kelime"][0]}
@@ -126,7 +126,7 @@ async def ratingsa(c:Client, m:Message):
             if puan == rating[kisi]:
                 metin += f"**{kisi}** : {puan}  Puan\n"
                 eklenen += 1
-                if eklenen == 20:
+                if eklenen == 50:
                     break
                 
     await c.send_message(m.chat.id, metin)
@@ -228,7 +228,7 @@ async def buldu(c:Client, m:Message):
                     kelime_list+= harf + " "
             
                 text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/20
+🎯 Raund : {oyun[m.chat.id]['round']}/50
 📝 Tapılacaq Söz :   <code>{kelime_list}</code>
 💰 Yığdığınız Xal: 1
 🔎 İlk hərf: 1. {oyun[m.chat.id]["kelime"][0]}
