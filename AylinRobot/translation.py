@@ -10,7 +10,7 @@ class Translation(object):
     START_TEXT = """
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {}**
-║ mən
+║
 ║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
 ║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
 ║▻ `📚 Kömək` Buttonuna Toxun
@@ -194,6 +194,8 @@ class Translation(object):
 ║
 ║▻ 🔮 Istifadə: /alive
 ║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
+║▻ 🔮 Istifadə: /purge
+║▻ 📃 Açıqlama: Qrupda Mesajları Silər
 ╚═════════════════
 """
 
