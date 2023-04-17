@@ -7,7 +7,6 @@ START_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('📢 Kanal', url=f"https://t.me/{Config.CHANNEL}"),
 InlineKeyboardButton("💬 Söhbət Qrupu", url=f"https://t.me/{Config.SUPPORT}"),
 ],[
-InlineKeyboardButton('ℹ️ Bot Haqqında', callback_data='bh'),  
 InlineKeyboardButton('📚 Kömək', callback_data='help'),
 ],[        
 InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),
