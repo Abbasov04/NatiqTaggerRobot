@@ -1,11 +1,13 @@
-from AylinRobot.config import Config
-import secrets
-import string
-import aiohttp
-import random
-from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+import secrets, string, aiohttp
 from AylinRobot import AylinRobot as app
+from Sehid import random_line
+from pyrogram.errors import FloodWait
+from pyrogram import Client, filters
+import os
+import random
+import asyncio
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 
 button = InlineKeyboardMarkup([
