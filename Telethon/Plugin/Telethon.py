@@ -580,10 +580,9 @@ async def handler(event):
 
 
 Aylin = (
-    "😒 Az tağ elə sahibimi",
+    "😒 Sahibim Burda Yoxdu Gələndə Yazar",
     "🤭 Hmm Mənim Sahibimlə Nə İşin Var?",
-    "😖 Ged Yat",
-    "🚷 Ban Olundun !\nSəbəb: Sahibimi tağ etdiyinçün \nŞaka ya korkma 😂",
+    "😖 Aktif deil gələndə yazacağ",
     "Burda olmasada qəlbi sizinlədi ❤️",
 )
 
@@ -629,16 +628,16 @@ Aylin = (
 @client.on(events.NewMessage(pattern='(?i)qehbbeeeeee'))
 @client.on(events.NewMessage(pattern='(?i)qehbbbeeee+'))
 @client.on(events.NewMessage(pattern='(?i)gəhbə+'))
-@client.on(events.NewMessage(pattern='(?i)qot+'))
+@client.on(events.NewMessage(pattern='(?i)göt+'))
 @client.on(events.NewMessage(pattern='(?i)amcıg+'))
-@client.on(events.NewMessage(pattern='(?i)gehbe+'))
+@client.on(events.NewMessage(pattern='(?i)qəhbə+'))
 @client.on(events.NewMessage(pattern='(?i)siik+'))
 @client.on(events.NewMessage(pattern='(?i)gij+'))
-@client.on(events.NewMessage(pattern='(?i)sg+'))
-@client.on(events.NewMessage(pattern='(?i)qəhi+'))
-@client.on(events.NewMessage(pattern='(?i)qehi+'))
-@client.on(events.NewMessage(pattern='(?i)meki+'))
-@client.on(events.NewMessage(pattern='(?i)məki+'))
+@client.on(events.NewMessage(pattern='(?i)peysər+'))
+@client.on(events.NewMessage(pattern='(?i)Pesi+'))
+@client.on(events.NewMessage(pattern='(?i)siktirde+'))
+@client.on(events.NewMessage(pattern='(?i)Sikim Anavı+'))
+@client.on(events.NewMessage(pattern='(?i)Əclaf+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.delete()      
     await event.reply(f" Söyüş Söymə")
