@@ -557,8 +557,8 @@ async def handler(event):
 
 userjoin = (
 
-    "Salam {mention} axır ki gəlib çıxdın sənin yoluvu çoxdandı gözləyirdik.👀 bizimlə xoş zaman keçirəcəynə əmin ola bilərsən🥳",
-    "Salam {mention} Siz öz dəyərli vaxtınızı daha da əyləncəli və maraqlı keçirmək üçün doğru ünvandasınız🎯. Aramızda sizi görmək çox xoş oldu bizə🤗 xoş Gəldiz😊",
+    "Salam axır ki gəlib çıxdın sənin yoluvu çoxdandı gözləyirdik.👀 bizimlə xoş zaman keçirəcəynə əmin ola bilərsən🥳",
+    "Salam Siz öz dəyərli vaxtınızı daha da əyləncəli və maraqlı keçirmək üçün doğru ünvandasınız🎯. Aramızda sizi görmək çox xoş oldu bizə🤗 xoş Gəldiz😊",
 )
 
 
