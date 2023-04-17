@@ -12,8 +12,7 @@ InlineKeyboardButton('📚 Kömək', callback_data='help'),
 InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),
 ],[                
 InlineKeyboardButton('👨‍💻 Sahibim',  url=f"https://t.me/Mirzeyev_645"),
-InlineKeyboardButton('👨‍💻 2-ci Sahibim',  url=f"https://t.me/Yoxduburda"),
-InlineKeyboardButton('🎧 Playlist', url=f"https://t.me/{Config.PLAYLIST_NAME}"),]])
+InlineKeyboardButton('👨‍💻 2-ci Sahibim',  url=f"https://t.me/Yoxduburda"),]])
 
 #### KÖMƏK BUTTONU
 
