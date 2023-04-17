@@ -10,13 +10,11 @@ class Translation(object):
     START_TEXT = """
 ╔═════════════════
 ║▻ **🙋‍♀️ Salam {}**
-║
-║▻ 🙋‍♀️ Mənim Adım  ️️️️️️🙎‍♀️ [{}](https://t.me/{}) Mən 
+║ mən
 ║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
 ║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
 ║▻ `📚 Kömək` Buttonuna Toxun
 ╚═════════════════
-👨‍💻 **Sahibim** ♒️ @{}
 
 """    
     HELP_TEXT = """
