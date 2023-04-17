@@ -13,7 +13,7 @@ class Config:
 
    API_ID = int(os.getenv("API_ID", "23110135"))
    API_HASH = os.getenv("API_HASH", "ae975527472ab73d41eb7a771fa152fe")
-   BOT_TOKEN = os.getenv("BOT_TOKEN", "6243129680:AAGwC3KZLvo5q7WI4q5-lGnOy_iW9JY3seY")
+   BOT_TOKEN = os.getenv("BOT_TOKEN", "6055881643:AAHlHOq107K2L5y4UVgsXtAKx_3v9ulJuLo")
    BOT_USERNAME = os.environ.get("BOT_USERNAME", "ATOMultiBot")
    BOT_NAME = os.environ.get("BOT_NAME", "𓆩𝙰𝚃𝙾𓆪")
    OWNER_ID = int(os.environ.get("OWNER_ID","5591796078"))
