@@ -203,7 +203,7 @@ class Translation(object):
     AXTARIS_TEXT = """
 ╔═════════════════
 ║▻ 🔮 Istifadə: /github 
-║▻ 🧩 Nümunə: /github HesenovHuseyn
+║▻ 🧩 Nümunə: /github KenanKodes
 ║▻ 📃 Açıqlama: Github Axtarışı Edər.
 ║
 ║▻ 🔮 Istifadə: /search
