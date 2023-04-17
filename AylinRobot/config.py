@@ -27,6 +27,6 @@ class Config:
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "4dc7aa73-cdde-448f-b267-5ee0a7285684")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "@ATOMultiBot")
    CHANNEL = os.environ.get("CHANNEL", "ATO_RESMl")
-   SUPPORT = os.environ.get("SUPPORT", "qizlarveolanlar")
+   SUPPORT = os.environ.get("SUPPORT", "kasbinxeyallari1")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/fe9dce4d50e2ee03d5894.jpg") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/fe9dce4d50e2ee03d5894.jpg")
