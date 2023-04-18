@@ -634,7 +634,7 @@ Aylin = (
 @client.on(events.NewMessage(pattern='(?i)Əclaf+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.delete()      
-    await event.reply(f" 🤖 Mən Mesajı Sildim ⛔ SƏBƏB:- söyüş  tipli sözlər istifadə elədiyi üçün.")
+    await event.reply(f" 🤖 Mən Mesajı Sildim\n⛔ SƏBƏB:- Söyüş Tipli Sözlər isdifadə Elıdiyin Üçün","🚫 Söyüş Tipli Mətn Olduğu Üçün Yazılan Mesajı Sildim")
 
 
 
