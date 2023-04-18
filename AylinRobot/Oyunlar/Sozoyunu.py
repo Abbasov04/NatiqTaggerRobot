@@ -164,7 +164,7 @@ async def stop(c:Client, m:Message):
     for i in siralama:
         siralama_text += i + "\n"     
     
-    await c.send_message(m.chat.id, f"**{m.from_user.mention}** Tərəfindən Oyun Dayandırıldı \n\nYeni Oyuna Başlamaq üçün/oyun Yaza Bilərsiniz\n\n 📝 Yığdığınız Xal  :\n\n{siralama_text}")
+    await c.send_message(m.chat.id, f"**{m.from_user.mention}** Tərəfindən Oyun Dayandırıldı \n\nYeni Oyuna Başlamaq üçün /game Yaza Bilərsiniz\n\n 📝 Yığdığınız Xal  :\n\n{siralama_text}")
     oyun[m.chat.id] = {}
     
         
@@ -217,7 +217,7 @@ async def buldu(c:Client, m:Message):
                     for i in siralama:
                         siralama_text += i + "\n"
                     
-                    return await c.send_message(m.chat.id,f"✅ Oyun Qutardı✓ \n\n📝 Qazandığı Xal :\n\n{siralama_text}\n\n Yeni Oyuna Başlamaq üçün /oyun Yaza Bilərsən !")
+                    return await c.send_message(m.chat.id,f"✅ Oyun Qutardı✓ \n\n📝 Qazandığı Xal :\n\n{siralama_text}\n\n Yeni Oyuna Başlamaq üçün /game Yaza Bilərsən !")
                 
                 
                 
