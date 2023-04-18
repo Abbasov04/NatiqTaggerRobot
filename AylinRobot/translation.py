@@ -175,8 +175,6 @@ class Translation(object):
 
     ELAVELER_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /carbon
-║▻ 📃 Açıqlama: Yazdığınız mesajı şəkilə çevirin
 ║
 ║▻ 🔮 Istifadə: /id
 ║▻ 📃 Açıqlama: İstifadəçinin ID alın.
@@ -184,8 +182,6 @@ class Translation(object):
 ║▻ 🔮 Istifadə: /info
 ║▻ 📃 Açıqlama: İstifadəçi haqqında məlumat verər
 ║
-║▻ 🔮 Istifadə: /alive
-║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
 ║▻ 🔮 Istifadə: /purge
 ║▻ 📃 Açıqlama: Qrupda Mesajları Silər
 ╚═════════════════
