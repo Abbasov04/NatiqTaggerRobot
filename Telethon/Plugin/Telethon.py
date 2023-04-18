@@ -678,7 +678,7 @@ async def eros(event):
      if event.is_private:
           return await event.respond("Bu əmr qruplar üçün etibarlıdır!  ")
      qrup = await event.get_chat() 
-     istifadeciler = await edalet.get_participants(qrup)
+     istifadeciler = await client.get_participants(qrup)
      sev1, sev2 = random.sample(istifadeciler, 2)
      secirem = await event.reply(f"{random.choice(urek)} Erosun oxu atıldı 🏹 \n🙈 Cütlükləri seçirəm")
      await asyncio.sleep(2)
