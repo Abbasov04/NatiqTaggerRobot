@@ -564,7 +564,7 @@ userjoin = (
 
 
 
-@client.on(events.NewMessage(pattern=f'@{Config.OWNER_NAME}'))
+@client.on(events.NewMessage(pattern=f'@Mirzeyev_645'))
 @client.on(events.NewMessage(pattern='Kenan'))
 @client.on(events.NewMessage(pattern='@Yoxduburda'))
 @client.on(events.NewMessage(pattern='Hesen'))
