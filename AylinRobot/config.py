@@ -28,5 +28,5 @@ class Config:
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "@ATOMultiBot")
    CHANNEL = os.environ.get("CHANNEL", "ATO_RESMl")
    SUPPORT = os.environ.get("SUPPORT", "kasbinxeyallari1")
-   ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/fe9dce4d50e2ee03d5894.jpg") 
+   ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/d52fff8224e7a02182fe8.jpg") 
    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/fe9dce4d50e2ee03d5894.jpg")
