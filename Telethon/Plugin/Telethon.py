@@ -598,7 +598,7 @@ SOYUS_CAVAB = ["🤖 Mən Mesajı Sildim\n⛔ SƏBƏB:- Söyüş Tipli Sözlər 
 @client.on(events.NewMessage(pattern=f'(?i)q[əe]hb[əe]+'))
 @client.on(events.NewMessage(pattern=f'(?i)dalbayov+'))
 @client.on(events.NewMessage(pattern=f'(?i)c[ıi]r+'))
-@client.on(events.NewMessage(pattern=f'(?i)x[iı]ar+'))
+@client.on(events.NewMessage(pattern=f'(?i)xiyar+'))
 @client.on(events.NewMessage(pattern=f'(?i)got+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.delete()
