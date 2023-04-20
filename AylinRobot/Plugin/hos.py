@@ -4,7 +4,7 @@ from AylinRobot import AylinRobot as app
 from AylinRobot.config import Config
 
 
-owner_idim = 5637445914,1347601562 
+owner_idim = 5637445914 1347601562 
 
 # Client oluşturma
 
