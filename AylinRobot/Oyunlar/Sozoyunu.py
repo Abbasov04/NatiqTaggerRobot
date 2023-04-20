@@ -40,7 +40,7 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/50 
+🎯 Raund : {oyun[m.chat.id]['round']}/150
 📝 Tapılacaq Söz :   <code>{kelime_list}</code>
 💰 Yığdınız Xal: 1
 🔎 İlk Hərf: 1. {oyun[m.chat.id]["kelime"][0]}
@@ -86,7 +86,7 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/50  
+🎯 Raund : {oyun[m.chat.id]['round']}/150 
 📝 Tapılacaq Sözlər :   <code>{kelime_list}</code>
 💰 Qazandığın Xal : 1
 🔎 İlk hərf : 1. {oyun[m.chat.id]["kelime"][0]}
@@ -208,7 +208,7 @@ async def buldu(c:Client, m:Message):
                 oyun[m.chat.id]["kelime"] = kelime_sec()
                 oyun[m.chat.id]["round"] = oyun[m.chat.id]["round"] + 1
                 
-                if not oyun[m.chat.id]["round"] <= 20:
+                if not oyun[m.chat.id]["round"] <= 150:
                     siralama = []
                     for i in oyun[m.chat.id]["oyuncular"]:
                         siralama.append(f"{i} :   {oyun[m.chat.id]['oyuncular'][i]}  Xal")
@@ -228,7 +228,7 @@ async def buldu(c:Client, m:Message):
                     kelime_list+= harf + " "
             
                 text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/50
+🎯 Raund : {oyun[m.chat.id]['round']}/150
 📝 Tapılacaq Söz :   <code>{kelime_list}</code>
 💰 Yığdığınız Xal: 1
 🔎 İlk hərf: 1. {oyun[m.chat.id]["kelime"][0]}
