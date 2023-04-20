@@ -8,13 +8,13 @@ kelimeler = ["gözəl ","bilmək ","sual","sağalmaq ","getmək","zaman","su","y
 
              "torpaq", "üzəri", "sistem", "xoş", "çəkilmək", "texnik", "yaxınlaşmaq", "ilbiz", "tarix", "kəsir", "bacı",
 
-             "incə", "deyər", "oyda", "qarşılıql","vermək", "sahib", "artıq", "kişi", "diyar", "dönəm", "yenə", "bunlar",
+             "incə", "deyər", "oyda", "qarşılıqlı","vermək", "sahib", "artıq", "kişi", "diyar", "dönəm", "yenə", "bunlar",
 
              "kitab", "xəta", "tapmaq", "siz", "dövlət", "qabaq", "enerji", "baxmaq", "xiyar", "oyun", "baş", "başlamaq",
 
              "tutmaq", "birbiri", "heçbir", "yatmaq", "su", "ürək", "hal", "doğru", "orta", "başqa", "böyük", "etmək",
 
-             "yeni", "çoxlu", "soruşmaq", "onlar", "açmaq", "həmin", "həb", "süsən", "ağlamaq", "dəli", "saat", "fəsil",
+             "yeni", "çoxlu", "soruşmaq", "onlar", "açmaq", "həmin", "həsən", "sükan", "ağlamaq", "dəli", "saat", "fəsil",
 
              'birlik', 'veteran', 'olmak', 'buzlu', 'içki', 'onuncu', 'bibar', 'demək', 'çox', 'yaşıl', 'aylıq', 'kimi', 'daha', 'almaq',
 
@@ -34,15 +34,15 @@ kelimeler = ["gözəl ","bilmək ","sual","sağalmaq ","getmək","zaman","su","y
 
              'qızıl', 'gətirmək', 'işlətmək', 'çünkü', 'tərəf', 'kimdi', 'adam', 'onun', 'ciyar', 'artıq', 'ütüntə', 'səs', 'könül',
 
-             'düzgün', 'dayanmaq', 'qız', 'tüm', 'süd', 'zəng', 'pullu', 'anlamak', 'nanə', 'qoşqar', 'bazar', 'baba', 'həyat',
+             'düzgün', 'dayanmaq', 'qız', 'hamsı', 'süd', 'zəng', 'pullu', 'başadüşməy', 'nanə', 'qoşqar', 'bazar', 'baba', 'həyat',
 
              'sadece', 'balaca', 'çox', 'bilgi', 'an', 'soruşma', 'bunun', 'qoyun', 'yemək', 'sağalmaq', 'kəsir', 'eynək', 'diş',
 
              'üzmək', 'yəni', 'vaxt', 'qayıtmaq', 'açmaq', 'oturmaq', 'salmaq', 'buraxmaq', 'həmən', 'saat', 'yaş', 'xəta', 'dövlət',
 
-             'sahib', 'sıra', 'yazmak', 'yüzdə', 'ayan', 'çalmaq', 'tutmaq', 'burun', 'qəza', 'yarı', 'qulaq', 'söz', 'gözəl',
+             'sahib', 'sıra', 'yazmağ', 'yüzdə', 'ayan', 'çalmaq', 'tutmaq', 'burun', 'qəza', 'yarı', 'qulaq', 'söz', 'gözəl',
 
-             'sevmek', 'biraz', 'çətin', 'çıxmaq', 'suni', 'koymak', 'tək', 'sistem', 'toplu', 'vergi', 'kim', 'incimək', 'gənc',
+             'sevmek', 'biraz', 'çətin', 'çıxmaq', 'suni', 'qoymaq', 'tək', 'sistem', 'toplu', 'vergi', 'kim', 'incimək', 'gənc',
 
              'qapı', 'kitab', 'üstün', 'burada', 'gecə', 'alan', 'bərbər', 'içki', 'gizli', 'uzun', 'kainat', 'bugün', 'fokus',
 
@@ -50,13 +50,13 @@ kelimeler = ["gözəl ","bilmək ","sual","sağalmaq ","getmək","zaman","su","y
 
              'çevrə', 'köhnə', 'zəng', 'yaşma', 'əhali', 'yaxın', 'yol', 'bəy', 'tarix', 'özellik', 'bölüm', 'şəxsi', 'ağıl',
 
-             'kimsə', 'pak', 'baş', 'gerek', 'yaxın', 'anlamaq', 'yuxarı', 'banka', 'kriz', 'ayak', 'daşımaq', 'geri', 'toplu',
+             'kimsə', 'pak', 'baş', 'gerek', 'yaxın', 'anlamaq', 'yuxarı', 'banka', 'infakt', 'ayağ', 'daşımaq', 'geri', 'toplu',
 
-             'maşın', 'maddə', 'Azərbaycan', 'qəlyan', 'görüldü', 'hava', 'sayı', 'farklı', 'qrup', 'otaq', 'bacı', 'dolmaq', 'xəbər',
+             'maşın', 'maddə', 'Azərbaycan', 'qəlyan', 'görüldü', 'hava', 'sayı', 'başqa', 'qrup', 'otaq', 'bacı', 'dolmaq', 'xəbər',
 
              'allah', 'ayrıca', 'gələn', 'çin', 'sual', 'arxa', 'qazanmaq', 'yazı', 'dərs', 'açıq', 'öyrənmək', 'sürmək',
 
-             'dil', 'şirkət', 'qaynaq', 'bitmək', 'program', 'devametmek', 'hərəkət', 'rəng', 'açılmaq', 'hak', 'inanmaq',
+             'dil', 'şirkət', 'qaynaq', 'bitmək', 'program', 'dəvamətmək', 'hərəkət', 'rəng', 'açılmaq', 'hak', 'inanmaq',
 
              'çalmaq', 'zaman', 'mahnı', 'qazet', 'yaratmaq', 'yaxşı', 'dəyər', 'tanımaq', 'kley', 'doxdur', 'gəlir',
 
@@ -66,17 +66,17 @@ kelimeler = ["gözəl ","bilmək ","sual","sağalmaq ","getmək","zaman","su","y
 
              'yaratmaq', 'xallı', 'fikir', 'keçmək', 'söyüş', 'qurmaq', 'fakt', 'buna', 'rəsim', 'ışıq', 'içmək',
 
-             'xanım', 'xəstə', 'ehtiyac', 'nöktə', 'yönlü', 'xəta', 'oyun', 'artmak', 'yenidən', 'şar', 'qısa', 'asta',
+             'xanım', 'xəstə', 'ehtiyac', 'nöktə', 'yönlü', 'xəta', 'oyun', 'artmağ', 'yenidən', 'şar', 'qısa', 'asta',
 
              'şan', 'qan', 'əsla', 'ağıl', 'orada', 'diqqət', 'uzaq', 'bilgisayar', 'gələcək', 'görünmək',
 
              'şəkil', 'oğul', 'dinləmək', 'uyğun', 'manat', 'passiv', 'dəqiq', 'unutmaq', 'cəld', 'eynək', 'pis',
 
-             'maşın', 'ağız', 'dünya', 'uygulamak', 'xala', 'örnek', 'azlıq', 'baxmaq', 'dərəcə', 'mümkün', 'dondurma',
+             'maşın', 'ağız', 'dünya', 'uygulamak', 'xala', 'nümunə', 'azlıq', 'baxmaq', 'dərəcə', 'mümkün', 'dondurma',
 
-             'divar', 'onsuz', 'sənə', 'ana', 'xəstəlik', 'öğrenci', 'televizor', 'kino', 'stul', 'ölmək', 'taksi', 'üst',
+             'divar', 'onsuz', 'sənə', 'ana', 'xəstəlik', 'şagird', 'televizor', 'kino', 'stul', 'ölmək', 'taksi', 'üst',
 
-             'baş', 'mahnı', 'sevgi', 'enerji', 'üniversite', 'spor', 'türlü', 'cansız', 'balta', 'soyuducu', 'ölüm',
+             'baş', 'mahnı', 'sevgi', 'enerji', 'Universtet', 'qaçmağ', 'hərşey', 'cansız', 'balta', 'soyuducu', 'ölüm',
 
              'dərdli', 'sağlam', 'inək', 'banan', 'hissetmek', 'nənə', 'sabah', 'internet', 'texnik', 'dondurma',
 
@@ -84,13 +84,13 @@ kelimeler = ["gözəl ","bilmək ","sual","sağalmaq ","getmək","zaman","su","y
 
              'sarı', 'götürmek', 'qatılmaq', 'yoxsul', 'qurmaq', 'ödəmək', 'sanki', 'qarın', 'xəstə', 'şəhər', 'qalxmaq',
 
-             'qara', 'qaynaq', 'həftə', 'lənpə', 'hesab', 'lətif', 'başqa', 'davranış', 'mutfak', 'kent', 'bazar',
+             'qara', 'qaynaq', 'həftə', 'işığ', 'hesab', 'lətif', 'başqa', 'davranış', 'mətbəx', 'kənd', 'bazar',
 
-             'vacib', 'ayrı', 'qiymət', 'hakkında', 'qaldırmaq', 'kola', 'tək', 'hazırlamaq', 'ayna', 'sonunda', 'yavaş',
+             'vacib', 'ayrı', 'qiymət', 'hakkında', 'qaldırmaq', 'kola', 'tək', 'hazırlamaq', 'Şüşə', 'sonunda', 'yavaş',
 
              'lazım', 'dəyər', 'arvad', 'yallı', 'varlı', 'tar', 'arı', 'təkcə', 'satış', 'içəri', 'qoğal', 'məhkum',
 
-             'şənlik', 'acı', 'xeyir', 'qorumaq', 'qat', 'ekonomi', 'genel', 'bildirmək', 'şəkər', 'heyvan', 'sarqı',
+             'şənlik', 'acı', 'xeyir', 'qorumaq', 'qat', 'ekonomi', 'hamı', 'bildirmək', 'şəkər', 'heyvan', 'sarğı',
 
              'yumurta', 'alma', 'plan', 'istəmək', 'kərim', 'kriz', 'birlik',
 
