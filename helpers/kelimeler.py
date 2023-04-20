@@ -46,17 +46,17 @@ kelimeler = ["gözəl ","bilmək ","sual","sağalmaq ","getmək","zaman","su","y
 
              'qapı', 'kitab', 'üstün', 'burada', 'gecə', 'alan', 'bərbər', 'içki', 'gizli', 'uzun', 'kainat', 'bugün', 'fokus',
 
-             'dost', 'soyad', 'aile', 'üç', 'okumaq','kişi', 'hərkəs', 'güc', 'bəlmək', 'doğru', 'tam', 'gecə', 'Riyad',
+             'dost', 'soyad', 'aile', 'üç', 'oxumaq','kişi', 'hərkəs', 'güc', 'bəlmək', 'doğru', 'tam', 'gecə', 'Riyad',
 
              'çevrə', 'köhnə', 'zəng', 'yaşma', 'əhali', 'yaxın', 'yol', 'bəy', 'tarix', 'özellik', 'bölüm', 'şəxsi', 'ağıl',
 
              'kimsə', 'pak', 'baş', 'gerek', 'yaxın', 'anlamaq', 'yuxarı', 'banka', 'kriz', 'ayak', 'daşımaq', 'geri', 'toplu',
 
-             'maşın', 'maddə', 'türk', 'qəlyan', 'görüldü', 'hava', 'sayı', 'farklı', 'qrup', 'otaq', 'bacı', 'dolmaq', 'xəbər',
+             'maşın', 'maddə', 'Azərbaycan', 'qəlyan', 'görüldü', 'hava', 'sayı', 'farklı', 'qrup', 'otaq', 'bacı', 'dolmaq', 'xəbər',
 
              'allah', 'ayrıca', 'gələn', 'çin', 'sual', 'arxa', 'qazanmaq', 'yazı', 'dərs', 'açıq', 'öyrənmək', 'sürmək',
 
-             'dil', 'şirkət', 'qaynaq', 'bitmək', 'program', 'devametmek', 'hareket', 'rəng', 'açılmaq', 'hak', 'inanmaq',
+             'dil', 'şirkət', 'qaynaq', 'bitmək', 'program', 'devametmek', 'hərəkət', 'rəng', 'açılmaq', 'hak', 'inanmaq',
 
              'çalmaq', 'zaman', 'mahnı', 'qazet', 'yaratmaq', 'yaxşı', 'dəyər', 'tanımaq', 'kley', 'doxdur', 'gəlir',
 
@@ -94,7 +94,7 @@ kelimeler = ["gözəl ","bilmək ","sual","sağalmaq ","getmək","zaman","su","y
 
              'yumurta', 'alma', 'plan', 'istəmək', 'kərim', 'kriz', 'birlik',
 
-             'qapanmaq'
+             'qapanmaq', 'Kənan', 'Kəmalə', 'Nilay', 'Əli', 'Elməddin', 'Zeynəb', 'Zəhra', 'Qruz',
 
              ]
 
