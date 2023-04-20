@@ -1,7 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
-import syntax
 
 owner_idim = 5637445914 
 
