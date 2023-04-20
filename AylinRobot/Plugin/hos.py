@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from AylinRobot import AylinRobot as app
 
-owner_idim = [5637445914,1347601562] 
+owner_idim = 1347601562
 
 # Client oluşturma
 
