@@ -550,11 +550,6 @@ async def handler(event):
         await event.reply(random.choice(userjoin))
 
 
-@client.on(events.ChatAction)
-async def handler(event):
-    if event.user_left:
-        await event.reply("Salam Çıxmasaydın Qrupdan xoş olardı.❤")
-
 userjoin = (
 
     "Salam axır ki gəlib çıxdın sənin yoluvu çoxdandı gözləyirdik.👀 bizimlə xoş zaman keçirəcəynə əmin ola bilərsən🥳",
