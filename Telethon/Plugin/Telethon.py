@@ -560,9 +560,9 @@ userjoin = (
 
 
 @client.on(events.NewMessage(pattern=f'@Mirzeyev_645'))
-@client.on(events.NewMessage(pattern='Kenan'))
+@client.on(events.NewMessage(pattern='Kənan'))
 @client.on(events.NewMessage(pattern='@Yoxduburda'))
-@client.on(events.NewMessage(pattern='Hesen'))
+@client.on(events.NewMessage(pattern='Həsən'))
 async def handler(event):
     await event.reply(random.choice(Aylin))
 
@@ -578,7 +578,7 @@ Aylin = (
 
 
 
-SOYUS_CAVAB = ["🤖 Mən Mesajı Sildim\n⛔ SƏBƏB:- Söyüş Tipli Sözlər isdifadə Elıdiyin Üçün","🚫 Söyüş Tipli Mətn Olduğu Üçün Yazılan Mesajı Sildim"]
+SOYUS_CAVAB = ["🤖 Mən Mesajı Sildim\n\n⛔ SƏBƏB:- Söyüş Tipli Sözlər isdifadə Elıdiyin Üçün","🚫 Söyüş Tipli Mətn Olduğu Üçün Yazılan Mesajı Sildim"]
 
 
 @client.on(events.NewMessage(pattern=f'(?i)s[iı]k+'))
