@@ -8,9 +8,7 @@ START_BUTTONS = InlineKeyboardMarkup(
 InlineKeyboardButton("💬 Söhbət Qrupu", url=f"https://t.me/{Config.SUPPORT}"),
 ],[
 InlineKeyboardButton('📚 Kömək', callback_data='help'),
-],[        
-InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),
-],
+],[
 #### KÖMƏK BUTTONU
 
 HELP_BUTTONS = InlineKeyboardMarkup(
