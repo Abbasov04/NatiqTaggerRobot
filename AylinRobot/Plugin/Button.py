@@ -5,12 +5,14 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 START_BUTTONS = InlineKeyboardMarkup(
 [[InlineKeyboardButton('📢 Kanal', url=f"https://t.me/{Config.CHANNEL}"),
-],[
 InlineKeyboardButton("💬 Söhbət Qrupu", url=f"https://t.me/{Config.SUPPORT}"),
 ],[
 InlineKeyboardButton('📚 Kömək', callback_data='help'),
-],[
-InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),]
+],[        
+InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),
+],[                
+InlineKeyboardButton('👨‍💻 𝑺𝒂𝒉𝒊𝒃𝒊𝒎',  url=f"https://t.me/elemedeala"),
+]]
 #### KÖMƏK BUTTONU
 
 HELP_BUTTONS = InlineKeyboardMarkup(
