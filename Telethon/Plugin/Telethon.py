@@ -6,7 +6,6 @@ from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from AylinRobot.config import Config
 from Telethon.Mesajlar import soz,  emoji, bayrag
-From Telethon import Button
 
 logging.basicConfig(
     level=logging.INFO,
@@ -684,12 +683,22 @@ async def eros(event):
                        f"♥️ Sevgi Faizi: {random.choice(faiz)}")
 
 
+from telethon import events, Button
+from telethon.tl.types import ChannelParticipantsAdmins
+import random
+from requests import get, post
+from os import remove
+from telethon.tl.functions.users import GetFullUserRequest
+from time import time
+
+
+
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.reply(f"🙋🏻 Salam mən qrupunuzdakı bütün üzvləri tağ edə bilərəm\n\n💁🏻 Ətraflı məlumat üçün Əmrlər bölməsinə daxil olun", button=(
+     await event.reply(f"🙋🏻 Salam mən qrupunuzdakı bütün üzvləri tağ edə bilərəm\n\n💁🏻 Ətraflı məlumat üçün Əmrlər bölməsinə daxil olun", buttons=(
                      [Button.url('➕ Qrupa Əlavə Et ➕','http://t.me/ATO_Tagger_Bot?startgroup=a')],
                [Button.inline(f"📚 Əmrlər", data="help"),
                 Button.inline(f"👑 Sahib Əmrləri", data="reklam")],
@@ -700,7 +709,7 @@ async def start(event):
 
 
   if event.is_group:
-    return await edalet.send_message(event.chat_id, f"Botun istifadə qaydasını öyrənmək üçün bota keçin", buttons=(
+    return await client.send_message(event.chat_id, f"Botun istifadə qaydasını öyrənmək üçün bota keçin", buttons=(
                      [Button.url('🤖 Bota Keç','https://t.me/ATO_Tagger_Bot?start=start')],
                [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
           Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
@@ -713,8 +722,8 @@ async def start(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"🙋🏻 Salam mən qrupunuzdakı bütün üzvləri tağ edə bilərəm\n\n💁🏻 Ətraflı məlumat üçün Əmrlər bölməsinə daxil olun", button=(
-                     [button.url('➕ Qrupa Əlavə Et ➕','http://t.me/ATO_Tagger_Bot?startgroup=a')],
+     await event.edit(f"🙋🏻 Salam mən qrupunuzdakı bütün üzvləri tağ edə bilərəm\n\n💁🏻 Ətraflı məlumat üçün Əmrlər bölməsinə daxil olun", buttons=(
+                     [Button.url('➕ Qrupa Əlavə Et ➕','http://t.me/ATO_Tagger_Bot?startgroup=a')],
                [Button.inline(f"📚 Əmrlər", data="help"),
                 Button.inline(f"👑 Sahib Əmrləri", data="reklam")],
                [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
