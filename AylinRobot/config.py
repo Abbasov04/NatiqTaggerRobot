@@ -24,7 +24,7 @@ class Config:
    PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME𝗧𝗲𝘁𝗿𝗮 𝗠𝘂𝗹𝘁𝗶 𝑷𝒍𝒂𝒚𝑳𝒊𝒔𝒕")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001939192145"))
    BAN_GROUP = int(os.environ.get("BAN_GROUP", "-1001600046749"))
-   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "9f7dd6b0-7b2e-46ad-b52a-cca8bc3891c7")
+   HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "a3f338b3-a62d-4651-ac8f-17e111211681")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "ATO_Tagger_Bot")
    CHANNEL = os.environ.get("CHANNEL", "ATO_RESMl")
    SUPPORT = os.environ.get("SUPPORT", "kasibinxeyyalari1")
