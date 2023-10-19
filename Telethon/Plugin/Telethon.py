@@ -731,7 +731,7 @@ async def handler(event):
                     ),
                     link_preview=False)
 
-@edalet.on(events.callbackquery.CallbackQuery(data="reklam"))
+@client.on(events.callbackquery.CallbackQuery(data="reklam"))
 async def handler(event):  
     await event.edit(f"🔮 İstifadə: /stats\n📃 Açıqlama: Botun məlumatları göstərir\n\n🔮 İstifadə: /reklam\n📃 Açıqlama: Yayım etmək\n\n🔮 İstifadə: /block\n📃 Açıqlama: İstifadəçi blok etmək\n\n🔮 İstifadə: /unblock\n📃 Açıqlama: İstifadəçi bloku qaldırmaq\n\n🔮 İstifadə: /blocklist\n📃 Açıqlama: Blok siyahısı göstərir\n\n🔮 İstifadə: /delcmd\n📃 Açıqlama: (on - off) - Komanda silmə funksiyası", buttons=(
          [Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
