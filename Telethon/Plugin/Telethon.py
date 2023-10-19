@@ -681,3 +681,62 @@ async def eros(event):
      await event.reply(f"{random.choice(urek)} Cütlüklər:\n"
                        f" [{sev1.first_name}](tg://user?id={sev1.id})" + f" [{sev2.first_name}](tg://user?id={sev2.id})\n"
                        f"♥️ Sevgi Faizi: {random.choice(faiz)}")
+
+
+@client.on(events.NewMessage(pattern="^/start$"))
+async def start(event):
+  if event.is_private:
+    async for usr in edalet.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await event.reply(f"🙋🏻 Salam mən qrupunuzdakı bütün üzvləri tağ edə bilərəm\n\n💁🏻 Ətraflı məlumat üçün Əmrlər bölməsinə daxil olun", buttons=(
+                     [Button.url('➕ Qrupa Əlavə Et ➕','http://t.me/ATO_Tagger_Bot?startgroup=a')],
+               [Button.inline(f"📚 Əmrlər", data="help"),
+                Button.inline(f"👑 Sahib Əmrləri", data="reklam")],
+               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
+                      Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
+                    ),
+                    link_preview=False)
+
+
+  if event.is_group:
+    return await edalet.send_message(event.chat_id, f"Botun istifadə qaydasını öyrənmək üçün bota keçin", buttons=(
+                     [Button.url('🤖 Bota Keç','https://t.me/ATO_Tagger_Bot?start=start')],
+               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
+          Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
+                    ),
+                    link_preview=False)
+
+
+
+@client.on(events.callbackquery.CallbackQuery(data="start"))
+async def handler(event):
+    async for usr in edalet.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await event.edit(f"🙋🏻 Salam mən qrupunuzdakı bütün üzvləri tağ edə bilərəm\n\n💁🏻 Ətraflı məlumat üçün Əmrlər bölməsinə daxil olun", buttons=(
+                     [Button.url('➕ Qrupa Əlavə Et ➕','http://t.me/ATO_Tagger_Bot?startgroup=a')],
+               [Button.inline(f"📚 Əmrlər", data="help"),
+                Button.inline(f"👑 Sahib Əmrləri", data="reklam")],
+               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
+                      Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
+                    ),
+                    link_preview=False)
+
+
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def handler(event):  
+    await event.edit(f"🕹 İstifadə: /ato\n📜 Açıqlama: Maraqlı sözlər ilə tağ edər\n\n🕹 İstifadə: /tag\n📜 Açıqlama: 5 nəfərlik tağ edər\n\n🕹 İstifadə: /etag\n📜 Açıqlama: Emoji ilə tağ edər\n\n🕹 İstifadə: /btag\n📜 Açıqlama: bayraqlar ilə tağ edər\n\n🕹 İstifadə: /ftag\n📜 Açıqlama: Məşhur futbolçuların adları ilə tağ edər\n\n🕹 İstifadə: /mafia\n📜 Açıqlama: Mafia rolları ilə tağ edər\n\n🕹 İstifadə: /adtag\n📜 Açıqlama: Maraqlı adlar ilə tağ edər\n\n🕹 İstifadə: /admins\n📜 Açıqlama: Qrup adminləri tağ edər\n\n🕹 İstifadə: /cancel\n📜 Açıqlama: Tağ prosesi dayandırar\n\n🕹 İstifadə: /ship\n📜 Açıqlama: Qrupda cütlük seçər\n\n🕹 İstifadə: /banda\n📜 Açıqlama: Qrupda silinən hesabları çıxardar\n\n🕹 İstifadə: /id\n📜 Açıqlama: ID atar", buttons=(
+               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
+                      Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
+               [Button.inline(f"🔙 Geri", data="start")]
+                    ),
+                    link_preview=False)
+
+@edalet.on(events.callbackquery.CallbackQuery(data="reklam"))
+async def handler(event):  
+    await event.edit(f"🔮 İstifadə: /stats\n📃 Açıqlama: Botun məlumatları göstərir\n\n🔮 İstifadə: /reklam\n📃 Açıqlama: Yayım etmək\n\n🔮 İstifadə: /block\n📃 Açıqlama: İstifadəçi blok etmək\n\n🔮 İstifadə: /unblock\n📃 Açıqlama: İstifadəçi bloku qaldırmaq\n\n🔮 İstifadə: /blocklist\n📃 Açıqlama: Blok siyahısı göstərir\n\n🔮 İstifadə: /delcmd\n📃 Açıqlama: (on - off) - Komanda silmə funksiyası", buttons=(
+         [Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
+               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
+                      Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
+               [Button.inline(f"🔙 Geri", data="start")]
+                    ),
+                    link_preview=False)
