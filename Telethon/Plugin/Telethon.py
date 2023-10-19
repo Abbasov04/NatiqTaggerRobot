@@ -6,6 +6,7 @@ from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from AylinRobot.config import Config
 from Telethon.Mesajlar import soz,  emoji, bayrag
+From Telethon import Button
 
 logging.basicConfig(
     level=logging.INFO,
