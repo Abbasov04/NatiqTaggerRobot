@@ -13,7 +13,7 @@ class Config:
 
    API_ID = int(os.getenv("API_ID", "23110135"))
    API_HASH = os.getenv("API_HASH", "ae975527472ab73d41eb7a771fa152fe")
-   BOT_TOKEN = os.getenv("BOT_TOKEN", "5361420173:AAGFrvJGyoDckNavmUWHL23YKs_pr-Pc8Pg")
+   BOT_TOKEN = os.getenv("BOT_TOKEN", "5361420173:AAHs8y5rasCyYhAQ4crYr0rVkiWqfSqcx94")
    BOT_USERNAME = os.environ.get("BOT_USERNAME", "ATO_Tagger_Bot")
    BOT_NAME = os.environ.get("BOT_NAME", "𓆩𝙰𝚃𝙾𓆪 𝚃𝙰𝙶𝙶𝙴𝚁 ⚕️")
    OWNER_ID = int(os.environ.get("OWNER_ID","6450834538"))
