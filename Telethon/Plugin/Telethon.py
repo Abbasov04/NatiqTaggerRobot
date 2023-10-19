@@ -559,7 +559,7 @@ userjoin = (
 
 
 
-@client.on(events.NewMessage(pattern=f'@Mirzeyev_645'))
+@client.on(events.NewMessage(pattern=f'@LDBrat'))
 @client.on(events.NewMessage(pattern='Kənan'))
 @client.on(events.NewMessage(pattern='@Yoxduburda'))
 @client.on(events.NewMessage(pattern='Həsən'))
