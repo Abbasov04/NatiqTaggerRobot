@@ -1233,3 +1233,30 @@ class LAN(object):
 
 
 app.start()
+
+from telethon import events
+import asyncio
+import random
+from telethon import events
+from telethon.tl.types import ChannelParticipantsBots
+from telethon.tl.types import ChannelParticipantsAdmins
+from os import remove
+from telethon.tl.functions.users import GetFullUserRequest
+
+
+
+@edalet.on(events.NewMessage(pattern="^/banda ?(.*)"))
+async def banda(event):
+    if not event.is_group:
+        return await event.reply("**ℹ️ Bu əmr qruplar üçün nəzərdə tutulub**")
+    info = await event.client.get_entity(event.chat_id)
+    title = info.title if info.title else "This chat"
+    mentions = f'**{title}** qrupunda olan silinən hesablar:\n'
+    deleted = 0
+    async for user in event.client.iter_participants(event.chat_id):
+        if user.deleted:
+            mentions += f"\n🗑️ Çıxarıldı: `{user.id}`"
+            deleted += 1
+            await event.client.kick_participant(event.chat_id, user.id)
+    mentions += f"\n\n👤 Silinən hesabların sayı: `{deleted}`"
+    await event.reply(mentions)
