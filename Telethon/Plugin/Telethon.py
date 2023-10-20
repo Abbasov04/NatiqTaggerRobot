@@ -726,9 +726,9 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"🙋🏻 Salam mən qrupunuzdakı bütün üzvləri tağ edə bilərəm\n\n💁🏻 Ətraflı məlumat üçün Əmrlər bölməsinə daxil olun", button=(
                      [Button.url('➕ Qrupa Əlavə Et ➕','http://t.me/ATO_Tagger_Bot?startgroup=a')],
-               [Button.inline(f"📚 Əmrlər", data="help"),
-               [Button.inline(f"📚Oyun Əmrləri", data="oyun"),
-               [Button.inline(f"📚Eylence Əmrləri", data="eylence"),
+               [Button.inline(f"📚 Əmrlər", data="help")],
+               [Button.inline(f"📚Oyun Əmrləri", data="oyun")],
+               [Button.inline(f"📚Eylence Əmrləri", data="eylence")],
                 [Button.inline(f"👑 Sahib Əmrləri", data="reklam")],
                       ),
                     link_preview=False)
@@ -737,7 +737,7 @@ async def handler(event):
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):  
     await event.edit(f"🕹 İstifadə: /stag\n📜 Açıqlama: Maraqlı sözlər ilə tağ edər\n\n🕹 İstifadə: /tag\n📜 Açıqlama: [Səbəb] - 5 - Li Tağ.\n\n🕹 İstifadə: /etag\n📜 Açıqlama: Emoji ilə tağ edər\n\n🕹 İstifadə: /tttag\n📜 Açıqlama: [Səbəb] - Təkli Tağ.\n\n🕹 İstifadə: /btag\n📜 Açıqlama: [Səbəb] - Bayraqlarla Tağ\n\n🕹 İstifadə: /admins\n📜 Açıqlama: Qrup adminləri tağ edər\n\n🕹 İstifadə: /cancel\n📜 Açıqlama: Tağ prosesi dayandırar\n\n🕹 İstifadə: /ship\n📜 Açıqlama: Qrupda cütlük seçər\n\n🕹 İstifadə: /banda\n📜 Açıqlama: Qrupda silinən hesabları çıxardar\n\n🕹 İstifadə: /id\n📜 Açıqlama: ID atar\n\n🕹 İstifadə: /info\n📜 Açıqlama: istifadəçi haqqında məlumat verər\n\n🕹 İstifadə: /purge\n📜 Açıqlama: Qrupda Mesajları Silər\n\n🕹 İstifadə: /sehid\n📜 Açıqlama: Bu əmr vaistəsiylə sizə **Şəhid** adları göndərəcəm\n 🥀 **Allah bütün Şəhidimizə rəhmət eləsin**\n🤲 Qazilərimizə şəfa versin 😔 Başın sağolsun Azərbaycan\n🇦🇿 Bazada **2881** Şəhid adı mövcuddur", buttons=(
-               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
+               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl')],
                       [Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
                [Button.inline(f"🔙 Geri", data="start")]
                     ),
@@ -747,7 +747,7 @@ async def handler(event):
 async def handler(event):  
     await event.edit(f"🔮 İstifadə: /stats\n📃 Açıqlama: Botun məlumatları göstərir\n\n🔮 İstifadə: /broadcast\n📃 Açıqlama: Yayım etmək\n\n🔮 İstifadə: /block\n📃 Açıqlama: İstifadəçini Və Ya Qrupu Bloklayar.\n\n🔮 İstifadə: /unblock\n📃 Açıqlama: Bloku Açar\n\n🔮 İstifadə: /blocklist\n📃 Açıqlama: Blok siyahısı göstərir\n\n🔮 İstifadə: /broadcastall\n📃 Açıqlama: Qrupa Və Şəxsiyə Yayım Edər\n\n🔮 İstifadə: /broadcast_pin\n📃 Açıqlama: Qruplarda Yayım Edər və sabitleyer", buttons=(
          [Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
-               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
+               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl')],
                       Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
                [Button.inline(f"🔙 Geri", data="start")]
                     )
