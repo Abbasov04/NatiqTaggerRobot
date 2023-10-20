@@ -746,7 +746,7 @@ async def handler(event):
     await event.edit(f"🔮 İstifadə: /stats\n📃 Açıqlama: Botun məlumatları göstərir\n\n🔮 İstifadə: /broadcast\n📃 Açıqlama: Yayım etmək\n\n🔮 İstifadə: /block\n📃 Açıqlama: İstifadəçini Və Ya Qrupu Bloklayar.\n\n🔮 İstifadə: /unblock\n📃 Açıqlama: Bloku Açar\n\n🔮 İstifadə: /blocklist\n📃 Açıqlama: Blok siyahısı göstərir\n\n🔮 İstifadə: /broadcastall\n📃 Açıqlama: Qrupa Və Şəxsiyə Yayım Edər\n\n🔮 İstifadə: /broadcast_pin\n📃 Açıqlama: Qruplarda Yayım Edər və sabitleyer", buttons=(
          [Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
                [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl')],
-                      Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
+                      [Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
                [Button.inline(f"🔙 Geri", data="start")]
                     )
                     link_preview=False)
