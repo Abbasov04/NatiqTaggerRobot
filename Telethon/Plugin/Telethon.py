@@ -729,8 +729,7 @@ async def handler(event):
                [Button.inline(f"📚Eylence Əmrləri", data="eylence"),
                 Button.inline(f"👑 Sahib Əmrləri", data="reklam")],
                [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
-                      Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
-                    ),
+                      Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],),
                     link_preview=False)
 
 
