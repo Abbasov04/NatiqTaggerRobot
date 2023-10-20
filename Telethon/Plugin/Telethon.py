@@ -753,4 +753,4 @@ async def handler(event):
 
 @client.on(events.callbackquery.CallbackQuery(data="oyun"))
 async def handler(event):  
-    await event.edit(f"🔮 Istifadə: /zer\n📃 Açıqlama: zər atar\n\n🆕️  SÖZ-OYUNU Nunun Əsas Əmrləri\n\n🔮 Istifadə: /game\n📃 Açıqlama: Oyunu Başladar"
+    await event.edit(f"🔮 Istifadə: /zer\n📃 Açıqlama: zər atar\n\n🆕️  SÖZ-OYUNU Nunun Əsas Əmrləri\n\n🔮 Istifadə: /game\n📃 Açıqlama: Oyunu Başladar\n\n🔮 Istifadə: /kec\n📃 Açıqlama: Çətin Sözü Keçər\n\n🔮 Istifadə: /stop\n📃 Açıqlama: Mövcud Oyunu Saxlayar\n\n🔮 Istifadə: /skor\n📃 Nümunə: Hər Bir Oyunçunun Reytinqi Göstərər"
