@@ -730,8 +730,6 @@ async def handler(event):
                [Button.inline(f"📚Oyun Əmrləri", data="oyun"),
                [Button.inline(f"📚Eylence Əmrləri", data="eylence"),
                 [Button.inline(f"👑 Sahib Əmrləri", data="reklam")],
-               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
-                      Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
                       ),
                     link_preview=False)
 
@@ -740,7 +738,7 @@ async def handler(event):
 async def handler(event):  
     await event.edit(f"🕹 İstifadə: /stag\n📜 Açıqlama: Maraqlı sözlər ilə tağ edər\n\n🕹 İstifadə: /tag\n📜 Açıqlama: [Səbəb] - 5 - Li Tağ.\n\n🕹 İstifadə: /etag\n📜 Açıqlama: Emoji ilə tağ edər\n\n🕹 İstifadə: /tttag\n📜 Açıqlama: [Səbəb] - Təkli Tağ.\n\n🕹 İstifadə: /btag\n📜 Açıqlama: [Səbəb] - Bayraqlarla Tağ\n\n🕹 İstifadə: /admins\n📜 Açıqlama: Qrup adminləri tağ edər\n\n🕹 İstifadə: /cancel\n📜 Açıqlama: Tağ prosesi dayandırar\n\n🕹 İstifadə: /ship\n📜 Açıqlama: Qrupda cütlük seçər\n\n🕹 İstifadə: /banda\n📜 Açıqlama: Qrupda silinən hesabları çıxardar\n\n🕹 İstifadə: /id\n📜 Açıqlama: ID atar\n\n🕹 İstifadə: /info\n📜 Açıqlama: istifadəçi haqqında məlumat verər\n\n🕹 İstifadə: /purge\n📜 Açıqlama: Qrupda Mesajları Silər\n\n🕹 İstifadə: /sehid\n📜 Açıqlama: Bu əmr vaistəsiylə sizə **Şəhid** adları göndərəcəm\n 🥀 **Allah bütün Şəhidimizə rəhmət eləsin**\n🤲 Qazilərimizə şəfa versin 😔 Başın sağolsun Azərbaycan\n🇦🇿 Bazada **2881** Şəhid adı mövcuddur", buttons=(
                [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
-                      Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
+                      [Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
                [Button.inline(f"🔙 Geri", data="start")]
                     ),
                     link_preview=False)
@@ -752,25 +750,19 @@ async def handler(event):
                [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
                       Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
                [Button.inline(f"🔙 Geri", data="start")]
-                    ),
+                    )
                     link_preview=False)
 
 @client.on(events.callbackquery.CallbackQuery(data="oyun"))
 async def handler(event):  
-    await event.edit(f"🔮 Istifadə: /zer\n📃 Açıqlama: zər atar\n\n🆕️  SÖZ-OYUNU Nunun Əsas Əmrləri\n\n🔮 Istifadə: /game\n📃 Açıqlama: Oyunu Başladar\n\n🔮 Istifadə: /kec\n📃 Açıqlama: Çətin Sözü Keçər\n\n🔮 Istifadə: /stop\n📃 Açıqlama: Mövcud Oyunu Saxlayar\n\n🔮 Istifadə: /skor\n📃 Nümunə: Hər Bir Oyunçunun Reytinqi Göstərər" buttons=(
-         [Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
-               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
-                      Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
+    await event.edit(f"🔮 Istifadə: /zer\n📃 Açıqlama: zər atar\n\n🆕️  SÖZ-OYUNU Nunun Əsas Əmrləri\n\n🔮 Istifadə: /game\n📃 Açıqlama: Oyunu Başladar\n\n🔮 Istifadə: /kec\n📃 Açıqlama: Çətin Sözü Keçər\n\n🔮 Istifadə: /stop\n📃 Açıqlama: Mövcud Oyunu Saxlayar\n\n🔮 Istifadə: /skor\n📃 Nümunə: Hər Bir Oyunçunun Reytinqi Göstərər"
                       [Button.inline(f"🔙 Geri", data="start")]
-                    ),
+                    )
                     link_preview=False)
                     
 @client.on(events.callbackquery.CallbackQuery(data="eylence"))
 async def handler(event):  
-    await event.edit(f"🔮 Istifadə: /bio\n📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.\n\n🔮 Istifadə: /sevgi\n📃 Açıqlama: Hazır Sevgi Yə Aid Sözlər Atar.\n\n🔮 Istifadə: /pp\n📃 Açıqlama: Rondom Profil Şəkili Atar\n\n🔮 Istifadə: /tgm\n📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz.\n\n🔮 Istifadə: /anime\n📃 Açıqlama: Rondom Anime Şəkili Atar" buttons=(
-         [Button.url('👨🏻‍💻 Bot Sahibi', 'https://t.me/Yoxduburda')],
-               [Button.url('📢 Kanal', 'https://t.me/ATO_RESMl'),
-                      Button.url('🇦🇿 Reklam', 'https://t.me/ATO_RESMl')],
+    await event.edit(f"🔮 Istifadə: /bio\n📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.\n\n🔮 Istifadə: /sevgi\n📃 Açıqlama: Hazır Sevgi Yə Aid Sözlər Atar.\n\n🔮 Istifadə: /pp\n📃 Açıqlama: Rondom Profil Şəkili Atar\n\n🔮 Istifadə: /tgm\n📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz.\n\n🔮 Istifadə: /anime\n📃 Açıqlama: Rondom Anime Şəkili Atar"
                       [Button.inline(f"🔙 Geri", data="start")]
-                    ),
+                    )
                     link_preview=False)
