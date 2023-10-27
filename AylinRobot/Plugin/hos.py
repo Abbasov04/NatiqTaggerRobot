@@ -15,4 +15,4 @@ def on_new_chat_members(client, message: Message):
             reply_message = message.reply("Salam Sahibim Xoş Gəldin Qrupa 🤖💙")
             # Emoji ve GIF eklemek için yanıt mesajına düzenleme yap
             reply_message.edit_text("salam Sahibim Xoş gəldin Qrupa 🤖💙😍")
-            reply_message.reply_animation("https://media.giphy.com/media/3o6Zt6MLxR1kv7Y5l2/giphy.gif")
+            reply_message.reply_animation("https://telegra.ph/file/6a8b0a19556719856e279.gif")
