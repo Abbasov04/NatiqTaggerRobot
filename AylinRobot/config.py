@@ -21,7 +21,7 @@ class Config:
    BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
    MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://qenberismayilzade005:natiq.3169@cluster0.wna0quv.mongodb.net/?retryWrites=true&w=majority")
    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002043569431"))
-   PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME, "𝐆𝐭𝐚 𝐌𝐮𝐬𝐢𝐜 𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭")
+   PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME, "𝐆𝐭𝐚𝐌𝐮𝐬𝐢𝐜𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭")
    PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1002074288242"))
    BAN_GROUP = int(os.environ.get("BAN_GROUP", "-1002043569431"))
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "c7c2f4ed-e8c3-46e8-ae9a-bfd0ed6b1a69")
