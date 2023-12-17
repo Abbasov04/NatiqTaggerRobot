@@ -5,7 +5,7 @@ from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
 
 
-banned_users = [-1001600046749]
+banned_users = [-1002043569431]
 
 @app.on_message(filters.command('ban') & filters.private)
 async def ban_user(client, message):
