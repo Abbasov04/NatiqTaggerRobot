@@ -575,7 +575,7 @@ Aylin = (
     "Cox Tag Eləsən Fban Verəcəm 😒",
     "Haycan",
     "Sahibimə Aşikmisin ?",
-    "Sahibim Burda Yoxdu Nə sözün Varsa Mənə yaz",
+    "Sahibimin hal hazırda işi var. Xahiş olunur səbrli olun.",
 
 )
 
