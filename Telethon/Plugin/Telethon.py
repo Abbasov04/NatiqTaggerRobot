@@ -567,10 +567,16 @@ async def handler(event):
 
 
 Aylin = (
-    " Sahibim Burda Yoxdu Gələndə Yazar 🙈",
-    " Hmm Mənim Sahibimlə Nə İşin Var?",
-    " Aktif deil gələndə yazacağ ❤️",
+    "Sahibim Burda Yoxdu Gələndə Yazar 🙈",
+    "Hmm Mənim Sahibimlə Nə İşin Var?",
+    "Aktif deil gələndə yazacağ ❤️",
     "Burda olmasada qəlbi sizinlədi ❤️",
+    "Xayis Eliyirəm Qoyun Sahibim Yatsin 😒",
+    "Cox Tag Eləsən Fban Verəcəm 😒",
+    "Haycan",
+    "Sahibimə Aşikmisin ?",
+    "Sahibim Burda Yoxdu Nə sözün Varsa Mənə yaz",
+
 )
 
 
