@@ -560,9 +560,7 @@ userjoin = (
 
 
 @client.on(events.NewMessage(pattern=f'@Telegrram_Kurucu'))
-@client.on(events.NewMessage(pattern='Natiq'))
 @client.on(events.NewMessage(pattern='@NatiqOwner'))
-@client.on(events.NewMessage(pattern='Abbasov'))
 async def handler(event):
     await event.reply(random.choice(Aylin))
 
