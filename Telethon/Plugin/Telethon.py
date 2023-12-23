@@ -812,10 +812,10 @@ app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 #"mongodb+srv://EdaletRoBot:EdaletRoBot31@cluster0.t4ukpl3.mongodb.net/?retryWrites=true&w=majority"
 DATABASE_URL = "mongodb+srv://Rahidtagbot:Rahidtagbot31@cluster0.m3kqvyk.mongodb.net/?retryWrites=true&w=majority"
 BOT_USERNAME = "GtaTaggerRobot"
-LOG_CHANNEL = -1002043569431
+LOG_CHANNEL = -1002049242182
 GROUP_SUPPORT = "GtaSupportQrup"
 GONDERME_TURU = False
-OWNER_ID = [6603298819]
+OWNER_ID = [6943473125]
 LANGAUGE = "AZ"
 
 
